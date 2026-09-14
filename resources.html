@@ -1,0 +1,6598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap"rel="stylesheet">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Resources</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="logo/ILC Logo.jpg">
+</head>
+<style>
+/* ==========================================
+   RESOURCE CENTRE HERO
+========================================== */
+.resource-hero{
+    padding:80px 5%;
+    background:var(--light);
+    overflow:hidden;
+}
+/* ==========================================
+   HERO WRAPPER
+========================================== */
+.resource-hero-wrapper{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:70px;
+    align-items:center;
+}
+.section-tag{
+    color: var(--primary);
+}
+/* ==========================================
+   HERO CONTENT
+========================================== */
+.resource-hero-content{
+    max-width:680px;
+}
+.resource-hero-content h1{
+    color:var(--dark);
+    font-size:40px;
+    line-height:1.15;
+    margin:15px 0 18px;
+}
+.resource-hero-content h1 span{
+    color:var(--primary);
+}
+.resource-hero-content > p{
+    max-width:620px;
+    color:var(--text);
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+/* ==========================================
+   RESOURCE SEARCH
+========================================== */
+.resource-search{
+    display:flex;
+    align-items:center;
+    width:100%;
+    max-width:650px;
+    height:58px;
+    background:var(--white);
+    border-radius:10px;
+    padding:6px;
+    box-shadow:  0 10px 30px rgba(15,23,42,.06);
+}
+.resource-search > i{
+    flex-shrink:0;
+    color:#94a3b8;
+    font-size:15px;
+    margin-left:16px;
+}
+.resource-search input{
+    flex:1;
+    min-width:0;
+    height:100%;
+    padding:0 14px;
+    background:transparent;
+    color:var(--dark);
+    border:0;
+    outline:0;
+    font-family:inherit;
+    font-size:16px;
+}
+.resource-search input::placeholder{
+    color:#94a3b8;
+}
+.resource-search button{
+    flex-shrink:0;
+    height:46px;
+    padding:0 22px;
+    background:var(--primary);
+    color:var(--white);
+    border:0;
+    border-radius:7px;
+    font-family:inherit;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+.resource-search button:hover{
+    background:var(--secondary);
+}
+/* ==========================================
+   POPULAR SEARCHES
+========================================== */
+.resource-popular{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:18px;
+}
+.resource-popular > span{
+    color:#64748b;
+    font-size:16px;
+    margin-right:3px;
+}
+.resource-popular a{
+    color:var(--primary);
+    font-size:16px;
+    text-decoration:none;
+    transition:.3s;
+}
+.resource-popular a:hover{
+    color:var(--secondary);
+}
+.resource-popular a:not(:last-child)::after{
+    content:"";
+    display:inline-block;
+    width:4px;
+    height:4px;
+    margin:0 0 2px 9px;
+    background:#cbd5e1;
+    border-radius:50%;
+}
+/* ==========================================
+   HERO VISUAL
+========================================== */
+.resource-hero-visual{
+    position:relative;
+    min-height:470px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+/* ==========================================
+   MAIN RESOURCE CARD
+========================================== */
+.resource-visual-main{
+    position:relative;
+    z-index:2;
+    width:330px;
+    min-height:360px;
+    padding:40px 35px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    background:var(--white);
+    border-radius:25px;
+    box-shadow:  0 25px 60px rgba(15,23,42,.09);
+}
+.resource-visual-icon{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:60px;
+    height:60px;
+    margin-bottom:25px;
+    background:rgba(31,53,151,.08);
+    color:var(--primary);
+    border-radius:13px;
+    font-size:30px;
+}
+.resource-visual-main > span{
+    color:var(--secondary);
+    font-size:14px;
+    font-weight:500;
+    letter-spacing:1px;
+    margin-bottom:10px;
+}
+.resource-visual-main h3{
+    color:var(--dark);
+    font-size:27px;
+    line-height:1.3;
+    margin:0 0 15px;
+}
+.resource-visual-main p{
+    color:#64748b;
+    font-size:16px;
+    line-height:1.7;
+    margin:0;
+}
+/* ==========================================
+   FLOATING RESOURCE CARDS
+========================================== */
+.resource-float-card{
+    position:absolute;
+    z-index:3;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    width:205px;
+    padding:14px;
+    background:var(--white);
+    border-radius:11px;
+    box-shadow:  0 15px 35px rgba(15,23,42,.08);
+}
+.resource-float-card > i{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    width:50px;
+    height:50px;
+    border-radius:9px;
+    background:rgba(31,53,151,.08);
+    color:var(--primary);
+    font-size:24px;
+}
+.resource-float-card div{
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+}
+.resource-float-card strong{
+    color:var(--dark);
+    font-size:16px;
+    font-weight:500;
+}
+.resource-float-card span{
+    color:#94a3b8;
+    font-size:14px;
+    line-height:1.4;
+}
+/* ==========================================
+   FLOATING POSITIONS
+========================================== */
+.resource-float-one{
+    top:10px;
+    left:10px;
+}
+.resource-float-two{
+    right:0;
+    bottom:15px;
+}
+/* ==========================================
+   BACKGROUND ACCENT
+========================================== */
+.resource-visual-accent{
+    position:absolute;
+    width:310px;
+    height:310px;
+    background:rgba(244,166,70,.12);
+    border-radius:50%;
+    right:-10px;
+    top:-20px;
+    z-index:1;
+}
+/* ==========================================
+   LARGE TABLET
+========================================== */
+@media (max-width:1100px){
+    .resource-hero{
+        padding:70px 5%;
+    }
+    .resource-hero-wrapper{
+        gap:45px;
+    }
+    .resource-hero-content h1{
+        font-size:40px;
+    }
+    .resource-hero-visual{
+        min-height:430px;
+    }
+    .resource-visual-main{
+        width:300px;
+        min-height:340px;
+    }
+    .resource-float-one{
+        left:0;
+    }
+    .resource-float-two{
+        right:-5px;
+    }
+}
+/* ==========================================
+   TABLET
+========================================== */
+@media (max-width:900px){
+    .resource-hero{
+        padding:70px 5%;
+    }
+    .resource-hero-wrapper{
+        grid-template-columns:1fr;
+        gap:55px;
+    }
+    .resource-hero-content{
+        max-width:720px;
+    }
+    .resource-hero-content h1{
+        font-size:40px;
+    }
+    .resource-hero-visual{
+        min-height:400px;
+        max-width:650px;
+        width:100%;
+        margin:0 auto;
+    }
+}
+/* ==========================================
+   MOBILE
+========================================== */
+@media (max-width:768px){
+    .resource-hero{
+        padding:70px 5%;
+    }
+    .resource-hero-wrapper{
+        gap:45px;
+    }
+    .resource-hero-content h1{
+        font-size:40px;
+        line-height:1.2;
+        margin:12px 0 15px;
+    }
+    .resource-hero-content > p{
+        font-size:18px;
+        line-height:1.75;
+        margin-bottom:25px;
+    }
+    /* SEARCH */
+    .resource-search{
+        height:auto;
+        min-height:54px;
+        padding:5px;
+    }
+    .resource-search > i{
+        margin-left:13px;
+        font-size:16px;
+    }
+    .resource-search input{
+        font-size:16px;
+        padding:0 9px;
+    }
+    .resource-search button{
+        height:44px;
+        padding:0 17px;
+        font-size:16px;
+    }
+    /* POPULAR */
+    .resource-popular{
+        gap:7px;
+        line-height:1.7;
+    }
+    .resource-popular > span,
+    .resource-popular a{
+        font-size:16px;
+    }
+    /* VISUAL */
+    .resource-hero-visual{
+        min-height:360px;
+    }
+    .resource-visual-main{
+        width:280px;
+        min-height:320px;
+        padding:32px 28px;
+        border-radius:20px;
+    }
+    .resource-visual-main h3{
+        font-size:24px;
+    }
+    .resource-float-card{
+        width:180px;
+        padding:11px;
+        gap:9px;
+    }
+    .resource-float-card > i{
+        width:50px;
+        height:50px;
+        font-size:25px;
+    }
+    .resource-float-card strong{
+        font-size:16px;
+    }
+    .resource-float-card span{
+        font-size:14px;
+    }
+    .resource-float-one{
+        top:-35px;
+        left:0;
+    }
+    .resource-float-two{
+        right:0;
+        bottom:-25px;
+    }
+    .resource-visual-accent{
+        width:250px;
+        height:250px;
+        right:20px;
+        top:55px;
+    }
+}
+/* ==========================================
+   RESOURCE CATEGORIES
+========================================== */
+.resource-categories{
+    padding:100px 5%;
+    background:var(--white);
+}
+/* ==========================================
+   SECTION HEADER
+========================================== */
+.resource-categories-header{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:40px;
+    margin-bottom:45px;
+}
+.resource-categories-header h2{
+    color:var(--dark);
+    font-size:36px;
+    line-height:1.2;
+    margin:15px 0 0;
+}
+.resource-categories-header > p{
+    max-width:470px;
+    color:var(--text);
+    font-size:18px;
+    line-height:1.8;
+    margin:0;
+}
+/* ==========================================
+   CATEGORY GRID
+========================================== */
+.resource-category-grid{
+    display:grid;
+    grid-template-columns:  repeat(4, 1fr);
+    gap:18px;
+}
+/* ==========================================
+   CATEGORY CARD
+========================================== */
+.resource-category-card{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    min-height:280px;
+    padding:25px;
+    background:var(--light);
+    border-radius:15px;
+    text-decoration:none;
+    overflow:hidden;
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
+}
+.resource-category-card:hover{
+    transform:translateY(-5px);
+    background:var(--white);
+    box-shadow:  0 15px 35px rgba(15,23,42,.07);
+}
+/* ==========================================
+   CARD TOP
+========================================== */
+.resource-category-top{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    margin-bottom:35px;
+}
+.resource-category-number{
+    color:#94a3b8;
+    font-size:16px;
+    letter-spacing:.5px;
+}
+/* ==========================================
+   CATEGORY ICON
+========================================== */
+.resource-category-icon{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:60px;
+    height:60px;
+    background:rgba(31,53,151,.08);
+    color:var(--primary);
+    border-radius:10px;
+    font-size:26px;
+    transition:.3s;
+}
+.resource-category-card:hover
+.resource-category-icon{
+    background:var(--primary);
+    color:var(--white);
+}
+/* ==========================================
+   CATEGORY CONTENT
+========================================== */
+.resource-category-content{
+    flex:1;
+}
+.resource-category-content h3{
+    color:var(--dark);
+    font-size:20px;
+    line-height:1.4;
+    margin:0 0 10px;
+}
+.resource-category-content p{
+    color:#64748b;
+    font-size:16px;
+    line-height:1.7;
+    margin:0;
+    max-width:260px;
+}
+/* ==========================================
+   CARD LINK
+========================================== */
+.resource-category-link{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:var(--primary);
+    font-size:16px;
+    margin-top:25px;
+}
+.resource-category-link i{
+    font-size:16px;
+    transition:.3s;
+}
+.resource-category-card:hover
+.resource-category-link i{
+    transform:translateX(4px);
+    color:var(--secondary);
+}
+/* ==========================================
+   TABLET
+========================================== */
+@media (max-width:1100px){
+    .resource-category-grid{
+        grid-template-columns:  repeat(2, 1fr);
+        gap:16px;
+    }
+    .resource-category-card{
+        min-height:260px;
+    }
+}
+/* ==========================================
+   TABLET / MOBILE
+========================================== */
+@media (max-width:800px){
+    .resource-categories{
+        padding:75px 5%;
+    }
+    .resource-categories-header{
+        display:block;
+        margin-bottom:35px;
+    }
+    .resource-categories-header h2{
+        font-size:30px;
+        margin-bottom:15px;
+    }
+    .resource-categories-header > p{
+        font-size:18px;
+        line-height:1.75;
+        max-width:650px;
+    }
+}
+/* ==========================================
+   MOBILE
+========================================== */
+@media (max-width:600px){
+    .resource-categories{
+        padding:70px 5%;
+    }
+    .resource-category-grid{
+        grid-template-columns:1fr;
+        gap:12px;
+    }
+    .resource-category-card{
+        min-height:235px;
+        padding:22px;
+    }
+    .resource-category-top{
+        margin-bottom:28px;
+    }
+    .resource-category-content h3{
+        font-size:20px;
+    }
+    .resource-category-content p{
+        font-size:16px;
+        line-height:1.7;
+    }
+
+}
+/* ==========================================
+   SMALL PHONES
+========================================== */
+@media (max-width:480px){
+    .resource-categories-header h2{
+        font-size:30px;
+    }
+    .resource-categories-header > p{
+        font-size:18px;
+    }
+    .resource-category-card{
+        min-height:220px;
+        padding:20px;
+        border-radius:13px;
+    }
+    .resource-category-top{
+        margin-bottom:25px;
+    }
+    .resource-category-content h3{
+        font-size:20px;
+    }
+    .resource-category-link{
+        margin-top:20px;
+        font-size:16px;
+    }
+
+}
+/* ==========================================
+   FEATURED RESOURCES
+========================================== */
+.featured-resources{
+    padding:100px 5%;
+    background:var(--light);
+}
+/* ==========================================
+   SECTION HEADER
+========================================== */
+.featured-resources-header{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:40px;
+    margin-bottom:45px;
+}
+.featured-resources-header h2{
+    color:var(--dark);
+    font-size:40px;
+    line-height:1.2;
+    margin:15px 0 0;
+}
+.featured-resources-header > p{
+    max-width:450px;
+    color:var(--text);
+    font-size:18px;
+    line-height:1.8;
+    margin:0;
+}
+/* ==========================================
+   FEATURED GRID
+========================================== */
+.featured-resource-grid{
+    display:grid;
+    grid-template-columns:  1.35fr .65fr;
+    gap:20px;
+    align-items:stretch;
+}
+/* ==========================================
+   MAIN RESOURCE
+========================================== */
+.featured-resource-main{
+    display:grid;
+    grid-template-columns:.85fr 1.15fr;
+    min-height:390px;
+    background:var(--white);
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow: 0 12px 35px rgba(15,23,42,.05);
+}
+/* ==========================================
+   MAIN IMAGE AREA
+========================================== */
+.featured-resource-image{
+    position:relative;
+    min-height:390px;
+    background:
+    linear-gradient(
+        135deg,
+        var(--primary),
+        rgba(30, 64, 175, 0.329)
+    ),
+    url("image/c462ae4cd8f22bf1af672bf5ea39ab26.jpg");
+    background-size:cover;
+    background-position:center;
+    overflow:hidden;
+}
+.featured-resource-image::before{
+    content:"";
+    position:absolute;
+    width:250px;
+    height:250px;
+    right:-80px;
+    top:-70px;
+    background:#f4a6464f;
+    border-radius:50%;
+}
+.featured-resource-image::after{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    left:-90px;
+    bottom:-70px;
+    background:rgba(255,255,255,.08);
+    border-radius:50%;
+}
+/* ==========================================
+   IMAGE LABELS
+========================================== */
+.featured-resource-overlay{
+    position:absolute;
+    inset:0;
+    z-index:2;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    gap:8px;
+    padding:28px;
+}
+.featured-resource-label{
+    display:inline-flex;
+    align-items:center;
+    width:fit-content;
+    padding:7px 12px;
+    background:var(--secondary);
+    color:var(--white);
+    border-radius:30px;
+    font-size:14px;
+    font-weight:500;
+    letter-spacing:.6px;
+}
+.featured-resource-category{
+    color:#fff;
+    font-size:18px;
+}
+/* ==========================================
+   MAIN CONTENT
+========================================== */
+.featured-resource-main-content{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:45px;
+}
+.featured-resource-meta{
+    color:var(--secondary);
+    font-size:16px;
+    font-weight:500;
+    margin-bottom:10px;
+}
+.featured-resource-main-content h3{
+    color:var(--dark);
+    font-size:30px;
+    line-height:1.25;
+    margin:0 0 15px;
+}
+.featured-resource-main-content p{
+    max-width:430px;
+    color:#64748b;
+    font-size:16px;
+    line-height:1.8;
+    margin:0 0 25px;
+}
+/* ==========================================
+   MAIN BUTTON
+========================================== */
+.featured-resource-button{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    width:fit-content;
+    padding:13px 18px;
+    background:var(--primary);
+    color:var(--white);
+    border-radius:8px;
+    text-decoration:none;
+    font-size:16px;
+    transition:.3s;
+}
+.featured-resource-button:hover{
+    background:var(--secondary);
+}
+.featured-resource-button i{
+    font-size:16px;
+    transition:.3s;
+}
+.featured-resource-button:hover i{
+    transform:translateX(4px);
+}
+/* ==========================================
+   SIDE RESOURCES
+========================================== */
+.featured-resource-side{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+/* ==========================================
+   SMALL RESOURCE
+========================================== */
+.featured-resource-small{
+    flex:1;
+    display:flex;
+    align-items:flex-start;
+    gap:20px;
+    padding:28px;
+    background:var(--white);
+    border-radius:17px;
+    box-shadow: 0 10px 30px rgba(15,23,42,.04);
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+.featured-resource-small:hover{
+    transform:translateY(-3px);
+    box-shadow: 0 15px 35px rgba(15,23,42,.07);
+}
+/* ==========================================
+   SMALL ICON
+========================================== */
+.featured-small-icon{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    width:50px;
+    height:50px;
+    background:rgba(31,53,151,.08);
+    color:var(--primary);
+    border-radius:10px;
+    font-size:26px;
+    transition:.3s;
+}
+.featured-resource-small:hover
+.featured-small-icon{
+    background:var(--primary);
+    color:var(--white);
+}
+/* ==========================================
+   SMALL CONTENT
+========================================== */
+.featured-small-content > span{
+    display:block;
+    color:var(--secondary);
+    font-size:14px;
+    margin-bottom:10px;
+}
+.featured-small-content h3{
+    color:var(--dark);
+    font-size:18px;
+    line-height:1.4;
+    margin:0 0 8px;
+}
+.featured-small-content p{
+    color:#64748b;
+    font-size:16px;
+    line-height:1.65;
+    margin:0 0 15px;
+}
+.featured-small-content a{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:var(--primary);
+    font-size:16px;
+    text-decoration:none;
+}
+.featured-small-content a i{
+    font-size:16px;
+    transition:.3s;
+}
+.featured-small-content a:hover{
+    color:var(--secondary);
+}
+.featured-small-content a:hover i{
+    transform:translateX(4px);
+}
+/* ==========================================
+   TABLET
+========================================== */
+@media (max-width:1100px){
+    .featured-resources{
+        padding:80px 5%;
+    }
+    .featured-resource-grid{
+        grid-template-columns:1fr;
+    }
+    .featured-resource-side{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+    }
+}
+/* ==========================================
+   TABLET
+========================================== */
+@media (max-width:800px){
+    .featured-resources{
+        padding:75px 5%;
+    }
+    .featured-resources-header{
+        display:block;
+        margin-bottom:35px;
+    }
+    .featured-resources-header h2{
+        font-size:32px;
+        margin-bottom:15px;
+    }
+    .featured-resources-header > p{
+        max-width:650px;
+        font-size:16px;
+    }
+    .featured-resource-main{
+        grid-template-columns:1fr;
+    }
+    .featured-resource-image{
+        min-height:250px;
+    }
+    .featured-resource-main-content{
+        padding:35px;
+    }
+}
+/* ==========================================
+   MOBILE
+========================================== */
+@media (max-width:600px){
+    .featured-resources{
+        padding:70px 5%;
+    }
+    .featured-resource-side{
+        display:flex;
+        flex-direction:column;
+        gap:12px;
+    }
+    .featured-resource-main{
+        border-radius:16px;
+    }
+    .featured-resource-image{
+        min-height:220px;
+    }
+    .featured-resource-overlay{
+        padding:22px;
+    }
+    .featured-resource-main-content{
+        padding:28px 22px;
+    }
+    .featured-resource-main-content h3{
+        font-size:24px;
+    }
+    .featured-resource-main-content p{
+        font-size:16px;
+        line-height:1.7;
+    }
+    .featured-resource-small{
+        padding:22px;
+        gap:15px;
+        border-radius:14px;
+    }
+    .featured-small-icon{
+        width:45px;
+        height:45px;
+        font-size:20px;
+    }
+    .featured-small-content h3{
+        font-size:18px;
+    }
+    .featured-small-content p{
+        font-size:16px;
+        line-height:1.65;
+    }
+}
+/* ==========================================
+   SMALL PHONES
+========================================== */
+@media (max-width:480px){
+    .featured-resources-header h2{
+        font-size:30px;
+    }
+    .featured-resources-header > p{
+        font-size:16px;
+    }
+    .featured-resource-image{
+        min-height:200px;
+    }
+    .featured-resource-main-content{
+        padding:25px 20px;
+    }
+    .featured-resource-main-content h3{
+        font-size:24px;
+    }
+    .featured-resource-small{
+        padding:20px;
+    }
+}
+/* ==========================================
+   IMMIGRATION & VISA RESOURCES
+========================================== */
+.immigration-resources{
+    padding:100px 5%;
+    background:var(--white);
+}
+/* ==========================================
+   SECTION HEADER
+========================================== */
+.immigration-resources-header{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:50px;
+    margin-bottom:45px;
+}
+.immigration-resources-heading{
+    max-width:600px;
+}
+.immigration-resources-heading h2{
+    color:var(--dark);
+    font-size:40px;
+    line-height:1.25;
+    margin:15px 0 0;
+}
+.immigration-resources-intro{
+    max-width:470px;
+}
+.immigration-resources-intro p{
+    color:var(--text);
+    font-size:18px;
+    line-height:1.8;
+    margin:0 0 18px;
+}
+/* ==========================================
+   SECTION CTA
+========================================== */
+.immigration-resources-cta{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    color:var(--primary);
+    font-size:16px;
+    text-decoration:none;
+    transition:.3s;
+}
+.immigration-resources-cta i{
+    font-size:16px;
+    transition:.3s;
+}
+.immigration-resources-cta:hover{
+    color:var(--secondary);
+}
+.immigration-resources-cta:hover i{
+    transform:translateX(4px);
+}
+/* ==========================================
+   RESOURCE GRID
+========================================== */
+.immigration-resource-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:18px;
+}
+/* ==========================================
+   RESOURCE CARD
+========================================== */
+.immigration-resource-card{
+    display:flex;
+    flex-direction:column;
+    min-height:300px;
+    padding:26px;
+    background:var(--light);
+    border-radius:15px;
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
+}
+.immigration-resource-card:hover{
+    transform:translateY(-4px);
+    background:var(--white);
+    box-shadow: 0 15px 35px rgba(15,23,42,.07);
+}
+/* ==========================================
+   CARD TOP
+========================================== */
+.immigration-resource-top{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    margin-bottom:40px;
+}
+.immigration-resource-type{
+    color:var(--secondary);
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:.7px;
+}
+/* ==========================================
+   RESOURCE ICON
+========================================== */
+.immigration-resource-icon{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:50px;
+    height:50px;
+    background:rgba(31,53,151,.08);
+    color:var(--primary);
+    border-radius:10px;
+    font-size:26px;
+    transition:.3s;
+}
+.immigration-resource-card:hover
+.immigration-resource-icon{
+    background:var(--primary);
+    color:var(--white);
+}
+/* ==========================================
+   RESOURCE CONTENT
+========================================== */
+.immigration-resource-content{
+    flex:1;
+}
+.immigration-resource-content h3{
+    color:var(--dark);
+    font-size:20px;
+    line-height:1.4;
+    margin:0 0 10px;
+}
+.immigration-resource-content p{
+    max-width:310px;
+    color:#64748b;
+    font-size:16px;
+    line-height:1.7;
+    margin:0;
+}
+/* ==========================================
+   RESOURCE LINK
+========================================== */
+.immigration-resource-link{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    width:fit-content;
+    margin-top:25px;
+    color:var(--primary);
+    font-size:16px;
+    text-decoration:none;
+    transition:.3s;
+}
+.immigration-resource-link i{
+    font-size:16px;
+    transition:.3s;
+}
+.immigration-resource-link:hover{
+    color:var(--secondary);
+}
+.immigration-resource-link:hover i{
+    transform:translateX(4px);
+}
+/* ==========================================
+   TABLET
+========================================== */
+@media (max-width:1000px){
+    .immigration-resources{
+        padding:85px 5%;
+    }
+    .immigration-resources-header{
+        align-items:flex-start;
+        gap:30px;
+    }
+    .immigration-resources-heading h2{
+        font-size:32px;
+    }
+    .immigration-resource-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .immigration-resource-card:last-child{
+        display:none;
+    }
+}
+/* ==========================================
+   TABLET / MOBILE
+========================================== */
+@media (max-width:750px){
+    .immigration-resources{
+        padding:70px 5%;
+    }
+    .immigration-resources-header{
+        display:block;
+        margin-bottom:35px;
+    }
+    .immigration-resources-heading{
+        margin-bottom:18px;
+    }
+    .immigration-resources-heading h2{
+        font-size:32px;
+    }
+    .immigration-resources-intro{
+        max-width:650px;
+    }
+    .immigration-resources-intro p{
+        font-size:18px;
+    }
+    .immigration-resource-grid{
+        grid-template-columns:1fr;
+    }
+    .immigration-resource-card:last-child{
+        display:flex;
+    }
+}
+/* ==========================================
+   MOBILE
+========================================== */
+@media (max-width:600px){
+    .immigration-resources{
+        padding:70px 5%;
+    }
+    .immigration-resources-heading h2{
+        font-size:32px;
+    }
+    .immigration-resource-card{
+        min-height:260px;
+        padding:22px;
+        border-radius:13px;
+    }
+    .immigration-resource-top{
+        margin-bottom:30px;
+    }
+    .immigration-resource-content h3{
+        font-size:20px;
+    }
+    .immigration-resource-content p{
+        font-size:16px;
+        line-height:1.7;
+    }
+}
+/* ==========================================
+   SMALL PHONES
+========================================== */
+@media (max-width:480px){
+    .immigration-resources-heading h2{
+        font-size:32px;
+    }
+    .immigration-resources-intro p{
+        font-size:18px;
+    }
+    .immigration-resource-card{
+        min-height:245px;
+        padding:20px;
+    }
+}
+/* ==========================================
+   STUDY ABROAD RESOURCES
+========================================== */
+.study-resources{
+    padding:100px 5%;
+    background:var(--light);
+}
+/* ==========================================
+   SECTION HEADER
+========================================== */
+.study-resources-header{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:70px;
+    align-items:end;
+    margin-bottom:45px;
+}
+/* ==========================================
+   HEADING
+========================================== */
+.study-resources-heading{
+    max-width:600px;
+}
+.study-resources-heading h2{
+    max-width:560px;
+    color:var(--dark);
+    font-size:40px;
+    line-height:1.2;
+    margin:12px 0 0;
+}
+/* ==========================================
+   INTRO
+========================================== */
+.study-resources-intro{
+    max-width:440px;
+    padding-bottom:3px;
+}
+.study-resources-intro p{
+    color:var(--text);
+    font-size:18px;
+    line-height:1.8;
+    margin:0 0 18px;
+}
+/* ==========================================
+   SECTION CTA
+========================================== */
+.study-resources-cta{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    color:var(--primary);
+    font-size:17px;
+    text-decoration:none;
+    transition:.3s;
+}
+.study-resources-cta i{
+    font-size:17px;
+    transition:.3s;
+}
+.study-resources-cta:hover{
+    color:var(--secondary);
+}
+.study-resources-cta:hover i{
+    transform:translateX(4px);
+}
+/* ==========================================
+   RESOURCE LAYOUT
+========================================== */
+.study-resource-layout{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20px;
+}
+/* ==========================================
+   FEATURED RESOURCE
+========================================== */
+.study-resource-featured{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    min-height:380px;
+    padding:32px;
+    background:var(--primary);
+    border-radius:18px;
+    overflow:hidden;
+}
+/* Decorative shapes */
+.study-resource-featured::before{
+    content:"";
+    position:absolute;
+    width:230px;
+    height:230px;
+    right:-90px;
+    top:-80px;
+    background:rgba(244,166,70,.18);
+    border-radius:50%;
+}
+.study-resource-featured::after{
+    content:"";
+    position:absolute;
+    width:150px;
+    height:150px;
+    left:-75px;
+    bottom:-75px;
+    background:rgba(255,255,255,.07);
+    border-radius:50%;
+}
+/* ==========================================
+   FEATURED TOP
+========================================== */
+.study-featured-top{
+    position:relative;
+    z-index:2;
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+}
+.study-resource-type{
+    color:rgba(255,255,255,.75);
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:.8px;
+}
+.study-resource-icon{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:60px;
+    height:60px;
+    background:rgba(255,255,255,.1);
+    color:var(--white);
+    border-radius:11px;
+    font-size:30px;
+}
+/* ==========================================
+   FEATURED CONTENT
+========================================== */
+.study-featured-content{
+    position:relative;
+    z-index:2;
+    max-width:480px;
+}
+.study-featured-content h3{
+    color:var(--white);
+    font-size:32px;
+    line-height:1.3;
+    margin:0 0 13px;
+}
+.study-featured-content p{
+    max-width:450px;
+    color:rgba(255,255,255,.78);
+    font-size:16px;
+    line-height:1.75;
+    margin:0 0 24px;
+}
+/* ==========================================
+   FEATURED LINK
+========================================== */
+.study-resource-link{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:var(--white);
+    font-size:16px;
+    text-decoration:none;
+    transition:.3s;
+}
+.study-resource-link i{
+    font-size:16px;
+    transition:.3s;
+}
+.study-resource-link:hover{
+    color:var(--accent);
+}
+.study-resource-link:hover i{
+    transform:translateX(4px);
+}
+/* ==========================================
+   RESOURCE LIST
+========================================== */
+.study-resource-list{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+/* ==========================================
+   RESOURCE ITEM
+========================================== */
+.study-resource-item{
+    display:flex;
+    align-items:flex-start;
+    gap:20px;
+    flex:1;
+    padding:28px;
+    background:var(--white);
+    border-radius:17px;
+    box-shadow: 0 10px 30px rgba(15,23,42,.04);
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+.study-resource-item:hover{
+    transform:translateY(-3px);
+    box-shadow: 0 15px 35px rgba(15,23,42,.07);
+}
+/* ==========================================
+   ITEM ICON
+========================================== */
+.study-item-icon{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    width:60px;
+    height:60px;
+    background:rgba(31,53,151,.08);
+    color:var(--primary);
+    border-radius:10px;
+    font-size:30px;
+    transition:.3s;
+}
+.study-resource-item:hover
+.study-item-icon{
+    background:var(--primary);
+    color:var(--white);
+}
+/* ==========================================
+   ITEM CONTENT
+========================================== */
+.study-item-content{
+    flex:1;
+}
+.study-item-content > span{
+    display:block;
+    color:var(--secondary);
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:.7px;
+    margin-bottom:7px;
+}
+.study-item-content h3{
+    color:var(--dark);
+    font-size:20px;
+    line-height:1.4;
+    margin:0 0 8px;
+}
+.study-item-content p{
+    color:#64748b;
+    font-size:16px;
+    line-height:1.65;
+    margin:0 0 15px;
+}
+.study-item-content a{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:var(--primary);
+    font-size:16px;
+    text-decoration:none;
+}
+.study-item-content a i{
+    font-size:16px;
+    transition:.3s;
+}
+.study-item-content a:hover{
+    color:var(--secondary);
+}
+.study-item-content a:hover i{
+    transform:translateX(4px);
+}
+/* ==========================================
+   TABLET
+========================================== */
+@media (max-width:1000px){
+    .study-resources{
+        padding:85px 5%;
+    }
+    .study-resource-layout{
+        grid-template-columns:1fr;
+    }
+    .study-resource-featured{
+        min-height:330px;
+    }
+}
+/* ==========================================
+   TABLET / MOBILE
+========================================== */
+@media (max-width:750px){
+    .study-resources{
+        padding:70px 5%;
+    }
+    .study-resources-header{
+        display:block;
+        margin-bottom:35px;
+    }
+    .study-resources-heading{
+        margin-bottom:18px;
+    }
+    .study-resources-heading h2{
+        font-size:34px;
+    }
+    .study-resources-intro{
+        max-width:650px;
+    }
+    .study-resources-intro p{
+        font-size:18px;
+    }
+    .study-resource-featured{
+        min-height:330px;
+        padding:28px;
+    }
+}
+/* ==========================================
+   MOBILE
+========================================== */
+@media (max-width:600px){
+    .study-resources{
+        padding:70px 5%;
+    }
+    .study-resources-heading h2{
+        font-size:34px;
+    }
+    .study-resource-featured{
+        min-height:310px;
+        padding:23px;
+        border-radius:15px;
+    }
+    .study-featured-content h3{
+        font-size:26px;
+    }
+    .study-featured-content p{
+        font-size:16px;
+        line-height:1.7;
+    }
+    .study-resource-item{
+        padding:22px;
+        gap:15px;
+        border-radius:14px;
+    }
+    .study-item-icon{
+        width:60px;
+        height:60px;
+        font-size:25px;
+    }
+    .study-item-content h3{
+        font-size:20px;
+    }
+    .study-item-content p{
+        font-size:16px;
+    }
+}
+/* ==========================================
+   CAREER DEVELOPMENT RESOURCES
+========================================== */
+.career-resources{
+    padding:100px 5%;
+    background:var(--light);
+}
+/* ==========================================
+   SECTION INTRO
+========================================== */
+.career-resources-intro{
+    margin-bottom:50px;
+}
+.career-resources-heading{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:60px;
+    margin-top:15px;
+}
+.career-resources-heading h2{
+    max-width:600px;
+    color:var(--dark);
+    font-size:40px;
+    line-height:1.2;
+    font-weight:600;
+    margin:0;
+}
+.career-resources-description{
+    max-width:390px;
+}
+.career-resources-description p{
+    color:var(--text);
+    font-size:18px;
+    line-height:1.8;
+    margin:0 0 17px;
+}
+/* ==========================================
+   MAIN SECTION LINK
+========================================== */
+.career-resources-link{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    color:var(--primary);
+    font-size:18px;
+    text-decoration:none;
+    transition:.3s;
+}
+.career-resources-link i{
+    font-size:18px;
+    transition:.3s;
+}
+.career-resources-link:hover{
+    color:var(--secondary);
+}
+.career-resources-link:hover i{
+    transform:translateX(4px);
+}
+/* ==========================================
+   FEATURED RESOURCE GRID
+========================================== */
+.career-featured-grid{
+    display:grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap:14px;
+}
+/* ==========================================
+   RESOURCE CARD
+========================================== */
+.career-resource-card{
+    position:relative;
+    min-height:350px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    padding:28px;
+    background:var(--white);
+    border-radius:16px;
+    overflow:hidden;
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+.career-resource-card:hover{
+    transform:translateY(-4px);
+    box-shadow: 0 15px 35px rgba(15,23,42,.06);
+}
+/* ==========================================
+   MAIN CARD
+========================================== */
+.career-resource-card-main{
+    background:var(--primary);
+}
+.career-resource-card-main .career-resource-number{
+    color:rgba(255,255,255,.55);
+}
+.career-resource-card-main .career-resource-category{
+    color:rgba(255,255,255,.65);
+}
+.career-resource-card-main
+.career-resource-content h3{
+    color:var(--white);
+}
+.career-resource-card-main
+.career-resource-content p{
+    color:rgba(255,255,255,.72);
+}
+.career-resource-card-main
+.career-read-link{
+    color:var(--white);
+}
+/* ==========================================
+   WARM CARD
+========================================== */
+.career-resource-card-warm{
+    background:#FFF8EF;
+}
+/* ==========================================
+   CARD TOP
+========================================== */
+.career-resource-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+}
+.career-resource-number{
+    color:#94a3b8;
+    font-size:14px;
+    font-weight:500;
+    letter-spacing:.4px;
+}
+.career-resource-category{
+    color:var(--secondary);
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:.7px;
+}
+/* ==========================================
+   CARD CONTENT
+========================================== */
+.career-resource-content{
+    max-width:430px;
+}
+.career-resource-content h3{
+    color:var(--dark);
+    font-size:26px;
+    line-height:1.3;
+    font-weight:500;
+    margin:0 0 12px;
+}
+.career-resource-content p{
+    color:#64748b;
+    font-size:16px;
+    line-height:1.7;
+    margin:0;
+}
+/* ==========================================
+   READ LINK
+========================================== */
+.career-read-link{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    align-self:flex-start;
+    color:var(--primary);
+    font-size:16px;
+    text-decoration:none;
+    transition:.3s;
+}
+.career-read-link i{
+    font-size:16px;
+    transition:.3s;
+}
+.career-read-link:hover{
+    color:var(--secondary);
+}
+.career-read-link:hover i{
+    transform:translateX(4px);
+}
+/* ==========================================
+   SUBTLE CARD DETAIL
+========================================== */
+.career-resource-card-main::after{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    right:-75px;
+    bottom:-85px;
+    background:rgba(255,255,255,.07);
+    border-radius:50%;
+    pointer-events:none;
+}
+/* ==========================================
+   SECONDARY RESOURCES
+========================================== */
+.career-secondary-resources{
+    display:grid;
+    grid-template-columns:
+        1fr 1fr 1fr;
+    margin-top:14px;
+    background:var(--white);
+    border-radius:16px;
+    overflow:hidden;
+}
+/* ==========================================
+   SECONDARY ITEM
+========================================== */
+.career-secondary-item{
+    display:grid;
+    grid-template-columns:35px 1fr 30px;
+    align-items:center;
+    gap:18px;
+    min-height:105px;
+    padding:20px 24px;
+    transition:.3s;
+}
+.career-secondary-item + .career-secondary-item{
+    border-left:1px solid rgba(226,232,240,.7);
+}
+.career-secondary-item:hover{
+    background:#FAFBFF;
+}
+/* ==========================================
+   SECONDARY NUMBER
+========================================== */
+.career-secondary-number{
+    color:#94a3b8;
+    font-size:14px;
+    font-weight:500;
+}
+/* ==========================================
+   SECONDARY CONTENT
+========================================== */
+.career-secondary-content span{
+    display:block;
+    color:var(--secondary);
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:.7px;
+    margin-bottom:5px;
+}
+.career-secondary-content h3{
+    color:var(--dark);
+    font-size:16px;
+    line-height:1.4;
+    font-weight:500;
+    margin:0;
+}
+/* ==========================================
+   SECONDARY ARROW
+========================================== */
+.career-secondary-item > a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:30px;
+    height:30px;
+    color:var(--primary);
+    background:rgba(31,53,151,.06);
+    border-radius:50%;
+    font-size:16px;
+    text-decoration:none;
+    transition:.3s;
+}
+.career-secondary-item:hover > a{
+    background:var(--primary);
+    color:var(--white);
+    transform:translateX(2px);
+}
+/* ==========================================
+   TABLET
+========================================== */
+@media (max-width:1000px){
+    .career-resources{
+        padding:80px 5%;
+    }
+    .career-resources-heading{
+        gap:35px;
+    }
+    .career-resources-heading h2{
+        font-size:38px;
+    }
+    .career-featured-grid{
+        grid-template-columns:1fr 1fr;
+    }
+    .career-resource-card-main{
+        grid-column:1 / -1;
+        min-height:320px;
+    }
+    .career-secondary-resources{
+        grid-template-columns:1fr;
+    }
+    .career-secondary-item + .career-secondary-item{
+        border-left:0;
+        border-top:1px solid rgba(226,232,240,.7);
+    }
+}
+/* ==========================================
+   MOBILE
+========================================== */
+@media (max-width:750px){
+    .career-resources{
+        padding:75px 5%;
+    }
+    .career-resources-intro{
+        margin-bottom:38px;
+    }
+    .career-resources-heading{
+        display:block;
+        margin-top:13px;
+    }
+    .career-resources-heading h2{
+        font-size:32px;
+        margin-bottom:18px;
+    }
+    .career-resources-description{
+        max-width:600px;
+    }
+    .career-resources-description p{
+        font-size:18px;
+    }
+    .career-featured-grid{
+        grid-template-columns:1fr;
+    }
+    .career-resource-card-main{
+        grid-column:auto;
+    }
+    .career-resource-card{
+        min-height:300px;
+    }
+}
+/* ==========================================
+   LANGUAGE TEST RESOURCES
+========================================== */
+.language-resources{
+    padding:100px 5%;
+    background:var(--white);
+}
+/* ==========================================
+   SECTION INTRO
+========================================== */
+.language-resources-intro{
+    margin-bottom:48px;
+}
+.language-resources-heading{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:60px;
+    margin-top:15px;
+}
+.language-resources-heading h2{
+    max-width:520px;
+    color:var(--dark);
+    font-size:40px;
+    line-height:1.2;
+    font-weight:600;
+    margin:0;
+}
+.language-resources-heading p{
+    max-width:410px;
+    color:var(--text);
+    font-size:18px;
+    line-height:1.8;
+    margin:0;
+}
+/* ==========================================
+   TEST GRID
+========================================== */
+.language-test-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:16px;
+}
+/* ==========================================
+   TEST CARD
+========================================== */
+.language-test-card{
+    position:relative;
+    min-height:430px;
+    display:flex;
+    flex-direction:column;
+    padding:30px;
+    border-radius:18px;
+    overflow:hidden;
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+.language-test-card:hover{
+    transform:translateY(-5px);
+    box-shadow: 0 18px 38px rgba(15,23,42,.08);
+}
+/* ==========================================
+   IELTS
+========================================== */
+.language-test-ielts{
+    background:#F2F5FF;
+}
+/* ==========================================
+   PTE
+========================================== */
+.language-test-pte{
+    background:#FFF7EC;
+}
+/* ==========================================
+   DUOLINGO
+========================================== */
+.language-test-duolingo{
+    background:#F4F8F6;
+}
+/* ==========================================
+   CARD HEADER
+========================================== */
+.language-test-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.language-test-number{
+    color:#94a3b8;
+    font-size:14px;
+    font-weight:500;
+}
+.language-test-label{
+    color:var(--secondary);
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:.8px;
+}
+/* ==========================================
+   TITLE
+========================================== */
+.language-test-title{
+    margin-top:70px;
+}
+.language-test-title h3{
+    color:var(--dark);
+    font-size:30px;
+    line-height:1.2;
+    font-weight:600;
+    margin:0 0 12px;
+}
+.language-test-title p{
+    max-width:320px;
+    color:var(--text);
+    font-size:16px;
+    line-height:1.7;
+    margin:0;
+}
+/* ==========================================
+   TOPICS
+========================================== */
+.language-test-topics{
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+    margin-top:30px;
+}
+.language-test-topics span{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:var(--dark);
+    font-size:16px;
+}
+.language-test-topics span::before{
+    content:"";
+    width:5px;
+    height:5px;
+    flex-shrink:0;
+    background:var(--accent);
+    border-radius:50%;
+}
+/*==========================================
+   LINK
+========================================== */
+.language-test-link{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    align-self:flex-start;
+    margin-top:auto;
+    padding-top:28px;
+    color:var(--primary);
+    font-size:16px;
+    text-decoration:none;
+    transition:.3s;
+}
+.language-test-link i{
+    font-size:16px;
+    transition:.3s;
+}
+.language-test-link:hover{
+    color:var(--secondary);
+}
+.language-test-link:hover i{
+    transform:translateX(4px);
+}
+/* ==========================================
+   DECORATIVE DETAILS
+========================================== */
+.language-test-card::after{
+    content:"";
+    position:absolute;
+    width:130px;
+    height:130px;
+    right:-55px;
+    top:-55px;
+    border-radius:50%;
+    background:rgba(255,255,255,.55);
+    pointer-events:none;
+}
+/* ==========================================
+   TABLET
+========================================== */
+@media (max-width:1000px){
+    .language-resources{
+        padding:85px 5%;
+    }
+    .language-resources-heading{
+        gap:35px;
+    }
+    .language-resources-heading h2{
+        font-size:38px;
+    }
+    .language-test-grid{
+        grid-template-columns:1fr 1fr;
+    }
+    .language-test-card:last-child{
+        grid-column:1 / -1;
+    }
+}
+/* ==========================================
+   MOBILE
+========================================== */
+@media (max-width:750px){
+    .language-resources{
+        padding:70px 5%;
+    }
+    .language-resources-intro{
+        margin-bottom:38px;
+    }
+    .language-resources-heading{
+        display:block;
+        margin-top:13px;
+    }
+    .language-resources-heading h2{
+        font-size:38px;
+        margin-bottom:17px;
+    }
+    .language-resources-heading p{
+        max-width:600px;
+        font-size:18px;
+    }
+    .language-test-grid{
+        grid-template-columns:1fr;
+    }
+    .language-test-card:last-child{
+        grid-column:auto;
+    }
+    .language-test-card{
+        min-height:350px;
+    }
+    .language-test-title{
+        margin-top:55px;
+    }
+}
+/* ==========================================
+   DESTINATION EXPLORER
+========================================== */
+.destination-explorer{
+    position:relative;
+    padding:100px 5%;
+    background:var(--white);
+    overflow:hidden;
+}
+/* ==========================================
+   MAIN LAYOUT
+========================================== */
+.destination-layout{
+    display:grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap:18px;
+    min-height:650px;
+}
+/* ==========================================
+   FEATURED DESTINATION
+========================================== */
+.destination-feature{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    min-height:650px;
+    padding:38px;
+    background:
+    linear-gradient(
+        135deg,
+        var(--primary),
+        rgba(0, 0, 0, 0.322)
+    ),
+    url("image/2f550b5a0c750ce788f72e7d1f759b5d.jpg");
+    background-size:cover;
+    background-position:center;
+    border-radius:22px;
+    overflow:hidden;
+}
+/* ==========================================
+   FEATURE TOP
+========================================== */
+.destination-feature-top{
+    position:relative;
+    z-index:2;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+.destination-feature-top span{
+    color:rgba(255,255,255,.65);
+    font-size:14px;
+    font-weight:500;
+    letter-spacing:.8px;
+}
+.destination-feature-top span:first-child{
+    color:var(--accent);
+}
+/* ==========================================
+   FEATURE MAIN
+========================================== */
+.destination-feature-main{
+    position:relative;
+    z-index:2;
+    max-width:560px;
+}
+.destination-country-mark{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:70px;
+    height:70px;
+    margin-bottom:25px;
+    color:var(--white);
+    background:rgba(255,255,255,.1);
+    border-radius:50%;
+    font-size:30px;
+    font-weight:600;
+    letter-spacing:1px;
+}
+.destination-feature-main h3{
+    color:var(--white);
+    font-size:64px;
+    line-height:1;
+    font-weight:600;
+    letter-spacing:-2px;
+    margin:0 0 20px;
+}
+.destination-feature-main p{
+    max-width:470px;
+    color:rgb(255, 255, 255);
+    font-size:18px;
+    line-height:1.8;
+    margin:0;
+}
+/* ==========================================
+   FEATURE BOTTOM
+========================================== */
+.destination-feature-bottom{
+    position:relative;
+    z-index:2;
+}
+.destination-stats{
+    display:flex;
+    flex-wrap:wrap;
+    gap:35px;
+    padding-bottom:28px;
+    margin-bottom:24px;
+    border-bottom:1px solid rgba(255,255,255,.15);
+}
+.destination-stats div{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+}
+.destination-stats span{
+    color: var(--accent);
+    font-size:16px;
+    font-weight:600;
+    letter-spacing:.8px;
+}
+.destination-stats strong{
+    color:var(--white);
+    font-size:18px;
+    font-weight:400;
+}
+/* ==========================================
+   FEATURE CTA
+========================================== */
+.destination-feature-link{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    color:var(--white);
+    font-size:17px;
+    text-decoration:none;
+    transition:.3s;
+}
+.destination-feature-link i{
+    font-size:17px;
+    transition:.3s;
+}
+.destination-feature-link:hover{
+    color:var(--accent);
+}
+.destination-feature-link:hover i{
+    transform:translateX(5px);
+}
+/* ==========================================
+   DECORATIVE ORBITS
+========================================== */
+.destination-orbit{
+    position:absolute;
+    border:1px solid rgba(255,255,255,.09);
+    border-radius:50%;
+    pointer-events:none;
+}
+.destination-orbit-one{
+    width:500px;
+    height:500px;
+    right:-180px;
+    top:50px;
+}
+.destination-orbit-two{
+    width:340px;
+    height:340px;
+    right:-100px;
+    top:130px;
+}
+/* ==========================================
+   DESTINATION LIST
+========================================== */
+.destination-list{
+    display:flex;
+    flex-direction:column;
+    background:var(--light);
+    border-radius:22px;
+    overflow:hidden;
+}
+/* ==========================================
+   DESTINATION ITEM
+========================================== */
+.destination-item{
+    position:relative;
+    display:grid;
+    grid-template-columns: 40px
+        1fr
+        auto
+        30px;
+
+    align-items:center;
+    gap:18px;
+    flex:1;
+    padding:25px 28px;
+    color:inherit;
+    text-decoration:none;
+    background:transparent;
+    transition:
+        background .3s ease,
+        padding .3s ease;
+}
+.destination-item + .destination-item{
+    border-top:1px solid rgba(226,232,240,.7);
+}
+.destination-item:hover{
+    padding-left:34px;
+    background:var(--white);
+}
+/* ==========================================
+   ITEM NUMBER
+========================================== */
+.destination-item-number{
+    color:#94a3b8;
+    font-size:16px;
+    font-weight:500;
+}
+/* ==========================================
+   ITEM NAME
+========================================== */
+.destination-item-name span{
+    display:block;
+    color:var(--secondary);
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:.8px;
+    margin-bottom:6px;
+}
+.destination-item-name h3{
+    color:var(--dark);
+    font-size:20px;
+    line-height:1.2;
+    font-weight:500;
+    margin:0;
+    transition:.3s;
+}
+.destination-item:hover
+.destination-item-name h3{
+    color:var(--primary);
+}
+/* ==========================================
+   ITEM PATH
+========================================== */
+.destination-item-path{
+    color:#64748b;
+    font-size:16px;
+    white-space:nowrap;
+}
+/* ==========================================
+   ITEM ICON
+========================================== */
+.destination-item > i{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:30px;
+    height:30px;
+    color:var(--primary);
+    font-size:16px;
+    opacity:.5;
+    transition:.3s;
+}
+.destination-item:hover > i{
+    color:var(--secondary);
+    opacity:1;
+    transform:translate(2px,-2px);
+}
+/* ==========================================
+   FOOTER
+========================================== */
+.destination-footer{
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:18px;
+    margin-top:22px;
+}
+.destination-footer p{
+    color:#64748b;
+    font-size:18px;
+    margin:0;
+}
+.destination-footer a{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:var(--primary);
+    font-size:18px;
+    text-decoration:none;
+}
+.destination-footer a i{
+    transition:.3s;
+}
+.destination-footer a:hover{
+    color:var(--secondary);
+}
+.destination-footer a:hover i{
+    transform:translateX(4px);
+}
+/* ==========================================
+   TABLET
+========================================== */
+@media (max-width:1200px){
+    .destination-explorer{
+        padding:90px 5%;
+    }
+    .destination-intro-content{
+        gap:40px;
+    }
+    .destination-layout{
+        grid-template-columns:1fr;
+    }
+    .destination-feature{
+        min-height:550px;
+    }
+    .destination-list{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+    }
+    .destination-item{
+        min-height:150px;
+    }
+    .destination-item-path{
+        color:#64748b;
+        font-size:14px;
+        white-space:nowrap;
+    }
+    .destination-item:nth-child(2),
+    .destination-item:nth-child(4){
+        border-left:1px solid rgba(226,232,240,.7);
+    }
+    .destination-item:nth-child(3),
+    .destination-item:nth-child(4),
+    .destination-item:nth-child(5){
+        border-top:1px solid rgba(226,232,240,.7);
+    }
+}
+/* ==========================================
+   TABLET
+========================================== */
+@media (max-width:1100px){
+    .destination-explorer{
+        padding:90px 5%;
+    }
+    .destination-intro-content{
+        gap:40px;
+    }
+    .destination-layout{
+        grid-template-columns:1fr;
+    }
+    .destination-feature{
+        min-height:550px;
+    }
+    .destination-list{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+    }
+    .destination-item{
+        min-height:150px;
+    }
+    .destination-item-path{
+        color:#64748b;
+        font-size:14px;
+        white-space:nowrap;
+    }
+    .destination-item:nth-child(2),
+    .destination-item:nth-child(4){
+        border-left:1px solid rgba(226,232,240,.7);
+    }
+    .destination-item:nth-child(3),
+    .destination-item:nth-child(4),
+    .destination-item:nth-child(5){
+        border-top:1px solid rgba(226,232,240,.7);
+    }
+}
+/* ==========================================
+   TABLET
+========================================== */
+@media (max-width:991px){
+    .destination-explorer{
+        padding:90px 5%;
+    }
+    .destination-intro-content{
+        gap:40px;
+    }
+    .destination-layout{
+        grid-template-columns:1fr;
+    }
+    .destination-feature{
+        min-height:550px;
+    }
+    .destination-list{
+        display:grid;
+        grid-template-columns:1fr;
+    }
+    .destination-item{
+        min-height:150px;
+    }
+    .destination-item-path{
+        color:#64748b;
+        font-size:14px;
+        white-space:nowrap;
+    }
+    .destination-item:nth-child(2),
+    .destination-item:nth-child(4){
+        border-left:1px solid rgba(226,232,240,.7);
+    }
+    .destination-item:nth-child(3),
+    .destination-item:nth-child(4),
+    .destination-item:nth-child(5){
+        border-top:1px solid rgba(226,232,240,.7);
+    }
+}
+/* ==========================================
+   MOBILE
+========================================== */
+@media (max-width:750px){
+    .destination-explorer{
+        padding:75px 5%;
+    }
+    .destination-intro{
+        margin-bottom:40px;
+    }
+    .destination-intro-content{
+        display:block;
+        margin-top:14px;
+    }
+    .destination-intro-side{
+        max-width:600px;
+    }
+    .destination-layout{
+        gap:14px;
+    }
+    .destination-feature{
+        min-height:500px;
+        padding:28px;
+        border-radius:18px;
+    }
+    .destination-feature-main h3{
+        font-size:52px;
+        letter-spacing:-1.5px;
+    }
+    .destination-feature-main p{
+        font-size:18px;
+    }
+    .destination-stats{
+        gap:22px;
+    }
+    .destination-list{
+        display:flex;
+        border-radius:18px;
+    }
+    .destination-item{
+        min-height:125px;
+        grid-template-columns:
+            32px
+            1fr
+            28px;
+        gap:12px;
+        padding:22px;
+    }
+    .destination-item:hover{
+        padding-left:22px;
+    }
+    .destination-item-path{
+        color:#64748b;
+        font-size:14px;
+        white-space:nowrap;
+    }
+    .destination-item > i{
+        grid-column:3;
+        grid-row:1;
+        justify-self:end;
+    }
+    .destination-item:nth-child(2),
+    .destination-item:nth-child(4){
+        border-left:0;
+    }
+    .destination-item:nth-child(3),
+    .destination-item:nth-child(4),
+    .destination-item:nth-child(5){
+        border-top:1px solid rgba(226,232,240,.7);
+    }
+    .destination-item-name h3{
+        font-size:23px;
+    }
+    .destination-footer{
+        justify-content:flex-start;
+        flex-wrap:wrap;
+        gap:8px 15px;
+    }
+
+}
+/* ==========================================
+   SMALL PHONES
+========================================== */
+@media (max-width:480px){
+    .destination-feature{
+        min-height:470px;
+        padding:23px;
+        border-radius:15px;
+    }
+    .destination-feature-top span{
+        font-size:10px;
+    }
+    .destination-country-mark{
+        width:54px;
+        height:54px;
+        margin-bottom:20px;
+        font-size:20px;
+    }
+    .destination-feature-main h3{
+        font-size:44px;
+        letter-spacing:-1px;
+    }
+    .destination-feature-main p{
+        font-size:17px;
+        line-height:1.7;
+    }
+    .destination-stats{
+        gap:18px;
+        padding-bottom:22px;
+        margin-bottom:20px;
+    }
+    .destination-stats span{
+        font-size:15px;
+    }
+    .destination-stats strong{
+        font-size:16px;
+    }
+    .destination-feature-link{
+        font-size:16px;
+    }
+    .destination-item{
+        min-height:115px;
+        padding:20px;
+    }
+    .destination-item:hover{
+        padding-left:20px;
+    }
+    .destination-item-name h3{
+        font-size:21px;
+    }
+    .destination-item-name span{
+        font-size:13px;
+    }
+    .destination-footer p,
+    .destination-footer a{
+        font-size:16px;
+    }
+
+}
+/* ==========================================
+   AI RESOURCE ASSISTANT
+========================================== */
+.ai-resource-assistant{
+    padding:100px 5%;
+    background:var(--light);
+}
+/* ==========================================
+   MAIN PANEL
+========================================== */
+.ai-assistant-panel{
+    display:grid;
+    grid-template-columns:
+        .85fr
+        1.15fr;
+    min-height:560px;
+    background:var(--dark);
+    border-radius:24px;
+    overflow:hidden;
+}
+/* ==========================================
+   INTRO
+========================================== */
+.ai-assistant-intro{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:60px;
+    background:var(--primary);
+}
+.ai-assistant-intro .section-tag{
+    display:inline-block;
+    width:max-content;
+    padding:8px 18px;
+    color:var(--white);
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:24px;
+}
+.ai-assistant-intro h2{
+    max-width:420px;
+    color:var(--white);
+    font-size:46px;
+    font-weight:600;
+    margin:0 0 22px;
+}
+.ai-assistant-intro p{
+    max-width:430px;
+    color:rgba(255,255,255,.76);
+    font-size:18px;
+    line-height:1.8;
+    margin:0 0 35px;
+}
+/* ==========================================
+   CTA
+========================================== */
+.ai-assistant-cta{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    width:max-content;
+    padding:14px 20px;
+    color:var(--primary);
+    background:var(--white);
+    border-radius:8px;
+    font-size:17px;
+    font-weight:500;
+    text-decoration:none;
+    transition:.3s;
+}
+.ai-assistant-cta i{
+    transition:.3s;
+}
+.ai-assistant-cta:hover{
+    background:var(--accent);
+}
+.ai-assistant-cta:hover i{
+    transform:translateX(4px);
+}
+/* ==========================================
+   SELECTOR
+========================================== */
+.ai-assistant-selector{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:55px 60px;
+    background:#FDFDFD;
+}
+/* ==========================================
+   SELECTOR TOP
+========================================== */
+.ai-assistant-selector-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:18px;
+}
+.ai-assistant-step{
+    color:var(--secondary);
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:.8px;
+}
+.ai-assistant-step-count{
+    color:#94a3b8;
+    font-size:14px;
+}
+/* ==========================================
+   AI RESPONSE
+========================================== */
+.ai-response{
+    max-width:520px;
+}
+.ai-response-tag{
+    display:inline-block;
+    color:var(--secondary);
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:.8px;
+    margin-bottom:18px;
+}
+.ai-response h3{
+    color:var(--dark);
+    font-size:32px;
+    line-height:1.25;
+    font-weight:600;
+    margin:0 0 18px;
+}
+.ai-response p{
+    max-width:470px;
+    color:var(--text);
+    font-size:17px;
+    line-height:1.8;
+    margin:0 0 30px;
+}
+/* ==========================================
+   RESPONSE ACTIONS
+========================================== */
+.ai-response-actions{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    flex-wrap:wrap;
+}
+/* ==========================================
+   BACK BUTTON
+========================================== */
+.ai-back-button{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:0;
+    color:#64748b;
+    background:transparent;
+    border:0;
+    font-family:inherit;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+}
+.ai-back-button:hover{
+    color:var(--dark);
+}
+/* ==========================================
+   VIEW RESOURCES
+========================================== */
+.ai-view-resources{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    padding:13px 18px;
+    color:var(--white);
+    background:var(--primary);
+    border-radius:8px;
+    font-size:17px;
+    text-decoration:none;
+    transition:.3s;
+}
+.ai-view-resources:hover{
+    background:var(--secondary);
+}
+.ai-view-resources i{
+    transition:.3s;
+}
+.ai-view-resources:hover i{
+    transform:translateX(4px);
+}
+/* ==========================================
+   QUESTION
+========================================== */
+.ai-assistant-selector h3{
+    color:var(--dark);
+    font-size:32px;
+    line-height:1.3;
+    font-weight:600;
+    margin:0 0 25px;
+}
+/* ==========================================
+   GOAL OPTIONS
+========================================== */
+.ai-goal-options{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+/* ==========================================
+   GOAL OPTION
+========================================== */
+.ai-goal-option{
+    position:relative;
+    display:flex;
+    align-items:center;
+    gap:13px;
+    min-height:68px;
+    padding:12px 14px;
+    color:var(--dark);
+    background:var(--light);
+    border:0;
+    border-radius:10px;
+    font-family:inherit;
+    text-align:left;
+    cursor:pointer;
+    transition:
+        background .25s ease,
+        transform .25s ease,
+        color .25s ease;
+}
+.ai-goal-option:hover{
+    color:var(--white);
+    background:var(--primary);
+    transform:translateY(-2px);
+}
+/* ==========================================
+   GOAL ICON
+========================================== */
+.ai-goal-icon{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    width:50px;
+    height:50px;
+    color:var(--primary);
+    background:var(--white);
+    border-radius:8px;
+    transition:.25s;
+}
+.ai-goal-icon i{
+    font-size:22px;
+}
+.ai-goal-option:hover .ai-goal-icon{
+    color:var(--secondary);
+}
+/* ==========================================
+   GOAL TEXT
+========================================== */
+.ai-goal-text{
+    flex:1;
+    font-size:17px;
+    font-weight:400;
+}
+/* ==========================================
+   GOAL ARROW
+========================================== */
+.ai-goal-arrow{
+    color:#94a3b8;
+    transition:.25s;
+}
+.ai-goal-option:hover .ai-goal-arrow{
+    color:var(--white);
+    transform:translateX(3px);
+}
+/* ==========================================
+   TABLET
+========================================== */
+@media (max-width:1200px){
+    .ai-resource-assistant{
+        padding:85px 5%;
+    }
+    .ai-assistant-panel{
+        grid-template-columns:1fr;
+    }
+    .ai-assistant-intro{
+        padding:50px;
+    }
+    .ai-assistant-selector{
+        padding:45px 50px;
+    }
+}
+@media (max-width:1000px){
+    .ai-resource-assistant{
+        padding:85px 5%;
+    }
+    .ai-assistant-panel{
+        grid-template-columns:1fr;
+    }
+    .ai-assistant-intro{
+        padding:50px;
+    }
+    .ai-assistant-selector{
+        padding:45px 50px;
+    }
+}
+/* ==========================================
+   MOBILE
+========================================== */
+@media (max-width:700px){
+    .ai-resource-assistant{
+        padding:70px 5%;
+    }
+    .ai-assistant-panel{
+        border-radius:18px;
+    }
+    .ai-assistant-intro{
+        padding:40px 28px;
+    }
+    .ai-assistant-intro .section-tag{
+        font-size:14px;
+        margin-bottom:20px;
+    }
+    .ai-assistant-intro h2{
+        font-size:36px;
+        letter-spacing:-.5px;
+    }
+    .ai-assistant-intro p{
+        font-size:17px;
+        line-height:1.7;
+    }
+    .ai-assistant-selector{
+        padding:38px 28px;
+    }
+    .ai-assistant-selector h3{
+        font-size:24px;
+    }
+    .ai-goal-options{
+        grid-template-columns:1fr;
+    }
+}
+/* ==========================================
+   SMALL PHONES
+========================================== */
+@media (max-width:480px){
+    .ai-assistant-intro{
+        padding:35px 23px;
+    }
+    .ai-assistant-intro h2{
+        font-size:32px;
+        line-height:1.18;
+    }
+    .ai-assistant-intro p{
+        font-size:17px;
+    }
+    .ai-assistant-selector{
+        padding:32px 20px;
+    }
+    .ai-assistant-selector h3{
+        font-size:22px;
+        margin-bottom:20px;
+    }
+    .ai-goal-option{
+        min-height:64px;
+    }
+    .ai-goal-text{
+        font-size:16px;
+    }
+    .ai-response h3{
+        font-size:27px;
+    }
+    .ai-response p{
+        font-size:16px;
+    }
+    .ai-response-actions{
+        align-items:flex-start;
+        flex-direction:column;
+        gap:17px;
+    }
+}
+/* ==========================================
+   LATEST RESOURCES
+========================================== */
+.latest-resources{
+    padding:100px 5%;
+    background:var(--white);
+}
+/* ==========================================
+   SECTION HEADER
+========================================== */
+.latest-resources-header{
+    margin-bottom:60px;
+}
+/* ==========================================
+   RESOURCE FEED
+========================================== */
+.latest-resource-feed{
+    display:grid;
+    grid-template-columns:
+        1.2fr
+        .8fr;
+    grid-template-rows:
+        1fr 1fr;
+    gap:16px;
+}
+/* ==========================================
+   FEATURE RESOURCE
+========================================== */
+.latest-resource-feature{
+    position:relative;
+    grid-row:1 / 3;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    min-height:570px;
+    padding:38px;
+    background:var(--primary);
+    border-radius:20px;
+    overflow:hidden;
+}
+/* ==========================================
+   FEATURE DECORATION
+========================================== */
+.latest-resource-feature::before{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    right:-130px;
+    top:-120px;
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:50%;
+}
+.latest-resource-feature::after{
+    content:"";
+    position:absolute;
+    width:210px;
+    height:210px;
+    right:-80px;
+    top:-75px;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:50%;
+}
+/* ==========================================
+   FEATURE TOP
+========================================== */
+.latest-resource-feature-top{
+    position:relative;
+    z-index:2;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.latest-resource-category{
+    color:var(--primary);
+    font-size:15px;
+    text-transform: uppercase;
+    font-weight:600;
+}
+.latest-resource-feature .latest-resource-category{
+    color:var(--accent);
+}
+.latest-resource-new{
+    padding:6px 10px;
+    color:var(--white);
+    background:rgba(255,255,255,.1);
+    border-radius:20px;
+    font-size:15px;
+    font-weight:600;
+    letter-spacing:.8px;
+}
+/* ==========================================
+   FEATURE CONTENT
+========================================== */
+.latest-resource-feature-content{
+    position:relative;
+    z-index:2;
+    max-width:560px;
+}
+.latest-resource-index{
+    display:block;
+    color:rgba(255,255,255,.4);
+    font-size:15px;
+    margin-bottom:18px;
+}
+.latest-resource-feature h3{
+    color:var(--white);
+    font-size:42px;
+    font-weight:600;
+    margin:0 0 20px;
+}
+.latest-resource-feature p{
+    max-width:500px;
+    color:rgba(255,255,255,.72);
+    font-size:17px;
+    line-height:1.8;
+    margin:0;
+}
+/* ==========================================
+   FEATURE BOTTOM
+========================================== */
+.latest-resource-feature-bottom{
+    position:relative;
+    z-index:2;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    padding-top:25px;
+    border-top:1px solid rgba(255,255,255,.15);
+}
+.latest-resource-date{
+    color:#94a3b8;
+    font-size:16px;
+}
+.latest-resource-feature .latest-resource-date{
+    color:rgba(255,255,255,.55);
+}
+/* ==========================================
+   RESOURCE LINK
+========================================== */
+.latest-resource-link{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    color:var(--primary);
+    font-size:17px;
+    text-decoration:none;
+    white-space:nowrap;
+    transition:.3s;
+}
+.latest-resource-link i{
+    transition:.3s;
+}
+.latest-resource-link:hover{
+    color:var(--secondary);
+}
+.latest-resource-link:hover i{
+    transform:translateX(4px);
+}
+.latest-resource-feature .latest-resource-link{
+    color:var(--white);
+}
+.latest-resource-feature .latest-resource-link:hover{
+    color:var(--accent);
+}
+/* ==========================================
+   SMALL RESOURCE ITEMS
+========================================== */
+.latest-resource-item{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    min-height:277px;
+    padding:28px;
+    background:var(--light);
+    border-radius:16px;
+    transition:
+        transform .3s ease,
+        background .3s ease;
+}
+.latest-resource-item:hover{
+    transform:translateY(-3px);
+    background:#F2F5FF;
+}
+/* ==========================================
+   ITEM TOP
+========================================== */
+.latest-resource-item-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+.latest-resource-item .latest-resource-index{
+    color:#94a3b8;
+    margin:0;
+    font-size:15px;
+}
+/* ==========================================
+   ITEM CONTENT
+========================================== */
+.latest-resource-item-content{
+    margin:25px 0;
+}
+.latest-resource-item h3{
+    max-width:430px;
+    color:var(--dark);
+    font-size:25px;
+    line-height:1.25;
+    font-weight:600;
+    margin:0 0 12px;
+}
+.latest-resource-item p{
+    max-width:450px;
+    color:var(--text);
+    font-size:16px;
+    line-height:1.7;
+    margin:0;
+}
+/* ==========================================
+   ITEM BOTTOM
+========================================== */
+.latest-resource-item-bottom{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    padding-top:18px;
+    border-top:1px solid var(--border);
+}
+/* ==========================================
+   FOOTER
+========================================== */
+.latest-resources-footer{
+    display:flex;
+    justify-content:flex-end;
+    margin-top:25px;
+}
+.latest-resources-all{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    color:var(--primary);
+    font-size:17px;
+    text-decoration:none;
+}
+.latest-resources-all i{
+    transition:.3s;
+}
+.latest-resources-all:hover{
+    color:var(--secondary);
+}
+.latest-resources-all:hover i{
+    transform:translateX(4px);
+}
+/* ==========================================
+   TABLET
+========================================== */
+@media (max-width:1000px){
+    .latest-resources{
+        padding:90px 5%;
+    }
+    .latest-resource-feed{
+        grid-template-columns:1fr 1fr;
+        grid-template-rows:auto;
+    }
+    .latest-resource-feature{
+        grid-column:1 / -1;
+        grid-row:auto;
+        min-height:460px;
+    }
+    .latest-resource-item{
+        min-height:280px;
+    }
+}
+/* ==========================================
+   MOBILE
+========================================== */
+@media (max-width:700px){
+    .latest-resources{
+        padding:75px 5%;
+    }
+    .latest-resources-header{
+        margin-bottom:40px;
+    }
+    .latest-resource-feed{
+        display:flex;
+        flex-direction:column;
+        gap:12px;
+    }
+    .latest-resource-feature{
+        min-height:470px;
+        padding:28px;
+        border-radius:17px;
+    }
+    .latest-resource-feature h3{
+        font-size:36px;
+        letter-spacing:-.4px;
+    }
+    .latest-resource-feature p{
+        font-size:16px;
+    }
+    .latest-resource-item{
+        min-height:290px;
+        padding:25px;
+        border-radius:15px;
+    }
+    .latest-resource-item h3{
+        font-size:24px;
+    }
+    .latest-resource-item p{
+        font-size:14px;
+    }
+}
+/* ==========================================
+   SMALL PHONES
+========================================== */
+@media (max-width:480px){
+    .latest-resource-feature{
+        min-height:430px;
+        padding:23px;
+    }
+    .latest-resource-feature h3{
+        font-size:32px;
+    }
+    .latest-resource-feature p{
+        font-size:16px;
+        line-height:1.7;
+    }
+    .latest-resource-feature-bottom,
+    .latest-resource-item-bottom{
+        align-items:flex-start;
+        flex-direction:column;
+        gap:14px;
+    }
+    .latest-resource-item{
+        min-height:275px;
+        padding:22px;
+    }
+    .latest-resource-item h3{
+        font-size:22px;
+    }
+    .latest-resource-item p{
+        font-size:16px;
+        line-height:1.7;
+    }
+    .latest-resources-footer{
+        justify-content:flex-start;
+    }
+}
+/* ==========================================
+   FINAL RESOURCE CTA
+========================================== */
+.resource-final-cta{
+    position:relative;
+    padding:100px 5%;
+    background:var(--primary);
+    overflow:hidden;
+}
+/* ==========================================
+   BACKGROUND DETAIL
+========================================== */
+.resource-final-cta::before{
+    content:"";
+    position:absolute;
+    width:420px;
+    height:420px;
+    top:-220px;
+    right:8%;
+    border-radius:50%;
+    background:#f4a64654;
+}
+.resource-final-cta::after{
+    content:"";
+    position:absolute;
+    width:260px;
+    height:260px;
+    bottom:-150px;
+    left:8%;
+    border-radius:50%;
+    background:#e107004f;
+}
+/* ==========================================
+   INNER
+========================================== */
+.resource-final-cta-inner{
+    position:relative;
+    z-index:2;
+    max-width:800px;
+    margin:0 auto;
+    text-align:center;
+}
+/* ==========================================
+   TAG
+========================================== */
+.resource-final-cta .section-tag{
+    display:inline-block;
+    padding:8px 18px;
+    color:var(--accent);
+    font-size:15px;
+    font-weight:600;
+    margin-bottom:20px;
+}
+/* ==========================================
+   HEADING
+========================================== */
+.resource-final-cta h2{
+    max-width:700px;
+    margin:0 auto 20px;
+    color:var(--white);
+    font-size:40px;
+    line-height:1.15;
+    font-weight:600;
+    letter-spacing:-.6px;
+}
+/* ==========================================
+   DESCRIPTION
+========================================== */
+.resource-final-cta p{
+    max-width:620px;
+    margin:0 auto;
+    color:rgba(255,255,255,.68);
+    font-size:17px;
+    line-height:1.8;
+}
+/* ==========================================
+   ACTIONS
+========================================== */
+.resource-final-actions{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    margin-top:35px;
+}
+/* ==========================================
+   PRIMARY BUTTON
+========================================== */
+.resource-cta-primary{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:14px 22px;
+    color:var(--primary);
+    background:var(--white);
+    border-radius:8px;
+    font-size:17px;
+    font-weight:500;
+    text-decoration:none;
+    transition:.3s;
+}
+.resource-cta-primary i{
+    transition:.3s;
+}
+.resource-cta-primary:hover{
+    background:var(--accent);
+}
+.resource-cta-primary:hover i{
+    transform:translateX(4px);
+}
+/* ==========================================
+   SECONDARY BUTTON
+========================================== */
+.resource-cta-secondary{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:13px 21px;
+    color:var(--white);
+    background:transparent;
+    border:1px solid var(--accent);
+    border-radius:8px;
+    font-size:17px;
+    font-weight:400;
+    text-decoration:none;
+    transition:.3s;
+}
+.resource-cta-secondary i{
+    transition:.3s;
+}
+.resource-cta-secondary:hover{
+    color:var(--white);
+    background:var(--accent);
+}
+.resource-cta-secondary:hover i{
+    transform:translateX(4px);
+}
+/* ==========================================
+   TABLET
+========================================== */
+@media (max-width:768px){
+    .resource-final-cta{
+        padding:70px 5%;
+    }
+    .resource-final-cta h2{
+        font-size:38px;
+    }
+    .resource-final-cta p{
+        font-size:17px;
+    }
+}
+/* ==========================================
+   MOBILE
+========================================== */
+@media (max-width:480px){
+    .resource-final-cta h2{
+        font-size:32px;
+        line-height:1.2;
+    }
+    .resource-final-cta p{
+        font-size:17px;
+        line-height:1.7;
+    }
+    .resource-final-actions{
+        flex-direction:column;
+        width:100%;
+        gap:10px;
+        margin-top:28px;
+    }
+    .resource-cta-primary,
+    .resource-cta-secondary{
+        width:100%;
+    }
+}
+</style>
+<body>
+    <!-- SCROLL BUTTON -->
+    <div id="progress">
+        <span id="progress-value">&#8593</span>
+    </div>
+    <!--top-bar-->
+    <div class="top-bar" id="top-bar">
+        <div class="container top-content">
+            <div class="top-left">
+                <span><i class="fas fa-globe"></i>Connecting Talent to Global Opportunities</span>
+                <span><i class="fas fa-envelope"></i>info@insignlinkglobalconnect.com</span>
+            </div>
+
+            <div class="top-right">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </div>
+    <!--header-->
+    <header class="main-header">
+
+        <!-- LOGO AREA -->
+        <div class="logo-section">
+            <a href="index.html" class="logo">
+                <img src="logo/ILC Logo.jpg" alt="Insign Linkglobal Connect">
+            </a>
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <div class="dropdown-header">
+
+                        <a href="explore.html" class="explore-link">
+                            Explore
+                        </a>
+
+                        <button class="dropdown-toggle" type="button">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+
+                    </div>
+
+                    <ul class="dropdown-content">
+                        <li><a href="study_abroad.html">Study Abroad</a></li>
+                        <li><a href="jobs_abroad.html">Jobs Abroad</a></li>
+                        <li><a href="scholarship.html">Scholarships</a></li>
+                        <li><a href="immigration.html">Immigration</a></li>
+                        <li><a href="career_development.html">Career Development</a></li>
+                    </ul>
+
+                </li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <!-- CTA BUTTONS -->
+            <div class="header-actions">
+
+                <a href="consultation.html" class="consultation-butn1">
+                    Book Consultation
+                </a>
+
+                <a href="login.html" class="login-butn1">
+                    Login
+                </a>
+
+                <a href="register.html" class="primary-butn1">
+                    Register
+                </a>
+
+            </div>
+        </nav>
+
+        <!-- MOBILE MENU -->
+        <div class="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </header>
+    <!-- ==========================================
+     RESOURCE CENTRE HERO
+    ========================================== -->
+    <section class="resource-hero">
+
+        <div class="container">
+
+            <div class="resource-hero-wrapper">
+
+                <!-- ==========================================
+                    HERO CONTENT
+                =========================================== -->
+
+                <div class="resource-hero-content">
+
+                    <span class="section-tag">
+                        RESOURCE CENTRE
+                    </span>
+
+                    <h1>
+                        Resources for
+                        <span>Your Global Journey</span>
+                    </h1>
+
+                    <p>
+                        Practical guides, checklists, career resources
+                        and expert insights to help you make informed
+                        decisions about studying, working and moving abroad.
+                    </p>
+
+
+                    <!-- ==========================================
+                        RESOURCE SEARCH
+                    =========================================== -->
+
+                    <form class="resource-search">
+
+                        <i class="fas fa-search"></i>
+
+                        <input
+                            type="search"
+                            id="resource-search-input"
+                            placeholder="Search guides, checklists, articles and resources..."
+                            aria-label="Search resources"
+                        >
+
+                        <button type="submit">
+                            Search
+                        </button>
+
+                    </form>
+
+
+                    <!-- ==========================================
+                        POPULAR SEARCHES
+                    =========================================== -->
+
+                    <div class="resource-popular">
+
+                        <span>
+                            Popular:
+                        </span>
+
+                        <a href="#">
+                            Immigration
+                        </a>
+
+                        <a href="#">
+                            CV & Careers
+                        </a>
+
+                        <a href="#">
+                            IELTS
+                        </a>
+
+                        <a href="#">
+                            Study Abroad
+                        </a>
+
+                        <a href="#">
+                            Country Guides
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==========================================
+                    HERO RESOURCE VISUAL
+                =========================================== -->
+
+                <div class="resource-hero-visual">
+
+                    <div class="resource-visual-main">
+
+                        <div class="resource-visual-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+
+                        <span>
+                            RESOURCE LIBRARY
+                        </span>
+
+                        <h3>
+                            Everything you need
+                            in one place.
+                        </h3>
+
+                        <p>
+                            Guides, checklists and practical
+                            resources for your next step.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Floating Resource Cards -->
+
+                    <div class="resource-float-card resource-float-one">
+
+                        <i class="fas fa-passport"></i>
+
+                        <div>
+                            <strong>
+                                Immigration
+                            </strong>
+
+                            <span>
+                                Guides & Checklists
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="resource-float-card resource-float-two">
+
+                        <i class="fas fa-briefcase"></i>
+
+                        <div>
+                            <strong>
+                                Career
+                            </strong>
+
+                            <span>
+                                CV & Interview Guides
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="resource-visual-accent"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     RESOURCE CATEGORIES
+    ========================================== -->
+    <section class="resource-categories">
+
+        <div class="container">
+
+            <!-- SECTION HEADER -->
+
+            <div class="resource-categories-header">
+
+                <div>
+
+                    <span class="section-tag">
+                        EXPLORE RESOURCES
+                    </span>
+
+                    <h2>
+                        Find What You Need
+                    </h2>
+
+                </div>
+
+                <p>
+                    Explore practical resources organized around
+                    the most important steps in your global journey.
+                </p>
+
+            </div>
+
+
+            <!-- CATEGORY GRID -->
+
+            <div class="resource-category-grid">
+
+
+                <!-- ==========================================
+                    01 IMMIGRATION
+                =========================================== -->
+
+                <a
+                    href="#"
+                    class="resource-category-card"
+                    data-category="immigration">
+
+                    <div class="resource-category-top">
+
+                        <span class="resource-category-number">
+                            01
+                        </span>
+
+                        <div class="resource-category-icon">
+                            <i class="fas fa-passport"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="resource-category-content">
+
+                        <h3>
+                            Immigration & Visa
+                        </h3>
+
+                        <p>
+                            Visa guides, immigration resources
+                            and application information.
+                        </p>
+
+                    </div>
+
+                    <span class="resource-category-link">
+
+                        Explore Resources
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </span>
+
+                </a>
+
+
+                <!-- ==========================================
+                    02 STUDY ABROAD
+                =========================================== -->
+
+                <a
+                    href="#"
+                    class="resource-category-card"
+                    data-category="study-abroad">
+
+                    <div class="resource-category-top">
+
+                        <span class="resource-category-number">
+                            02
+                        </span>
+
+                        <div class="resource-category-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="resource-category-content">
+
+                        <h3>
+                            Study Abroad
+                        </h3>
+
+                        <p>
+                            University, admissions, scholarships
+                            and student resources.
+                        </p>
+
+                    </div>
+
+                    <span class="resource-category-link">
+
+                        Explore Resources
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </span>
+
+                </a>
+
+
+                <!-- ==========================================
+                    03 CAREER DEVELOPMENT
+                =========================================== -->
+
+                <a
+                    href="#"
+                    class="resource-category-card"
+                    data-category="career">
+
+                    <div class="resource-category-top">
+
+                        <span class="resource-category-number">
+                            03
+                        </span>
+
+                        <div class="resource-category-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="resource-category-content">
+
+                        <h3>
+                            Career Development
+                        </h3>
+
+                        <p>
+                            CVs, interviews, LinkedIn and
+                            employment resources.
+                        </p>
+
+                    </div>
+
+                    <span class="resource-category-link">
+
+                        Explore Resources
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </span>
+
+                </a>
+
+
+                <!-- ==========================================
+                    04 LANGUAGE TESTS
+                =========================================== -->
+
+                <a
+                    href="#"
+                    class="resource-category-card"
+                    data-category="language-tests">
+
+                    <div class="resource-category-top">
+
+                        <span class="resource-category-number">
+                            04
+                        </span>
+
+                        <div class="resource-category-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="resource-category-content">
+
+                        <h3>
+                            Language Tests
+                        </h3>
+
+                        <p>
+                            IELTS, PTE and Duolingo
+                            preparation resources.
+                        </p>
+
+                    </div>
+
+                    <span class="resource-category-link">
+
+                        Explore Resources
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </span>
+
+                </a>
+
+
+                <!-- ==========================================
+                    05 RELOCATION
+                =========================================== -->
+
+                <a
+                    href="#"
+                    class="resource-category-card"
+                    data-category="relocation">
+
+                    <div class="resource-category-top">
+
+                        <span class="resource-category-number">
+                            05
+                        </span>
+
+                        <div class="resource-category-icon">
+                            <i class="fas fa-house"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="resource-category-content">
+
+                        <h3>
+                            Relocation & Settlement
+                        </h3>
+
+                        <p>
+                            Practical resources for moving
+                            and settling abroad.
+                        </p>
+
+                    </div>
+
+                    <span class="resource-category-link">
+
+                        Explore Resources
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </span>
+
+                </a>
+
+
+                <!-- ==========================================
+                    06 DOCUMENTS
+                =========================================== -->
+
+                <a
+                    href="#"
+                    class="resource-category-card"
+                    data-category="documents">
+
+                    <div class="resource-category-top">
+
+                        <span class="resource-category-number">
+                            06
+                        </span>
+
+                        <div class="resource-category-icon">
+                            <i class="fas fa-file-lines"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="resource-category-content">
+
+                        <h3>
+                            Documents & Checklists
+                        </h3>
+
+                        <p>
+                            Application checklists, document
+                            guides and templates.
+                        </p>
+
+                    </div>
+
+                    <span class="resource-category-link">
+
+                        Explore Resources
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </span>
+
+                </a>
+
+
+                <!-- ==========================================
+                    07 COUNTRY GUIDES
+                =========================================== -->
+
+                <a
+                    href="#"
+                    class="resource-category-card"
+                    data-category="country-guides">
+
+                    <div class="resource-category-top">
+
+                        <span class="resource-category-number">
+                            07
+                        </span>
+
+                        <div class="resource-category-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="resource-category-content">
+
+                        <h3>
+                            Country Guides
+                        </h3>
+
+                        <p>
+                            Country-specific study, career
+                            and immigration information.
+                        </p>
+
+                    </div>
+
+                    <span class="resource-category-link">
+
+                        Explore Resources
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </span>
+
+                </a>
+
+
+                <!-- ==========================================
+                    08 CAREER ARTICLES
+                =========================================== -->
+
+                <a
+                    href="#"
+                    class="resource-category-card"
+                    data-category="career-articles">
+
+                    <div class="resource-category-top">
+
+                        <span class="resource-category-number">
+                            08
+                        </span>
+
+                        <div class="resource-category-icon">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="resource-category-content">
+
+                        <h3>
+                            Career Articles
+                        </h3>
+
+                        <p>
+                            Career advice, employment trends
+                            and professional development.
+                        </p>
+
+                    </div>
+
+                    <span class="resource-category-link">
+
+                        Explore Resources
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </span>
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     FEATURED RESOURCES
+    ========================================== -->
+    <section class="featured-resources">
+
+        <div class="container">
+
+            <!-- SECTION HEADER -->
+
+            <div class="featured-resources-header">
+
+                <div>
+
+                    <span class="section-tag">
+                        FEATURED RESOURCES
+                    </span>
+
+                    <h2>
+                        Resources Worth Exploring
+                    </h2>
+
+                </div>
+
+                <p>
+                    Hand-picked guides and practical resources
+                    selected to help you take your next step
+                    with confidence.
+                </p>
+
+            </div>
+
+
+            <!-- FEATURED RESOURCE LAYOUT -->
+
+            <div class="featured-resource-grid">
+
+
+                <!-- ==========================================
+                    MAIN FEATURED RESOURCE
+                =========================================== -->
+
+                <article class="featured-resource-main">
+
+                    <div class="featured-resource-image">
+
+                        <div class="featured-resource-overlay">
+
+                            <span class="featured-resource-label">
+                                FEATURED
+                            </span>
+
+                            <span class="featured-resource-category">
+                                Immigration & Visa
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="featured-resource-main-content">
+
+                        <span class="featured-resource-meta">
+                            Immigration Guide
+                        </span>
+
+                        <h3>
+                            Immigration Checklist
+                        </h3>
+
+                        <p>
+                            Prepare the essential documents and
+                            information you may need before starting
+                            your immigration application.
+                        </p>
+
+                        <a
+                            href="#"
+                            class="featured-resource-button">
+
+                            Read Resource
+
+                            <i class="fas fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ==========================================
+                    SUPPORTING RESOURCES
+                =========================================== -->
+
+                <div class="featured-resource-side">
+
+
+                    <!-- RESOURCE TWO -->
+
+                    <article class="featured-resource-small">
+
+                        <div class="featured-small-icon">
+                            <i class="fas fa-file-lines"></i>
+                        </div>
+
+                        <div class="featured-small-content">
+
+                            <span>
+                                Career Development
+                            </span>
+
+                            <h3>
+                                CV Writing Guide
+                            </h3>
+
+                            <p>
+                                Learn how to create a clear,
+                                professional and ATS-friendly CV.
+                            </p>
+
+                            <a href="#">
+
+                                Read Guide
+
+                                <i class="fas fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- RESOURCE THREE -->
+
+                    <article class="featured-resource-small">
+
+                        <div class="featured-small-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+
+                        <div class="featured-small-content">
+
+                            <span>
+                                Immigration & Visa
+                            </span>
+
+                            <h3>
+                                Visa Interview Guide
+                            </h3>
+
+                            <p>
+                                Prepare for common visa interview
+                                questions and improve your confidence.
+                            </p>
+
+                            <a href="#">
+
+                                Read Guide
+
+                                <i class="fas fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     IMMIGRATION & VISA RESOURCES
+    ========================================== -->
+    <section class="immigration-resources">
+
+        <div class="container">
+
+            <!-- ==========================================
+                SECTION HEADER
+            =========================================== -->
+
+            <div class="immigration-resources-header">
+
+                <div class="immigration-resources-heading">
+
+                    <span class="section-tag">
+                        IMMIGRATION & VISA
+                    </span>
+
+                    <h2>
+                        Resources for Your
+                        Immigration Journey
+                    </h2>
+
+                </div>
+
+                <div class="immigration-resources-intro">
+
+                    <p>
+                        Practical immigration guides, document
+                        checklists and visa resources to help you
+                        understand the process and prepare with confidence.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="immigration-resources-cta">
+
+                        Explore Immigration Resources
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==========================================
+                RESOURCE CARDS
+                
+                These cards will eventually be rendered
+                from the database where:
+                
+                category = "immigration"
+            =========================================== -->
+
+            <div class="immigration-resource-grid">
+
+
+                <!-- RESOURCE CARD -->
+
+                <article
+                    class="immigration-resource-card"
+                    data-resource-category="immigration">
+
+                    <div class="immigration-resource-top">
+
+                        <span class="immigration-resource-type">
+                            GUIDE
+                        </span>
+
+                        <div class="immigration-resource-icon">
+                            <i class="fas fa-list-check"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="immigration-resource-content">
+
+                        <h3>
+                            Immigration Checklist
+                        </h3>
+
+                        <p>
+                            Prepare the essential documents
+                            and information before starting
+                            your immigration application.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="#"
+                        class="immigration-resource-link">
+
+                        Read Resource
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </article>
+
+
+                <!-- RESOURCE CARD -->
+
+                <article
+                    class="immigration-resource-card"
+                    data-resource-category="immigration">
+
+                    <div class="immigration-resource-top">
+
+                        <span class="immigration-resource-type">
+                            DOCUMENTS
+                        </span>
+
+                        <div class="immigration-resource-icon">
+                            <i class="fas fa-file-lines"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="immigration-resource-content">
+
+                        <h3>
+                            Required Documents Guide
+                        </h3>
+
+                        <p>
+                            Understand the common documents
+                            required when preparing an immigration
+                            or visa application.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="#"
+                        class="immigration-resource-link">
+
+                        Read Resource
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </article>
+
+
+                <!-- RESOURCE CARD -->
+
+                <article
+                    class="immigration-resource-card"
+                    data-resource-category="immigration">
+
+                    <div class="immigration-resource-top">
+
+                        <span class="immigration-resource-type">
+                            VISA
+                        </span>
+
+                        <div class="immigration-resource-icon">
+                            <i class="fas fa-passport"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="immigration-resource-content">
+
+                        <h3>
+                            Visa Application Guide
+                        </h3>
+
+                        <p>
+                            Learn how to approach the visa
+                            application process and prepare
+                            the information you may need.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="#"
+                        class="immigration-resource-link">
+
+                        Read Resource
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     STUDY ABROAD RESOURCES
+    ========================================== -->
+    <section class="study-resources">
+
+        <div class="container">
+
+            <!-- ==========================================
+                SECTION HEADER
+            =========================================== -->
+
+            <div class="study-resources-header">
+
+                <div class="study-resources-heading">
+
+                    <span class="section-tag">
+                        STUDY ABROAD
+                    </span>
+
+                    <h2>
+                        Plan Your Study
+                        Abroad Journey
+                    </h2>
+
+                </div>
+
+                <div class="study-resources-intro">
+
+                    <p>
+                        Explore practical university, admission,
+                        scholarship and student resources to help
+                        you prepare for studying abroad.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="study-resources-cta">
+
+                        Explore Study Resources
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==========================================
+                STUDY RESOURCE LAYOUT
+
+                Database filter:
+
+                category = "study_abroad"
+            =========================================== -->
+
+            <div class="study-resource-layout">
+
+
+                <!-- ==========================================
+                    FEATURED STUDY RESOURCE
+                =========================================== -->
+
+                <article
+                    class="study-resource-featured"
+                    data-resource-category="study_abroad">
+
+                    <div class="study-featured-top">
+
+                        <span class="study-resource-type">
+                            STUDY GUIDE
+                        </span>
+
+                        <div class="study-resource-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="study-featured-content">
+
+                        <h3>
+                            University Application Guide
+                        </h3>
+
+                        <p>
+                            Understand the key stages of choosing
+                            a university, preparing your application
+                            and getting ready for admission.
+                        </p>
+
+                        <a
+                            href="#"
+                            class="study-resource-link">
+
+                            Read Resource
+
+                            <i class="fas fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ==========================================
+                    SECONDARY RESOURCES
+                =========================================== -->
+
+                <div class="study-resource-list">
+
+
+                    <!-- STUDY RESOURCE -->
+
+                    <article
+                        class="study-resource-item"
+                        data-resource-category="study_abroad">
+
+                        <div class="study-item-icon">
+                            <i class="fas fa-list-check"></i>
+                        </div>
+
+                        <div class="study-item-content">
+
+                            <span>
+                                CHECKLIST
+                            </span>
+
+                            <h3>
+                                Study Abroad Checklist
+                            </h3>
+
+                            <p>
+                                Keep track of the important steps
+                                before starting your study journey.
+                            </p>
+
+                            <a href="#">
+
+                                Read Resource
+
+                                <i class="fas fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- STUDY RESOURCE -->
+
+                    <article
+                        class="study-resource-item"
+                        data-resource-category="study_abroad">
+
+                        <div class="study-item-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+
+                        <div class="study-item-content">
+
+                            <span>
+                                FUNDING
+                            </span>
+
+                            <h3>
+                                Scholarship Guide
+                            </h3>
+
+                            <p>
+                                Discover what to consider when
+                                searching and preparing for scholarships.
+                            </p>
+
+                            <a href="#">
+
+                                Read Resource
+
+                                <i class="fas fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     CAREER DEVELOPMENT RESOURCES
+    ========================================== -->
+    <section class="career-resources">
+
+        <div class="container">
+
+            <!-- ==========================================
+                SECTION INTRO
+            =========================================== -->
+
+            <div class="career-resources-intro">
+
+                <span class="section-tag">
+                    CAREER DEVELOPMENT
+                </span>
+
+                <div class="career-resources-heading">
+
+                    <h2>
+                        Career resources for
+                        where you're going.
+                    </h2>
+
+                    <div class="career-resources-description">
+
+                        <p>
+                            Practical guides to help you build stronger
+                            applications, prepare with confidence and
+                            present yourself professionally.
+                        </p>
+
+                        <a
+                            href="#"
+                            class="career-resources-link">
+
+                            Explore Career Resources
+
+                            <i class="fas fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==========================================
+                FEATURED RESOURCE COLLECTION
+
+                Database filter:
+
+                category = career_development
+            =========================================== -->
+
+            <div class="career-featured-grid">
+
+
+                <!-- ==========================================
+                    RESOURCE 01
+                =========================================== -->
+
+                <article
+                    class="career-resource-card career-resource-card-main"
+                    data-resource-category="career_development">
+
+                    <div class="career-resource-top">
+
+                        <span class="career-resource-number">
+                            01
+                        </span>
+
+                        <span class="career-resource-category">
+                            CV & APPLICATIONS
+                        </span>
+
+                    </div>
+
+                    <div class="career-resource-content">
+
+                        <h3>
+                            CV Writing Guide
+                        </h3>
+
+                        <p>
+                            Learn how to structure your experience,
+                            highlight your strengths and create a
+                            professional CV for the global job market.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="#"
+                        class="career-read-link">
+
+                        Read Guide
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </article>
+
+
+                <!-- ==========================================
+                    RESOURCE 02
+                =========================================== -->
+
+                <article
+                    class="career-resource-card"
+                    data-resource-category="career_development">
+
+                    <div class="career-resource-top">
+
+                        <span class="career-resource-number">
+                            02
+                        </span>
+
+                        <span class="career-resource-category">
+                            APPLICATIONS
+                        </span>
+
+                    </div>
+
+                    <div class="career-resource-content">
+
+                        <h3>
+                            Cover Letter Guide
+                        </h3>
+
+                        <p>
+                            Create a focused cover letter that
+                            connects your experience to the opportunity.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="#"
+                        class="career-read-link">
+
+                        Read Guide
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </article>
+
+
+                <!-- ==========================================
+                    RESOURCE 03
+                =========================================== -->
+
+                <article
+                    class="career-resource-card career-resource-card-warm"
+                    data-resource-category="career_development">
+
+                    <div class="career-resource-top">
+
+                        <span class="career-resource-number">
+                            03
+                        </span>
+
+                        <span class="career-resource-category">
+                            INTERVIEWS
+                        </span>
+
+                    </div>
+
+                    <div class="career-resource-content">
+
+                        <h3>
+                            Interview Guide
+                        </h3>
+
+                        <p>
+                            Prepare for common questions and walk
+                            into your next interview with confidence.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="#"
+                        class="career-read-link">
+
+                        Read Guide
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </article>
+
+            </div>
+
+
+            <!-- ==========================================
+                SECONDARY RESOURCE COLLECTION
+            =========================================== -->
+
+            <div class="career-secondary-resources">
+
+
+                <!-- ==========================================
+                    RESOURCE 04
+                =========================================== -->
+
+                <article
+                    class="career-secondary-item"
+                    data-resource-category="career_development">
+
+                    <div class="career-secondary-number">
+                        04
+                    </div>
+
+                    <div class="career-secondary-content">
+
+                        <span>
+                            PROFESSIONAL BRANDING
+                        </span>
+
+                        <h3>
+                            LinkedIn Guide
+                        </h3>
+
+                    </div>
+
+                    <a
+                        href="#"
+                        aria-label="Read LinkedIn Guide">
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </article>
+
+
+                <!-- ==========================================
+                    RESOURCE 05
+                =========================================== -->
+
+                <article
+                    class="career-secondary-item"
+                    data-resource-category="career_development">
+
+                    <div class="career-secondary-number">
+                        05
+                    </div>
+
+                    <div class="career-secondary-content">
+
+                        <span>
+                            PERSONAL BRANDING
+                        </span>
+
+                        <h3>
+                            Personal Branding Guide
+                        </h3>
+
+                    </div>
+
+                    <a
+                        href="#"
+                        aria-label="Read Personal Branding Guide">
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </article>
+
+
+                <!-- ==========================================
+                    RESOURCE 06
+                =========================================== -->
+
+                <article
+                    class="career-secondary-item"
+                    data-resource-category="career_development">
+
+                    <div class="career-secondary-number">
+                        06
+                    </div>
+
+                    <div class="career-secondary-content">
+
+                        <span>
+                            JOB SEARCH
+                        </span>
+
+                        <h3>
+                            Job Search Guide
+                        </h3>
+
+                    </div>
+
+                    <a
+                        href="#"
+                        aria-label="Read Job Search Guide">
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     LANGUAGE TEST RESOURCES
+    ========================================== -->
+    <section class="language-resources">
+
+        <div class="container">
+
+            <!-- ==========================================
+                SECTION INTRO
+            =========================================== -->
+
+            <div class="language-resources-intro">
+
+                <span class="section-tag">
+                    LANGUAGE TESTS
+                </span>
+
+                <div class="language-resources-heading">
+
+                    <h2>
+                        Prepare with the
+                        right resources.
+                    </h2>
+
+                    <p>
+                        Find practical preparation resources for the
+                        English test that fits your study, career or
+                        immigration plans.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==========================================
+                TEST PATHS
+            =========================================== -->
+
+            <div class="language-test-grid">
+
+
+                <!-- ==========================================
+                    IELTS
+                =========================================== -->
+
+                <article
+                    class="language-test-card language-test-ielts"
+                    data-resource-category="language_tests"
+                    data-test="ielts">
+
+                    <div class="language-test-header">
+
+                        <span class="language-test-number">
+                            01
+                        </span>
+
+                        <span class="language-test-label">
+                            ENGLISH TEST
+                        </span>
+
+                    </div>
+
+                    <div class="language-test-title">
+
+                        <h3>
+                            IELTS
+                        </h3>
+
+                        <p>
+                            Prepare for the International English
+                            Language Testing System.
+                        </p>
+
+                    </div>
+
+                    <div class="language-test-topics">
+
+                        <span>
+                            Academic
+                        </span>
+
+                        <span>
+                            General Training
+                        </span>
+
+                        <span>
+                            Mock Tests
+                        </span>
+
+                    </div>
+
+                    <a
+                        href="#"
+                        class="language-test-link">
+
+                        Explore IELTS Resources
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </article>
+
+
+                <!-- ==========================================
+                    PTE
+                =========================================== -->
+
+                <article
+                    class="language-test-card language-test-pte"
+                    data-resource-category="language_tests"
+                    data-test="pte">
+
+                    <div class="language-test-header">
+
+                        <span class="language-test-number">
+                            02
+                        </span>
+
+                        <span class="language-test-label">
+                            ENGLISH TEST
+                        </span>
+
+                    </div>
+
+                    <div class="language-test-title">
+
+                        <h3>
+                            PTE
+                        </h3>
+
+                        <p>
+                            Build your confidence with focused
+                            PTE preparation resources.
+                        </p>
+
+                    </div>
+
+                    <div class="language-test-topics">
+
+                        <span>
+                            Practice Tests
+                        </span>
+
+                        <span>
+                            Speaking Practice
+                        </span>
+
+                        <span>
+                            Scoring Tips
+                        </span>
+
+                    </div>
+
+                    <a
+                        href="#"
+                        class="language-test-link">
+
+                        Explore PTE Resources
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </article>
+
+
+                <!-- ==========================================
+                    DUOLINGO
+                =========================================== -->
+
+                <article
+                    class="language-test-card language-test-duolingo"
+                    data-resource-category="language_tests"
+                    data-test="duolingo">
+
+                    <div class="language-test-header">
+
+                        <span class="language-test-number">
+                            03
+                        </span>
+
+                        <span class="language-test-label">
+                            ENGLISH TEST
+                        </span>
+
+                    </div>
+
+                    <div class="language-test-title">
+
+                        <h3>
+                            Duolingo
+                        </h3>
+
+                        <p>
+                            Get familiar with the Duolingo English
+                            Test and prepare at your own pace.
+                        </p>
+
+                    </div>
+
+                    <div class="language-test-topics">
+
+                        <span>
+                            Sample Questions
+                        </span>
+
+                        <span>
+                            Practice Resources
+                        </span>
+
+                        <span>
+                            Test Strategy
+                        </span>
+
+                    </div>
+
+                    <a
+                        href="#"
+                        class="language-test-link">
+
+                        Explore Duolingo Resources
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     COUNTRY GUIDES — DESTINATION EXPLORER
+    ========================================== -->
+    <section class="destination-explorer">
+
+        <div class="container">
+
+            <!-- ==========================================
+                INTRO
+            =========================================== -->
+
+            <div class="section-header country-guides-header">
+
+                <span class="section-tag">
+                    COUNTRY GUIDES
+                </span>
+
+                <h2>
+                    Find the Right Destination
+                    for Your Global Journey
+                </h2>
+
+                <p>
+                    Explore study, work and immigration opportunities
+                    across popular destinations and discover the pathways,
+                    requirements and costs that may apply to your journey.
+                </p>
+
+            </div>
+
+
+            <!-- ==========================================
+                DESTINATION EXPLORER
+            =========================================== -->
+
+            <div class="destination-layout">
+
+
+                <!-- ==========================================
+                    FEATURED COUNTRY
+                =========================================== -->
+
+                <article
+                    class="destination-feature"
+                    data-country="canada">
+
+                    <div class="destination-orbit destination-orbit-one"></div>
+
+                    <div class="destination-orbit destination-orbit-two"></div>
+
+                    <div class="destination-feature-top">
+
+                        <span>
+                            01 / FEATURED DESTINATION
+                        </span>
+
+                        <span>
+                            NORTH AMERICA
+                        </span>
+
+                    </div>
+
+
+                    <div class="destination-feature-main">
+
+                        <div class="destination-country-mark">
+                            CA
+                        </div>
+
+                        <h3>
+                            Canada
+                        </h3>
+
+                        <p>
+                            Explore opportunities for education,
+                            professional growth and long-term settlement.
+                        </p>
+
+                    </div>
+
+
+                    <div class="destination-feature-bottom">
+
+                        <div class="destination-stats">
+
+                            <div>
+                                <span>
+                                    PATHWAYS
+                                </span>
+
+                                <strong>
+                                    Study · Work
+                                </strong>
+                            </div>
+
+                            <div>
+                                <span>
+                                    PR OPTIONS
+                                </span>
+
+                                <strong>
+                                    Available
+                                </strong>
+                            </div>
+
+                            <div>
+                                <span>
+                                    COST
+                                </span>
+
+                                <strong>
+                                    Varies
+                                </strong>
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="#"
+                            class="destination-feature-link">
+
+                            Explore Country Guide
+
+                            <i class="fas fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ==========================================
+                    DESTINATION LIST
+                =========================================== -->
+
+                <div class="destination-list">
+
+
+                    <!-- IRELAND -->
+
+                    <a
+                        href="#"
+                        class="destination-item"
+                        data-country="ireland">
+
+                        <span class="destination-item-number">
+                            02
+                        </span>
+
+                        <div class="destination-item-name">
+
+                            <span>
+                                EUROPE
+                            </span>
+
+                            <h3>
+                                Ireland
+                            </h3>
+
+                        </div>
+
+                        <div class="destination-item-path">
+                            Study · Work · Immigration
+                        </div>
+
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+
+                    <!-- UNITED KINGDOM -->
+
+                    <a
+                        href="#"
+                        class="destination-item"
+                        data-country="uk">
+
+                        <span class="destination-item-number">
+                            03
+                        </span>
+
+                        <div class="destination-item-name">
+
+                            <span>
+                                EUROPE
+                            </span>
+
+                            <h3>
+                                United Kingdom
+                            </h3>
+
+                        </div>
+
+                        <div class="destination-item-path">
+                            Study · Work · Immigration
+                        </div>
+
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+
+                    <!-- AUSTRALIA -->
+
+                    <a
+                        href="#"
+                        class="destination-item"
+                        data-country="australia">
+
+                        <span class="destination-item-number">
+                            04
+                        </span>
+
+                        <div class="destination-item-name">
+
+                            <span>
+                                OCEANIA
+                            </span>
+
+                            <h3>
+                                Australia
+                            </h3>
+
+                        </div>
+
+                        <div class="destination-item-path">
+                            Study · Work · Immigration
+                        </div>
+
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+
+                    <!-- GERMANY -->
+
+                    <a
+                        href="#"
+                        class="destination-item"
+                        data-country="germany">
+
+                        <span class="destination-item-number">
+                            05
+                        </span>
+
+                        <div class="destination-item-name">
+
+                            <span>
+                                EUROPE
+                            </span>
+
+                            <h3>
+                                Germany
+                            </h3>
+
+                        </div>
+
+                        <div class="destination-item-path">
+                            Study · Work · Immigration
+                        </div>
+
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+
+                    <!-- NEW ZEALAND -->
+
+                    <a
+                        href="#"
+                        class="destination-item"
+                        data-country="new-zealand">
+
+                        <span class="destination-item-number">
+                            06
+                        </span>
+
+                        <div class="destination-item-name">
+
+                            <span>
+                                OCEANIA
+                            </span>
+
+                            <h3>
+                                New Zealand
+                            </h3>
+
+                        </div>
+
+                        <div class="destination-item-path">
+                            Study · Work · Immigration
+                        </div>
+
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==========================================
+                EXPLORER FOOTER
+            =========================================== -->
+
+            <div class="destination-footer">
+
+                <p>
+                    Looking for somewhere else?
+                </p>
+
+                <a href="#">
+                    Explore all countries
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     AI RESOURCE ASSISTANT
+    ========================================== -->
+    <section class="ai-resource-assistant">
+
+        <div class="container">
+
+            <div class="ai-assistant-panel">
+
+                <!-- ==========================================
+                    LEFT — INTRO
+                =========================================== -->
+
+                <div class="ai-assistant-intro">
+
+                    <span class="section-tag">
+                        AI RESOURCE ASSISTANT
+                    </span>
+
+                    <h2>
+                        Not Sure
+                        Where to Start?
+                    </h2>
+
+                    <p>
+                        Tell us what you're trying to achieve and
+                        get recommended resources based on your
+                        goals, interests and next steps.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="ai-assistant-cta">
+
+                        Ask the AI Assistant
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <!-- ==========================================
+                    RIGHT — GOAL SELECTOR
+                =========================================== -->
+
+                <div class="ai-assistant-selector">
+
+                    <div class="ai-assistant-selector-top">
+
+                        <span class="ai-assistant-step">
+                            START WITH YOUR GOAL
+                        </span>
+
+                        <span class="ai-assistant-step-count">
+                            01 / 01
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        What are you planning to do?
+                    </h3>
+
+
+                    <div class="ai-goal-options">
+
+
+                        <button
+                            type="button"
+                            class="ai-goal-option"
+                            data-goal="study-abroad">
+
+                            <span class="ai-goal-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </span>
+
+                            <span class="ai-goal-text">
+                                Study abroad
+                            </span>
+
+                            <i class="fas fa-arrow-right ai-goal-arrow"></i>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="ai-goal-option"
+                            data-goal="work-abroad">
+
+                            <span class="ai-goal-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </span>
+
+                            <span class="ai-goal-text">
+                                Work abroad
+                            </span>
+
+                            <i class="fas fa-arrow-right ai-goal-arrow"></i>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="ai-goal-option"
+                            data-goal="permanent-move">
+
+                            <span class="ai-goal-icon">
+                                <i class="fas fa-globe"></i>
+                            </span>
+
+                            <span class="ai-goal-text">
+                                Move permanently
+                            </span>
+
+                            <i class="fas fa-arrow-right ai-goal-arrow"></i>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="ai-goal-option"
+                            data-goal="career-development">
+
+                            <span class="ai-goal-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </span>
+
+                            <span class="ai-goal-text">
+                                Improve my career
+                            </span>
+
+                            <i class="fas fa-arrow-right ai-goal-arrow"></i>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="ai-goal-option"
+                            data-goal="english-test">
+
+                            <span class="ai-goal-icon">
+                                <i class="fas fa-language"></i>
+                            </span>
+
+                            <span class="ai-goal-text">
+                                Prepare for an English test
+                            </span>
+
+                            <i class="fas fa-arrow-right ai-goal-arrow"></i>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="ai-goal-option"
+                            data-goal="immigration">
+
+                            <span class="ai-goal-icon">
+                                <i class="fas fa-passport"></i>
+                            </span>
+
+                            <span class="ai-goal-text">
+                                Explore immigration options
+                            </span>
+
+                            <i class="fas fa-arrow-right ai-goal-arrow"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     LATEST RESOURCES
+    ========================================== -->
+    <section class="latest-resources">
+
+        <div class="container">
+
+            <!-- ==========================================
+                SECTION HEADER
+            ========================================== -->
+
+            <div class="section-header latest-resources-header">
+
+                <span class="section-tag">
+                    LATEST RESOURCES
+                </span>
+
+                <h2>
+                    Fresh resources for
+                    your next step.
+                </h2>
+
+                <p>
+                    Explore the latest guides, checklists and
+                    practical insights published by our team.
+                </p>
+
+            </div>
+
+
+            <!-- ==========================================
+                RESOURCE FEED
+                
+                Database:
+                ORDER BY published_at DESC
+                LIMIT 3
+            ========================================== -->
+
+            <div class="latest-resource-feed">
+
+
+                <!-- ==========================================
+                    LATEST / FEATURED ITEM
+                ========================================== -->
+
+                <article
+                    class="latest-resource-feature"
+                    data-resource-id="resource-001"
+                    data-category="immigration">
+
+                    <div class="latest-resource-feature-top">
+
+                        <span class="latest-resource-category">
+                            Immigration
+                        </span>
+
+                        <span class="latest-resource-new">
+                            NEW
+                        </span>
+
+                    </div>
+
+
+                    <div class="latest-resource-feature-content">
+
+                        <span class="latest-resource-index">
+                            01
+                        </span>
+
+                        <h3>
+                            Canada Immigration
+                            Checklist
+                        </h3>
+
+                        <p>
+                            A practical guide to the essential
+                            documents and preparation steps
+                            before starting your application.
+                        </p>
+
+                    </div>
+
+
+                    <div class="latest-resource-feature-bottom">
+
+                        <span class="latest-resource-date">
+                            Updated Aug 2026
+                        </span>
+
+                        <a
+                            href="#"
+                            class="latest-resource-link">
+
+                            Read Resource
+
+                            <i class="fas fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ==========================================
+                    SECOND ITEM
+                ========================================== -->
+
+                <article
+                    class="latest-resource-item"
+                    data-resource-id="resource-002"
+                    data-category="career">
+
+                    <div class="latest-resource-item-top">
+
+                        <span class="latest-resource-index">
+                            02
+                        </span>
+
+                        <span class="latest-resource-category">
+                            Career
+                        </span>
+
+                    </div>
+
+
+                    <div class="latest-resource-item-content">
+
+                        <h3>
+                            How to Build an
+                            ATS-Friendly CV
+                        </h3>
+
+                        <p>
+                            Practical guidance for creating
+                            a CV that is clear, professional
+                            and ready for modern recruitment systems.
+                        </p>
+
+                    </div>
+
+
+                    <div class="latest-resource-item-bottom">
+
+                        <span class="latest-resource-date">
+                            Updated Aug 2026
+                        </span>
+
+                        <a
+                            href="#"
+                            class="latest-resource-link">
+
+                            Read Resource
+
+                            <i class="fas fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ==========================================
+                    THIRD ITEM
+                ========================================== -->
+
+                <article
+                    class="latest-resource-item"
+                    data-resource-id="resource-003"
+                    data-category="ielts">
+
+                    <div class="latest-resource-item-top">
+
+                        <span class="latest-resource-index">
+                            03
+                        </span>
+
+                        <span class="latest-resource-category">
+                            IELTS
+                        </span>
+
+                    </div>
+
+
+                    <div class="latest-resource-item-content">
+
+                        <h3>
+                            IELTS Speaking
+                            Preparation Guide
+                        </h3>
+
+                        <p>
+                            Preparation strategies, speaking
+                            practice ideas and useful tips for
+                            improving your performance.
+                        </p>
+
+                    </div>
+
+
+                    <div class="latest-resource-item-bottom">
+
+                        <span class="latest-resource-date">
+                            Updated Aug 2026
+                        </span>
+
+                        <a
+                            href="#"
+                            class="latest-resource-link">
+
+                            Read Resource
+
+                            <i class="fas fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- ==========================================
+                VIEW ALL
+            ========================================== -->
+
+            <div class="latest-resources-footer">
+
+                <a
+                    href="resources.html"
+                    class="latest-resources-all">
+
+                    View All Resources
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     FINAL RESOURCE CTA
+    ========================================== -->
+    <section class="resource-final-cta">
+
+        <div class="resource-final-cta-inner">
+
+            <span class="section-tag">
+                YOUR NEXT STEP
+            </span>
+
+            <h2>
+                Ready to Take
+                the Next Step?
+            </h2>
+
+            <p>
+                Explore practical resources designed to help
+                you study, work and build your future
+                internationally.
+            </p>
+
+            <div class="resource-final-actions">
+
+                <a
+                    href="resources.html"
+                    class="resource-cta-primary">
+
+                    Explore Resources
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+                <a
+                    href="#career-assessment"
+                    class="resource-cta-secondary">
+
+                    Get Career Assessment
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     FOOTER
+    ========================================== -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- COMPANY INFO -->
+            <div class="footer-col footer-brand">
+
+                <div class="logo">
+                    <span>
+                        <img src="logo/ILC Logo.jpg" alt="Insign Link Global Connect Logo">
+                    </span>
+
+                    <h3>
+                        Insign LinkGlobal Connect
+                    </h3>
+                </div>
+
+                <p>
+                    Connecting students, professionals, and families to global
+                    education, career, employment, and immigration opportunities
+                    across the world.
+                </p>
+
+            </div>
+
+            <!-- CONTACT -->
+            <div class="footer-col">
+
+                <h4>CONTACT US</h4>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Nairobi, Kenya
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +254 704 565 250
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    info@insignlinkglobalconnect.com
+                </p>
+
+            </div>
+
+            <!-- OPPORTUNITIES -->
+            <div class="footer-col">
+
+                <h4>OPPORTUNITIES</h4>
+
+                <ul>
+
+                    <li>
+                        <a href="study-abroad.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Study Abroad
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="jobs_abroad.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Jobs Abroad
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="immigration.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Immigration Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="career-development.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Career Development
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- RESOURCES -->
+            <div class="footer-col">
+
+                <h4>RESOURCES</h4>
+
+                <ul>
+
+                    <li>
+                        <a href="resources.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Resource Center
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="success-stories.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Success Stories
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="faq.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            FAQs
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Book Consultation
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- FOOTER BOTTOM -->
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Insign Link Global Connect. All Rights Reserved. Crafted by
+                <a href="https://wa.me/254700073919?text=Hello%20I%20am%20interested%20in%20your%20services">
+                    Brydex Technologies
+                </a>
+            </p>
+
+            <div class="footer-links">
+                <a href="terms.html">Terms of Use</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+            </div>
+
+            <div class="social-icons">
+
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const navbar = document.querySelector('.navbar');
+
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('active');
+            navbar.classList.toggle('active');
+        });
+
+        /* Mobile dropdown toggle */
+
+        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+
+            toggle.addEventListener('click', function(e){
+
+                e.preventDefault();
+                e.stopPropagation();
+
+                const dropdown = this.closest('.dropdown');
+
+                dropdown.classList.toggle('active');
+
+            });
+
+        });
+        // SCROLL BUTTON
+            let calcScrollValue = () => {
+                let scrollProgress = document.getElementById("progress");
+                let pos = document.documentElement.scrollTop;
+                let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                let scrollValue = Math.round((pos * 100) / calcHeight);
+
+                if (pos > 100) {
+                    scrollProgress.style.display = "grid";
+                } else {
+                    scrollProgress.style.display = "none";
+                }
+
+                scrollProgress.onclick = () => {
+                    document.documentElement.scrollTop = 0;
+                };
+
+                scrollProgress.style.background =
+                    `conic-gradient(#F4A646 ${scrollValue}%, white ${scrollValue}%)`;
+            };
+
+            window.addEventListener("scroll", calcScrollValue);
+
+            /* ==========================================
+   AI RESOURCE ASSISTANT
+========================================== */
+
+document.addEventListener("DOMContentLoaded", function(){
+
+    const goalButtons = document.querySelectorAll(".ai-goal-option");
+
+    goalButtons.forEach(function(button){
+
+        button.addEventListener("click", function(){
+
+            const selectedGoal = this.dataset.goal;
+
+            handleResourceGoal(selectedGoal);
+
+        });
+
+    });
+
+
+    /* ==========================================
+       HANDLE GOAL SELECTION
+    ========================================== */
+
+    function handleResourceGoal(goal){
+
+        console.log("Selected goal:", goal);
+
+        /*
+         * Temporary frontend behaviour.
+         *
+         * Later this will call your AI backend:
+         *
+         * POST /api/resource-assistant
+         *
+         * {
+         *     goal: goal
+         * }
+         */
+
+        const goalNames = {
+
+            "study-abroad":
+                "Study Abroad",
+
+            "work-abroad":
+                "Work Abroad",
+
+            "permanent-move":
+                "Move Permanently",
+
+            "career-development":
+                "Improve My Career",
+
+            "english-test":
+                "English Test Preparation",
+
+            "immigration":
+                "Immigration Options"
+
+        };
+
+        const selectedName = goalNames[goal] || "your goal";
+
+        showAssistantMessage(selectedName);
+
+    }
+
+
+    /* ==========================================
+       TEMPORARY RESPONSE
+    ========================================== */
+
+    function showAssistantMessage(goal){
+
+        const selector = document.querySelector(
+            ".ai-assistant-selector"
+        );
+
+        if(!selector) return;
+
+
+        selector.innerHTML = `
+
+            <div class="ai-response">
+
+                <span class="ai-response-tag">
+                    YOUR NEXT STEP
+                </span>
+
+                <h3>
+                    Let's help you with
+                    ${goal.toLowerCase()}.
+                </h3>
+
+                <p>
+                    We're finding resources that match
+                    your goal. This area will eventually
+                    connect directly to our AI resource
+                    recommendation system.
+                </p>
+
+                <div class="ai-response-actions">
+
+                    <button
+                        type="button"
+                        class="ai-back-button">
+
+                        <i class="fas fa-arrow-left"></i>
+
+                        Choose another goal
+
+                    </button>
+
+                    <a
+                        href="resources.html"
+                        class="ai-view-resources">
+
+                        View Resources
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        `;
+
+
+        /* ==========================================
+           BACK BUTTON
+        ========================================== */
+
+        const backButton =
+            selector.querySelector(".ai-back-button");
+
+        backButton.addEventListener(
+            "click",
+            restoreGoalSelector
+        );
+
+    }
+
+
+    /* ==========================================
+       RESTORE GOALS
+    ========================================== */
+
+    function restoreGoalSelector(){
+
+        location.reload();
+
+    }
+
+});
+    </script>
+</body>
+</html>

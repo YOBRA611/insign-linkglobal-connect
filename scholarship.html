@@ -1,0 +1,6808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap"rel="stylesheet">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Scholarship</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="logo/ILC Logo.jpg">
+</head>
+<style>
+/* ==========================================
+   SCHOLARSHIP HERO
+========================================== */
+.scholarship-hero{
+    padding:120px 5% 100px;
+    background:#f8fafc;
+    overflow:hidden;
+}
+.scholarship-hero-container{
+    display:grid;
+    grid-template-columns:1.1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+/* CONTENT */
+.hero-tag{
+    display:inline-block;
+    padding:10px 18px;
+    color:var(--primary);
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:20px;
+}
+.scholarship-hero-content h1{
+    font-size:40px;
+    line-height:1.15;
+    margin-bottom:25px;
+}
+.scholarship-hero-content h1 span{
+    color:var(--primary);
+}
+.scholarship-hero-content p{
+    color:#64748b;
+    line-height:1.9;
+    font-size:18px;
+    margin-bottom:35px;
+}
+/* BUTTONS */
+.hero-buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:25px;
+}
+.primary-btn1,
+.secondary-btn1{
+    padding:15px 30px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:400;
+    transition:.3s ease;
+}
+.primary-btn1{
+    background:var(--primary);
+    color:#fff;
+}
+.primary-btn1:hover{
+    background:var(--secondary);
+}
+.secondary-btn1{
+    border:1px solid var(--secondary);
+    color:var(--primary);
+}
+.secondary-btn1:hover{
+    background:var(--secondary);
+    color:#fff;
+}
+/* TRUST */
+.hero-trust{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:40px;
+    color:#475569;
+    line-height:1.7;
+}
+.hero-trust i{
+    color:var(--primary);
+    font-size:18px;
+}
+/* STATS */
+.hero-stats{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+.stat-card{
+    background:#fff;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+    transition:.3s;
+}
+.stat-card:hover{
+    transform:translateY(-5px);
+}
+.stat-card h3{
+    color:var(--primary);
+    font-size:26px;
+    margin-bottom:8px;
+}
+.stat-card span{
+    color:#64748b;
+    font-size:15px;
+}
+/* VISUAL */
+.hero-image{
+    margin-bottom:25px;
+}
+.hero-image img{
+    width:100%;
+    border-radius:10px;
+    display:block;
+    object-fit:cover;
+    height:570px;
+}
+/* HIGHLIGHT CARDS */
+.hero-highlight-cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+.highlight-card{
+    background:#fff;
+    padding:20px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+    transition:.3s;
+}
+.highlight-card:hover{
+    transform:translateY(-5px);
+}
+.highlight-card i{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:rgba(37,99,235,.1);
+    color:var(--primary);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 15px;
+    font-size:24px;
+}
+.highlight-card h4{
+    margin-bottom:8px;
+    font-size:16px;
+    color:var(--dark);
+}
+.highlight-card span{
+    font-size:13px;
+    color:#64748b;
+    line-height:1.6;
+}
+/* RESPONSIVE */
+@media(max-width:991px){
+    .scholarship-hero-container{
+        grid-template-columns:1fr;
+    }
+    .scholarship-hero-content{
+        text-align:center;
+    }
+    .hero-buttons,
+    .hero-trust{
+        justify-content:center;
+    }
+}
+@media(max-width:768px){
+    .scholarship-hero{
+        padding:90px 5% 80px;
+    }
+    .hero-stats{
+        grid-template-columns:1fr;
+    }
+    .hero-highlight-cards{
+        grid-template-columns:1fr;
+    }
+    .hero-image img{
+        height:350px;
+    }
+}
+@media(max-width:576px){
+    .hero-buttons{
+        flex-direction:column;
+    }
+    .hero-buttons a{
+        width:100%;
+        text-align:center;
+    }
+    .hero-trust{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+/* ==========================================
+   WHY SCHOLARSHIPS MATTER
+========================================== */
+.why-scholarships{
+    padding:100px 5%;
+    background:#fff;
+}
+/* BENEFITS GRID */
+.scholarship-benefits-grid{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:30px;
+    margin-top:60px;
+}
+/* TOP ROW */
+.scholarship-benefits-grid .benefit-card:nth-child(1){
+    grid-column:1 / 3;
+}
+.scholarship-benefits-grid .benefit-card:nth-child(2){
+    grid-column:3 / 5;
+}
+.scholarship-benefits-grid .benefit-card:nth-child(3){
+    grid-column:5 / 7;
+}
+/* BOTTOM ROW CENTERED */
+.scholarship-benefits-grid .benefit-card:nth-child(4){
+    grid-column:2 / 4;
+}
+.scholarship-benefits-grid .benefit-card:nth-child(5){
+    grid-column:4 / 6;
+}
+/* CARD */
+.benefit-card{
+    background:#fff;
+    padding:35px 30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+    transition:.35s ease;
+}
+.benefit-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0, 0, 0, 0.281);
+}
+/* ICON */
+.benefit-icon{
+    width:80px;
+    height:80px;
+    margin:0 auto 25px;
+    border-radius:50%;
+    background:rgba(37,99,235,.1);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.benefit-icon i{
+    font-size:30px;
+    color:var(--primary);
+}
+/* CONTENT */
+.benefit-card h3{
+    margin-bottom:15px;
+    color:var(--dark);
+    font-size:22px;
+}
+.benefit-card p{
+    color:#64748b;
+    line-height:1.8;
+    font-size:15px;
+}
+/* ==========================================
+   RESPONSIVE
+========================================== */
+@media(max-width:991px){
+     .scholarship-benefits-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+    .scholarship-benefits-grid .benefit-card{
+        grid-column:auto !important;
+    }
+}
+@media(max-width:768px){
+    .why-scholarships{
+        padding:80px 5%;
+    }
+    .scholarship-benefits-grid{
+        grid-template-columns:1fr;
+    }
+    .benefit-card{
+        padding:30px 25px;
+    }
+}
+@media(max-width:576px){
+    .benefit-icon{
+        width:70px;
+        height:70px;
+    }
+    .benefit-icon i{
+        font-size:28px;
+    }
+    .benefit-card h3{
+        font-size:20px;
+    }
+}
+/* ==========================================
+   FEATURED SCHOLARSHIP DESTINATIONS
+========================================== */
+.featured-destinations{
+    padding:100px 5%;
+    background:#f8fafc;
+}
+.destinations-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+    margin-top:60px;
+}
+/* SECOND ROW CENTERING */
+.destinations-grid .destination-card:nth-child(5){
+    grid-column:1 / 2;
+}
+.destinations-grid .destination-card:nth-child(6){
+    grid-column:2 / 3;
+}
+.destinations-grid .destination-card:nth-child(7){
+    grid-column:3 / 4;
+}
+/* CARD */
+.destination-card{
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+    transition:.35s ease;
+}
+.destination-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+}
+/* IMAGE */
+.destination-image{
+    position:relative;
+    height:220px;
+}
+.destination-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.destination-badge{
+    position:absolute;
+    top:15px;
+    right:15px;
+    background:var(--primary);
+    color:#fff;
+    padding:8px 14px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:600;
+}
+/* CONTENT */
+.destination-content{
+    padding:25px;
+}
+.destination-content h3{
+    margin-bottom:12px;
+    color:var(--dark);
+}
+.destination-content p{
+    color:#64748b;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+/* INFO */
+.destination-info{
+    margin-bottom:25px;
+}
+.info-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:12px;
+}
+.info-item i{
+    color:var(--primary);
+}
+.info-item span{
+    color:#475569;
+    font-size:14px;
+}
+/* BUTTON */
+.destination-btn{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    text-decoration:none;
+    color:var(--primary);
+    font-weight:450;
+    transition:.3s;
+}
+.destination-btn:hover{
+    color:var(--secondary);
+}
+/* RESPONSIVE */
+@media(max-width:1200px){
+    .destinations-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+    .destinations-grid .destination-card{
+        grid-column:auto !important;
+    }
+}
+@media(max-width:991px){
+    .destinations-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+@media(max-width:768px){
+    .featured-destinations{
+        padding:80px 5%;
+    }
+    .destinations-grid{
+        grid-template-columns:1fr;
+    }
+}
+@media(max-width:576px){
+    .destination-image{
+        height:200px;
+    }
+    .destination-content{
+        padding:20px;
+    }
+}
+/* ==========================================
+   SCHOLARSHIP CATEGORIES
+========================================== */
+.scholarship-categories{
+    padding:100px 5%;
+    background:#f8fafc;
+}
+.categories-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+    margin-top:60px;
+}
+/* CARD */
+.category-card{
+    background:#fff;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+    transition:.35s ease;
+    display:flex;
+    flex-direction:column;
+    height:100%;
+}
+.category-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+}
+/* ICON */
+.category-icon{
+    width:70px;
+    height:70px;
+    border-radius:18px;
+    background:rgba(37,99,235,.1);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:25px;
+}
+.category-icon i{
+    font-size:30px;
+    color:var(--primary);
+}
+/* CONTENT */
+.category-card h3{
+    font-size:20px;
+    margin-bottom:15px;
+    color:var(--dark);
+}
+.category-card p{
+    color:#64748b;
+    line-height:1.8;
+    margin-bottom:20px;
+    flex:1;
+}
+/* COUNT */
+.category-count{
+    display:inline-block;
+    background:#eff6ff;
+    color:var(--primary);
+    padding:10px 15px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:20px;
+}
+/* BUTTON */
+.category-btn{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    text-decoration:none;
+    color:var(--primary);
+    font-weight:600;
+    transition:.3s;
+}
+.category-btn:hover{
+    color:var(--secondary);
+}
+.category-btn i{
+    transition:.3s;
+}
+.category-btn:hover i{
+    transform:translateX(5px);
+}
+/* RESPONSIVE */
+@media(max-width:1200px){
+    .categories-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
+@media(max-width:991px){
+    .categories-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+@media(max-width:768px){
+    .scholarship-categories{
+        padding:80px 5%;
+    }
+    .categories-grid{
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+}
+@media(max-width:576px){
+    .category-card{
+        padding:25px;
+    }
+    .category-icon{
+        width:65px;
+        height:65px;
+    }
+    .category-icon i{
+        font-size:26px;
+    }
+}
+/* ==========================================
+   SCHOLARSHIP SEARCH & FILTER
+========================================== */
+.scholarship-search-section{
+    padding:100px 5%;
+    background:#fff;
+}
+/* SEARCH BOX */
+.scholarship-search-box{
+    margin-top:60px;
+    background:#fff;
+    border-radius:10px;
+    padding:35px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+/* SEARCH INPUT */
+.search-input-wrapper{
+    position:relative;
+    margin-bottom:30px;
+}
+.search-input-wrapper i{
+    position:absolute;
+    left:20px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#94a3b8;
+    font-size:18px;
+}
+.search-input-wrapper input{
+    width:100%;
+    height:65px;
+    border:1px solid #e2e8f0;
+    border-radius:14px;
+    padding:0 20px 0 55px;
+    font-size:16px;
+    outline:none;
+    transition:.3s;
+}
+.search-input-wrapper input:focus{
+    border-color:var(--primary);
+}
+/* FILTERS */
+.scholarship-filters{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:20px;
+}
+.filter-group{
+    display:flex;
+    flex-direction:column;
+}
+.filter-group label{
+    font-size:14px;
+    font-weight:600;
+    color:var(--dark);
+    margin-bottom:10px;
+}
+.filter-group select{
+    height:55px;
+    border:1px solid #e2e8f0;
+    border-radius:12px;
+    padding:0 15px;
+    font-size:15px;
+    outline:none;
+    cursor:pointer;
+    transition:.3s;
+}
+.filter-group select:focus{
+    border-color:var(--primary);
+}
+/* BUTTON */
+.search-action{
+    margin-top:30px;
+}
+.search-scholarship-btn{
+    width:100%;
+    height:60px;
+    border:none;
+    border-radius:14px;
+    background:var(--primary);
+    color:#fff;
+    font-size:16px;
+    font-weight:400;
+    cursor:pointer;
+    transition:.3s;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+}
+.search-scholarship-btn:hover{
+    background:var(--secondary);
+}
+/* POPULAR SEARCHES */
+.popular-searches{
+    margin-top:40px;
+}
+.popular-searches h4{
+    margin-bottom:20px;
+    color:var(--dark);
+}
+.search-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+.search-tag{
+    text-decoration:none;
+    padding:10px 18px;
+    border-radius:30px;
+    background:#eff6ff;
+    color:var(--primary);
+    font-size:14px;
+    font-weight:500;
+    transition:.3s;
+}
+.search-tag:hover{
+    background:var(--primary);
+    color:#fff;
+}
+/* ==========================================
+   RESPONSIVE
+========================================== */
+@media(max-width:1200px){
+    .scholarship-filters{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
+@media(max-width:768px){
+    .scholarship-search-section{
+        padding:80px 5%;
+    }
+    .scholarship-search-box{
+        padding:25px;
+    }
+    .scholarship-filters{
+        grid-template-columns:1fr;
+    }
+    .search-input-wrapper input{
+        height:60px;
+    }
+}
+@media(max-width:576px){
+    .search-tags{
+        gap:10px;
+    }
+    .search-tag{
+        font-size:13px;
+        padding:8px 15px;
+    }
+}
+/* ==========================================
+   LATEST SCHOLARSHIPS
+========================================== */
+.latest-scholarships{
+    padding:100px 5%;
+    background:#f8fafc;
+}
+.scholarships-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:60px;
+}
+/* CARD */
+.scholarship-card{
+    background:#fff;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+    transition:.35s ease;
+}
+.scholarship-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+}
+/* TOP */
+.scholarship-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+    gap:10px;
+}
+.funding-badge,
+.level-badge{
+    padding:8px 14px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:600;
+}
+.fully-funded{
+    background:#dcfce7;
+    color:#15803d;
+}
+.partial-funded{
+    background:#dbeafe;
+    color:#1d4ed8;
+}
+.grant-funded{
+    background:#ffedd5;
+    color:#ea580c;
+}
+.level-badge{
+    background:#f1f5f9;
+    color:#475569;
+}
+/* CONTENT */
+.scholarship-card h3{
+    margin-bottom:15px;
+    font-size:20px;
+    line-height:1.4;
+    color:var(--dark);
+}
+.scholarship-institution{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:25px;
+    color:var(--primary);
+    font-weight:600;
+}
+.scholarship-institution i{
+    color:var(--primary);
+}
+/* DETAILS */
+.scholarship-details{
+    margin-bottom:25px;
+}
+.detail-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:14px;
+}
+.detail-item i{
+    width:18px;
+    color:var(--primary);
+}
+.detail-item span{
+    color:#64748b;
+    font-size:15px;
+}
+/* BUTTON */
+.scholarship-btn{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    text-decoration:none;
+    color:var(--primary);
+    font-weight:600;
+    border-top:1px solid #e2e8f0;
+    padding-top:20px;
+    transition:.3s;
+}
+.scholarship-btn:hover{
+    color:var(--secondary);
+}
+.scholarship-btn i{
+    transition:.3s;
+}
+.scholarship-btn:hover i{
+    transform:translateX(5px);
+}
+/* FOOTER */
+.scholarships-footer{
+    text-align:center;
+    margin-top:60px;
+}
+.scholarships-footer p{
+    margin-bottom:20px;
+    color:#64748b;
+}
+.view-all-scholarships-btn{
+    display:inline-block;
+    text-decoration:none;
+    background:var(--primary);
+    color:#fff;
+    padding:15px 30px;
+    border-radius:10px;
+    font-weight:400;
+    transition:.3s;
+}
+.view-all-scholarships-btn:hover{
+    background:var(--secondary);
+}
+/* RESPONSIVE */
+@media(max-width:1200px){
+    .scholarships-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+@media(max-width:768px){
+    .latest-scholarships{
+        padding:80px 5%;
+    }
+    .scholarships-grid{
+        grid-template-columns:1fr;
+    }
+}
+@media(max-width:576px){
+    .scholarship-card{
+        padding:25px;
+    }
+    .scholarship-card h3{
+        font-size:20px;
+    }
+    .scholarship-top{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+}
+/* ==========================================
+   SCHOLARSHIPS BY STUDY LEVEL
+========================================== */
+.study-level-scholarships{
+    padding:100px 5%;
+    background:#fff;
+}
+/* TABS */
+.level-tabs{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+.level-tab{
+    border:none;
+    background:#f1f5f9;
+    color:#475569;
+    padding:14px 25px;
+    border-radius:50px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+.level-tab:hover{
+    background:#e2e8f0;
+}
+.level-tab.active{
+    background:var(--primary);
+    color:#fff;
+}
+/* CONTENT */
+.level-content{
+    display:none;
+}
+.level-content.active{
+    display:block;
+}
+/* GRID */
+.level-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+/* CARD */
+.level-card{
+    background:#fff;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0, 0, 0, 0.253);
+    transition:.3s;
+}
+.level-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+.level-card h3{
+    margin-bottom:20px;
+    color:var(--dark);
+}
+.level-card ul{
+    list-style:none;
+    padding:0;
+    margin:0 0 25px;
+}
+.level-card li{
+    margin-bottom:12px;
+    color:#64748b;
+    line-height:1.7;
+}
+/* BUTTON */
+.level-btn{
+    display:inline-block;
+    text-decoration:none;
+    background:var(--primary);
+    color:#fff;
+    padding:12px 24px;
+    border-radius:50px;
+    font-weight:400;
+    transition:.3s;
+}
+.level-btn:hover{
+    background:var(--secondary);
+}
+/* RESPONSIVE */
+@media(max-width:768px){
+    .study-level-scholarships{
+        padding:80px 5%;
+    }
+    .level-grid{
+        grid-template-columns:1fr;
+    }
+    .level-card{
+        padding:25px;
+    }
+}
+/* ==========================================
+   FULLY FUNDED SCHOLARSHIPS
+========================================== */
+.fully-funded-scholarships{
+    padding:100px 5%;
+    background:#f8fafc;
+}
+.funded-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:60px;
+}
+/* CARD */
+.funded-card{
+    position:relative;
+    background:#fff;
+    border-radius:24px;
+    padding:35px;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+    transition:.35s ease;
+    overflow:hidden;
+}
+.funded-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,.1);
+}
+/* BADGE */
+.funded-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: linear-gradient(
+        135deg,
+        var(--secondary),
+        var(--primary)
+    );
+    color: #fff;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 700;
+}
+.funded-badge i {
+    font-size: 13px;
+}
+/* ICON */
+.funded-icon {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background: rgba(37, 99, 235, 0.08);
+    margin-bottom: 25px;
+}
+.funded-icon i {
+    font-size: 28px;
+    color: var(--primary);
+}
+/* TITLE */
+.funded-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: var(--dark);
+}
+/* COUNTRY */
+.funded-country {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 25px;
+    color: #64748b;
+    font-weight: 500;
+}
+.funded-country i {
+    color: var(--primary);
+}
+/* BENEFITS */
+.funded-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+}
+.funded-card ul li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #f1f5f9;
+    color: #475569;
+}
+.funded-card ul li:last-child {
+    border-bottom: none;
+}
+.funded-card ul li i {
+    width: 20px;
+    text-align: center;
+    color: var(--primary);
+}
+/* BUTTON */
+.funded-btn {
+    display: block;
+    text-align: center;
+    padding: 14px;
+    border-radius: 12px;
+    text-decoration: none;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 400;
+    transition: .3s;
+}
+.funded-btn:hover {
+    background: var(--secondary);
+}
+/* FOOTER */
+.funded-footer {
+    text-align: center;
+    margin-top: 60px;
+}
+.funded-footer p {
+    margin-bottom: 20px;
+    color: #64748b;
+}
+.view-funded-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 400;
+    transition: .3s;
+}
+.view-funded-btn:hover {
+    background: var(--secondary);
+}
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+    .funded-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .fully-funded-scholarships {
+        padding: 80px 5%;
+    }
+    .funded-grid {
+        grid-template-columns: 1fr;
+    }
+    .funded-card {
+        padding: 30px;
+    }
+}
+@media (max-width: 576px) {
+    .funded-badge {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-bottom: 20px;
+    }
+    .funded-card h3 {
+        font-size: 1.2rem;
+    }
+}
+/* ==========================================
+   FEATURED PARTNER INSTITUTIONS
+========================================== */
+.partner-institutions{
+    padding:100px 5%;
+    background:#fff;
+}
+.institutions-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+    margin-top:60px;
+}
+/* CARD */
+.institution-card{
+    background:#fff;
+    border-radius:24px;
+    padding:30px;
+    transition:.35s ease;
+    box-shadow:0 10px 30px rgba(0, 0, 0, 0.219);
+}
+.institution-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+}
+/* LOGO */
+.institution-logo{
+    height:90px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:20px;
+}
+.institution-logo img{
+    max-width:140px;
+    max-height:70px;
+    object-fit:contain;
+}
+/* COUNTRY */
+.institution-country{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:#64748b;
+    font-size:.95rem;
+    margin-bottom:15px;
+}
+.institution-country i{
+    color:var(--primary);
+}
+/* TITLE */
+.institution-card h3{
+    font-size:20px;
+    margin-bottom:20px;
+    color:var(--dark);
+    line-height:1.5;
+}
+/* STATS */
+.institution-stats{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-bottom:20px;
+}
+.institution-stat{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#475569;
+}
+.institution-stat i{
+    color:var(--primary);
+    width:20px;
+}
+/* PROGRAMS */
+.institution-programs{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:25px;
+}
+.institution-programs span{
+    background:#f1f5f9;
+    color:#475569;
+    padding:8px 12px;
+    border-radius:50px;
+    font-size:.85rem;
+    font-weight:500;
+}
+/* BUTTON */
+.institution-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    text-decoration:none;
+    background:var(--primary);
+    color:#fff;
+    padding:14px;
+    border-radius:12px;
+    font-weight:400;
+    transition:.3s;
+}
+.institution-btn:hover{
+    background:var(--secondary);
+}
+.institution-btn i{
+    transition:.3s;
+}
+.institution-btn:hover i{
+    transform:translateX(5px);
+}
+/* RESPONSIVE */
+@media(max-width:1200px){
+    .institutions-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+@media(max-width:768px){
+    .partner-institutions{
+        padding:80px 5%;
+    }
+    .institutions-grid{
+        grid-template-columns:1fr;
+    }
+    .institution-card{
+        padding:25px;
+    }
+}
+/* ==========================================
+   SCHOLARSHIP APPLICATION PROCESS
+========================================== */
+.scholarship-process{
+    padding:100px 5%;
+    background:#f8fafc;
+}
+.process-timeline{
+    max-width:900px;
+    margin:70px auto 0;
+    position:relative;
+}
+/* CENTER LINE */
+.process-timeline::before{
+    content:"";
+    position:absolute;
+    left:40px;
+    top:0;
+    bottom:0;
+    width:3px;
+    background:linear-gradient(
+        to bottom,
+        var(--primary),
+        rgba(37,99,235,.15)
+    );
+}
+/* STEP */
+.process-step1{
+    position:relative;
+    display:flex;
+    gap:25px;
+    margin-bottom:35px;
+}
+.process-step1:last-child{
+    margin-bottom:0;
+}
+/* NUMBER */
+.step-number{
+    min-width:40px;
+    height:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--primary);
+    color:#fff;
+    border-radius:50%;
+    font-size:.85rem;
+    font-weight:700;
+    position:relative;
+    z-index:2;
+}
+/* ICON */
+.step-icon1{
+    width:70px;
+    height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#fff;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    flex-shrink:0;
+}
+.step-icon1 i{
+    font-size:28px;
+    color:var(--accent);
+}
+/* CONTENT */
+.step-content{
+    flex:1;
+    background:#fff;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+    transition:.3s ease;
+}
+.process-step:hover .step-content{
+    transform:translateX(5px);
+}
+.step-content h3{
+    margin-bottom:10px;
+    color:var(--dark);
+    font-size:1.2rem;
+}
+.step-content p{
+    margin:0;
+    color:#64748b;
+    line-height:1.7;
+}
+/* RESPONSIVE */
+@media(max-width:768px){
+    .scholarship-process{
+        padding:80px 5%;
+    }
+    .process-timeline::before{
+        left:20px;
+    }
+    .process-step1{
+        gap:15px;
+    }
+    .step-number{
+        min-width:35px;
+        height:35px;
+        font-size:.75rem;
+    }
+    .step-icon1{
+        width:55px;
+        height:55px;
+    }
+    .step-icon1 i{
+        font-size:22px;
+    }
+    .step-content{
+        padding:20px;
+    }
+    .step-content h3{
+        font-size:1rem;
+    }
+}
+/* ==========================================
+   MOBILE TIMELINE
+========================================== */
+@media (max-width: 576px) {
+    .process-timeline::before{
+        display:none;
+    }
+    .step-number{
+        margin:0 auto 12px;
+    }
+    .step-icon1{
+        margin:0 auto 15px;
+        width:60px;
+        height:60px;
+    }
+    .step-icon1 i{
+        font-size:24px;
+    }
+    .step-content{
+        text-align:center;
+        padding:20px;
+    }
+    .step-content h3{
+        font-size:1rem;
+        margin-bottom:8px;
+    }
+    .step-content p{
+        font-size:.92rem;
+        line-height:1.6;
+    }
+}
+/* ==========================================
+   SCHOLARSHIP SUPPORT SERVICES
+========================================== */
+.scholarship-support-services{
+    padding:100px 5%;
+    background:#ffffff;
+}
+/* GRID */
+.support-services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:60px;
+}
+/* CARD */
+.support-service-card{
+    background:#fff;
+    border-radius:24px;
+    padding:35px;
+    transition:.35s ease;
+    box-shadow:0 10px 30px rgba(0, 0, 0, 0.247);
+}
+.support-service-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+}
+/* ICON */
+.support-icon{
+    width:75px;
+    height:75px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:18px;
+    background:rgba(37,99,235,.08);
+    margin-bottom:25px;
+}
+.support-icon i{
+    font-size:30px;
+    color:var(--primary);
+}
+/* TITLE */
+.support-service-card h3{
+    font-size:1.3rem;
+    margin-bottom:15px;
+    color:var(--dark);
+}
+/* TEXT */
+.support-service-card p{
+    color:#64748b;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+/* LINK */
+.support-link{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    color:var(--primary);
+    font-weight:400;
+}
+.support-link i{
+    transition:.3s;
+}
+.support-link:hover i{
+    transform:translateX(5px);
+}
+/* CTA */
+.support-services-cta{
+    margin-top:70px;
+    padding:60px;
+    text-align:center;
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+    border-radius:30px;
+    color:#fff;
+}
+.support-services-cta h3{
+    font-size:2rem;
+    margin-bottom:15px;
+}
+.support-services-cta p{
+    max-width:700px;
+    margin:0 auto 30px;
+    line-height:1.8;
+    opacity:.95;
+}
+/* BUTTON */
+.support-cta-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    background:#fff;
+    color:var(--primary);
+    padding:15px 30px;
+    border-radius:10px;
+    font-weight:400;
+    transition:.3s;
+}
+.support-cta-btn:hover{
+    transform:translateY(-3px);
+}
+/* RESPONSIVE */
+@media(max-width:1200px){
+    .support-services-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+@media(max-width:768px){
+    .scholarship-support-services{
+        padding:80px 5%;
+    }
+    .support-services-grid{
+        grid-template-columns:1fr;
+    }
+    .support-service-card{
+        padding:30px;
+    }
+    .support-services-cta{
+        padding:40px 25px;
+    }
+    .support-services-cta h3{
+        font-size:1.5rem;
+    }
+}
+@media(max-width:576px){
+    .support-service-card{
+        text-align:center;
+    }
+    .support-icon{
+        margin:0 auto 20px;
+    }
+    .support-link{
+        justify-content:center;
+    }
+}
+/* ==========================================
+   SCHOLARSHIP SUCCESS STORIES
+========================================== */
+.scholarship-success-stories{
+    padding:100px 5%;
+    background:#f8fafc;
+    overflow:hidden;
+}
+.success-slider-wrapper{
+    position:relative;
+    margin-top:60px;
+}
+.success-slider{
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    scrollbar-width:none;
+    padding:10px;
+}
+.success-slider::-webkit-scrollbar{
+    display:none;
+}
+.success-card{
+    min-width:380px;
+    background:#fff;
+    border-radius:24px;
+    padding:35px;
+    box-shadow:0 10px 30px rgba(0, 0, 0, 0.164);
+    transition:.35s;
+}
+.success-card:hover{
+    transform:translateY(-8px);
+}
+.student-image{
+    width:100px;
+    height:100px;
+    margin:0 auto 20px;
+}
+.student-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:50%;
+}
+.success-award{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    width:max-content;
+    margin:0 auto 20px;
+    padding:10px 18px;
+    border-radius:50px;
+    background:rgba(37,99,235,.08);
+    color:var(--primary);
+    font-size:.85rem;
+    font-weight:600;
+}
+.success-card h3{
+    text-align:center;
+    margin-bottom:15px;
+}
+.success-meta{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-bottom:20px;
+}
+.success-meta span{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    color:#64748b;
+}
+.success-meta i{
+    color:var(--primary);
+}
+.success-card p{
+    text-align:center;
+    line-height:1.8;
+    color:#475569;
+    margin-bottom:20px;
+    font-style:italic;
+}
+.success-rating{
+    display:flex;
+    justify-content:center;
+    gap:5px;
+}
+.success-rating i{
+    color:#f59e0b;
+}
+/* NAVIGATION */
+.success-nav{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:10;
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:#fff;
+    color:var(--primary);
+    cursor:pointer;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+.success-prev{
+    left:-25px;
+}
+.success-next{
+    right:-25px;
+}
+/* RESPONSIVE */
+@media(max-width:992px){
+    .success-card{
+        min-width:320px;
+    }
+}
+@media(max-width:768px){
+    .scholarship-success-stories{
+        padding:80px 5%;
+    }
+    .success-card{
+        min-width:290px;
+    }
+    .success-prev{
+        left:-10px;
+    }
+    .success-next{
+        right:-10px;
+    }
+}
+@media(max-width:576px){
+    .success-slider{
+        gap:15px;
+        padding:0;
+        scroll-snap-type:x mandatory;
+    }
+    .success-card{
+        min-width:100%;
+        width:100%;
+        scroll-snap-align:start;
+        padding:25px 20px;
+    }
+    .student-image{
+        width:80px;
+        height:80px;
+    }
+    .success-card h3{
+        font-size:1.1rem;
+    }
+    .success-meta span{
+        font-size:.9rem;
+    }
+    .success-card p{
+        font-size:.95rem;
+        line-height:1.7;
+    }
+}
+/* ==========================================
+   REQUIRED DOCUMENTS
+========================================== */
+.required-documents{
+    padding:100px 5%;
+    background:#ffffff;
+}
+/* GRID */
+.documents-wrapper{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+    margin-top:60px;
+}
+/* CARD */
+.documents-card{
+    background:#fff;
+    border-radius:24px;
+    padding:35px;
+    box-shadow:0 10px 30px rgba(0, 0, 0, 0.178);
+    transition:.3s;
+}
+.documents-card:hover{
+    transform:translateY(-5px);
+}
+/* HEADER */
+.documents-card-header{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin-bottom:25px;
+}
+.documents-icon{
+    width:70px;
+    height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(37,99,235,.08);
+    border-radius:18px;
+}
+.documents-icon i{
+    color:var(--primary);
+    font-size:28px;
+}
+.documents-card-header h3{
+    margin-bottom:5px;
+    color:var(--dark);
+}
+.documents-card-header span{
+    color:#64748b;
+    font-size:.9rem;
+}
+/* LIST */
+.documents-list{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.documents-list li{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:14px 0;
+    border-bottom:1px solid #f1f5f9;
+    color:var(--dark);
+    font-weight:400;
+}
+.documents-list li:last-child{
+    border-bottom:none;
+}
+.documents-list i{
+    color:#16a34a;
+    font-size:18px;
+}
+/* NOTICE */
+.documents-notice{
+    margin-top:40px;
+    display:flex;
+    gap:20px;
+    background:#eff6ff;
+    border-left:5px solid var(--primary);
+    padding:25px;
+    border-radius:16px;
+}
+.notice-icon i{
+    color:var(--primary);
+    font-size:28px;
+}
+.notice-content h4{
+    margin-bottom:8px;
+    color:var(--dark);
+}
+.notice-content p{
+    margin:0;
+    line-height:1.8;
+    color:#64748b;
+}
+/* CTA */
+.documents-cta{
+    margin-top:50px;
+    text-align:center;
+}
+.documents-cta h3{
+    margin-bottom:15px;
+    color:var(--dark);
+}
+.documents-cta p{
+    max-width:650px;
+    margin:0 auto 25px;
+    color:#64748b;
+    line-height:1.8;
+}
+.documents-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:15px 30px;
+    background:var(--primary);
+    color:#fff;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:400;
+    transition:.3s;
+}
+.documents-btn:hover{
+    background:var(--secondary);
+    transform:translateY(-3px);
+}
+/* RESPONSIVE */
+@media(max-width:992px){
+    .documents-wrapper{
+        grid-template-columns:1fr;
+    }
+}
+@media(max-width:768px){
+    .required-documents{
+        padding:80px 5%;
+    }
+    .documents-card{
+        padding:25px;
+    }
+    .documents-card-header{
+        flex-direction:column;
+        text-align:center;
+    }
+    .documents-notice{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+@media(max-width:576px){
+    .documents-list li{
+        font-size:.95rem;
+    }
+    .documents-btn{
+        width:100%;
+        justify-content:center;
+    }
+}
+/* ==========================================
+   UPCOMING SCHOLARSHIP DEADLINES
+========================================== */
+.scholarship-deadlines{
+    padding:100px 5%;
+    background:#f8fafc;
+}
+/* GRID */
+.deadline-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+    margin-top:60px;
+}
+/* CARD */
+.deadline-card{
+    background:#fff;
+    border-radius:24px;
+    padding:30px;
+    transition:.35s ease;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+}
+.deadline-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+}
+/* TOP BORDER COLORS */
+.deadline-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:5px;
+}
+.deadline-card.urgent::before{
+    background:var(--secondary);
+}
+.deadline-card.warning::before{
+    background:var(--accent);
+}
+.deadline-card.safe::before{
+    background:var(--primary);
+}
+/* DAYS LEFT */
+.deadline-status{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 15px;
+    border-radius:50px;
+    background:#f1f5f9;
+    font-size:.85rem;
+    font-weight:600;
+    margin-bottom:20px;
+}
+.deadline-status i{
+    color:var(--primary);
+}
+/* TITLE */
+.deadline-card h3{
+    margin-bottom:18px;
+    color:var(--dark);
+}
+/* FUNDING BADGE */
+.funding-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:rgba(37,99,235,.08);
+    color:var(--primary);
+    padding:10px 16px;
+    border-radius:50px;
+    font-size:.85rem;
+    font-weight:600;
+    margin-bottom:25px;
+}
+/* DEADLINE INFO */
+.deadline-info{
+    margin-bottom:25px;
+}
+.deadline-info .label{
+    display:block;
+    font-size:.85rem;
+    color:#64748b;
+    margin-bottom:6px;
+}
+.deadline-info strong{
+    color:var(--dark);
+    font-size:1rem;
+}
+/* BUTTON */
+.deadline-btn{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    text-decoration:none;
+    color:var(--primary);
+    font-weight:450;
+    padding-top:15px;
+}
+.deadline-btn i{
+    transition:.3s;
+}
+.deadline-btn:hover i{
+    transform:translateX(5px);
+}
+/* FOOTER */
+.deadlines-footer{
+    text-align:center;
+    margin-top:60px;
+}
+.deadlines-footer h3{
+    margin-bottom:15px;
+    color:var(--dark);
+}
+.deadlines-footer p{
+    max-width:650px;
+    margin:0 auto 25px;
+    color:#64748b;
+    line-height:1.8;
+}
+.view-deadlines-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:var(--primary);
+    color:#fff;
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:10px;
+    font-weight:450;
+    transition:.3s;
+}
+.view-deadlines-btn:hover{
+    transform:translateY(-3px);
+}
+/* RESPONSIVE */
+@media(max-width:992px){
+    .deadline-grid{
+        grid-template-columns:1fr;
+    }
+}
+@media(max-width:768px){
+    .scholarship-deadlines{
+        padding:80px 5%;
+    }
+    .deadline-card{
+        padding:25px;
+    }
+}
+@media(max-width:576px){
+    .deadline-card{
+        padding:22px;
+    }
+    .deadline-status,
+    .funding-badge{
+        width:100%;
+        justify-content:center;
+    }
+    .deadline-card h3{
+        font-size:1.1rem;
+    }
+    .view-deadlines-btn{
+        width:100%;
+        justify-content:center;
+    }
+}
+/* ==========================================
+   SCHOLARSHIP FAQ
+========================================== */
+.scholarship-faq{
+    padding:100px 5%;
+    background:#ffffff;
+}
+/* FAQ WRAPPER */
+.faq-container{
+    max-width:900px;
+    margin:60px auto 0;
+}
+/* FAQ ITEM */
+.faq-item{
+    border-radius:18px;
+    margin-bottom:18px;
+    overflow:hidden;
+    background:#fff;
+    transition:.3s;
+}
+.faq-item:hover{
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+/* QUESTION */
+.faq-question{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:22px 25px;
+    border:none;
+    background:#fff;
+    cursor:pointer;
+    font-size:1rem;
+    font-weight:600;
+    color:var(--dark);
+    text-align:left;
+}
+.faq-question i{
+    color:var(--primary);
+    font-size:14px;
+}
+/* ANSWER */
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .4s ease;
+}
+.faq-answer p{
+    padding:0 25px 25px;
+    margin:0;
+    line-height:1.8;
+    color:#64748b;
+}
+/* ACTIVE */
+.faq-item.active .faq-answer{
+    max-height:300px;
+}
+.faq-item.active{
+    border-color:rgba(37,99,235,.2);
+}
+/* SUPPORT BOX */
+.faq-support-box{
+    margin-top:60px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+    padding:35px;
+    border-radius:24px;
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+    color:#fff;
+}
+.faq-support-icon{
+    width:80px;
+    height:80px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(255,255,255,.15);
+    border-radius:20px;
+}
+.faq-support-icon i{
+    font-size:32px;
+}
+.faq-support-content{
+    flex:1;
+}
+.faq-support-content h3{
+    margin-bottom:10px;
+}
+.faq-support-content p{
+    line-height:1.8;
+    opacity:.95;
+}
+.faq-support-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    background:#fff;
+    color:var(--primary);
+    padding:15px 25px;
+    border-radius:10px;
+    font-weight:450;
+    transition:.3s;
+}
+.faq-support-btn:hover{
+    transform:translateY(-3px);
+}
+/* RESPONSIVE */
+@media(max-width:768px){
+    .scholarship-faq{
+        padding:80px 5%;
+    }
+    .faq-support-box{
+        flex-direction:column;
+        text-align:center;
+    }
+    .faq-support-content{
+        text-align:center;
+    }
+}
+@media(max-width:576px){
+    .faq-question{
+        padding:20px;
+        font-size:.95rem;
+    }
+    .faq-answer p{
+        padding:0 20px 20px;
+    }
+    .faq-support-btn{
+        width:100%;
+        justify-content:center;
+    }
+}
+/* ==========================================
+   FINAL CTA
+========================================== */
+.scholarship-final-cta{
+    padding:100px 5%;
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        #1d4ed8
+    );
+    position:relative;
+    overflow:hidden;
+}
+.scholarship-final-cta::before{
+    content:"";
+    position:absolute;
+    top:-100px;
+    right:-100px;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    background:rgba(255,255,255,.06);
+}
+.scholarship-final-cta::after{
+    content:"";
+    position:absolute;
+    bottom:-120px;
+    left:-120px;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    background:rgba(255,255,255,.05);
+}
+.final-cta-content{
+    position:relative;
+    z-index:2;
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    color:#fff;
+}
+.cta-tag{
+    display:inline-block;
+    padding:10px 18px;
+    font-size:.85rem;
+    font-weight:600;
+    letter-spacing:.5px;
+    margin-bottom:20px;
+}
+.final-cta-content h2{
+    font-size:40px;
+    line-height:1.2;
+    margin-bottom:25px;
+    color:#fff;
+}
+.final-cta-content p{
+    max-width:750px;
+    margin:auto;
+    font-size:1.05rem;
+    line-height:1.9;
+    opacity:.95;
+    margin-bottom:40px;
+}
+/* BUTTONS */
+.final-cta-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+.cta-primary-btn,
+.cta-secondary-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:16px 32px;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:450;
+    transition:.35s ease;
+}
+.cta-primary-btn{
+    background:#fff;
+    color:var(--primary);
+}
+.cta-primary-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+.cta-secondary-btn{
+    border:2px solid rgb(255, 255, 255);
+    color:#fff;
+    backdrop-filter:blur(10px);
+}
+.cta-secondary-btn:hover{
+    background:#fff;
+    color:var(--primary);
+    transform:translateY(-4px);
+}
+/* RESPONSIVE */
+@media(max-width:768px){
+    .scholarship-final-cta{
+        padding:80px 5%;
+    }
+    .final-cta-content p{
+        font-size:1rem;
+    }
+}
+@media(max-width:576px){
+    .final-cta-buttons{
+        flex-direction:column;
+    }
+    .cta-primary-btn,
+    .cta-secondary-btn{
+        width:100%;
+        justify-content:center;
+    }
+}
+</style>
+<body>
+    <!-- SCROLL BUTTON -->
+    <div id="progress">
+        <span id="progress-value">&#8593</span>
+    </div>
+    <!--top-bar-->
+    <div class="top-bar" id="top-bar">
+        <div class="container top-content">
+            <div class="top-left">
+                <span><i class="fas fa-globe"></i>Connecting Talent to Global Opportunities</span>
+                <span><i class="fas fa-envelope"></i>info@insignlinkglobalconnect.com</span>
+            </div>
+
+            <div class="top-right">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </div>
+    <!--header-->
+    <header class="main-header">
+
+        <!-- LOGO AREA -->
+        <div class="logo-section">
+            <a href="index.html" class="logo">
+                <img src="logo/ILC Logo.jpg" alt="Insign Linkglobal Connect">
+            </a>
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <div class="dropdown-header">
+
+                        <a href="explore.html" class="explore-link">
+                            Explore
+                        </a>
+
+                        <button class="dropdown-toggle" type="button">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+
+                    </div>
+
+                    <ul class="dropdown-content">
+                        <li><a href="study_abroad.html">Study Abroad</a></li>
+                        <li><a href="jobs_abroad.html">Jobs Abroad</a></li>
+                        <li><a href="scholarship.html">Scholarships</a></li>
+                        <li><a href="immigration.html">Immigration</a></li>
+                        <li><a href="career_development.html">Career Development</a></li>
+                    </ul>
+
+                </li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <!-- CTA BUTTONS -->
+            <div class="header-actions">
+
+                <a href="consultation.html" class="consultation-butn1">
+                    Book Consultation
+                </a>
+
+                <a href="login.html" class="login-butn1">
+                    Login
+                </a>
+
+                <a href="register.html" class="primary-butn1">
+                    Register
+                </a>
+
+            </div>
+        </nav>
+
+        <!-- MOBILE MENU -->
+        <div class="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </header>
+    <!-- ==========================================
+     SCHOLARSHIP HERO
+    ========================================== -->
+    <section class="scholarship-hero">
+
+        <div class="container scholarship-hero-container">
+
+            <!-- LEFT CONTENT -->
+
+            <div class="scholarship-hero-content">
+
+                <span class="hero-tag">
+                    GLOBAL SCHOLARSHIP OPPORTUNITIES
+                </span>
+
+                <h1>
+                    Find Scholarships &
+                    <span>Make Your Study Abroad Dream Affordable</span>
+                </h1>
+
+                <p>
+                    Explore fully funded, partial, government, and university
+                    scholarships across leading study destinations and take
+                    the next step toward your international education journey.
+                </p>
+
+                <!-- BUTTONS -->
+
+                <div class="hero-buttons">
+
+                    <a href="#scholarships" class="primary-btn1">
+                        <i class="fas fa-award"></i>
+                        Browse Scholarships
+                    </a>
+
+                    <a href="consultation.html" class="secondary-btn1">
+                        <i class="fas fa-calendar-check"></i>
+                        Book Consultation
+                    </a>
+
+                </div>
+
+                <!-- TRUST TEXT -->
+
+                <div class="hero-trust">
+
+                    <i class="fas fa-shield-alt"></i>
+
+                    <span>
+                        Helping students discover funding opportunities
+                        from top universities and international
+                        scholarship providers.
+                    </span>
+
+                </div>
+
+                <!-- STATS -->
+
+                <div class="hero-stats">
+
+                    <div class="stat-card">
+                        <h3>500+</h3>
+                        <span>Scholarships Available</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>20+</h3>
+                        <span>Study Destinations</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>100+</h3>
+                        <span>Partner Institutions</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>95%</h3>
+                        <span>Student Success Rate</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT VISUAL -->
+
+            <div class="scholarship-hero-visual">
+
+                <div class="hero-image">
+
+                    <img src="image/39e72bf44de88c065a99347dd75f019f.jpg"
+                        alt="Scholarship Student">
+
+                </div>
+
+                <!-- HIGHLIGHT CARDS -->
+
+                <div class="hero-highlight-cards">
+
+                    <div class="highlight-card">
+
+                        <i class="fas fa-award"></i>
+
+                        <h4>
+                            Fully Funded
+                        </h4>
+
+                        <span>
+                            Scholarship Opportunities
+                        </span>
+
+                    </div>
+
+                    <div class="highlight-card">
+
+                        <i class="fas fa-graduation-cap"></i>
+
+                        <h4>
+                            Merit Awards
+                        </h4>
+
+                        <span>
+                            Academic Excellence
+                        </span>
+
+                    </div>
+
+                    <div class="highlight-card">
+
+                        <i class="fas fa-globe"></i>
+
+                        <h4>
+                            20+ Countries
+                        </h4>
+
+                        <span>
+                            Study Destinations
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     WHY SCHOLARSHIPS MATTER
+    ========================================== -->
+    <section class="why-scholarships">
+
+        <div class="container">
+
+            <!-- SECTION HEADER -->
+
+            <div class="section-header">
+
+                <span class="section-tag">
+                    WHY SCHOLARSHIPS MATTER
+                </span>
+
+                <h2>
+                    Scholarships Open Doors To A Brighter Future
+                </h2>
+
+                <p>
+                    Scholarships do more than reduce costs. They provide access
+                    to quality education, international opportunities, and a
+                    stronger foundation for your future career.
+                </p>
+
+            </div>
+
+            <!-- BENEFITS GRID -->
+
+            <div class="scholarship-benefits-grid">
+
+                <!-- CARD 1 -->
+
+                <div class="benefit-card">
+
+                    <div class="benefit-icon">
+
+                        <i class="fas fa-money-bill-wave"></i>
+
+                    </div>
+
+                    <h3>
+                        Reduce Tuition Costs
+                    </h3>
+
+                    <p>
+                        Minimize education expenses and make studying abroad
+                        more affordable through available scholarship funding.
+                    </p>
+
+                </div>
+
+                <!-- CARD 2 -->
+
+                <div class="benefit-card">
+
+                    <div class="benefit-icon">
+
+                        <i class="fas fa-chart-line"></i>
+
+                    </div>
+
+                    <h3>
+                        Lower Financial Burden
+                    </h3>
+
+                    <p>
+                        Reduce pressure on family finances and focus more
+                        on achieving your academic goals.
+                    </p>
+
+                </div>
+
+                <!-- CARD 3 -->
+
+                <div class="benefit-card">
+
+                    <div class="benefit-icon">
+
+                        <i class="fas fa-university"></i>
+
+                    </div>
+
+                    <h3>
+                        Access Top Universities
+                    </h3>
+
+                    <p>
+                        Gain opportunities to study at globally recognized
+                        institutions that may otherwise be financially out of reach.
+                    </p>
+
+                </div>
+
+                <!-- CARD 4 -->
+
+                <div class="benefit-card">
+
+                    <div class="benefit-icon">
+
+                        <i class="fas fa-house"></i>
+
+                    </div>
+
+                    <h3>
+                        Support Living Expenses
+                    </h3>
+
+                    <p>
+                        Many scholarships help cover accommodation,
+                        transport, meals, and daily student expenses.
+                    </p>
+
+                </div>
+
+                <!-- CARD 5 -->
+
+                <div class="benefit-card">
+
+                    <div class="benefit-icon">
+
+                        <i class="fas fa-earth-africa"></i>
+
+                    </div>
+
+                    <h3>
+                        Increase Global Opportunities
+                    </h3>
+
+                    <p>
+                        Graduate with international exposure, global networks,
+                        and stronger career prospects.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     FEATURED SCHOLARSHIP DESTINATIONS
+    ========================================== -->
+    <section class="featured-destinations">
+
+        <div class="container">
+
+            <!-- SECTION HEADER -->
+
+            <div class="section-header">
+
+                <span class="section-tag">
+                    SCHOLARSHIP DESTINATIONS
+                </span>
+
+                <h2>
+                    Explore Scholarships By Destination
+                </h2>
+
+                <p>
+                    Discover scholarship opportunities across the world's
+                    leading study destinations and find funding options
+                    that match your academic goals.
+                </p>
+
+            </div>
+
+            <!-- DESTINATIONS GRID -->
+
+            <div class="destinations-grid">
+
+                <!-- IRELAND -->
+
+                <div class="destination-card">
+
+                    <div class="destination-image">
+
+                        <img src="image/1b01114e9718e9eca1d6fc52efebc25a.jpg"
+                            alt="Study in Ireland">
+
+                        <span class="destination-badge">
+                            Popular
+                        </span>
+
+                    </div>
+
+                    <div class="destination-content">
+
+                        <h3>
+                            🇮🇪 Ireland
+                        </h3>
+
+                        <p>
+                            Top destination for business,
+                            technology and healthcare programs.
+                        </p>
+
+                        <div class="destination-info">
+
+                            <div class="info-item">
+
+                                <i class="fas fa-award"></i>
+
+                                <span>
+                                    120+ Scholarships
+                                </span>
+
+                            </div>
+
+                            <div class="info-item">
+
+                                <i class="fas fa-wallet"></i>
+
+                                <span>
+                                    Fully Funded & Partial
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <a href="#" class="destination-btn">
+
+                            Explore Scholarships
+
+                            <i class="fas fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- CANADA -->
+
+                <div class="destination-card">
+
+                    <div class="destination-image">
+
+                        <img src="image/2f550b5a0c750ce788f72e7d1f759b5d.jpg"
+                            alt="Study in Canada">
+
+                        <span class="destination-badge">
+                            High Demand
+                        </span>
+
+                    </div>
+
+                    <div class="destination-content">
+
+                        <h3>
+                            🇨🇦 Canada
+                        </h3>
+
+                        <p>
+                            World-class universities with
+                            strong scholarship programs.
+                        </p>
+
+                        <div class="destination-info">
+
+                            <div class="info-item">
+
+                                <i class="fas fa-award"></i>
+
+                                <span>
+                                    150+ Scholarships
+                                </span>
+
+                            </div>
+
+                            <div class="info-item">
+
+                                <i class="fas fa-wallet"></i>
+
+                                <span>
+                                    Government & University Funding
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <a href="#" class="destination-btn">
+
+                            Explore Scholarships
+
+                            <i class="fas fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- UK -->
+
+                <div class="destination-card">
+
+                    <div class="destination-image">
+
+                        <img src="image/c8d47eb4c84b8cc8270192712c2f9d2f.jpg"
+                            alt="Study in UK">
+
+                        <span class="destination-badge">
+                            Popular
+                        </span>
+
+                    </div>
+
+                    <div class="destination-content">
+
+                        <h3>
+                            🇬🇧 United Kingdom
+                        </h3>
+
+                        <p>
+                            Home of globally recognized
+                            universities and scholarship schemes.
+                        </p>
+
+                        <div class="destination-info">
+
+                            <div class="info-item">
+
+                                <i class="fas fa-award"></i>
+
+                                <span>
+                                    180+ Scholarships
+                                </span>
+
+                            </div>
+
+                            <div class="info-item">
+
+                                <i class="fas fa-wallet"></i>
+
+                                <span>
+                                    Chevening & University Awards
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <a href="#" class="destination-btn">
+
+                            Explore Scholarships
+
+                            <i class="fas fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- AUSTRALIA -->
+
+                <div class="destination-card">
+
+                    <div class="destination-image">
+
+                        <img src="image/cf8597ac0daad255fd5c635047351897.jpg"
+                            alt="Study in Australia">
+
+                    </div>
+
+                    <div class="destination-content">
+
+                        <h3>
+                            🇦🇺 Australia
+                        </h3>
+
+                        <p>
+                            Leading destination for
+                            research and professional programs.
+                        </p>
+
+                        <div class="destination-info">
+
+                            <div class="info-item">
+
+                                <i class="fas fa-award"></i>
+
+                                <span>
+                                    90+ Scholarships
+                                </span>
+
+                            </div>
+
+                            <div class="info-item">
+
+                                <i class="fas fa-wallet"></i>
+
+                                <span>
+                                    Australia Awards Available
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <a href="#" class="destination-btn">
+
+                            Explore Scholarships
+
+                            <i class="fas fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- GERMANY -->
+
+                <div class="destination-card">
+
+                    <div class="destination-image">
+
+                        <img src="image/bf9a09ddf7808c176d6812826bcfb38a.jpg"
+                            alt="Study in Germany">
+
+                        <span class="destination-badge">
+                            Fully Funded
+                        </span>
+
+                    </div>
+
+                    <div class="destination-content">
+
+                        <h3>
+                            🇩🇪 Germany
+                        </h3>
+
+                        <p>
+                            Affordable education with
+                            excellent funding opportunities.
+                        </p>
+
+                        <div class="destination-info">
+
+                            <div class="info-item">
+
+                                <i class="fas fa-award"></i>
+
+                                <span>
+                                    100+ Scholarships
+                                </span>
+
+                            </div>
+
+                            <div class="info-item">
+
+                                <i class="fas fa-wallet"></i>
+
+                                <span>
+                                    DAAD Opportunities
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <a href="#" class="destination-btn">
+
+                            Explore Scholarships
+
+                            <i class="fas fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- USA -->
+
+                <div class="destination-card">
+
+                    <div class="destination-image">
+
+                        <img src="image/6a48f59c7c5911203723754c2adbe179.jpg"
+                            alt="Study in USA">
+
+                    </div>
+
+                    <div class="destination-content">
+
+                        <h3>
+                            🇺🇸 USA
+                        </h3>
+
+                        <p>
+                            Thousands of funding opportunities
+                            from top institutions.
+                        </p>
+
+                        <div class="destination-info">
+
+                            <div class="info-item">
+
+                                <i class="fas fa-award"></i>
+
+                                <span>
+                                    200+ Scholarships
+                                </span>
+
+                            </div>
+
+                            <div class="info-item">
+
+                                <i class="fas fa-wallet"></i>
+
+                                <span>
+                                    Merit & Research Funding
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <a href="#" class="destination-btn">
+
+                            Explore Scholarships
+
+                            <i class="fas fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- NEW ZEALAND -->
+
+                <div class="destination-card">
+
+                    <div class="destination-image">
+
+                        <img src="image/22b1f02ac69899596538c83c25bc0036.jpg"
+                            alt="Study in New Zealand">
+
+                    </div>
+
+                    <div class="destination-content">
+
+                        <h3>
+                            🇳🇿 New Zealand
+                        </h3>
+
+                        <p>
+                            High-quality education and
+                            attractive scholarship pathways.
+                        </p>
+
+                        <div class="destination-info">
+
+                            <div class="info-item">
+
+                                <i class="fas fa-award"></i>
+
+                                <span>
+                                    50+ Scholarships
+                                </span>
+
+                            </div>
+
+                            <div class="info-item">
+
+                                <i class="fas fa-wallet"></i>
+
+                                <span>
+                                    Government Scholarships
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <a href="#" class="destination-btn">
+
+                            Explore Scholarships
+
+                            <i class="fas fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     SCHOLARSHIP CATEGORIES
+    ========================================== -->
+    <section class="scholarship-categories">
+
+        <div class="container">
+
+            <!-- SECTION HEADER -->
+
+            <div class="section-header">
+
+                <span class="section-tag">
+                    SCHOLARSHIP CATEGORIES
+                </span>
+
+                <h2>
+                    Find Scholarships That Match Your Goals
+                </h2>
+
+                <p>
+                    Explore different types of scholarships available for
+                    international students and discover funding opportunities
+                    that align with your academic journey.
+                </p>
+
+            </div>
+
+            <!-- CATEGORIES GRID -->
+
+            <div class="categories-grid">
+
+                <!-- MERIT -->
+
+                <div class="category-card">
+
+                    <div class="category-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+
+                    <h3>
+                        Merit Scholarships
+                    </h3>
+
+                    <p>
+                        Awarded based on academic excellence,
+                        leadership, and outstanding achievements.
+                    </p>
+
+                    <div class="category-count">
+                        150+ Opportunities
+                    </div>
+
+                    <a href="#" class="category-btn">
+                        Explore Scholarships
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+                <!-- GOVERNMENT -->
+
+                <div class="category-card">
+
+                    <div class="category-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+
+                    <h3>
+                        Government Scholarships
+                    </h3>
+
+                    <p>
+                        Funding programs offered by governments
+                        to support international students.
+                    </p>
+
+                    <div class="category-count">
+                        80+ Opportunities
+                    </div>
+
+                    <a href="#" class="category-btn">
+                        Explore Scholarships
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+                <!-- UNIVERSITY -->
+
+                <div class="category-card">
+
+                    <div class="category-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+
+                    <h3>
+                        University Scholarships
+                    </h3>
+
+                    <p>
+                        Scholarships awarded directly by
+                        universities and colleges worldwide.
+                    </p>
+
+                    <div class="category-count">
+                        220+ Opportunities
+                    </div>
+
+                    <a href="#" class="category-btn">
+                        Explore Scholarships
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+                <!-- RESEARCH -->
+
+                <div class="category-card">
+
+                    <div class="category-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+
+                    <h3>
+                        Research Scholarships
+                    </h3>
+
+                    <p>
+                        Funding for postgraduate research,
+                        innovation, and academic projects.
+                    </p>
+
+                    <div class="category-count">
+                        90+ Opportunities
+                    </div>
+
+                    <a href="#" class="category-btn">
+                        Explore Scholarships
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+                <!-- INDUSTRY -->
+
+                <div class="category-card">
+
+                    <div class="category-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+
+                    <h3>
+                        Industry Scholarships
+                    </h3>
+
+                    <p>
+                        Sponsored by companies and industry
+                        partners across various sectors.
+                    </p>
+
+                    <div class="category-count">
+                        60+ Opportunities
+                    </div>
+
+                    <a href="#" class="category-btn">
+                        Explore Scholarships
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+                <!-- WOMEN -->
+
+                <div class="category-card">
+
+                    <div class="category-icon">
+                        <i class="fas fa-female"></i>
+                    </div>
+
+                    <h3>
+                        Women Scholarships
+                    </h3>
+
+                    <p>
+                        Designed to support women pursuing
+                        higher education and leadership careers.
+                    </p>
+
+                    <div class="category-count">
+                        75+ Opportunities
+                    </div>
+
+                    <a href="#" class="category-btn">
+                        Explore Scholarships
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+                <!-- INTERNATIONAL -->
+
+                <div class="category-card">
+
+                    <div class="category-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+
+                    <h3>
+                        International Scholarships
+                    </h3>
+
+                    <p>
+                        Dedicated funding opportunities
+                        specifically for international students.
+                    </p>
+
+                    <div class="category-count">
+                        180+ Opportunities
+                    </div>
+
+                    <a href="#" class="category-btn">
+                        Explore Scholarships
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+                <!-- COMMUNITY -->
+
+                <div class="category-card">
+
+                    <div class="category-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+
+                    <h3>
+                        Community Scholarships
+                    </h3>
+
+                    <p>
+                        Provided by foundations, NGOs,
+                        and community organizations.
+                    </p>
+
+                    <div class="category-count">
+                        50+ Opportunities
+                    </div>
+
+                    <a href="#" class="category-btn">
+                        Explore Scholarships
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     SCHOLARSHIP SEARCH & FILTER
+    ========================================== -->
+    <section class="scholarship-search-section">
+
+        <div class="container">
+
+            <!-- SECTION HEADER -->
+
+            <div class="section-header">
+
+                <span class="section-tag">
+                    FIND YOUR SCHOLARSHIP
+                </span>
+
+                <h2>
+                    Search & Filter Scholarships
+                </h2>
+
+                <p>
+                    Find scholarships that match your preferred destination,
+                    study level, academic field, and funding requirements.
+                </p>
+
+            </div>
+
+            <!-- SEARCH BOX -->
+
+            <div class="scholarship-search-box">
+
+                <div class="search-input-wrapper">
+
+                    <i class="fas fa-search"></i>
+
+                    <input type="text"
+                        placeholder="Search scholarships, universities, countries...">
+
+                </div>
+
+                <!-- FILTERS -->
+
+                <div class="scholarship-filters">
+
+                    <!-- COUNTRY -->
+
+                    <div class="filter-group">
+
+                        <label>
+                            Country
+                        </label>
+
+                        <select>
+
+                            <option>
+                                All Countries
+                            </option>
+
+                            <option>
+                                Ireland
+                            </option>
+
+                            <option>
+                                Canada
+                            </option>
+
+                            <option>
+                                United Kingdom
+                            </option>
+
+                            <option>
+                                Australia
+                            </option>
+
+                            <option>
+                                Germany
+                            </option>
+
+                            <option>
+                                USA
+                            </option>
+
+                            <option>
+                                New Zealand
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- LEVEL -->
+
+                    <div class="filter-group">
+
+                        <label>
+                            Study Level
+                        </label>
+
+                        <select>
+
+                            <option>
+                                All Levels
+                            </option>
+
+                            <option>
+                                Diploma
+                            </option>
+
+                            <option>
+                                Undergraduate
+                            </option>
+
+                            <option>
+                                Masters
+                            </option>
+
+                            <option>
+                                PhD
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- FIELD -->
+
+                    <div class="filter-group">
+
+                        <label>
+                            Field of Study
+                        </label>
+
+                        <select>
+
+                            <option>
+                                All Fields
+                            </option>
+
+                            <option>
+                                Business
+                            </option>
+
+                            <option>
+                                Engineering
+                            </option>
+
+                            <option>
+                                Healthcare
+                            </option>
+
+                            <option>
+                                Information Technology
+                            </option>
+
+                            <option>
+                                Hospitality
+                            </option>
+
+                            <option>
+                                Agriculture
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- FUNDING -->
+
+                    <div class="filter-group">
+
+                        <label>
+                            Funding Type
+                        </label>
+
+                        <select>
+
+                            <option>
+                                All Funding Types
+                            </option>
+
+                            <option>
+                                Fully Funded
+                            </option>
+
+                            <option>
+                                Partial Funding
+                            </option>
+
+                            <option>
+                                Government Scholarship
+                            </option>
+
+                            <option>
+                                University Scholarship
+                            </option>
+
+                            <option>
+                                Research Scholarship
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- DEADLINE -->
+
+                    <div class="filter-group">
+
+                        <label>
+                            Deadline
+                        </label>
+
+                        <select>
+
+                            <option>
+                                Any Time
+                            </option>
+
+                            <option>
+                                This Month
+                            </option>
+
+                            <option>
+                                Next 3 Months
+                            </option>
+
+                            <option>
+                                Next 6 Months
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <!-- SEARCH BUTTON -->
+
+                <div class="search-action">
+
+                    <button class="search-scholarship-btn">
+
+                        <i class="fas fa-search"></i>
+
+                        Search Scholarships
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- POPULAR SEARCHES -->
+
+            <div class="popular-searches">
+
+                <h4>
+                    Popular Scholarship Searches
+                </h4>
+
+                <div class="search-tags">
+
+                    <a href="#" class="search-tag">
+                        Fully Funded
+                    </a>
+
+                    <a href="#" class="search-tag">
+                        Masters
+                    </a>
+
+                    <a href="#" class="search-tag">
+                        Canada
+                    </a>
+
+                    <a href="#" class="search-tag">
+                        Healthcare
+                    </a>
+
+                    <a href="#" class="search-tag">
+                        Engineering
+                    </a>
+
+                    <a href="#" class="search-tag">
+                        UK Scholarships
+                    </a>
+
+                    <a href="#" class="search-tag">
+                        PhD Funding
+                    </a>
+
+                    <a href="#" class="search-tag">
+                        Government Scholarships
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     LATEST SCHOLARSHIPS
+    ========================================== -->
+    <section class="latest-scholarships">
+
+        <div class="container">
+
+            <!-- SECTION HEADER -->
+
+            <div class="section-header">
+
+                <span class="section-tag">
+                    LATEST SCHOLARSHIPS
+                </span>
+
+                <h2>
+                    Latest Scholarship Opportunities
+                </h2>
+
+                <p>
+                    Explore recently added scholarship opportunities from
+                    leading universities and institutions worldwide.
+                </p>
+
+            </div>
+
+            <!-- SCHOLARSHIP GRID -->
+
+            <div class="scholarships-grid">
+
+                <!-- CARD 1 -->
+
+                <div class="scholarship-card">
+
+                    <div class="scholarship-top">
+
+                        <span class="funding-badge fully-funded">
+                            Fully Funded
+                        </span>
+
+                        <span class="level-badge">
+                            Masters
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Ireland Education Scholarship
+                    </h3>
+
+                    <div class="scholarship-institution">
+
+                        <i class="fas fa-university"></i>
+
+                        National College of Ireland
+
+                    </div>
+
+                    <div class="scholarship-details">
+
+                        <div class="detail-item">
+
+                            <i class="fas fa-location-dot"></i>
+
+                            <span>
+                                Ireland
+                            </span>
+
+                        </div>
+
+                        <div class="detail-item">
+
+                            <i class="fas fa-wallet"></i>
+
+                            <span>
+                                Full Tuition Coverage
+                            </span>
+
+                        </div>
+
+                        <div class="detail-item">
+
+                            <i class="fas fa-calendar"></i>
+
+                            <span>
+                                Deadline: 30 Sept 2026
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <a href="#" class="scholarship-btn">
+
+                        Apply Now
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+                <!-- CARD 2 -->
+
+                <div class="scholarship-card">
+
+                    <div class="scholarship-top">
+
+                        <span class="funding-badge partial-funded">
+                            Partial Funding
+                        </span>
+
+                        <span class="level-badge">
+                            Undergraduate
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Global Excellence Scholarship
+                    </h3>
+
+                    <div class="scholarship-institution">
+
+                        <i class="fas fa-university"></i>
+
+                        Griffith College Dublin
+
+                    </div>
+
+                    <div class="scholarship-details">
+
+                        <div class="detail-item">
+
+                            <i class="fas fa-location-dot"></i>
+
+                            <span>
+                                Ireland
+                            </span>
+
+                        </div>
+
+                        <div class="detail-item">
+
+                            <i class="fas fa-wallet"></i>
+
+                            <span>
+                                50% Tuition Coverage
+                            </span>
+
+                        </div>
+
+                        <div class="detail-item">
+
+                            <i class="fas fa-calendar"></i>
+
+                            <span>
+                                Deadline: 15 Oct 2026
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <a href="#" class="scholarship-btn">
+
+                        Apply Now
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+                <!-- CARD 3 -->
+
+                <div class="scholarship-card">
+
+                    <div class="scholarship-top">
+
+                        <span class="funding-badge grant-funded">
+                            Grant
+                        </span>
+
+                        <span class="level-badge">
+                            Masters
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        International Student Award
+                    </h3>
+
+                    <div class="scholarship-institution">
+
+                        <i class="fas fa-university"></i>
+
+                        Dundalk Institute of Technology
+
+                    </div>
+
+                    <div class="scholarship-details">
+
+                        <div class="detail-item">
+
+                            <i class="fas fa-location-dot"></i>
+
+                            <span>
+                                Ireland
+                            </span>
+
+                        </div>
+
+                        <div class="detail-item">
+
+                            <i class="fas fa-wallet"></i>
+
+                            <span>
+                                €5,000 Grant
+                            </span>
+
+                        </div>
+
+                        <div class="detail-item">
+
+                            <i class="fas fa-calendar"></i>
+
+                            <span>
+                                Deadline: 10 Nov 2026
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <a href="#" class="scholarship-btn">
+
+                        Apply Now
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+                <!-- CARD 4 -->
+
+                <div class="scholarship-card">
+
+                    <div class="scholarship-top">
+
+                        <span class="funding-badge fully-funded">
+                            Fully Funded
+                        </span>
+
+                        <span class="level-badge">
+                            PhD
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Research Excellence Scholarship
+                    </h3>
+
+                    <div class="scholarship-institution">
+
+                        <i class="fas fa-university"></i>
+
+                        University of Toronto
+
+                    </div>
+
+                    <div class="scholarship-details">
+
+                        <div class="detail-item">
+
+                            <i class="fas fa-location-dot"></i>
+
+                            <span>
+                                Canada
+                            </span>
+
+                        </div>
+
+                        <div class="detail-item">
+
+                            <i class="fas fa-wallet"></i>
+
+                            <span>
+                                Full Tuition + Living Costs
+                            </span>
+
+                        </div>
+
+                        <div class="detail-item">
+
+                            <i class="fas fa-calendar"></i>
+
+                            <span>
+                                Deadline: 15 Dec 2026
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <a href="#" class="scholarship-btn">
+
+                        Apply Now
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+                <!-- CARD 5 -->
+
+                <div class="scholarship-card">
+
+                    <div class="scholarship-top">
+
+                        <span class="funding-badge partial-funded">
+                            Partial Funding
+                        </span>
+
+                        <span class="level-badge">
+                            Undergraduate
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        International Merit Scholarship
+                    </h3>
+
+                    <div class="scholarship-institution">
+
+                        <i class="fas fa-university"></i>
+
+                        University of Melbourne
+
+                    </div>
+
+                    <div class="scholarship-details">
+
+                        <div class="detail-item">
+
+                            <i class="fas fa-location-dot"></i>
+
+                            <span>
+                                Australia
+                            </span>
+
+                        </div>
+
+                        <div class="detail-item">
+
+                            <i class="fas fa-wallet"></i>
+
+                            <span>
+                                50% Tuition Scholarship
+                            </span>
+
+                        </div>
+
+                        <div class="detail-item">
+
+                            <i class="fas fa-calendar"></i>
+
+                            <span>
+                                Deadline: 20 Jan 2027
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <a href="#" class="scholarship-btn">
+
+                        Apply Now
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+                <!-- CARD 6 -->
+
+                <div class="scholarship-card">
+
+                    <div class="scholarship-top">
+
+                        <span class="funding-badge fully-funded">
+                            Fully Funded
+                        </span>
+
+                        <span class="level-badge">
+                            Masters
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Chevening Scholarship
+                    </h3>
+
+                    <div class="scholarship-institution">
+
+                        <i class="fas fa-university"></i>
+
+                        UK Government
+
+                    </div>
+
+                    <div class="scholarship-details">
+
+                        <div class="detail-item">
+
+                            <i class="fas fa-location-dot"></i>
+
+                            <span>
+                                United Kingdom
+                            </span>
+
+                        </div>
+
+                        <div class="detail-item">
+
+                            <i class="fas fa-wallet"></i>
+
+                            <span>
+                                Full Funding Package
+                            </span>
+
+                        </div>
+
+                        <div class="detail-item">
+
+                            <i class="fas fa-calendar"></i>
+
+                            <span>
+                                Deadline: 05 Nov 2026
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <a href="#" class="scholarship-btn">
+
+                        Apply Now
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- CTA -->
+
+            <div class="scholarships-footer">
+
+                <p>
+                    Looking for more scholarship opportunities?
+                </p>
+
+                <a href="#" class="view-all-scholarships-btn">
+
+                    View All Scholarships
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     SCHOLARSHIPS BY STUDY LEVEL
+    ========================================== -->
+    <section class="study-level-scholarships">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="section-tag">
+                    SCHOLARSHIPS BY STUDY LEVEL
+                </span>
+
+                <h2>
+                    Find Scholarships Matching Your Academic Level
+                </h2>
+
+                <p>
+                    Explore scholarship opportunities based on your current
+                    or intended level of study.
+                </p>
+
+            </div>
+
+            <!-- TABS -->
+
+            <div class="level-tabs">
+
+                <button class="level-tab active"
+                    data-tab="undergraduate">
+                    Undergraduate
+                </button>
+
+                <button class="level-tab"
+                    data-tab="masters">
+                    Masters
+                </button>
+
+                <button class="level-tab"
+                    data-tab="mba">
+                    MBA
+                </button>
+
+                <button class="level-tab"
+                    data-tab="phd">
+                    PhD
+                </button>
+
+                <button class="level-tab"
+                    data-tab="research">
+                    Research
+                </button>
+
+                <button class="level-tab"
+                    data-tab="professional">
+                    Professional Courses
+                </button>
+
+            </div>
+
+            <!-- UNDERGRADUATE -->
+
+            <div class="level-content active"
+                id="undergraduate">
+
+                <div class="level-grid">
+
+                    <div class="level-card">
+
+                        <h3>
+                            Global Undergraduate Scholarship
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                <strong>Institution:</strong>
+                                University of Toronto
+                            </li>
+
+                            <li>
+                                <strong>Funding:</strong>
+                                Full Tuition
+                            </li>
+
+                            <li>
+                                <strong>Country:</strong>
+                                Canada
+                            </li>
+
+                        </ul>
+
+                        <a href="#"
+                            class="level-btn">
+
+                            Apply Now
+
+                        </a>
+
+                    </div>
+
+                    <div class="level-card">
+
+                        <h3>
+                            International Excellence Scholarship
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                <strong>Institution:</strong>
+                                Griffith College
+                            </li>
+
+                            <li>
+                                <strong>Funding:</strong>
+                                50% Tuition
+                            </li>
+
+                            <li>
+                                <strong>Country:</strong>
+                                Ireland
+                            </li>
+
+                        </ul>
+
+                        <a href="#"
+                            class="level-btn">
+
+                            Apply Now
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- MASTERS -->
+
+            <div class="level-content"
+                id="masters">
+
+                <div class="level-grid">
+
+                    <div class="level-card">
+
+                        <h3>
+                            Ireland Education Scholarship
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                <strong>Institution:</strong>
+                                National College of Ireland
+                            </li>
+
+                            <li>
+                                <strong>Funding:</strong>
+                                Full Tuition
+                            </li>
+
+                            <li>
+                                <strong>Country:</strong>
+                                Ireland
+                            </li>
+
+                        </ul>
+
+                        <a href="#"
+                            class="level-btn">
+
+                            Apply Now
+
+                        </a>
+
+                    </div>
+
+                    <div class="level-card">
+
+                        <h3>
+                            Chevening Scholarship
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                <strong>Institution:</strong>
+                                UK Government
+                            </li>
+
+                            <li>
+                                <strong>Funding:</strong>
+                                Fully Funded
+                            </li>
+
+                            <li>
+                                <strong>Country:</strong>
+                                United Kingdom
+                            </li>
+
+                        </ul>
+
+                        <a href="#"
+                            class="level-btn">
+
+                            Apply Now
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- MBA -->
+
+            <div class="level-content"
+                id="mba">
+
+                <div class="level-grid">
+
+                    <div class="level-card">
+
+                        <h3>
+                            Global MBA Scholarship
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                <strong>Institution:</strong>
+                                University of Melbourne
+                            </li>
+
+                            <li>
+                                <strong>Funding:</strong>
+                                Partial Funding
+                            </li>
+
+                            <li>
+                                <strong>Country:</strong>
+                                Australia
+                            </li>
+
+                        </ul>
+
+                        <a href="#"
+                            class="level-btn">
+
+                            Apply Now
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- PHD -->
+
+            <div class="level-content"
+                id="phd">
+
+                <div class="level-grid">
+
+                    <div class="level-card">
+
+                        <h3>
+                            Research Excellence Scholarship
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                <strong>Institution:</strong>
+                                University of Toronto
+                            </li>
+
+                            <li>
+                                <strong>Funding:</strong>
+                                Full Funding + Stipend
+                            </li>
+
+                            <li>
+                                <strong>Country:</strong>
+                                Canada
+                            </li>
+
+                        </ul>
+
+                        <a href="#"
+                            class="level-btn">
+
+                            Apply Now
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RESEARCH -->
+
+            <div class="level-content"
+                id="research">
+
+                <div class="level-grid">
+
+                    <div class="level-card">
+
+                        <h3>
+                            DAAD Research Grant
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                <strong>Institution:</strong>
+                                DAAD
+                            </li>
+
+                            <li>
+                                <strong>Funding:</strong>
+                                Research Funding
+                            </li>
+
+                            <li>
+                                <strong>Country:</strong>
+                                Germany
+                            </li>
+
+                        </ul>
+
+                        <a href="#"
+                            class="level-btn">
+
+                            Apply Now
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- PROFESSIONAL -->
+
+            <div class="level-content"
+                id="professional">
+
+                <div class="level-grid">
+
+                    <div class="level-card">
+
+                        <h3>
+                            Healthcare Professional Scholarship
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                <strong>Institution:</strong>
+                                Healthcare Academy
+                            </li>
+
+                            <li>
+                                <strong>Funding:</strong>
+                                Partial Funding
+                            </li>
+
+                            <li>
+                                <strong>Country:</strong>
+                                United Kingdom
+                            </li>
+
+                        </ul>
+
+                        <a href="#"
+                            class="level-btn">
+
+                            Apply Now
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     FULLY FUNDED SCHOLARSHIPS
+    ========================================== -->
+    <section class="fully-funded-scholarships">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="section-tag">
+                    PREMIUM OPPORTUNITIES
+                </span>
+
+                <h2>
+                    Fully Funded Scholarships
+                </h2>
+
+                <p>
+                    Discover prestigious scholarship opportunities that cover tuition,
+                    accommodation, travel expenses, insurance, and living costs while
+                    studying abroad.
+                </p>
+
+            </div>
+
+            <div class="funded-grid">
+
+                <!-- CHEVENING -->
+
+                <div class="funded-card">
+
+                    <div class="funded-badge">
+                        <i class="fas fa-award"></i>
+                        Fully Funded
+                    </div>
+
+                    <div class="funded-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+
+                    <h3>
+                        Chevening Scholarship
+                    </h3>
+
+                    <div class="funded-country">
+                        <i class="fas fa-location-dot"></i>
+                        United Kingdom
+                    </div>
+
+                    <ul>
+
+                        <li>
+                            <i class="fas fa-graduation-cap"></i>
+                            Full Tuition
+                        </li>
+
+                        <li>
+                            <i class="fas fa-house"></i>
+                            Accommodation
+                        </li>
+
+                        <li>
+                            <i class="fas fa-plane-departure"></i>
+                            Airfare
+                        </li>
+
+                        <li>
+                            <i class="fas fa-wallet"></i>
+                            Monthly Allowance
+                        </li>
+
+                    </ul>
+
+                    <a href="#" class="funded-btn">
+                        Apply Now
+                    </a>
+
+                </div>
+
+                <!-- DAAD -->
+
+                <div class="funded-card">
+
+                    <div class="funded-badge">
+                        <i class="fas fa-award"></i>
+                        Fully Funded
+                    </div>
+
+                    <div class="funded-icon">
+                        <i class="fas fa-building-columns"></i>
+                    </div>
+
+                    <h3>
+                        DAAD Scholarship
+                    </h3>
+
+                    <div class="funded-country">
+                        <i class="fas fa-location-dot"></i>
+                        Germany
+                    </div>
+
+                    <ul>
+
+                        <li>
+                            <i class="fas fa-graduation-cap"></i>
+                            Tuition Support
+                        </li>
+
+                        <li>
+                            <i class="fas fa-wallet"></i>
+                            Living Expenses
+                        </li>
+
+                        <li>
+                            <i class="fas fa-plane-departure"></i>
+                            Travel Grant
+                        </li>
+
+                        <li>
+                            <i class="fas fa-heart-pulse"></i>
+                            Health Insurance
+                        </li>
+
+                    </ul>
+
+                    <a href="#" class="funded-btn">
+                        Apply Now
+                    </a>
+
+                </div>
+
+                <!-- FULBRIGHT -->
+
+                <div class="funded-card">
+
+                    <div class="funded-badge">
+                        <i class="fas fa-award"></i>
+                        Fully Funded
+                    </div>
+
+                    <div class="funded-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+
+                    <h3>
+                        Fulbright Scholarship
+                    </h3>
+
+                    <div class="funded-country">
+                        <i class="fas fa-location-dot"></i>
+                        United States
+                    </div>
+
+                    <ul>
+
+                        <li>
+                            <i class="fas fa-graduation-cap"></i>
+                            Full Tuition
+                        </li>
+
+                        <li>
+                            <i class="fas fa-wallet"></i>
+                            Living Allowance
+                        </li>
+
+                        <li>
+                            <i class="fas fa-plane-departure"></i>
+                            Travel Support
+                        </li>
+
+                        <li>
+                            <i class="fas fa-heart-pulse"></i>
+                            Medical Coverage
+                        </li>
+
+                    </ul>
+
+                    <a href="#" class="funded-btn">
+                        Apply Now
+                    </a>
+
+                </div>
+
+                <!-- ERASMUS -->
+
+                <div class="funded-card">
+
+                    <div class="funded-badge">
+                        <i class="fas fa-award"></i>
+                        Fully Funded
+                    </div>
+
+                    <div class="funded-icon">
+                        <i class="fas fa-earth-europe"></i>
+                    </div>
+
+                    <h3>
+                        Erasmus Mundus
+                    </h3>
+
+                    <div class="funded-country">
+                        <i class="fas fa-location-dot"></i>
+                        European Union
+                    </div>
+
+                    <ul>
+
+                        <li>
+                            <i class="fas fa-graduation-cap"></i>
+                            Tuition Fees
+                        </li>
+
+                        <li>
+                            <i class="fas fa-wallet"></i>
+                            Monthly Stipend
+                        </li>
+
+                        <li>
+                            <i class="fas fa-plane-departure"></i>
+                            Travel Costs
+                        </li>
+
+                        <li>
+                            <i class="fas fa-suitcase-rolling"></i>
+                            Relocation Support
+                        </li>
+
+                    </ul>
+
+                    <a href="#" class="funded-btn">
+                        Apply Now
+                    </a>
+
+                </div>
+
+                <!-- AUSTRALIA AWARDS -->
+
+                <div class="funded-card">
+
+                    <div class="funded-badge">
+                        <i class="fas fa-award"></i>
+                        Fully Funded
+                    </div>
+
+                    <div class="funded-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+
+                    <h3>
+                        Australia Awards
+                    </h3>
+
+                    <div class="funded-country">
+                        <i class="fas fa-location-dot"></i>
+                        Australia
+                    </div>
+
+                    <ul>
+
+                        <li>
+                            <i class="fas fa-graduation-cap"></i>
+                            Full Tuition
+                        </li>
+
+                        <li>
+                            <i class="fas fa-house"></i>
+                            Accommodation
+                        </li>
+
+                        <li>
+                            <i class="fas fa-plane-departure"></i>
+                            Airfare
+                        </li>
+
+                        <li>
+                            <i class="fas fa-wallet"></i>
+                            Establishment Allowance
+                        </li>
+
+                    </ul>
+
+                    <a href="#" class="funded-btn">
+                        Apply Now
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="funded-footer">
+
+                <p>
+                    Looking for more fully funded opportunities?
+                </p>
+
+                <a href="#" class="view-funded-btn">
+                    View All Fully Funded Scholarships
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     FEATURED PARTNER INSTITUTIONS
+    ========================================== -->
+    <section class="partner-institutions">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="section-tag">
+                    PARTNER INSTITUTIONS
+                </span>
+
+                <h2>
+                    Featured Partner Institutions
+                </h2>
+
+                <p>
+                    Explore leading institutions offering internationally
+                    recognized programs and scholarship opportunities.
+                </p>
+
+            </div>
+
+            <div class="institutions-grid">
+
+                <!-- CARD 1 -->
+
+                <div class="institution-card">
+
+                    <div class="institution-logo">
+
+                        <img src="image/NCI logoresized.png"
+                            alt="National College of Ireland">
+
+                    </div>
+
+                    <div class="institution-country">
+
+                        <i class="fas fa-location-dot"></i>
+                        Ireland
+
+                    </div>
+
+                    <h3>
+                        National College of Ireland
+                    </h3>
+
+                    <div class="institution-stats">
+
+                        <div class="institution-stat">
+
+                            <i class="fas fa-book-open"></i>
+
+                            <span>
+                                12 Programs
+                            </span>
+
+                        </div>
+
+                        <div class="institution-stat">
+
+                            <i class="fas fa-award"></i>
+
+                            <span>
+                                8 Scholarships
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="institution-programs">
+
+                        <span>Business</span>
+                        <span>Computing</span>
+                        <span>Data Analytics</span>
+
+                    </div>
+
+                    <a href="#"
+                        class="institution-btn">
+
+                        View Institution
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+                <!-- CARD 2 -->
+
+                <div class="institution-card">
+
+                    <div class="institution-logo">
+
+                        <img src="image/images.png"
+                            alt="Griffith College">
+
+                    </div>
+
+                    <div class="institution-country">
+
+                        <i class="fas fa-location-dot"></i>
+                        Ireland
+
+                    </div>
+
+                    <h3>
+                        Griffith College
+                    </h3>
+
+                    <div class="institution-stats">
+
+                        <div class="institution-stat">
+
+                            <i class="fas fa-book-open"></i>
+
+                            <span>
+                                18 Programs
+                            </span>
+
+                        </div>
+
+                        <div class="institution-stat">
+
+                            <i class="fas fa-award"></i>
+
+                            <span>
+                                10 Scholarships
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="institution-programs">
+
+                        <span>Business</span>
+                        <span>Law</span>
+                        <span>Marketing</span>
+
+                    </div>
+
+                    <a href="#"
+                        class="institution-btn">
+
+                        View Institution
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+                <!-- CARD 3 -->
+
+                <div class="institution-card">
+
+                    <div class="institution-logo">
+
+                        <img src="image/images (1).png"
+                            alt="Holmes Institute">
+
+                    </div>
+
+                    <div class="institution-country">
+
+                        <i class="fas fa-location-dot"></i>
+                        Australia
+
+                    </div>
+
+                    <h3>
+                        Holmes Institute
+                    </h3>
+
+                    <div class="institution-stats">
+
+                        <div class="institution-stat">
+
+                            <i class="fas fa-book-open"></i>
+
+                            <span>
+                                15 Programs
+                            </span>
+
+                        </div>
+
+                        <div class="institution-stat">
+
+                            <i class="fas fa-award"></i>
+
+                            <span>
+                                6 Scholarships
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="institution-programs">
+
+                        <span>Business</span>
+                        <span>Accounting</span>
+                        <span>IT</span>
+
+                    </div>
+
+                    <a href="#"
+                        class="institution-btn">
+
+                        View Institution
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+                <!-- CARD 4 -->
+
+                <div class="institution-card">
+
+                    <div class="institution-logo">
+
+                        <img src="image/Dundalk-Institute-of-Technology-Logo.jpg"
+                            alt="Dundalk Institute of Technology">
+
+                    </div>
+
+                    <div class="institution-country">
+
+                        <i class="fas fa-location-dot"></i>
+                        Ireland
+
+                    </div>
+
+                    <h3>
+                        Dundalk Institute of Technology
+                    </h3>
+
+                    <div class="institution-stats">
+
+                        <div class="institution-stat">
+
+                            <i class="fas fa-book-open"></i>
+
+                            <span>
+                                20 Programs
+                            </span>
+
+                        </div>
+
+                        <div class="institution-stat">
+
+                            <i class="fas fa-award"></i>
+
+                            <span>
+                                12 Scholarships
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="institution-programs">
+
+                        <span>Engineering</span>
+                        <span>Science</span>
+                        <span>Technology</span>
+
+                    </div>
+
+                    <a href="#"
+                        class="institution-btn">
+
+                        View Institution
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     SCHOLARSHIP APPLICATION PROCESS
+    ========================================== -->
+    <section class="scholarship-process">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="section-tag">
+                    APPLICATION JOURNEY
+                </span>
+
+                <h2>
+                    Scholarship Application Process
+                </h2>
+
+                <p>
+                    Follow our proven step-by-step process from scholarship
+                    discovery to successfully beginning your studies abroad.
+                </p>
+
+            </div>
+
+            <div class="process-timeline">
+
+                <!-- STEP 1 -->
+
+                <div class="process-step1">
+
+                    <div class="step-number">01</div>
+
+                    <div class="step-icon1">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+
+                    <div class="step-content">
+
+                        <h3>Create Account</h3>
+
+                        <p>
+                            Register your profile and start your study abroad journey.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- STEP 2 -->
+
+                <div class="process-step1">
+
+                    <div class="step-number">02</div>
+
+                    <div class="step-icon1">
+                        <i class="fas fa-globe"></i>
+                    </div>
+
+                    <div class="step-content">
+
+                        <h3>Choose Destination</h3>
+
+                        <p>
+                            Select your preferred study destination and country.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- STEP 3 -->
+
+                <div class="process-step1">
+
+                    <div class="step-number">03</div>
+
+                    <div class="step-icon1">
+                        <i class="fas fa-university"></i>
+                    </div>
+
+                    <div class="step-content">
+
+                        <h3>Choose Institution</h3>
+
+                        <p>
+                            Identify institutions that match your academic goals.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- STEP 4 -->
+
+                <div class="process-step1">
+
+                    <div class="step-number">04</div>
+
+                    <div class="step-icon1">
+                        <i class="fas fa-award"></i>
+                    </div>
+
+                    <div class="step-content">
+
+                        <h3>Find Scholarship</h3>
+
+                        <p>
+                            Explore scholarship opportunities available to you.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- STEP 5 -->
+
+                <div class="process-step1">
+
+                    <div class="step-number">05</div>
+
+                    <div class="step-icon1">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+
+                    <div class="step-content">
+
+                        <h3>Prepare Documents</h3>
+
+                        <p>
+                            Gather academic, personal, and supporting documents.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- STEP 6 -->
+
+                <div class="process-step1">
+
+                    <div class="step-number">06</div>
+
+                    <div class="step-icon1">
+                        <i class="fas fa-paper-plane"></i>
+                    </div>
+
+                    <div class="step-content">
+
+                        <h3>Submit Application</h3>
+
+                        <p>
+                            Complete and submit your scholarship application.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- STEP 7 -->
+
+                <div class="process-step1">
+
+                    <div class="step-number">07</div>
+
+                    <div class="step-icon1">
+                        <i class="fas fa-comments"></i>
+                    </div>
+
+                    <div class="step-content">
+
+                        <h3>Interview</h3>
+
+                        <p>
+                            Attend interviews where required by the institution.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- STEP 8 -->
+
+                <div class="process-step1">
+
+                    <div class="step-number">08</div>
+
+                    <div class="step-icon1">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+
+                    <div class="step-content">
+
+                        <h3>Receive Offer</h3>
+
+                        <p>
+                            Secure admission and scholarship confirmation.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- STEP 9 -->
+
+                <div class="process-step1">
+
+                    <div class="step-number">09</div>
+
+                    <div class="step-icon1">
+                        <i class="fas fa-passport"></i>
+                    </div>
+
+                    <div class="step-content">
+
+                        <h3>Visa Processing</h3>
+
+                        <p>
+                            Prepare and submit your student visa application.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- STEP 10 -->
+
+                <div class="process-step1">
+
+                    <div class="step-number">10</div>
+
+                    <div class="step-icon1">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+
+                    <div class="step-content">
+
+                        <h3>Start Studies</h3>
+
+                        <p>
+                            Travel abroad and begin your academic journey.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     SCHOLARSHIP SUPPORT SERVICES
+    ========================================== -->
+    <section class="scholarship-support-services">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="section-tag">
+                    EXPERT GUIDANCE
+                </span>
+
+                <h2>
+                    Scholarship Support Services
+                </h2>
+
+                <p>
+                    Maximize your chances of success with professional support
+                    throughout your scholarship and study abroad journey.
+                </p>
+
+            </div>
+
+            <div class="support-services-grid">
+
+                <!-- SERVICE 1 -->
+
+                <div class="support-service-card">
+
+                    <div class="support-icon">
+                        <i class="fas fa-magnifying-glass"></i>
+                    </div>
+
+                    <h3>
+                        Scholarship Matching
+                    </h3>
+
+                    <p>
+                        We identify scholarship opportunities that align with
+                        your academic profile, goals, and study destination.
+                    </p>
+
+                    <a href="#" class="support-link">
+                        Learn More
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+                <!-- SERVICE 2 -->
+
+                <div class="support-service-card">
+
+                    <div class="support-icon">
+                        <i class="fas fa-file-signature"></i>
+                    </div>
+
+                    <h3>
+                        Essay Review
+                    </h3>
+
+                    <p>
+                        Improve your scholarship essays and personal statements
+                        with expert feedback and recommendations.
+                    </p>
+
+                    <a href="#" class="support-link">
+                        Learn More
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+                <!-- SERVICE 3 -->
+
+                <div class="support-service-card">
+
+                    <div class="support-icon">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+
+                    <h3>
+                        SOP Assistance
+                    </h3>
+
+                    <p>
+                        Receive guidance in preparing a compelling Statement of
+                        Purpose that stands out.
+                    </p>
+
+                    <a href="#" class="support-link">
+                        Learn More
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+                <!-- SERVICE 4 -->
+
+                <div class="support-service-card">
+
+                    <div class="support-icon">
+                        <i class="fas fa-paper-plane"></i>
+                    </div>
+
+                    <h3>
+                        Application Support
+                    </h3>
+
+                    <p>
+                        Get help completing and submitting scholarship and
+                        university applications correctly.
+                    </p>
+
+                    <a href="#" class="support-link">
+                        Learn More
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+                <!-- SERVICE 5 -->
+
+                <div class="support-service-card">
+
+                    <div class="support-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+
+                    <h3>
+                        Interview Coaching
+                    </h3>
+
+                    <p>
+                        Prepare confidently for scholarship interviews through
+                        mock interviews and coaching.
+                    </p>
+
+                    <a href="#" class="support-link">
+                        Learn More
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+                <!-- SERVICE 6 -->
+
+                <div class="support-service-card">
+
+                    <div class="support-icon">
+                        <i class="fas fa-building-columns"></i>
+                    </div>
+
+                    <h3>
+                        University Selection
+                    </h3>
+
+                    <p>
+                        Choose institutions that match your academic interests,
+                        career goals, and budget.
+                    </p>
+
+                    <a href="#" class="support-link">
+                        Learn More
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- CTA -->
+
+            <div class="support-services-cta">
+
+                <h3>
+                    Need Personalized Scholarship Guidance?
+                </h3>
+
+                <p>
+                    Speak with our education advisors and receive tailored
+                    support for your scholarship journey.
+                </p>
+
+                <a href="consultation.html"
+                    class="support-cta-btn">
+
+                    <i class="fas fa-calendar-check"></i>
+                    Book Consultation
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     SCHOLARSHIP SUCCESS STORIES
+    ========================================== -->
+    <section class="scholarship-success-stories">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="section-tag">
+                    STUDENT SUCCESS STORIES
+                </span>
+
+                <h2>
+                    Scholarship Success Stories
+                </h2>
+
+                <p>
+                    Real student journeys, real scholarship awards, and real
+                    success stories from students who achieved their dream of
+                    studying abroad.
+                </p>
+
+            </div>
+
+            <div class="success-slider-wrapper">
+
+                <button class="success-nav success-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div class="success-slider" id="successSlider">
+
+                    <!-- STORY 1 -->
+
+                    <div class="success-card">
+
+                        <div class="student-image">
+                            <img src="image/student-1.jpg" alt="Student">
+                        </div>
+
+                        <div class="success-award">
+                            <i class="fas fa-award"></i>
+                            100% Tuition Scholarship
+                        </div>
+
+                        <h3>Brian Odhiambo</h3>
+
+                        <div class="success-meta">
+
+                            <span>
+                                <i class="fas fa-university"></i>
+                                National College of Ireland
+                            </span>
+
+                            <span>
+                                <i class="fas fa-location-dot"></i>
+                                Ireland
+                            </span>
+
+                        </div>
+
+                        <p>
+                            "The scholarship guidance and application support
+                            helped me secure funding and pursue my studies in
+                            Ireland."
+                        </p>
+
+                        <div class="success-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+
+                    </div>
+
+                    <!-- STORY 2 -->
+
+                    <div class="success-card">
+
+                        <div class="student-image">
+                            <img src="image/student-2.jpg" alt="Student">
+                        </div>
+
+                        <div class="success-award">
+                            <i class="fas fa-award"></i>
+                            Fully Funded Scholarship
+                        </div>
+
+                        <h3>Grace Wanjiku</h3>
+
+                        <div class="success-meta">
+
+                            <span>
+                                <i class="fas fa-university"></i>
+                                Griffith College
+                            </span>
+
+                            <span>
+                                <i class="fas fa-location-dot"></i>
+                                Ireland
+                            </span>
+
+                        </div>
+
+                        <p>
+                            "The application coaching and scholarship matching
+                            process gave me confidence and excellent results."
+                        </p>
+
+                        <div class="success-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+
+                    </div>
+
+                    <!-- STORY 3 -->
+
+                    <div class="success-card">
+
+                        <div class="student-image">
+                            <img src="image/student-3.jpg" alt="Student">
+                        </div>
+
+                        <div class="success-award">
+                            <i class="fas fa-award"></i>
+                            Merit Scholarship
+                        </div>
+
+                        <h3>Daniel Otieno</h3>
+
+                        <div class="success-meta">
+
+                            <span>
+                                <i class="fas fa-university"></i>
+                                Holmes Institute
+                            </span>
+
+                            <span>
+                                <i class="fas fa-location-dot"></i>
+                                Australia
+                            </span>
+
+                        </div>
+
+                        <p>
+                            "The university selection support helped me find
+                            the perfect institution and scholarship package."
+                        </p>
+
+                        <div class="success-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button class="success-nav success-next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     REQUIRED DOCUMENTS
+    ========================================== -->
+    <section class="required-documents">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="section-tag">
+                    APPLICATION REQUIREMENTS
+                </span>
+
+                <h2>
+                    Required Documents
+                </h2>
+
+                <p>
+                    Prepare these essential documents before applying for
+                    scholarships and study opportunities abroad.
+                </p>
+
+            </div>
+
+            <div class="documents-wrapper">
+
+                <!-- CORE DOCUMENTS -->
+
+                <div class="documents-card">
+
+                    <div class="documents-card-header">
+
+                        <div class="documents-icon">
+                            <i class="fas fa-folder-open"></i>
+                        </div>
+
+                        <div>
+                            <h3>Core Documents</h3>
+                            <span>Required for most applications</span>
+                        </div>
+
+                    </div>
+
+                    <ul class="documents-list">
+
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Passport
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Academic Certificates
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Academic Transcripts
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Curriculum Vitae (CV)
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- SUPPORTING DOCUMENTS -->
+
+                <div class="documents-card">
+
+                    <div class="documents-card-header">
+
+                        <div class="documents-icon">
+                            <i class="fas fa-file-signature"></i>
+                        </div>
+
+                        <div>
+                            <h3>Supporting Documents</h3>
+                            <span>May vary by scholarship</span>
+                        </div>
+
+                    </div>
+
+                    <ul class="documents-list">
+
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Recommendation Letters
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Statement of Purpose (SOP)
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            English Test Results
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Scholarship Essay
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- INFO BOX -->
+
+            <div class="documents-notice">
+
+                <div class="notice-icon">
+                    <i class="fas fa-circle-info"></i>
+                </div>
+
+                <div class="notice-content">
+
+                    <h4>
+                        Important Notice
+                    </h4>
+
+                    <p>
+                        Document requirements may vary depending on the scholarship,
+                        institution, program, and destination country. Our advisors
+                        can help you prepare and review all required documents.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- CTA -->
+
+            <div class="documents-cta">
+
+                <h3>
+                    Need Help Preparing Your Documents?
+                </h3>
+
+                <p>
+                    Our team can review your documents and guide you through
+                    the scholarship application process.
+                </p>
+
+                <a href="consultation.html"
+                    class="documents-btn">
+
+                    <i class="fas fa-calendar-check"></i>
+
+                    Book Consultation
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     UPCOMING SCHOLARSHIP DEADLINES
+    ========================================== -->
+    <section class="scholarship-deadlines">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="section-tag">
+                    APPLY BEFORE IT'S TOO LATE
+                </span>
+
+                <h2>
+                    Upcoming Scholarship Deadlines
+                </h2>
+
+                <p>
+                    Don't miss out on life-changing scholarship opportunities.
+                    Explore upcoming deadlines and submit your applications on time.
+                </p>
+
+            </div>
+
+            <div class="deadline-grid">
+
+                <!-- CHEVENING -->
+
+                <div class="deadline-card urgent">
+
+                    <div class="deadline-status">
+
+                        <i class="fas fa-clock"></i>
+                        12 Days Left
+
+                    </div>
+
+                    <h3>
+                        Chevening Scholarship
+                    </h3>
+
+                    <div class="funding-badge">
+
+                        <i class="fas fa-award"></i>
+                        Fully Funded
+
+                    </div>
+
+                    <div class="deadline-info">
+
+                        <div>
+
+                            <span class="label">
+                                Deadline
+                            </span>
+
+                            <strong>
+                                15 Sept 2026
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                    <a href="#"
+                        class="deadline-btn">
+
+                        Apply Now
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+                <!-- DAAD -->
+
+                <div class="deadline-card warning">
+
+                    <div class="deadline-status">
+
+                        <i class="fas fa-clock"></i>
+                        24 Days Left
+
+                    </div>
+
+                    <h3>
+                        DAAD Scholarship
+                    </h3>
+
+                    <div class="funding-badge">
+
+                        <i class="fas fa-graduation-cap"></i>
+                        Tuition + Living Costs
+
+                    </div>
+
+                    <div class="deadline-info">
+
+                        <div>
+
+                            <span class="label">
+                                Deadline
+                            </span>
+
+                            <strong>
+                                27 Sept 2026
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                    <a href="#"
+                        class="deadline-btn">
+
+                        Apply Now
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+                <!-- IRELAND -->
+
+                <div class="deadline-card safe">
+
+                    <div class="deadline-status">
+
+                        <i class="fas fa-clock"></i>
+                        39 Days Left
+
+                    </div>
+
+                    <h3>
+                        Ireland Education Scholarship
+                    </h3>
+
+                    <div class="funding-badge">
+
+                        <i class="fas fa-university"></i>
+                        Partial Funding
+
+                    </div>
+
+                    <div class="deadline-info">
+
+                        <div>
+
+                            <span class="label">
+                                Deadline
+                            </span>
+
+                            <strong>
+                                12 Oct 2026
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                    <a href="#"
+                        class="deadline-btn">
+
+                        Apply Now
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+                <!-- AUSTRALIA -->
+
+                <div class="deadline-card safe">
+
+                    <div class="deadline-status">
+
+                        <i class="fas fa-clock"></i>
+                        52 Days Left
+
+                    </div>
+
+                    <h3>
+                        Australia Awards
+                    </h3>
+
+                    <div class="funding-badge">
+
+                        <i class="fas fa-award"></i>
+                        Fully Funded
+
+                    </div>
+
+                    <div class="deadline-info">
+
+                        <div>
+
+                            <span class="label">
+                                Deadline
+                            </span>
+
+                            <strong>
+                                25 Oct 2026
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                    <a href="#"
+                        class="deadline-btn">
+
+                        Apply Now
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- CTA -->
+
+            <div class="deadlines-footer">
+
+                <h3>
+                    Looking For More Scholarship Opportunities?
+                </h3>
+
+                <p>
+                    Browse our complete scholarship database and discover
+                    opportunities that match your goals.
+                </p>
+
+                <a href="#scholarships"
+                    class="view-deadlines-btn">
+
+                    <i class="fas fa-search"></i>
+
+                    View All Scholarships
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     SCHOLARSHIP FAQ
+    ========================================== -->
+    <section class="scholarship-faq">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="section-tag">
+                    FREQUENTLY ASKED QUESTIONS
+                </span>
+
+                <h2>
+                    Scholarship FAQ
+                </h2>
+
+                <p>
+                    Find answers to common questions about scholarships,
+                    eligibility requirements, funding opportunities, and
+                    studying abroad.
+                </p>
+
+            </div>
+
+            <div class="faq-container">
+
+                <!-- FAQ 1 -->
+
+                <div class="faq-item active">
+
+                    <button class="faq-question">
+
+                        <span>
+                            Can I get a fully funded scholarship?
+                        </span>
+
+                        <i class="fas fa-plus"></i>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            Yes. Many government, university, and international
+                            scholarship programs provide full funding that may
+                            include tuition fees, accommodation, airfare,
+                            insurance, and living expenses.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- FAQ 2 -->
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        <span>
+                            What GPA is required?
+                        </span>
+
+                        <i class="fas fa-plus"></i>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            GPA requirements vary depending on the scholarship.
+                            Highly competitive scholarships often require strong
+                            academic performance, while many opportunities are
+                            available for different academic profiles.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- FAQ 3 -->
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        <span>
+                            Can I apply without IELTS?
+                        </span>
+
+                        <i class="fas fa-plus"></i>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            Some universities and scholarship providers accept
+                            alternative proof of English proficiency or may
+                            waive IELTS requirements depending on your previous
+                            education background.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- FAQ 4 -->
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        <span>
+                            How competitive are scholarships?
+                        </span>
+
+                        <i class="fas fa-plus"></i>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            Scholarships can be highly competitive, especially
+                            fully funded opportunities. Strong applications,
+                            quality essays, and early preparation significantly
+                            improve your chances of success.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- FAQ 5 -->
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        <span>
+                            Can scholarships cover living expenses?
+                        </span>
+
+                        <i class="fas fa-plus"></i>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            Many fully funded scholarships include living
+                            allowances, accommodation support, and other
+                            financial benefits beyond tuition coverage.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- FAQ 6 -->
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        <span>
+                            Can I combine scholarships?
+                        </span>
+
+                        <i class="fas fa-plus"></i>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            Some institutions allow students to combine multiple
+                            funding sources, while others have restrictions.
+                            Always review the scholarship terms and conditions.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- SUPPORT BOX -->
+
+            <div class="faq-support-box">
+
+                <div class="faq-support-icon">
+
+                    <i class="fas fa-headset"></i>
+
+                </div>
+
+                <div class="faq-support-content">
+
+                    <h3>
+                        Still Have Questions?
+                    </h3>
+
+                    <p>
+                        Speak with our education advisors for personalized
+                        guidance on scholarships, applications, and study
+                        abroad opportunities.
+                    </p>
+
+                </div>
+
+                <a href="consultation.html"
+                    class="faq-support-btn">
+
+                    <i class="fas fa-calendar-check"></i>
+
+                    Book Consultation
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     FINAL CTA
+    ========================================== -->
+    <section class="scholarship-final-cta">
+
+        <div class="container">
+
+            <div class="final-cta-content">
+
+                <span class="cta-tag">
+                    START YOUR JOURNEY TODAY
+                </span>
+
+                <h2>
+                    Ready to Secure Your Scholarship Opportunity?
+                </h2>
+
+                <p>
+                    Our advisors can help identify suitable scholarships,
+                    prepare strong applications, and maximize your chances
+                    of success through personalized guidance and expert support.
+                </p>
+
+                <div class="final-cta-buttons">
+
+                    <a href="#scholarships"
+                        class="cta-primary-btn">
+
+                        <i class="fas fa-award"></i>
+
+                        Browse Scholarships
+
+                    </a>
+
+                    <a href="consultation.html"
+                        class="cta-secondary-btn">
+
+                        <i class="fas fa-calendar-check"></i>
+
+                        Book Consultation
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     FOOTER
+    ========================================== -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- COMPANY INFO -->
+            <div class="footer-col footer-brand">
+
+                <div class="logo">
+                    <span>
+                        <img src="logo/ILC Logo.jpg" alt="Insign Link Global Connect Logo">
+                    </span>
+
+                    <h3>
+                        Insign LinkGlobal Connect
+                    </h3>
+                </div>
+
+                <p>
+                    Connecting students, professionals, and families to global
+                    education, career, employment, and immigration opportunities
+                    across the world.
+                </p>
+
+            </div>
+
+            <!-- CONTACT -->
+            <div class="footer-col">
+
+                <h4>CONTACT US</h4>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Nairobi, Kenya
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +254 704 565 250
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    info@insignlinkglobalconnect.com
+                </p>
+
+            </div>
+
+            <!-- OPPORTUNITIES -->
+            <div class="footer-col">
+
+                <h4>OPPORTUNITIES</h4>
+
+                <ul>
+
+                    <li>
+                        <a href="study-abroad.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Study Abroad
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="jobs_abroad.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Jobs Abroad
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="immigration.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Immigration Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="career-development.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Career Development
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- RESOURCES -->
+            <div class="footer-col">
+
+                <h4>RESOURCES</h4>
+
+                <ul>
+
+                    <li>
+                        <a href="resources.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Resource Center
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="success-stories.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Success Stories
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="faq.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            FAQs
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Book Consultation
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- FOOTER BOTTOM -->
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Insign Link Global Connect. All Rights Reserved. Crafted by
+                <a href="https://wa.me/254700073919?text=Hello%20I%20am%20interested%20in%20your%20services">
+                    Brydex Technologies
+                </a>
+            </p>
+
+            <div class="footer-links">
+                <a href="terms.html">Terms of Use</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+            </div>
+
+            <div class="social-icons">
+
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const navbar = document.querySelector('.navbar');
+
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('active');
+            navbar.classList.toggle('active');
+        });
+
+        /* Mobile dropdown toggle */
+
+        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+
+            toggle.addEventListener('click', function(e){
+
+                e.preventDefault();
+                e.stopPropagation();
+
+                const dropdown = this.closest('.dropdown');
+
+                dropdown.classList.toggle('active');
+
+            });
+
+        });
+        // SCROLL BUTTON
+            let calcScrollValue = () => {
+                let scrollProgress = document.getElementById("progress");
+                let pos = document.documentElement.scrollTop;
+                let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                let scrollValue = Math.round((pos * 100) / calcHeight);
+
+                if (pos > 100) {
+                    scrollProgress.style.display = "grid";
+                } else {
+                    scrollProgress.style.display = "none";
+                }
+
+                scrollProgress.onclick = () => {
+                    document.documentElement.scrollTop = 0;
+                };
+
+                scrollProgress.style.background =
+                    `conic-gradient(#F4A646 ${scrollValue}%, white ${scrollValue}%)`;
+            };
+
+            window.addEventListener("scroll", calcScrollValue);
+
+            // ==========================================
+            // SCHOLARSHIP LEVEL TABS
+            // ==========================================
+
+            const levelTabs = document.querySelectorAll('.level-tab');
+            const levelContents = document.querySelectorAll('.level-content');
+
+            levelTabs.forEach(tab => {
+
+                tab.addEventListener('click', () => {
+
+                    const target = tab.dataset.tab;
+
+                    levelTabs.forEach(btn =>
+                        btn.classList.remove('active')
+                    );
+
+                    levelContents.forEach(content =>
+                        content.classList.remove('active')
+                    );
+
+                    tab.classList.add('active');
+
+                    document
+                        .getElementById(target)
+                        .classList.add('active');
+
+                });
+
+            });
+
+            const successSlider = document.getElementById('successSlider');
+
+            document.querySelector('.success-next').addEventListener('click', () => {
+                successSlider.scrollBy({
+                    left: 420,
+                    behavior: 'smooth'
+                });
+            });
+
+            document.querySelector('.success-prev').addEventListener('click', () => {
+                successSlider.scrollBy({
+                    left: -420,
+                    behavior: 'smooth'
+                });
+            });
+
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+
+                const button = item.querySelector('.faq-question');
+
+                button.addEventListener('click', () => {
+
+                    faqItems.forEach(faq => {
+
+                        if(faq !== item){
+
+                            faq.classList.remove('active');
+
+                            faq.querySelector('i').classList.remove('fa-plus');
+                            faq.querySelector('i').classList.add('fa-plus');
+
+                        }
+
+                    });
+
+                    item.classList.toggle('active');
+
+                    const icon = item.querySelector('i');
+
+                    if(item.classList.contains('active')){
+
+                        icon.classList.remove('fa-plus');
+                        icon.classList.add('fa-plus');
+
+                    }else{
+
+                        icon.classList.remove('fa-plus');
+                        icon.classList.add('fa-plus');
+
+                    }
+
+                });
+
+            });
+    </script>
+</body>
+</html>

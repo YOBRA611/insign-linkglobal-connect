@@ -1,0 +1,7432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap"rel="stylesheet">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Career Development</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="logo/ILC Logo.jpg">
+</head>
+<style>
+/* ==========================================
+   CAREER HERO
+========================================== */
+.career-hero{
+    padding:80px 5%;
+    background:
+    linear-gradient(
+        135deg,
+        #f8fafc 0%,
+        #eef4ff 100%
+    );
+    overflow:hidden;
+}
+.career-hero-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+}
+.hero-tag{
+    display:inline-block;
+    color:var(--primary);
+    padding:10px 18px;
+    border-radius:50px;
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:20px;
+}
+.career-hero-content h1{
+    font-size:40px;
+    line-height:1.1;
+    margin-bottom:25px;
+}
+.career-hero-content h1 span{
+    color:var(--primary);
+}
+.career-hero-content p{
+    font-size:18px;
+    line-height:1.9;
+    color:#64748b;
+    margin-bottom:35px;
+}
+.hero-buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+.hero-btn-primary{
+    background:var(--primary);
+    color:#fff;
+    text-decoration:none;
+    padding:16px 30px;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    transition:.35s ease;
+}
+.hero-btn-secondary{
+    background:var(--secondary);
+    color:white;
+    border:1px solid var(--secondary);
+    text-decoration:none;
+    padding:16px 30px;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    transition:.35s ease;
+}
+.hero-btn-primary:hover{
+    transform:translateY(-8px);
+}
+.hero-btn-secondary:hover{
+    transform:translateY(-8px);
+}
+/* TRUST */
+.career-trust{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:40px;
+}
+.career-trust .trust-item{
+    background:#fff;
+    padding:12px 18px;
+    border-radius:50px;
+    font-size:14px;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+.career-trust i{
+    color:#22c55e;
+    margin-right:8px;
+}
+/* RIGHT */
+.career-hero-visual{
+    position:relative;
+}
+.hero-main-image{
+    border-radius:30px;
+    overflow:hidden;
+    box-shadow:
+    0 40px 80px rgba(0,0,0,.12);
+}
+.hero-main-image img{
+    width:100%;
+    display:block;
+    height:650px;
+    object-fit:cover;
+}
+/* FLOATING CARDS */
+.floating-card{
+    position:absolute;
+    background:#fff;
+    border-radius:20px;
+    padding:18px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,.08);
+}
+.card-icon{
+    width:50px;
+    height:50px;
+    border-radius:14px;
+    background:#eff6ff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.floating-card strong{
+    display:block;
+    color: var(--primary);
+}
+.floating-card span{
+    color:#64748b;
+    font-size:14px;
+    font-weight: 400;
+}
+.card1{
+    top:40px;
+    left:-40px;
+}
+.card2{
+    top:220px;
+    right:-40px;
+}
+.card3{
+    bottom:180px;
+    left:-30px;
+}
+/* DASHBOARD */
+.career-dashboard{
+    position:absolute;
+    bottom:-40px;
+    right:20px;
+    width:320px;
+    background:#fff;
+    padding:25px;
+    border-radius:24px;
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.1);
+}
+.career-dashboard h4{
+    margin-bottom:20px;
+}
+.dashboard-item{
+    margin-bottom:18px;
+}
+.dashboard-item span{
+    display:block;
+    margin-bottom:8px;
+    font-size:14px;
+}
+.progress-bar{
+    height:10px;
+    background:#e5e7eb;
+    border-radius:50px;
+    overflow:hidden;
+}
+.progress-fill{
+    height:100%;
+    border-radius:50px;
+}
+.fill1{
+    width:92%;
+    background:#22c55e;
+}
+.fill2{
+    width:85%;
+    background:#3b82f6;
+}
+.fill3{
+    width:78%;
+    background:#f59e0b;
+}
+/* ==========================================
+   RESPONSIVE
+========================================== */
+@media(max-width:1024px){
+    .career-hero-container{
+        grid-template-columns:1fr;
+    }
+    .career-hero-content h1{
+        font-size:3rem;
+    }
+    .card1,
+    .card2,
+    .card3{
+        position:relative;
+        left:auto;
+        right:auto;
+        top:auto;
+        bottom:auto;
+        margin-top:20px;
+    }
+    .career-dashboard{
+        position:relative;
+        width:100%;
+        bottom:auto;
+        right:auto;
+        margin-top:20px;
+    }
+}
+@media(max-width:768px){
+    .career-hero{
+        padding:50px 5%;
+    }
+    .career-hero-content h1{
+        font-size:2.3rem;
+    }
+    .hero-main-image img{
+        height:450px;
+    }
+    .hero-buttons{
+        flex-direction:column;
+    }
+    .hero-btn-primary,
+    .hero-btn-secondary{
+        justify-content:center;
+    }
+    .career-trust{
+        display:grid;
+        grid-template-columns:1fr;
+    }
+}
+/* ==========================================
+   CAREER SERVICES
+========================================== */
+.career-services{
+    padding:100px 5%;
+    background:#f8fafc;
+}
+.career-services-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    margin-top:60px;
+}
+/* FEATURED */
+.featured-service{
+    grid-column:span 2;
+    grid-row:span 2;
+    background: linear-gradient(135deg,var(--primary),#1e3a8a);
+    color:#fff;
+    border-radius:30px;
+    padding:50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+}
+.featured-service::before{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    background:
+    rgba(255,255,255,.06);
+    right:-100px;
+    top:-100px;
+}
+.service-badge{
+    background:
+    rgba(255,255,255,.15);
+    padding:10px 18px;
+    border-radius:50px;
+    display:inline-block;
+    margin-bottom:20px;
+}
+.featured-service h3{
+    font-size:2.3rem;
+    margin-bottom:20px;
+}
+.featured-service p{
+    line-height:1.8;
+    margin-bottom:25px;
+}
+.featured-service ul{
+    padding-left:20px;
+}
+.featured-service ul li{
+    margin-bottom:10px;
+}
+.featured-icon{
+    font-size:120px;
+    opacity:.15;
+}
+.service-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    margin-top:25px;
+    background:#fff;
+    color:var(--primary);
+    padding:15px 25px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:600;
+}
+/* SMALL CARDS */
+.service-card{
+    background:#fff;
+    border-radius:24px;
+    padding:35px;
+    text-align:left;
+    transition:.35s;
+    box-shadow: 0 15px 40px rgba(0,0,0,.05);
+}
+.service-card:hover{
+    transform:translateY(-8px);
+}
+.service-card i{
+    font-size:38px;
+    color:var(--primary);
+    margin-bottom:20px;
+}
+.service-card h4{
+    margin-bottom:12px;
+}
+.service-card p{
+    color:#64748b;
+    line-height:1.7;
+}
+/* TABLET */
+@media(max-width:1024px){
+    .career-services-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+    .featured-service{
+        grid-column:span 2;
+    }
+}
+/* MOBILE */
+@media(max-width:768px){
+    .career-services-grid{
+        grid-template-columns:1fr;
+    }
+    .featured-service{
+        grid-column:span 1;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:30px;
+    }
+    .featured-service h3{
+        font-size:2rem;
+    }
+    .featured-icon{
+        font-size:80px;
+    }
+}
+/* ==========================================
+   AI CAREER TOOLKIT
+========================================== */
+.ai-toolkit{
+    padding:100px 5%;
+    background:#f8fafc;
+    position:relative;
+}
+/* GRID */
+.ai-toolkit-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:25px;
+    margin-top:60px;
+}
+/* ==========================================
+   FEATURED CARD
+========================================== */
+.featured-ai-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:30px;
+    padding:50px;
+    background:linear-gradient(135deg,var(--primary),#1e3a8a);
+    color:#fff;
+    min-height:520px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.12);
+}
+.featured-ai-card::before{
+    content:'';
+    position:absolute;
+    top:-120px;
+    right:-120px;
+    width:320px;
+    height:320px;
+    border-radius:50%;
+    background:
+    rgba(255,255,255,.08);
+}
+.featured-ai-content{
+    position:relative;
+    z-index:2;
+}
+.ai-badge{
+    display:inline-block;
+    padding:10px 18px;
+    border-radius:50px;
+    background:
+    rgba(255,255,255,.15);
+    backdrop-filter:blur(10px);
+    font-size:13px;
+    font-weight:600;
+    margin-bottom:25px;
+}
+.featured-ai-card h3{
+    font-size:42px;
+    line-height:1.2;
+    margin-bottom:20px;
+    color:#fff;
+}
+.featured-ai-card p{
+    line-height:1.9;
+    max-width:550px;
+    margin-bottom:30px;
+    opacity:.95;
+}
+.ai-features{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin-bottom:35px;
+}
+.ai-feature{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 16px;
+}
+.ai-feature i{
+    color:#22c55e;
+}
+.featured-ai-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    width:fit-content;
+    padding:15px 30px;
+    border-radius:12px;
+    background:#fff;
+    color:var(--primary);
+    text-decoration:none;
+    font-weight:600;
+    transition:.35s;
+}
+.featured-ai-btn:hover{
+    transform:translateY(-3px);
+}
+.featured-ai-icon{
+    position:absolute;
+    bottom:40px;
+    right:40px;
+    font-size:140px;
+    color:rgba(255,255,255,.08);
+}
+/* ==========================================
+   TOOL CARDS
+========================================== */
+.ai-tool-card{
+    background:#fff;
+    border-radius:24px;
+    padding:30px;
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.05);
+    transition:.35s;
+    display:flex;
+    flex-direction:column;
+}
+.ai-tool-card:hover{
+    transform:translateY(-8px);
+}
+.tool-icon{
+    width:70px;
+    height:70px;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:
+    rgba(13,110,253,.08);
+    color:var(--primary);
+    font-size:28px;
+    margin-bottom:25px;
+}
+.ai-tool-card h4{
+    font-size:22px;
+    margin-bottom:15px;
+}
+.ai-tool-card p{
+    color:#64748b;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+.ai-tool-card ul{
+    padding-left:18px;
+    margin-bottom:25px;
+}
+.ai-tool-card ul li{
+    margin-bottom:10px;
+    color:#475569;
+}
+.tool-btn{
+    margin-top:auto;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    padding:14px 18px;
+    border-radius:12px;
+    background:var(--primary);
+    color:#fff;
+    font-weight:500;
+    transition:.35s;
+}
+.tool-btn:hover{
+    opacity:.9;
+}
+/* ==========================================
+   CTA
+========================================== */
+.ai-toolkit-cta{
+    margin-top:70px;
+    background:#fff;
+    padding:60px;
+    border-radius:30px;
+    text-align:center;
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.04);
+}
+.ai-toolkit-cta h3{
+    font-size:30px;
+    margin-bottom:15px;
+}
+.ai-toolkit-cta p{
+    max-width:700px;
+    margin:0 auto 30px;
+    color:#64748b;
+    line-height:1.9;
+}
+.cta-main-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:16px 35px;
+    background:var(--primary);
+    color:#fff;
+    text-decoration:none;
+    border-radius:12px;
+    font-weight:600;
+}
+/* ==========================================
+   TABLET
+========================================== */
+@media(max-width:1200px){
+    .ai-toolkit-grid{
+        grid-template-columns:1fr 1fr;
+    }
+    .featured-ai-card{
+        grid-column:span 2;
+    }
+}
+/* ==========================================
+   MOBILE
+========================================== */
+@media(max-width:768px){
+    .ai-toolkit{
+        padding:80px 20px;
+    }
+    .ai-toolkit-grid{
+        grid-template-columns:1fr;
+    }
+    .featured-ai-card{
+        grid-column:auto;
+        padding:35px 25px;
+        min-height:auto;
+    }
+    .featured-ai-card h3{
+        font-size:32px;
+    }
+    .featured-ai-icon{
+        display:none;
+    }
+    .ai-features{
+        grid-template-columns:1fr;
+    }
+    .ai-tool-card{
+        padding:25px;
+    }
+    .ai-toolkit-cta{
+        padding:40px 25px;
+    }
+    .ai-toolkit-cta h3{
+        font-size:28px;
+    }
+    .cta-main-btn{
+        width:100%;
+        justify-content:center;
+    }
+}
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+@media(max-width:480px){
+    .featured-ai-card h3{
+        font-size:28px;
+    }
+    .featured-ai-card p{
+        font-size:14px;
+    }
+    .tool-icon{
+        width:60px;
+        height:60px;
+        font-size:24px;
+    }
+    .ai-tool-card h4{
+        font-size:20px;
+    }
+}
+/* ==========================================
+   CV BUILDER PROCESS
+========================================== */
+.cv-builder-process{
+    padding:100px 5%;
+    background:#f8fafc;
+}
+.cv-process-layout{
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:60px;
+    margin-top:60px;
+    align-items:center;
+}
+/* LEFT SIDE */
+.cv-preview-card{
+    background:#fff;
+    border-radius:30px;
+    padding:30px;
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.08);
+}
+.ats-score{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+    background:#f1f5f9;
+    padding:18px 20px;
+    border-radius:15px;
+}
+.ats-score span{
+    color:#64748b;
+    font-size:13px;
+}
+.ats-score strong{
+    color:var(--secondary);
+    font-size:28px;
+}
+.cv-preview{
+    border-radius:20px;
+    padding:25px;
+}
+.cv-preview h3{
+    margin-bottom:5px;
+}
+.cv-preview > span{
+    color:var(--primary);
+    display:block;
+    margin-bottom:20px;
+}
+.cv-line{
+    height:10px;
+    background:#e2e8f0;
+    border-radius:20px;
+    margin-bottom:10px;
+}
+.cv-line.long{
+    width:100%;
+}
+.cv-line.short{
+    width:60%;
+}
+.cv-preview h4{
+    margin:25px 0 10px;
+}
+.skills-preview{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+.skills-preview span{
+    background:#eff6ff;
+    color:var(--primary);
+    padding:8px 12px;
+    border-radius:50px;
+    font-size:13px;
+}
+.cv-status{
+    margin-top:25px;
+    display:grid;
+    gap:12px;
+}
+.cv-status div{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#334155;
+}
+.cv-status i{
+    color:#22c55e;
+}
+/* RIGHT SIDE */
+.cv-steps{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+.cv-step{
+    display:flex;
+    gap:20px;
+    background:#fff;
+    padding:25px;
+    border-radius:20px;
+    transition:.35s;
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.04);
+}
+.cv-step:hover{
+    transform:translateX(8px);
+}
+.step-no{
+    min-width:60px;
+    height:60px;
+    border-radius:16px;
+    background:var(--primary);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:500;
+}
+.cv-step h3{
+    margin-bottom:4px;
+}
+.cv-step p{
+    color:#64748b;
+    line-height:1.8;
+}
+.cv-process-btn{
+    margin-top:20px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:16px 30px;
+    background:var(--primary);
+    color:#fff;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:400;
+}
+/* RESPONSIVE */
+@media(max-width:992px){
+    .cv-process-layout{
+        grid-template-columns:1fr;
+    }
+}
+@media(max-width:768px){
+    .cv-builder-process{
+        padding:80px 20px;
+    }
+    .cv-step{
+        padding:20px;
+    }
+    .step-no{
+        width:50px;
+        height:50px;
+        min-width:50px;
+    }
+}
+/* ==========================================
+   CAREER RESOURCES
+========================================== */
+.career-resources{
+    padding:100px 5%;
+    background:#f8fafc;
+}
+.resources-layout{
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    gap:35px;
+    margin-top:60px;
+}
+/* ==========================================
+   FEATURED RESOURCE
+========================================== */
+.featured-resource{
+    position:relative;
+    overflow:hidden;
+    border-radius:10px;
+    min-height:650px;
+}
+.featured-resource img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+.featured-resource-overlay{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    padding:50px;
+    background:
+    linear-gradient(
+        to top,
+        rgba(0,0,0,.88),
+        rgba(0,0,0,.25)
+    );
+    color:#fff;
+}
+.resource-badge{
+    display:inline-block;
+    width:fit-content;
+    padding:10px 18px;
+    border-radius:50px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(12px);
+    font-size:13px;
+    font-weight:500;
+    margin-bottom:20px;
+}
+.featured-resource-overlay h3{
+    font-size:35px;
+    line-height:1.2;
+    margin-bottom:15px;
+    color:#fff;
+}
+.featured-resource-overlay p{
+    max-width:550px;
+    line-height:1.9;
+    margin-bottom:25px;
+    opacity:.95;
+}
+.resource-download-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    width:fit-content;
+    padding:15px 28px;
+    border-radius:12px;
+    background:#fff;
+    color:var(--primary);
+    text-decoration:none;
+    font-weight:500;
+    transition:.35s;
+}
+.resource-download-btn:hover{
+    transform:translateY(-4px);
+}
+/* ==========================================
+   RESOURCE GRID
+========================================== */
+.resource-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:20px;
+}
+.resource-card{
+    background:#fff;
+    padding:28px;
+    border-radius:24px;
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.05);
+    transition:.35s;
+    border:1px solid rgba(0,0,0,.04);
+}
+.resource-card:hover{
+    transform:translateY(-8px);
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.08);
+}
+.resource-card i{
+    width:60px;
+    height:60px;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:
+    rgba(13,110,253,.08);
+    color:var(--primary);
+    font-size:22px;
+    margin-bottom:20px;
+}
+.resource-card h4{
+    font-size:22px;
+    margin-bottom:10px;
+    color:#0f172a;
+}
+.resource-card p{
+    color:#64748b;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+.resource-card a{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    text-decoration:none;
+    color:var(--secondary);
+    font-weight:500;
+}
+/* ==========================================
+   TABLET
+========================================== */
+@media(max-width:1024px){
+    .resources-layout{
+        grid-template-columns:1fr;
+    }
+    .featured-resource{
+        min-height:500px;
+    }
+}
+/* ==========================================
+   MOBILE
+========================================== */
+@media(max-width:768px){
+    .career-resources{
+        padding:80px 20px;
+    }
+    .featured-resource{
+        min-height:450px;
+        border-radius:24px;
+    }
+    .featured-resource-overlay{
+        padding:30px 25px;
+    }
+    .featured-resource-overlay h3{
+        font-size:30px;
+    }
+    .featured-resource-overlay p{
+        font-size:14px;
+    }
+    .resource-card{
+        padding:24px;
+    }
+    .resource-card i{
+        width:60px;
+        height:60px;
+        font-size:24px;
+    }
+    .resource-card h4{
+        font-size:20px;
+    }
+}
+/* ==========================================
+   SMALL PHONES
+========================================== */
+@media(max-width:480px){
+    .featured-resource{
+        min-height:400px;
+    }
+    .featured-resource-overlay h3{
+        font-size:26px;
+    }
+    .featured-resource-overlay p{
+        font-size:13px;
+        line-height:1.8;
+    }
+    .resource-download-btn{
+        width:100%;
+        justify-content:center;
+    }
+}
+/* =========================================
+   LANGUAGE TEST PREPARATION
+========================================= */
+.language-prep-section {
+    position: relative;
+    padding: 100px 5%;
+    background: #f7f9fc;
+    overflow: hidden;
+}
+.language-prep-container {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+}
+/* =========================================
+   SECTION HEADER
+========================================= */
+.language-prep-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 60px;
+    margin-bottom: 55px;
+}
+.section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+.section-eyebrow::before {
+    content: "";
+    width: 28px;
+    height: 2px;
+    background: var(--primary);
+}
+.language-prep-header h2 {
+    margin: 0;
+    font-size: 40px;
+    line-height: 1.08;
+    font-weight: 700;
+    color: #10213f;
+}
+.language-prep-header h2 span {
+    color: var(--primary);
+}
+.language-prep-header > p {
+    max-width: 420px;
+    margin: 0 0 5px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #667085;
+}
+/* =========================================
+   MAIN GRID
+========================================= */
+.language-prep-grid {
+    display: grid;
+    grid-template-columns: minmax(380px, 0.95fr) minmax(500px, 1.05fr);
+    gap: 24px;
+    align-items: stretch;
+}
+/* =========================================
+   FEATURED IELTS CARD
+========================================= */
+.ielts-featured-card {
+    position: relative;
+    min-height: 650px;
+    padding: 38px;
+    border-radius: 28px;
+    background:radial-gradient(
+            circle at 85% 15%,
+            rgba(255, 255, 255, 0.14),
+            transparent 30%
+        ),
+        linear-gradient(
+            145deg,
+            var(--primary),
+            #0149b6
+        );
+    color: #ffffff;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(15, 35, 70, 0.16);
+}
+/* Decorative circles */
+.ielts-featured-card::before {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    right: -120px;
+    top: -100px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+}
+.ielts-featured-card::after {
+    content: "";
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    right: -180px;
+    top: -150px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+}
+/* Featured Top */
+.featured-top {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.featured-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 13px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+}
+.featured-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    font-size: 39px;
+}
+/* Featured Content */
+.featured-content {
+    position: relative;
+    z-index: 3;
+    max-width: 470px;
+    margin-top: 80px;
+}
+.program-label {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.65);
+}
+.featured-content h3 {
+    margin: 0 0 20px;
+    font-size: 40px;
+    line-height: 1.08;
+}
+.featured-content > p {
+    margin: 0;
+    max-width: 440px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgb(255, 255, 255);
+}
+/* IELTS Features */
+.ielts-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 20px;
+    margin: 35px 0;
+}
+.ielts-feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+}
+.ielts-feature i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 14px;
+}
+/* Featured CTA */
+.featured-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 22px;
+    border-radius: 12px;
+    background: #ffffff;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.featured-btn i {
+    transition: transform 0.3s ease;
+}
+.featured-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+.featured-btn:hover i {
+    transform: translateX(4px);
+}
+/* Decorative IELTS Text */
+.featured-decoration {
+    position: absolute;
+    right: -20px;
+    bottom: 15px;
+    z-index: 1;
+    pointer-events: none;
+}
+.featured-decoration span {
+    font-size: 150px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -8px;
+    color: rgba(255, 255, 255, 0.035);
+}
+/* =========================================
+   RIGHT SIDE CARDS
+========================================= */
+.language-test-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+/* =========================================
+   LANGUAGE TEST CARD
+========================================= */
+.language-test-card {
+    position: relative;
+    padding: 30px;
+    min-height: 310px;
+    background: #ffffff;
+    border-radius: 24px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+.language-test-card:hover {
+    transform: translateY(-6px);
+    border-color: #d5dfef;
+    box-shadow: 0 20px 45px rgba(24, 49, 83, 0.09);
+}
+/* Card Top */
+.test-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+.test-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    font-size: 20px;
+}
+.pte-icon {
+    background: #eef4ff;
+    color: var(--primary);
+}
+.duolingo-icon {
+    background: #edf8f3;
+    color: #16865d;
+}
+.test-number {
+    font-size: 18px;
+    font-weight: 700;
+    color: #a0a9b8;
+}
+/* Card Content */
+.test-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color: #8b95a5;
+}
+.test-card-content h3 {
+    margin: 0 0 10px;
+    font-size: 26px;
+    color: var(--dark);
+}
+.test-card-content > p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.65;
+    color: #697586;
+}
+/* Test Features */
+.test-features {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-bottom: 10px;
+    padding: 0;
+    list-style: none;
+}
+.test-features li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    color: #475467;
+}
+.test-features li i {
+    color:var(--primary);
+    font-size: 16px;
+}
+/* =========================================
+   TEST META
+========================================= */
+.test-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid #edf0f5;
+}
+.test-meta span {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #98a2b3;
+}
+.test-meta strong {
+    display: block;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #344054;
+}
+/* =========================================
+   SUCCESS TIP
+========================================= */
+.success-tip {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 18px;
+    padding: 12px;
+    border-radius: 12px;
+    background: #f8fafc;
+}
+.success-tip > i {
+    margin-top: 2px;
+    color: var(--accent);
+    font-size: 16px;
+}
+.success-tip span {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #667085;
+}
+.success-tip p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #344054;
+}
+/* =========================================
+   RESOURCE CARD
+========================================= */
+.language-resource-card {
+    grid-column: 1 / -1;
+    position: relative;
+    min-height: 230px;
+    padding: 32px;
+    border-radius: 24px;
+    background: #ffffff;
+    overflow: hidden;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+.language-resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 45px rgba(24, 49, 83, 0.08);
+}
+.resource-card-content {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    position: relative;
+    z-index: 2;
+}
+.resource-icon {
+    flex-shrink: 0;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background: #eef4ff;
+    color: var(--secondary);
+    font-size: 24px;
+}
+.language-resource-card h3 {
+    margin: 0 0 8px;
+    font-size: 25px;
+    line-height: 1.2;
+    color: #10213f;
+}
+.language-resource-card p {
+    max-width: 500px;
+    margin: 0 0 15px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #697586;
+}
+.resource-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+.resource-link i {
+    transition: transform 0.3s ease;
+}
+.resource-link:hover i {
+    transform: translateX(4px);
+}
+/* =========================================
+   FOOTER / JOURNEY STRIP
+========================================= */
+.language-prep-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 25px;
+    padding: 22px 28px;
+    background: #ffffff;
+    border-radius: 18px;
+}
+.footer-intro {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    color:#000000;
+}
+.footer-intro i {
+    color: #22a06b;
+}
+.journey-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.journey-links span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+}
+.journey-links i {
+    color: var(--accent);
+}
+/* =========================================
+   TABLET
+========================================= */
+@media (max-width: 1000px) {
+    .language-prep-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .language-prep-header > p {
+        max-width: 600px;
+    }
+    .language-prep-grid {
+        grid-template-columns: 1fr;
+    }
+    .ielts-featured-card {
+        min-height: auto;
+    }
+    .featured-content {
+        margin-top: 60px;
+    }
+}
+/* =========================================
+   MOBILE
+========================================= */
+@media (max-width: 650px) {
+    .language-prep-section {
+        padding: 70px 5%;
+    }
+    .language-prep-header {
+        margin-bottom: 35px;
+    }
+    .language-prep-header h2 {
+        font-size: 34px;
+    }
+    .ielts-featured-card {
+        padding: 28px;
+        border-radius: 22px;
+    }
+    .featured-content {
+        margin-top: 55px;
+    }
+    .featured-content h3 {
+        font-size: 34px;
+    }
+    .ielts-features {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+    .language-test-cards {
+        grid-template-columns: 1fr;
+    }
+    .language-test-card {
+        min-height: auto;
+    }
+    .language-resource-card {
+        padding: 25px;
+    }
+    .resource-card-content {
+        align-items: flex-start;
+    }
+    .language-prep-footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .journey-links {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 13px;
+    }
+}
+/* =========================================
+   SMALL MOBILE
+========================================= */
+@media (max-width: 420px) {
+    .language-prep-container {
+        width: 90%;
+    }
+    .ielts-featured-card {
+        padding: 24px;
+    }
+    .featured-content h3 {
+        font-size: 30px;
+    }
+    .featured-decoration span {
+        font-size: 100px;
+    }
+    .resource-card-content {
+        flex-direction: column;
+    }
+}
+/* ==========================================
+   INTERVIEW PREPARATION HUB
+========================================== */
+.interview-hub{
+    padding:100px 5%;
+    background:#f8fafc;
+    position:relative;
+}
+/* ==========================================
+   FEATURED INTERVIEW
+========================================== */
+.interview-featured{
+    position:relative;
+    min-height:540px;
+    border-radius:30px;
+    overflow:hidden;
+    margin-bottom:30px;
+}
+.interview-featured > img{
+    width:100%;
+    height:540px;
+    display:block;
+    object-fit:cover;
+}
+/* FEATURED OVERLAY */
+.interview-featured-overlay{
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    padding:60px;
+    color:var(--white);
+    background:
+    linear-gradient(
+        to right,
+        rgba(0,0,0,.88),
+        rgba(0,0,0,.30)
+    );
+}
+.interview-featured-content{
+    max-width:650px;
+}
+/* LABEL */
+.interview-label{
+    display:inline-flex;
+    align-items:center;
+    padding:8px 15px;
+    border-radius:50px;
+    color:var(--white);
+    font-size:16px;
+    font-weight:700;
+    letter-spacing:1.3px;
+    margin-bottom:18px;
+}
+.interview-featured h3{
+    color:var(--white);
+    font-size:48px;
+    line-height:1.12;
+    font-weight:700;
+    margin-bottom:18px;
+}
+.interview-featured-content > p{
+    max-width:590px;
+    color:rgba(255,255,255,.84);
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:28px;
+}
+/* FEATURED META */
+.interview-featured-meta{
+    display:flex;
+    align-items:flex-start;
+    gap:45px;
+    margin-bottom:30px;
+}
+.interview-featured-meta div{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+}
+.interview-featured-meta strong{
+    color:var(--white);
+    font-size:18px;
+    font-weight:700;
+}
+.interview-featured-meta span{
+    color:rgba(255,255,255,.70);
+    font-size:16px;
+}
+/* FEATURED BUTTON */
+.interview-primary-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    width:fit-content;
+    padding:14px 25px;
+    background:var(--white);
+    color:var(--primary);
+    border:1px solid var(--white);
+    border-radius:10px;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:500;
+    transition:.3s ease;
+}
+.interview-primary-btn i{
+    transition:.3s ease;
+}
+.interview-primary-btn:hover{
+    background:transparent;
+    color:var(--white);
+}
+.interview-primary-btn:hover i{
+    transform:translateX(4px);
+}
+/* ==========================================
+   INTERVIEW CARDS
+========================================== */
+.interview-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+.interview-card{
+    background:var(--white);
+    border-radius:10px;
+    overflow:hidden;
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+    box-shadow:
+        0 12px 35px rgba(15,23,42,.045);
+}
+.interview-card:hover{
+    transform:translateY(-6px);
+    border-color:rgba(31,53,151,.18);
+    box-shadow: 0 20px 45px rgba(15,23,42,.09);
+}
+/* ==========================================
+   CARD IMAGE
+========================================== */
+.interview-card-image{
+    position:relative;
+    height:225px;
+    overflow:hidden;
+}
+.interview-card-image img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    transition: transform .5s ease;
+}
+.interview-card:hover
+.interview-card-image img{
+    transform:scale(1.045);
+}
+/* IMAGE NUMBER */
+.interview-card-number{
+    position:absolute;
+    top:16px;
+    right:16px;
+    width:38px;
+    height:38px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:rgba(255,255,255,.94);
+    color:var(--primary);
+    font-size:14px;
+    font-weight:700;
+    box-shadow: 0 5px 18px rgba(15,23,42,.15);
+}
+/* ==========================================
+   CARD CONTENT
+========================================== */
+.interview-card-content{
+    padding:27px 27px 29px;
+}
+.interview-card-tag{
+    display:block;
+    color:var(--primary);
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:1.1px;
+    margin-bottom:11px;
+}
+.interview-card h3{
+    color:var(--dark);
+    font-size:25px;
+    line-height:1.25;
+    font-weight:500;
+    margin-bottom:11px;
+}
+.interview-card p{
+    color:var(--text);
+    font-size:16px;
+    line-height:1.75;
+    margin-bottom:21px;
+}
+/* CARD LINK */
+.interview-card-link{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    color:var(--primary);
+    font-size:16px;
+    font-weight:500;
+    text-decoration:none;
+    transition:.3s ease;
+}
+.interview-card-link i{
+    color:var(--secondary);
+    font-size:16px;
+    transition:.3s ease;
+}
+.interview-card-link:hover{
+    color:var(--secondary);
+}
+.interview-card-link:hover i{
+    transform:translateX(4px);
+}
+/* ==========================================
+   BOTTOM CTA
+========================================== */
+.interview-bottom{
+    margin-top:55px;
+    padding:45px 50px;
+    background:var(--primary);
+    border-radius:25px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+    position:relative;
+    overflow:hidden;
+}
+/* SUBTLE BRAND DETAIL */
+.interview-bottom::after{
+    content:"";
+    position:absolute;
+    width:240px;
+    height:240px;
+    right:-90px;
+    top:-100px;
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:50%;
+}
+.interview-bottom::before{
+    content:"";
+    position:absolute;
+    width:120px;
+    height:120px;
+    right:55px;
+    top:-65px;
+    border:1px solid rgba(244,166,70,.20);
+    border-radius:50%;
+}
+.interview-bottom > div{
+    position:relative;
+    z-index:1;
+}
+.interview-bottom-label{
+    display:block;
+    color:rgba(255,255,255,.65);
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:1.4px;
+    margin-bottom:9px;
+}
+.interview-bottom h3{
+    color:var(--white);
+    font-size:28px;
+    line-height:1.25;
+    margin-bottom:10px;
+}
+.interview-bottom p{
+    max-width:650px;
+    color:rgba(255,255,255,.76);
+    font-size:16px;
+    line-height:1.75;
+    margin:0;
+}
+/* CTA */
+.interview-cta{
+    position:relative;
+    z-index:1;
+    flex-shrink:0;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:14px 25px;
+    background:var(--white);
+    color:var(--primary);
+    border-radius:10px;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:500;
+    transition:.3s ease;
+}
+.interview-cta i{
+    transition:.3s ease;
+}
+.interview-cta:hover{
+    background:transparent;
+    color:var(--white);
+}
+.interview-cta:hover i{
+    transform:translateX(4px);
+}
+/* ==========================================
+   LARGE TABLETS
+========================================== */
+@media (max-width:1024px){
+    .interview-hub{
+        padding:70px 5%;
+    }
+    .interview-featured{
+        min-height:500px;
+    }
+    .interview-featured > img{
+        height:500px;
+    }
+    .interview-featured-overlay{
+        padding:45px;
+    }
+    .interview-featured h3{
+        font-size:42px;
+    }
+    .interview-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+    .interview-card-image{
+        height:215px;
+    }
+    .interview-bottom{
+        padding:38px;
+    }
+}
+/* ==========================================
+   TABLET / MOBILE
+========================================== */
+@media (max-width:768px){
+    .interview-hub{
+        padding:70px 5%;
+    }
+    /* FEATURED */
+    .interview-featured{
+        min-height:570px;
+        height:570px;
+        border-radius:24px;
+    }
+    .interview-featured > img{
+        position:absolute;
+        inset:0;
+        width:100%;
+        height:100%;
+    }
+    .interview-featured-overlay{
+        position:relative;
+        height:100%;
+        display:flex;
+        align-items:flex-end;
+        padding:30px 25px;
+    }
+    .interview-featured h3{
+        font-size:33px;
+        line-height:1.15;
+    }
+    .interview-featured-content > p{
+        font-size:14px;
+        line-height:1.75;
+    }
+    .interview-featured-meta{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:10px;
+        margin-bottom:23px;
+    }
+    .interview-featured-meta div{
+        padding:11px 14px;
+        border-radius:10px;
+    }
+    .interview-primary-btn{
+        width:100%;
+    }
+    /* CARDS */
+    .interview-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+    .interview-card-image{
+        height:225px;
+    }
+    .interview-card-content{
+        padding:24px;
+    }
+    .interview-card h3{
+        font-size:22px;
+    }
+    /* CTA */
+    .interview-bottom{
+        margin-top:40px;
+        padding:32px 25px;
+        border-radius:20px;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:25px;
+    }
+    .interview-bottom h3{
+        font-size:25px;
+    }
+    .interview-bottom p{
+        font-size:14px;
+    }
+    .interview-cta{
+        width:100%;
+    }
+}
+/* ==========================================
+   SMALL PHONES
+========================================== */
+@media (max-width:480px){
+    .interview-featured{
+        height:550px;
+        min-height:550px;
+    }
+    .interview-featured-overlay{
+        padding:24px 20px;
+    }
+    .interview-featured h3{
+        font-size:28px;
+    }
+    .interview-featured-content > p{
+        font-size:13px;
+    }
+    .interview-featured-meta span{
+        font-size:12px;
+    }
+    .interview-card-image{
+        height:205px;
+    }
+    .interview-card-content{
+        padding:22px;
+    }
+    .interview-card h3{
+        font-size:21px;
+    }
+    .interview-card p{
+        font-size:13px;
+    }
+    .interview-bottom{
+        padding:28px 22px;
+    }
+    .interview-bottom h3{
+        font-size:23px;
+    }
+}
+/* ==========================================
+   LINKEDIN OPTIMIZATION
+========================================== */
+.linkedin-optimization{
+    padding:100px 5%;
+    background:#fff;
+}
+.linkedin-wrapper{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+/* ==========================================
+   IMAGE
+========================================== */
+.linkedin-image{
+    position:relative;
+    height:620px;
+    overflow:hidden;
+    border-radius:10px;
+}
+.linkedin-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+.linkedin-image-caption{
+    position:absolute;
+    left:35px;
+    right:35px;
+    bottom:35px;
+    padding:25px;
+    background:rgb(255, 255, 255);
+    color:var(--primary);
+    border-radius:10px;
+}
+.linkedin-image-caption span{
+    display:block;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:1px;
+    margin-bottom:8px;
+}
+.linkedin-image-caption strong{
+    display:block;
+    max-width:400px;
+    color:var(--dark);
+    font-weight: 400;
+    font-size:16px;
+    line-height:1.35;
+}
+/* ==========================================
+   CONTENT
+========================================== */
+.linkedin-content{
+    max-width:600px;
+}
+.linkedin-content h2{
+    font-size:36px;
+    line-height:1.2;
+    color:var(--dark);
+    margin:15px 0;
+}
+.linkedin-intro{
+    color:var(--text);
+    line-height:1.8;
+    margin-bottom:35px;
+}
+/* ==========================================
+   INCLUDED
+========================================== */
+.linkedin-included h3{
+    font-size:20px;
+    color:var(--dark);
+    margin-bottom:20px;
+}
+.linkedin-features{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px 30px;
+}
+.linkedin-feature{
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+}
+.linkedin-feature > span{
+    flex-shrink:0;
+    color:var(--secondary);
+    font-size:14px;
+    font-weight:600;
+    padding-top:3px;
+}
+.linkedin-feature strong{
+    display:block;
+    color:var(--dark);
+    font-size:16px;
+    margin-bottom:5px;
+}
+.linkedin-feature p{
+    color:#64748b;
+    font-size:16px;
+    line-height:1.6;
+    margin:0;
+}
+/* ==========================================
+   CTA
+========================================== */
+.linkedin-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    margin-top:35px;
+    padding:15px 28px;
+    background:var(--primary);
+    color:#fff;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:400;
+}
+.linkedin-btn i{
+    transition:.3s;
+}
+.linkedin-btn:hover{
+    background:var(--secondary);
+}
+.linkedin-btn:hover i{
+    transform:translateX(4px);
+}
+/* ==========================================
+   TABLET
+========================================== */
+@media (max-width:1024px){
+    .linkedin-wrapper{
+        gap:45px;
+    }
+    .linkedin-image{
+        height:560px;
+    }
+    .linkedin-content h2{
+        font-size:32px;
+    }
+    .linkedin-features{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+}
+/* ==========================================
+   MOBILE
+========================================== */
+@media (max-width:768px){
+    .linkedin-optimization{
+        padding:70px 5%;
+    }
+    .linkedin-wrapper{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+    .linkedin-image{
+        height:450px;
+        border-radius:24px;
+    }
+    .linkedin-image-caption{
+        left:20px;
+        right:20px;
+        bottom:20px;
+        padding:20px;
+    }
+    .linkedin-content h2{
+        font-size:30px;
+    }
+    .linkedin-intro{
+        font-size:16px;
+    }
+    .linkedin-features{
+        grid-template-columns:1fr;
+    }
+    .linkedin-btn{
+        width:100%;
+        justify-content:center;
+    }
+}
+/* ==========================================
+   CAREER DEVELOPMENT ARTICLES
+========================================== */
+.career-articles{
+    padding:100px 5%;
+    background:var(--light);
+}
+/* ==========================================
+   FEATURED ARTICLE
+========================================== */
+.featured-article{
+    position:relative;
+    height:500px;
+    overflow:hidden;
+    border-radius:30px;
+    margin-top:55px;
+}
+.featured-article img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+.featured-article-overlay{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    padding:50px;
+    color:#fff;
+    background: linear-gradient(to top,
+            rgba(0,0,0,.88),
+            rgba(0,0,0,.25)
+        );
+}
+.article-category{
+    display:block;
+    color:#fff;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:1px;
+    margin-bottom:12px;
+}
+.featured-article h3{
+    max-width:650px;
+    color:#fff;
+    font-size:40px;
+    line-height:1.2;
+    margin-bottom:15px;
+}
+.featured-article p{
+    max-width:600px;
+    color:rgba(255,255,255,.85);
+    line-height:1.8;
+    font-size: 16px;
+    margin-bottom:22px;
+}
+/* ==========================================
+   BUTTON
+========================================== */
+.article-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    width:fit-content;
+    padding:14px 25px;
+    background:#fff;
+    color:var(--primary);
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:500;
+}
+.article-btn:hover{
+    background:var(--primary);
+    color:#fff;
+}
+/* ==========================================
+   ARTICLE GRID
+========================================== */
+.career-article-grid{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:25px;
+    margin-top:35px;
+}
+/* ==========================================
+   ARTICLE CARD
+========================================== */
+.career-article-card{
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,.05);
+    transition:.35s;
+}
+.career-article-card:hover{
+    transform:translateY(-8px);
+}
+.career-article-card img{
+    width:100%;
+    height:210px;
+    object-fit:cover;
+    display:block;
+}
+.career-article-content{
+    padding:25px;
+}
+.career-article-content > span{
+    display:block;
+    color:var(--primary);
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:.7px;
+    margin-bottom:10px;
+}
+.career-article-content h3{
+    color:var(--dark);
+    font-size:21px;
+    margin-bottom:10px;
+}
+.career-article-content p{
+    color:var(--text);
+    font-size:16px;
+    line-height:1.7;
+    margin-bottom:18px;
+}
+.career-article-content a{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:var(--primary);
+    text-decoration:none;
+    font-weight:500;
+}
+.career-article-content a i{
+    color:var(--secondary);
+    transition:.3s;
+}
+.career-article-content a:hover{
+    color:var(--secondary);
+}
+.career-article-content a:hover i{
+    transform:translateX(4px);
+}
+/* ==========================================
+   VIEW ALL
+========================================== */
+.articles-view-all{
+    text-align:center;
+    margin-top:45px;
+}
+.articles-link{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    color:var(--primary);
+    text-decoration:none;
+    font-weight:500;
+}
+.articles-link i{
+    color:var(--secondary);
+    transition:.3s;
+}
+.articles-link:hover{
+    color:var(--secondary);
+}
+.articles-link:hover i{
+    transform:translateX(5px);
+}
+/* ==========================================
+   TABLET
+========================================== */
+@media (max-width:1024px){
+    .featured-article{
+        height:480px;
+    }
+    .featured-article-overlay{
+        padding:40px;
+    }
+    .featured-article h3{
+        font-size:34px;
+    }
+    .career-article-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+}
+/* ==========================================
+   MOBILE
+========================================== */
+@media (max-width:768px){
+    .career-articles{
+        padding:70px 5%;
+    }
+    .featured-article{
+        height:560px;
+        border-radius:24px;
+        margin-top:40px;
+    }
+    .featured-article-overlay{
+        padding:30px 24px;
+        background: linear-gradient(
+                to top,
+                rgba(0,0,0,.92),
+                rgba(0,0,0,.55),
+                rgba(0,0,0,.15)
+            );
+    }
+    .featured-article h3{
+        font-size:28px;
+    }
+    .featured-article p{
+        font-size:14px;
+        line-height:1.7;
+    }
+    .article-btn{
+        width:100%;
+        justify-content:center;
+    }
+    /* GRID */
+    .career-article-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+        margin-top:25px;
+    }
+    .career-article-card img{
+        height:220px;
+    }
+}
+/* ==========================================
+   SUCCESS STORIES
+========================================== */
+.success-stories{
+    padding:100px 5%;
+    background:#fff;
+}
+/* ==========================================
+   FEATURED STORY
+========================================== */
+.featured-success{
+    display:grid;
+    grid-template-columns:45% 55%;
+    min-height:520px;
+    margin-top:55px;
+    background:var(--light);
+    border-radius:30px;
+    overflow:hidden;
+}
+.success-photo{
+    min-height:520px;
+}
+.success-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+.success-content{
+    padding:55px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+.success-label{
+    color:var(--secondary);
+    font-size:14px;
+    font-weight:500;
+    letter-spacing:1px;
+    margin-bottom:20px;
+}
+.success-person h3{
+    color:var(--dark);
+    font-size:30px;
+    margin-bottom:5px;
+}
+.success-person span{
+    color:var(--primary);
+    font-size:14px;
+}
+.success-outcome{
+    margin-top:30px;
+}
+.success-outcome strong{
+    display:block;
+    color:var(--dark);
+    font-size:18px;
+    margin-bottom:7px;
+}
+.success-outcome p{
+    color:var(--text);
+    line-height:1.7;
+    margin:0;
+}
+.success-content blockquote{
+    margin:25px 0;
+    padding:0;
+    color:var(--dark);
+    font-size:16px;
+    line-height:1.7;
+}
+.success-footer{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    margin-top:15px;
+}
+.success-footer span{
+    color:#64748b;
+    font-size:16px;
+}
+.success-footer a{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size: 16px;
+    color:var(--primary);
+    text-decoration:none;
+    font-weight:500;
+}
+.success-footer a i{
+    color:var(--secondary);
+    transition:.3s;
+}
+.success-footer a:hover i{
+    transform:translateX(4px);
+}
+/* ==========================================
+   STORIES SLIDER
+========================================== */
+.stories-slider-wrapper{
+    position:relative;
+    display:flex;
+    align-items:center;
+    gap:20px;
+    margin-top:35px;
+}
+.stories-slider{
+    width:100%;
+    overflow:hidden;
+}
+.stories-track{
+    display:flex;
+    gap:25px;
+    transition:transform .45s ease;
+}
+.story-card{
+    flex:0 0 calc((100% - 50px) / 3);
+    background:#fff;
+    border-radius:5px;
+    overflow:hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,.06);
+}
+.story-card img{
+    width:100%;
+    height:210px;
+    object-fit:cover;
+    display:block;
+}
+.story-content{
+    padding:25px;
+}
+.story-person h4{
+    color:var(--dark);
+    font-size:19px;
+    margin-bottom:5px;
+}
+.story-person span{
+    color:var(--primary);
+    font-size:14px;
+}
+.story-outcome-label{
+    display:block;
+    color:var(--secondary);
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:.8px;
+    margin-top:22px;
+    margin-bottom:7px;
+}
+.story-outcome{
+    color:var(--dark);
+    font-size:16px;
+    line-height:1.6;
+    margin-bottom:15px;
+}
+.story-testimonial{
+    color:#64748b;
+    font-size:15px;
+    line-height:1.7;
+    margin-bottom:18px;
+}
+.story-content a{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:var(--primary);
+    text-decoration:none;
+    font-size:16px;
+    font-weight:500;
+}
+.story-content a i{
+    color:var(--secondary);
+    transition:.3s;
+}
+.story-content a:hover i{
+    transform:translateX(4px);
+}
+/* ==========================================
+   SLIDER ARROWS
+========================================== */
+.stories-arrow{
+    flex-shrink:0;
+    width:42px;
+    height:42px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--primary);
+    color:#fff;
+    border:0;
+    border-radius:50%;
+    cursor:pointer;
+    transition:.3s;
+}
+.stories-arrow:hover{
+    background:var(--secondary);
+}
+.stories-arrow:disabled{
+    opacity:.4;
+    cursor:not-allowed;
+}
+/* ==========================================
+   PAGINATION
+========================================== */
+.stories-pagination{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    margin-top:25px;
+}
+.story-dot{
+    width:7px;
+    height:7px;
+    padding:0;
+    border:0;
+    border-radius:50%;
+    background:var(--border);
+    cursor:pointer;
+}
+.story-dot.active{
+    width:22px;
+    border-radius:10px;
+    background:var(--primary);
+}
+/* ==========================================
+   TABLET
+========================================== */
+@media (max-width:1024px){
+    .featured-success{
+        grid-template-columns:42% 58%;
+    }
+    .success-content{
+        padding:40px;
+    }
+    .success-content blockquote{
+        font-size:18px;
+    }
+    .story-card{
+        flex:0 0 calc((100% - 25px) / 2);
+    }
+}
+/* ==========================================
+   MOBILE SLIDER
+========================================== */
+@media (max-width:768px){
+    .success-stories{
+        padding:75px 5%;
+    }
+    .featured-success{
+        grid-template-columns:1fr;
+        margin-top:40px;
+        border-radius:24px;
+    }
+    .success-photo{
+        height:360px;
+        min-height:0;
+    }
+    .success-content{
+        padding:30px 24px;
+    }
+    .success-person h3{
+        font-size:27px;
+    }
+    .success-content blockquote{
+        font-size:17px;
+    }
+    .success-footer{
+        align-items:flex-start;
+        flex-direction:column;
+    }
+    /* ==========================================
+       MOBILE STORIES SLIDER
+    =========================================== */
+    .stories-slider-wrapper{
+        gap:8px;
+        margin-top:25px;
+    }
+    .stories-slider{
+        flex:1;
+        min-width:0;
+    }
+    .story-card{
+        flex:0 0 100%;
+    }
+    .story-card img{
+        height:220px;
+    }
+    /* MOBILE ARROWS */
+    .stories-arrow{
+        display:flex;
+        width:38px;
+        height:38px;
+        flex-shrink:0;
+        font-size:12px;
+    }
+}
+/* ==========================================
+   SMALL PHONES
+========================================== */
+@media (max-width:480px){
+    .success-stories{
+        padding:65px 20px;
+    }
+    .success-photo{
+        height:300px;
+    }
+    .success-content{
+        padding:25px 20px;
+    }
+    .success-content blockquote{
+        font-size:16px;
+    }
+    .story-content{
+        padding:22px;
+    }
+    /* SMALLER ARROWS */
+    .stories-arrow{
+        width:34px;
+        height:34px;
+        font-size:10px;
+    }
+}
+/* ==========================================
+   CAREER ASSESSMENT
+========================================== */
+.career-assessment{
+    padding:100px 5%;
+    background:var(--light);
+}
+/* ==========================================
+   WRAPPER
+========================================== */
+.assessment-wrapper{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+/* ==========================================
+   INTRO
+========================================== */
+.assessment-intro{
+    max-width:550px;
+}
+.assessment-intro h2{
+    color:var(--dark);
+    font-size:36px;
+    line-height:1.2;
+    margin:15px 0;
+}
+.assessment-intro > p{
+    color:var(--text);
+    line-height:1.8;
+    margin-bottom:35px;
+}
+/* ==========================================
+   BENEFITS
+========================================== */
+.assessment-benefits{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+}
+.assessment-benefit{
+    display:flex;
+    align-items:flex-start;
+    gap:15px;
+}
+.assessment-benefit > span{
+    flex-shrink:0;
+    color:var(--secondary);
+    font-size:14px;
+    font-weight:500;
+    padding-top:3px;
+}
+.assessment-benefit strong{
+    display:block;
+    color:var(--dark);
+    font-size:16px;
+    margin-bottom:10px;
+}
+.assessment-benefit p{
+    color:#64748b;
+    font-size:16px;
+    line-height:1.6;
+    margin:0;
+}
+/* ==========================================
+   FORM WRAPPER
+========================================== */
+.assessment-form-wrapper{
+    background:var(--light);
+    padding:35px;
+    border-radius:20px;
+}
+.assessment-form-header{
+    margin-bottom:25px;
+}
+.assessment-form-header > span{
+    display:block;
+    color:var(--secondary);
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:1px;
+    margin-bottom:8px;
+}
+.assessment-form-header h3{
+    color:var(--dark);
+    font-size:24px;
+    margin-bottom:7px;
+}
+.assessment-form-header p{
+    color:#64748b;
+    font-size:16px;
+    line-height:1.6;
+    margin:0;
+}
+/* ==========================================
+   FORM
+========================================== */
+.career-assessment-form{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:18px;
+}
+.form-group{
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+}
+.form-group label{
+    color:var(--dark);
+    font-size:16px;
+    font-weight:400;
+}
+.form-group input,
+.form-group select{
+    width:100%;
+    height:48px;
+    padding:0 14px;
+    background:#fff;
+    color:var(--text);
+    border:0;
+    border-radius:8px;
+    outline:none;
+    font-family:inherit;
+    font-size:14px;
+    box-shadow: 0 5px 18px rgba(15,23,42,.04);
+}
+.form-group input::placeholder{
+    color:#94a3b8;
+}
+.form-group input:focus,
+.form-group select:focus{
+    box-shadow: 0 0 0 2px rgba(31,53,151,.15);
+}
+/* ==========================================
+   SUBMIT
+========================================== */
+.assessment-submit{
+    grid-column:1 / -1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    width:100%;
+    margin-top:5px;
+    padding:15px 25px;
+    background:var(--primary);
+    color:#fff;
+    border:0;
+    border-radius:10px;
+    font-family:inherit;
+    font-size:16px;
+    font-weight:400;
+    cursor:pointer;
+    transition:.3s;
+}
+.assessment-submit:hover{
+    background:var(--secondary);
+}
+.assessment-submit i{
+    transition:.3s;
+}
+.assessment-submit:hover i{
+    transform:translateX(4px);
+}
+/* ==========================================
+   NOTE
+========================================== */
+.assessment-note{
+    grid-column:1 / -1;
+    color:#94a3b8;
+    font-size:16px;
+    line-height:1.5;
+    text-align:center;
+    margin:0;
+}
+/* ==========================================
+   LARGE TABLETS
+========================================== */
+@media (max-width:1100px){
+    .career-assessment{
+        padding:80px 5%;
+    }
+    .assessment-wrapper{
+        grid-template-columns:1fr 1fr;
+        gap:45px;
+    }
+    .assessment-intro{
+        max-width:100%;
+    }
+    .assessment-intro h2{
+        font-size:32px;
+    }
+    .assessment-benefits{
+        gap:20px;
+    }
+    .assessment-benefit strong{
+        font-size:16px;
+    }
+    .assessment-benefit p{
+        font-size:16px;
+    }
+    .assessment-form-wrapper{
+        padding:30px;
+    }
+    .career-assessment-form{
+        gap:15px;
+    }
+}
+/* ==========================================
+   TABLET
+========================================== */
+@media (max-width:900px){
+    .career-assessment{
+        padding:70px 5%;
+    }
+    /*
+       Stack the introduction and
+       assessment form vertically.
+    */
+    .assessment-wrapper{
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+    .assessment-intro{
+        max-width:700px;
+    }
+    .assessment-intro h2{
+        font-size:34px;
+    }
+    .assessment-form-wrapper{
+        width:100%;
+    }
+}
+/* ==========================================
+   MOBILE
+========================================== */
+@media (max-width:768px){
+    .career-assessment{
+        padding:70px 5%;
+    }
+    /* ==========================================
+       WRAPPER
+    ========================================== */
+    .assessment-wrapper{
+        display:flex;
+        flex-direction:column;
+        gap:35px;
+        width:100%;
+    }
+    /* ==========================================
+       INTRO
+    ========================================== */
+    .assessment-intro{
+        width:100%;
+        max-width:100%;
+    }
+    .assessment-intro h2{
+        font-size:30px;
+        line-height:1.25;
+        margin:12px 0 15px;
+    }
+    .assessment-intro > p{
+        font-size:16px;
+        line-height:1.8;
+        margin-bottom:28px;
+    }
+    /* ==========================================
+       BENEFITS
+    ========================================== */
+    .assessment-benefits{
+        gap:20px;
+    }
+    .assessment-benefit{
+        gap:12px;
+    }
+    .assessment-benefit > span{
+        font-size:14px;
+        min-width:25px;
+    }
+    .assessment-benefit strong{
+        font-size:16px;
+        line-height:1.4;
+        margin-bottom:7px;
+    }
+    .assessment-benefit p{
+        font-size:14px;
+        line-height:1.7;
+    }
+    /* ==========================================
+       FORM WRAPPER
+    ========================================== */
+    .assessment-form-wrapper{
+        width:100%;
+        padding:28px 22px;
+        border-radius:18px;
+    }
+    .assessment-form-header{
+        margin-bottom:22px;
+    }
+    .assessment-form-header > span{
+        font-size:14px;
+    }
+    .assessment-form-header h3{
+        font-size:22px;
+        line-height:1.3;
+    }
+    .assessment-form-header p{
+        font-size:14px;
+        line-height:1.7;
+    }
+    /* ==========================================
+       FORM
+    ========================================== */
+    .career-assessment-form{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:17px;
+    }
+    .form-group{
+        width:100%;
+        min-width:0;
+    }
+    .form-group label{
+        font-size:14px;
+    }
+    .form-group input,
+    .form-group select{
+        width:100%;
+        height:48px;
+        padding:0 13px;
+        font-size:14px;
+    }
+    /* ==========================================
+       SUBMIT
+    ========================================== */
+    .assessment-submit{
+        grid-column:auto;
+        width:100%;
+        min-height:50px;
+        padding:14px 18px;
+        font-size:16px;
+    }
+    /* ==========================================
+       NOTE
+    ========================================== */
+    .assessment-note{
+        grid-column:auto;
+        font-size:14px;
+        line-height:1.6;
+        padding:0 5px;
+    }
+}
+/* ==========================================
+   SMALL PHONES
+========================================== */
+@media (max-width:480px){
+    .career-assessment{
+        padding:60px 20px;
+    }
+    /* INTRO */
+    .assessment-intro h2{
+        font-size:27px;
+        line-height:1.25;
+    }
+    .assessment-intro > p{
+        font-size:14px;
+        line-height:1.75;
+    }
+    /* BENEFITS */
+    .assessment-benefits{
+        gap:18px;
+    }
+    .assessment-benefit{
+        gap:10px;
+    }
+    .assessment-benefit > span{
+        font-size:14px;
+        min-width:23px;
+    }
+    .assessment-benefit strong{
+        font-size:16px;
+    }
+    .assessment-benefit p{
+        font-size:14px;
+        line-height:1.65;
+    }
+    /* FORM */
+    .assessment-form-wrapper{
+        padding:24px 17px;
+        border-radius:16px;
+    }
+    .assessment-form-header{
+        margin-bottom:20px;
+    }
+    .assessment-form-header h3{
+        font-size:20px;
+    }
+    .assessment-form-header p{
+        font-size:14px;
+    }
+    .career-assessment-form{
+        gap:15px;
+    }
+    .form-group{
+        gap:6px;
+    }
+    .form-group label{
+        font-size:14px;
+    }
+    .form-group input,
+    .form-group select{
+        height:46px;
+        font-size:14px;
+        padding:0 12px;
+    }
+    /* BUTTON */
+    .assessment-submit{
+        min-height:48px;
+        padding:13px 15px;
+        font-size:14px;
+    }
+    .assessment-note{
+        font-size:14px;
+        line-height:1.6;
+    }
+}
+/* ==========================================
+   CAREER DEVELOPMENT FAQ
+========================================== */
+.career-faq{
+    padding:100px 5%;
+    background:var(--light);
+}
+/* ==========================================
+   FAQ WRAPPER
+========================================== */
+.career-faq-wrapper{
+    display:grid;
+    grid-template-columns:0.8fr 1.2fr;
+    gap:80px;
+    align-items:start;
+}
+/* ==========================================
+   INTRO
+========================================== */
+.career-faq-intro{
+    max-width:480px;
+}
+.career-faq-intro h2{
+    color:var(--dark);
+    font-size:36px;
+    line-height:1.2;
+    margin:15px 0;
+}
+.career-faq-intro > p{
+    color:var(--text);
+    font-size:16px;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+/* ==========================================
+   FAQ NOTE
+========================================== */
+.career-faq-note{
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+    padding-top:22px;
+}
+.career-faq-note > i{
+    color:var(--primary);
+    font-size:26px;
+    padding-top:3px;
+}
+.career-faq-note strong{
+    display:block;
+    color:var(--dark);
+    font-size:18px;
+    margin-bottom:10px;
+}
+.career-faq-note p{
+    color:#64748b;
+    font-size:16px;
+    line-height:1.6;
+    margin:0;
+}
+/* ==========================================
+   FAQ LIST
+========================================== */
+.career-faq-list{
+    width:100%;
+}
+/* ==========================================
+   FAQ ITEM
+========================================== */
+.career-faq-item{
+    background:#fff;
+    margin-bottom:12px;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow: 0 8px 25px rgba(15,23,42,.04);
+}
+/* ==========================================
+   QUESTION
+========================================== */
+.career-faq-question{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    width:100%;
+    padding:20px 22px;
+    background:#fff;
+    color:var(--dark);
+    border:0;
+    font-family:inherit;
+    font-size:16px;
+    font-weight:500;
+    text-align:left;
+    cursor:pointer;
+}
+.career-faq-question span{
+    line-height:1.5;
+}
+.career-faq-question i{
+    flex-shrink:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:25px;
+    height:25px;
+    color:var(--primary);
+    font-size:16px;
+    transition:.3s;
+}
+/* ==========================================
+   ANSWER
+========================================== */
+.career-faq-answer{
+    display:grid;
+    grid-template-rows:0fr;
+    transition:grid-template-rows .3s ease;
+}
+.career-faq-answer p{
+    overflow:hidden;
+    color:#64748b;
+    font-size:16px;
+    line-height:1.8;
+    margin:0;
+    padding:0 22px;
+    transition: padding .3s ease;
+}
+/* ==========================================
+   ACTIVE FAQ
+========================================== */
+.career-faq-item.active
+.career-faq-answer{
+    grid-template-rows:1fr;
+}
+.career-faq-item.active
+.career-faq-answer p{
+    padding:
+        0 22px 22px;
+}
+.career-faq-item.active
+.career-faq-question i{
+    transform:rotate(45deg);
+    color:var(--secondary);
+}
+/* ==========================================
+   HOVER
+========================================== */
+.career-faq-question:hover{
+    color:var(--primary);
+}
+/* ==========================================
+   TABLET
+========================================== */
+@media (max-width:1024px){
+    .career-faq{
+        padding:85px 5%;
+    }
+    .career-faq-wrapper{
+        grid-template-columns:1fr 1.4fr;
+        gap:45px;
+    }
+    .career-faq-intro h2{
+        font-size:32px;
+    }
+}
+/* ==========================================
+   TABLET / MOBILE
+========================================== */
+@media (max-width:800px){
+    .career-faq{
+        padding:70px 5%;
+    }
+    .career-faq-wrapper{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+    .career-faq-intro{
+        max-width:700px;
+    }
+    .career-faq-intro h2{
+        font-size:30px;
+    }
+}
+/* ==========================================
+   MOBILE
+========================================== */
+@media (max-width:768px){
+    .career-faq{
+        padding:70px 5%;
+    }
+    .career-faq-wrapper{
+        gap:32px;
+    }
+    .career-faq-intro h2{
+        font-size:29px;
+        line-height:1.25;
+    }
+
+    .career-faq-intro > p{
+        font-size:16px;
+        line-height:1.75;
+    }
+    .career-faq-note{
+        padding-top:15px;
+        font-size: 16px;
+    }
+    .career-faq-question{
+        padding:18px;
+        font-size:16px;
+        gap:15px;
+    }
+    .career-faq-question i{
+        width:23px;
+        height:23px;
+    }
+    .career-faq-answer p{
+        padding-left:18px;
+        padding-right:18px;
+        font-size:16px;
+        line-height:1.75;
+    }
+    .career-faq-item.active
+    .career-faq-answer p{
+        padding:
+            0 18px 19px;
+    }
+}
+/* ==========================================
+   SMALL PHONES
+========================================== */
+@media (max-width:480px){
+    .career-faq{
+        padding:60px 20px;
+    }
+    .career-faq-intro h2{
+        font-size:26px;
+    }
+    .career-faq-intro > p{
+        font-size:16px;
+    }
+    .career-faq-note strong{
+        font-size:18px;
+    }
+    .career-faq-note p{
+        font-size:16px;
+    }
+    .career-faq-question{
+        padding:17px 16px;
+        font-size:16px;
+        gap:12px;
+    }
+    .career-faq-question i{
+        width:21px;
+        height:21px;
+        font-size:16px;
+    }
+    .career-faq-answer p{
+        padding-left:16px;
+        padding-right:16px;
+        font-size:16px;
+    }
+    .career-faq-item.active
+    .career-faq-answer p{
+        padding:
+            0 16px 18px;
+    }
+}
+/* ==========================================
+   FINAL CAREER CTA
+========================================== */
+.career-final-cta{
+    padding:100px 5%;
+    background:var(--white);
+}
+/* ==========================================
+   CTA WRAPPER
+========================================== */
+.career-cta-wrapper{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+    padding:60px;
+    background:var(--primary);
+    border-radius:15px;
+}
+/* ==========================================
+   CTA CONTENT
+========================================== */
+.career-cta-content{
+    max-width:600px;
+}
+.career-cta-content .section-tag{
+    color:var(--accent);
+}
+.career-cta-content h2{
+    color:#fff;
+    font-size:36px;
+    line-height:1.2;
+    margin:15px 0;
+}
+.career-cta-content p{
+    max-width:550px;
+    color:rgba(255,255,255,.82);
+    font-size:16px;
+    line-height:1.8;
+    margin:0;
+}
+/* ==========================================
+   CTA ACTIONS
+========================================== */
+.career-cta-actions{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    width:100%;
+    max-width:300px;
+}
+/* ==========================================
+   BUTTON
+========================================== */
+.career-cta-btn{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    width:100%;
+    padding:14px 18px;
+    border-radius:9px;
+    text-decoration:none;
+    font-family:inherit;
+    font-size:16px;
+    font-weight:400;
+    transition:.3s;
+}
+.career-cta-btn .arrow{
+    margin-left:auto;
+    font-size:16px;
+    transition:.3s;
+}
+.career-cta-btn:hover .arrow{
+    transform:translateX(4px);
+}
+/* ==========================================
+   PRIMARY BUTTON
+========================================== */
+.career-cta-btn.primary{
+    background:#fff;
+    color:var(--primary);
+}
+.career-cta-btn.primary:hover{
+    background:var(--accent);
+    color:var(--dark);
+}
+/* ==========================================
+   SECONDARY BUTTON
+========================================== */
+.career-cta-btn.secondary{
+    background:var(--secondary);
+    color:#fff;
+}
+.career-cta-btn.secondary:hover{
+    background:#c90500;
+}
+/* ==========================================
+   OUTLINE BUTTON
+========================================== */
+.career-cta-btn.outline{
+    background:rgba(255,255,255,.08);
+    color:#fff;
+}
+.career-cta-btn.outline:hover{
+    background:rgba(255,255,255,.16);
+}
+/* ==========================================
+   TABLET
+========================================== */
+@media (max-width:1000px){
+    .career-final-cta{
+        padding:85px 5%;
+    }
+    .career-cta-wrapper{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:40px;
+        padding:50px;
+    }
+    .career-cta-content{
+        max-width:700px;
+    }
+    .career-cta-actions{
+        max-width:100%;
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* ==========================================
+   MOBILE
+========================================== */
+@media (max-width:768px){
+    .career-final-cta{
+        padding:70px 5%;
+    }
+    .career-cta-wrapper{
+        padding:40px 28px;
+        border-radius:20px;
+        gap:30px;
+    }
+    .career-cta-content h2{
+        font-size:30px;
+        line-height:1.25;
+    }
+    .career-cta-content p{
+        font-size:15px;
+        line-height:1.75;
+    }
+    .career-cta-actions{
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+    }
+    .career-cta-btn{
+        padding:14px 16px;
+        font-size:16px;
+    }
+}
+/* ==========================================
+   SMALL PHONES
+========================================== */
+@media (max-width:480px){
+    .career-final-cta{
+        padding:60px 20px;
+    }
+    .career-cta-wrapper{
+        padding:32px 20px;
+        border-radius:18px;
+    }
+    .career-cta-content h2{
+        font-size:27px;
+    }
+    .career-cta-content p{
+        font-size:14px;
+    }
+    .career-cta-btn{
+        padding:13px 14px;
+        font-size:14px;
+    }
+}
+</style>
+<body>
+    <!-- SCROLL BUTTON -->
+    <div id="progress">
+        <span id="progress-value">&#8593</span>
+    </div>
+    <!--top-bar-->
+    <div class="top-bar" id="top-bar">
+        <div class="container top-content">
+            <div class="top-left">
+                <span><i class="fas fa-globe"></i>Connecting Talent to Global Opportunities</span>
+                <span><i class="fas fa-envelope"></i>info@insignlinkglobalconnect.com</span>
+            </div>
+
+            <div class="top-right">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </div>
+    <!--header-->
+    <header class="main-header">
+
+        <!-- LOGO AREA -->
+        <div class="logo-section">
+            <a href="index.html" class="logo">
+                <img src="logo/ILC Logo.jpg" alt="Insign Linkglobal Connect">
+            </a>
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <div class="dropdown-header">
+
+                        <a href="explore.html" class="explore-link">
+                            Explore
+                        </a>
+
+                        <button class="dropdown-toggle" type="button">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+
+                    </div>
+
+                    <ul class="dropdown-content">
+                        <li><a href="study_abroad.html">Study Abroad</a></li>
+                        <li><a href="jobs_abroad.html">Jobs Abroad</a></li>
+                        <li><a href="scholarship.html">Scholarships</a></li>
+                        <li><a href="immigration.html">Immigration</a></li>
+                        <li><a href="career_development.html">Career Development</a></li>
+                    </ul>
+
+                </li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <!-- CTA BUTTONS -->
+            <div class="header-actions">
+
+                <a href="consultation.html" class="consultation-butn1">
+                    Book Consultation
+                </a>
+
+                <a href="login.html" class="login-butn1">
+                    Login
+                </a>
+
+                <a href="register.html" class="primary-butn1">
+                    Register
+                </a>
+
+            </div>
+        </nav>
+
+        <!-- MOBILE MENU -->
+        <div class="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </header>
+    <!-- ==========================================
+     CAREER DEVELOPMENT HERO
+    ========================================== -->
+    <section class="career-hero">
+
+        <div class="container career-hero-container">
+
+            <!-- LEFT CONTENT -->
+
+            <div class="career-hero-content">
+
+                <span class="hero-tag">
+                    CAREER DEVELOPMENT • CV BUILDER • INTERVIEW PREP
+                </span>
+
+                <h1>
+                    Build a Global Career
+                    <span>That Gets You Hired</span>
+                </h1>
+
+                <p>
+                    Access powerful CV tools, interview preparation resources,
+                    LinkedIn optimization guides, language test preparation,
+                    and career growth strategies designed for global opportunities.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#cv-builder" class="hero-btn-primary">
+                        <i class="fas fa-file-alt"></i>
+                        Build My CV
+                    </a>
+
+                    <a href="#assessment" class="hero-btn-secondary">
+                        <i class="fas fa-user-check"></i>
+                        Career Assessment
+                    </a>
+
+                </div>
+
+                <!-- TRUST STRIP -->
+
+                <div class="career-trust">
+
+                    <div class="trust-item">
+                        <i class="fas fa-check-circle"></i>
+                        ATS-Friendly CVs
+                    </div>
+
+                    <div class="trust-item">
+                        <i class="fas fa-check-circle"></i>
+                        Interview Resources
+                    </div>
+
+                    <div class="trust-item">
+                        <i class="fas fa-check-circle"></i>
+                        LinkedIn Optimization
+                    </div>
+
+                    <div class="trust-item">
+                        <i class="fas fa-check-circle"></i>
+                        IELTS • PTE • Duolingo
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT SIDE -->
+
+            <div class="career-hero-visual">
+
+                <div class="hero-main-image">
+
+                    <img src="image/74338528b83c94f68000bbbc543411dd.jpg"
+                        alt="Career Development">
+
+                </div>
+
+                <!-- AI CV BUILDER CARD -->
+
+                <div class="floating-card card1">
+
+                    <div class="card-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+
+                    <div>
+                        <strong>AI CV Builder</strong>
+                        <span>ATS Optimized Templates</span>
+                    </div>
+
+                </div>
+
+                <!-- CV SCORE -->
+
+                <div class="floating-card card2">
+
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+
+                    <div>
+                        <strong>CV Score: 92%</strong>
+                        <span>Recruiter Ready</span>
+                    </div>
+
+                </div>
+
+                <!-- INTERVIEW -->
+
+                <div class="floating-card card3">
+
+                    <div class="card-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+
+                    <div>
+                        <strong>500+</strong>
+                        <span>Interview Success Stories</span>
+                    </div>
+
+                </div>
+
+                <!-- DASHBOARD -->
+
+                <div class="career-dashboard">
+
+                    <h4>Career Progress Dashboard</h4>
+
+                    <div class="dashboard-item">
+
+                        <span>CV Completion</span>
+
+                        <div class="progress-bar">
+                            <div class="progress-fill fill1"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="dashboard-item">
+
+                        <span>LinkedIn Profile</span>
+
+                        <div class="progress-bar">
+                            <div class="progress-fill fill2"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="dashboard-item">
+
+                        <span>Interview Readiness</span>
+
+                        <div class="progress-bar">
+                            <div class="progress-fill fill3"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     CAREER DEVELOPMENT SERVICES
+    ========================================== -->
+    <section class="career-services">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="section-tag">
+                    CAREER DEVELOPMENT TOOLS
+                </span>
+
+                <h2>
+                    Everything You Need To Build
+                    A Competitive Global Career
+                </h2>
+
+                <p>
+                    Professional tools, preparation resources,
+                    and career support designed to help you
+                    stand out internationally.
+                </p>
+
+            </div>
+
+            <div class="career-services-grid">
+
+                <!-- FEATURED -->
+
+                <div class="featured-service">
+
+                    <div class="featured-content">
+
+                        <span class="service-badge">
+                            MOST POPULAR
+                        </span>
+
+                        <h3>
+                            AI CV Builder
+                        </h3>
+
+                        <p>
+                            Create professional ATS-friendly CVs
+                            designed to pass recruiter screening
+                            systems and increase interview chances.
+                        </p>
+
+                        <ul>
+
+                            <li>ATS Optimized Templates</li>
+
+                            <li>Professional Formatting</li>
+
+                            <li>Multiple Export Formats</li>
+
+                            <li>Industry Specific CVs</li>
+
+                        </ul>
+
+                        <a href="#"
+                            class="service-btn">
+
+                            Build My CV
+
+                            <i class="fas fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                    <div class="featured-icon">
+
+                        <i class="fas fa-file-alt"></i>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div class="service-card">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <h4>Cover Letter Generator</h4>
+                    <p>
+                        Generate customized cover letters.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-comments"></i>
+                    <h4>Interview Preparation</h4>
+                    <p>
+                        Practice interview questions and answers.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fab fa-linkedin"></i>
+                    <h4>LinkedIn Optimization</h4>
+                    <p>
+                        Build a powerful LinkedIn profile.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-language"></i>
+                    <h4>IELTS Preparation</h4>
+                    <p>
+                        Academic & General IELTS resources.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h4>PTE Preparation</h4>
+                    <p>
+                        Practice tests and preparation materials.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-book-reader"></i>
+                    <h4>Duolingo Preparation</h4>
+                    <p>
+                        Get ready for the English proficiency test.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-folder-open"></i>
+                    <h4>Career Resources</h4>
+                    <p>
+                        Articles, guides and templates.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     AI CAREER TOOLKIT
+    ========================================== -->
+    <section class="ai-toolkit">
+
+        <div class="container">
+
+            <!-- SECTION HEADER -->
+
+            <div class="section-header">
+
+                <span class="section-tag">
+                    AI CAREER TOOLKIT
+                </span>
+
+                <h2>
+                    Supercharge Your Career With AI-Powered Tools
+                </h2>
+
+                <p>
+                    Build professional resumes, generate personalized cover letters,
+                    receive career guidance, and prepare for interviews using
+                    intelligent career technology.
+                </p>
+
+            </div>
+
+            <!-- TOOLKIT GRID -->
+
+            <div class="ai-toolkit-grid">
+
+                <!-- FEATURED CARD -->
+
+                <div class="featured-ai-card">
+
+                    <div class="featured-ai-content">
+
+                        <span class="ai-badge">
+                            MOST POPULAR
+                        </span>
+
+                        <h3>
+                            AI CV Builder
+                        </h3>
+
+                        <p>
+                            Create ATS-optimized resumes designed to pass recruiter
+                            screening systems and improve your chances of securing
+                            interviews globally.
+                        </p>
+
+                        <div class="ai-features">
+
+                            <div class="ai-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>ATS Score Analysis</span>
+                            </div>
+
+                            <div class="ai-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Professional Templates</span>
+                            </div>
+
+                            <div class="ai-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Industry-Specific Formatting</span>
+                            </div>
+
+                            <div class="ai-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Instant PDF Export</span>
+                            </div>
+
+                        </div>
+
+                        <a href="#"
+                            class="featured-ai-btn">
+
+                            Build My CV
+
+                            <i class="fas fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                    <div class="featured-ai-icon">
+
+                        <i class="fas fa-file-alt"></i>
+
+                    </div>
+
+                </div>
+
+                <!-- COVER LETTER -->
+
+                <div class="ai-tool-card">
+
+                    <div class="tool-icon">
+
+                        <i class="fas fa-envelope-open-text"></i>
+
+                    </div>
+
+                    <h4>
+                        AI Cover Letter Generator
+                    </h4>
+
+                    <p>
+                        Generate customized cover letters based on
+                        your experience and target role.
+                    </p>
+
+                    <ul>
+
+                        <li>Personalized Content</li>
+
+                        <li>Professional Formatting</li>
+
+                        <li>Editable Drafts</li>
+
+                    </ul>
+
+                    <a href="#"
+                        class="tool-btn">
+
+                        Generate Letter
+
+                    </a>
+
+                </div>
+
+                <!-- CAREER ASSISTANT -->
+
+                <div class="ai-tool-card">
+
+                    <div class="tool-icon">
+
+                        <i class="fas fa-robot"></i>
+
+                    </div>
+
+                    <h4>
+                        AI Career Assistant
+                    </h4>
+
+                    <p>
+                        Receive intelligent career recommendations,
+                        skills analysis, and pathway guidance.
+                    </p>
+
+                    <ul>
+
+                        <li>Career Planning</li>
+
+                        <li>Skills Gap Analysis</li>
+
+                        <li>Job Matching</li>
+
+                    </ul>
+
+                    <a href="#"
+                        class="tool-btn">
+
+                        Ask AI Assistant
+
+                    </a>
+
+                </div>
+
+                <!-- INTERVIEW COACH -->
+
+                <div class="ai-tool-card">
+
+                    <div class="tool-icon">
+
+                        <i class="fas fa-comments"></i>
+
+                    </div>
+
+                    <h4>
+                        AI Interview Coach
+                    </h4>
+
+                    <p>
+                        Practice interview questions and receive
+                        instant performance feedback.
+                    </p>
+
+                    <ul>
+
+                        <li>Mock Interviews</li>
+
+                        <li>Confidence Scoring</li>
+
+                        <li>Improvement Suggestions</li>
+
+                    </ul>
+
+                    <a href="#"
+                        class="tool-btn">
+
+                        Start Practice
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- CTA -->
+
+            <div class="ai-toolkit-cta">
+
+                <h3>
+                    Ready To Build A Stronger Career?
+                </h3>
+
+                <p>
+                    Use our AI-powered career tools to improve your profile,
+                    prepare for opportunities, and stand out to employers worldwide.
+                </p>
+
+                <a href="#"
+                    class="cta-main-btn">
+
+                    Start Building
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     HOW THE AI CV BUILDER WORKS
+    ========================================== -->
+    <section class="cv-builder-process">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="section-tag">
+                    HOW IT WORKS
+                </span>
+
+                <h2>
+                    Build A Professional CV In Minutes
+                </h2>
+
+                <p>
+                    Our AI-powered CV Builder guides you through a simple
+                    process and creates a professional ATS-friendly resume
+                    ready for international opportunities.
+                </p>
+
+            </div>
+
+            <div class="cv-process-layout">
+
+                <!-- CV PREVIEW -->
+
+                <div class="cv-preview-card">
+
+                    <div class="ats-score">
+
+                        <span>ATS SCORE</span>
+
+                        <strong>98%</strong>
+
+                    </div>
+
+                    <div class="cv-preview">
+
+                        <h3>JOHN DOE</h3>
+
+                        <span>
+                            Software Engineer
+                        </span>
+
+                        <div class="cv-line long"></div>
+
+                        <div class="cv-line"></div>
+
+                        <div class="cv-line"></div>
+
+                        <div class="cv-line short"></div>
+
+                        <h4>Experience</h4>
+
+                        <div class="cv-line"></div>
+
+                        <div class="cv-line"></div>
+
+                        <div class="cv-line short"></div>
+
+                        <h4>Education</h4>
+
+                        <div class="cv-line"></div>
+
+                        <div class="cv-line short"></div>
+
+                        <h4>Skills</h4>
+
+                        <div class="skills-preview">
+
+                            <span>JavaScript</span>
+
+                            <span>Python</span>
+
+                            <span>SQL</span>
+
+                            <span>React</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="cv-status">
+
+                        <div>
+                            <i class="fas fa-check-circle"></i>
+                            ATS Optimized
+                        </div>
+
+                        <div>
+                            <i class="fas fa-check-circle"></i>
+                            HR Approved
+                        </div>
+
+                        <div>
+                            <i class="fas fa-check-circle"></i>
+                            PDF Ready
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- PROCESS STEPS -->
+
+                <div class="cv-steps">
+
+                    <div class="cv-step">
+
+                        <div class="step-no">01</div>
+
+                        <div>
+                            <h3>Create Profile</h3>
+                            <p>
+                                Add personal information and career goals.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="cv-step">
+
+                        <div class="step-no">02</div>
+
+                        <div>
+                            <h3>Add Experience</h3>
+                            <p>
+                                Enter work history and achievements.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="cv-step">
+
+                        <div class="step-no">03</div>
+
+                        <div>
+                            <h3>Add Education</h3>
+                            <p>
+                                Include academic qualifications.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="cv-step">
+
+                        <div class="step-no">04</div>
+
+                        <div>
+                            <h3>Select Template</h3>
+                            <p>
+                                Choose from professional designs.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="cv-step">
+
+                        <div class="step-no">05</div>
+
+                        <div>
+                            <h3>AI Optimization</h3>
+                            <p>
+                                AI improves formatting and ATS performance.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="cv-step">
+
+                        <div class="step-no">06</div>
+
+                        <div>
+                            <h3>Download PDF</h3>
+                            <p>
+                                Export a polished professional CV instantly.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <a href="#"
+                        class="cv-process-btn">
+
+                        Build My CV
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     FEATURED CAREER RESOURCES
+    ========================================== -->
+    <section class="career-resources">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="section-tag">
+                    CAREER RESOURCES
+                </span>
+
+                <h2>
+                    Free Career Guides & Resources
+                </h2>
+
+                <p>
+                    Download professional resources designed to help you
+                    improve employability, strengthen applications and
+                    accelerate career growth.
+                </p>
+
+            </div>
+
+            <div class="resources-layout">
+
+                <!-- FEATURED RESOURCE -->
+
+                <div class="featured-resource">
+
+                    <img src="image/ca023f6fa01720a7618202eecb37a946.jpg"
+                        alt="CV Writing Guide">
+
+                    <div class="featured-resource-overlay">
+
+                        <span class="resource-badge">
+                            MOST DOWNLOADED
+                        </span>
+
+                        <h3>
+                            Complete CV Writing Guide
+                        </h3>
+
+                        <p>
+                            Learn how to create ATS-friendly resumes that
+                            stand out to recruiters and employers globally.
+                        </p>
+
+                        <a href="#"
+                            class="resource-download-btn">
+
+                            <i class="fas fa-download"></i>
+
+                            Download Guide
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- RESOURCE GRID -->
+
+                <div class="resource-grid">
+
+                    <div class="resource-card">
+
+                        <i class="fas fa-file-signature"></i>
+
+                        <h4>
+                            Cover Letter Guide
+                        </h4>
+
+                        <p>
+                            Write compelling cover letters that increase
+                            interview invitations.
+                        </p>
+
+                        <a href="#">
+                            Download Guide
+                        </a>
+
+                    </div>
+
+                    <div class="resource-card">
+
+                        <i class="fas fa-user-tie"></i>
+
+                        <h4>
+                            Interview Guide
+                        </h4>
+
+                        <p>
+                            Master common interview questions and answer
+                            frameworks.
+                        </p>
+
+                        <a href="#">
+                            Download Guide
+                        </a>
+
+                    </div>
+
+                    <div class="resource-card">
+
+                        <i class="fab fa-linkedin"></i>
+
+                        <h4>
+                            LinkedIn Guide
+                        </h4>
+
+                        <p>
+                            Optimize your LinkedIn profile for visibility
+                            and opportunities.
+                        </p>
+
+                        <a href="#">
+                            Download Guide
+                        </a>
+
+                    </div>
+
+                    <div class="resource-card">
+
+                        <i class="fas fa-bullhorn"></i>
+
+                        <h4>
+                            Personal Branding Guide
+                        </h4>
+
+                        <p>
+                            Build a strong professional reputation and
+                            online presence.
+                        </p>
+
+                        <a href="#">
+                            Download Guide
+                        </a>
+
+                    </div>
+
+                    <div class="resource-card">
+
+                        <i class="fas fa-search"></i>
+
+                        <h4>
+                            Job Search Guide
+                        </h4>
+
+                        <p>
+                            Learn strategies for finding and securing
+                            international opportunities.
+                        </p>
+
+                        <a href="#">
+                            Download Guide
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- =========================
+     LANGUAGE TEST PREPARATION
+    ========================= -->
+    <section class="language-prep-section" id="language-preparation">
+
+        <div class="language-prep-container">
+
+            <!-- Section Header -->
+            <div class="language-prep-header">
+                <div>
+                    <span class="section-eyebrow">
+                        LANGUAGE TEST PREPARATION
+                    </span>
+
+                    <h2>
+                        Prepare With Confidence.<br>
+                        <span>Achieve Your Target Score.</span>
+                    </h2>
+                </div>
+
+                <p>
+                    Build the language skills you need for study abroad,
+                    international careers, and immigration opportunities.
+                </p>
+            </div>
+
+
+            <!-- Main Learning Hub -->
+            <div class="language-prep-grid">
+
+                <!-- =========================
+                    FEATURED IELTS
+                ========================== -->
+                <div class="ielts-featured-card">
+
+                    <div class="featured-top">
+                        <span class="featured-badge">
+                            FEATURED PROGRAM
+                        </span>
+
+                        <div class="featured-icon">
+                            <i class="fa-solid fa-language"></i>
+                        </div>
+                    </div>
+
+
+                    <div class="featured-content">
+
+                        <span class="program-label">
+                            IELTS PREPARATION
+                        </span>
+
+                        <h3>
+                            Master IELTS.<br>
+                            Unlock Global Opportunities.
+                        </h3>
+
+                        <p>
+                            A structured preparation journey designed to help
+                            you understand the test, improve your performance,
+                            and confidently work toward your target band score.
+                        </p>
+
+
+                        <!-- Features -->
+                        <div class="ielts-features">
+
+                            <div class="ielts-feature">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Academic & General Training</span>
+                            </div>
+
+                            <div class="ielts-feature">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Mock Tests</span>
+                            </div>
+
+                            <div class="ielts-feature">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Band Score Strategies</span>
+                            </div>
+
+                            <div class="ielts-feature">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Study Roadmap</span>
+                            </div>
+
+                        </div>
+
+
+                        <!-- CTA -->
+                        <a href="#" class="featured-btn">
+                            Start Preparation
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+
+                    <!-- Decorative element -->
+                    <div class="featured-decoration">
+                        <span>IELTS</span>
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                    OTHER TESTS
+                ========================== -->
+                <div class="language-test-cards">
+
+                    <!-- PTE -->
+                    <article class="language-test-card">
+
+                        <div class="test-card-top">
+
+                            <div class="test-icon pte-icon">
+                                <i class="fa-solid fa-microphone-lines"></i>
+                            </div>
+
+                            <span class="test-number">
+                                02
+                            </span>
+
+                        </div>
+
+
+                        <div class="test-card-content">
+
+                            <span class="test-label">
+                                LANGUAGE TEST
+                            </span>
+
+                            <h3>PTE</h3>
+
+                            <p>
+                                Build confidence with practical preparation
+                                focused on real test performance.
+                            </p>
+
+
+                            <ul class="test-features">
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Practice Tests
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Scoring Strategies
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Speaking Practice
+                                </li>
+
+                            </ul>
+
+
+                            <div class="test-meta">
+
+                                <div>
+                                    <span>Difficulty</span>
+                                    <strong>Intermediate</strong>
+                                </div>
+
+                                <div>
+                                    <span>Duration</span>
+                                    <strong>3–8 Weeks</strong>
+                                </div>
+
+                            </div>
+
+
+                            <div class="success-tip">
+                                <i class="fa-solid fa-lightbulb"></i>
+
+                                <div>
+                                    <span>Success Tip</span>
+                                    <p>
+                                        Focus on integrated tasks.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Duolingo -->
+                    <article class="language-test-card">
+
+                        <div class="test-card-top">
+
+                            <div class="test-icon duolingo-icon">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+
+                            <span class="test-number">
+                                03
+                            </span>
+
+                        </div>
+
+
+                        <div class="test-card-content">
+
+                            <span class="test-label">
+                                LANGUAGE TEST
+                            </span>
+
+                            <h3>Duolingo</h3>
+
+                            <p>
+                                Prepare efficiently with flexible resources
+                                for the Duolingo English Test.
+                            </p>
+
+
+                            <ul class="test-features">
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Sample Questions
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Practice Resources
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Test Strategy
+                                </li>
+
+                            </ul>
+
+
+                            <div class="test-meta">
+
+                                <div>
+                                    <span>Difficulty</span>
+                                    <strong>Beginner–Intermediate</strong>
+                                </div>
+
+                                <div>
+                                    <span>Duration</span>
+                                    <strong>2–6 Weeks</strong>
+                                </div>
+
+                            </div>
+
+
+                            <div class="success-tip">
+                                <i class="fa-solid fa-lightbulb"></i>
+
+                                <div>
+                                    <span>Success Tip</span>
+                                    <p>
+                                        Practice spontaneous speaking.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Preparation Resources -->
+                    <article class="language-resource-card">
+
+                        <div class="resource-card-content">
+
+                            <div class="resource-icon">
+                                <i class="fa-solid fa-book-open-reader"></i>
+                            </div>
+
+                            <div>
+                                <span class="test-label">
+                                    LEARNING RESOURCES
+                                </span>
+
+                                <h3>
+                                    Build Your<br>
+                                    Preparation Plan
+                                </h3>
+
+                                <p>
+                                    Explore study resources, preparation
+                                    strategies, and practical guidance.
+                                </p>
+
+                                <a href="#" class="resource-link">
+                                    Explore Resources
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+
+            <!-- Bottom Trust Strip -->
+            <div class="language-prep-footer">
+
+                <div class="footer-intro">
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <span>
+                        Choose the right test for your journey
+                    </span>
+                </div>
+
+
+                <div class="journey-links">
+
+                    <span>
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        Study Abroad
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-briefcase"></i>
+                        Work Abroad
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-passport"></i>
+                        Immigration
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     INTERVIEW PREPARATION HUB
+    ========================================== -->
+    <section class="interview-hub">
+
+        <div class="container">
+
+            <!-- SECTION HEADER -->
+
+            <div class="section-header interview-header">
+
+                <span class="section-tag">
+                    INTERVIEW PREPARATION
+                </span>
+
+                <h2>
+                    Prepare With Confidence.
+                    <br>
+                    Perform at Your Best.
+                </h2>
+
+                <p>
+                    Build the confidence, communication skills and practical
+                    knowledge you need to succeed in interviews and take the
+                    next step in your international career.
+                </p>
+
+            </div>
+
+
+            <!-- FEATURED INTERVIEW RESOURCE -->
+
+            <div class="interview-featured">
+
+                <img
+                    src="image/interview-behavioral.jpg"
+                    alt="Professional preparing for a behavioral interview"
+                >
+
+                <div class="interview-featured-overlay">
+
+                    <div class="interview-featured-content">
+
+                        <span class="interview-label">
+                            START HERE
+                        </span>
+
+                        <h3>
+                            Behavioral Interviews
+                        </h3>
+
+                        <p>
+                            Learn how to confidently answer competency-based
+                            questions, communicate your experience and tell
+                            compelling stories that demonstrate your value.
+                        </p>
+
+                        <div class="interview-featured-meta">
+
+                            <div>
+                                <strong>
+                                    Focus
+                                </strong>
+
+                                <span>
+                                    Communication & Experience
+                                </span>
+                            </div>
+
+                            <div>
+                                <strong>
+                                    Preparation
+                                </strong>
+
+                                <span>
+                                    Questions & Model Answers
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <a href="#"
+                        class="interview-primary-btn">
+
+                            Explore Preparation
+
+                            <i class="fas fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- INTERVIEW CATEGORIES -->
+
+            <div class="interview-grid">
+
+
+                <!-- TECHNICAL -->
+
+                <article class="interview-card">
+
+                    <div class="interview-card-image">
+
+                        <img
+                            src="image/interview-technical.jpg"
+                            alt="Technical interview preparation"
+                        >
+
+                        <span class="interview-card-number">
+                            01
+                        </span>
+
+                    </div>
+
+                    <div class="interview-card-content">
+
+                        <span class="interview-card-tag">
+                            SKILLS & EXPERTISE
+                        </span>
+
+                        <h3>
+                            Technical Interviews
+                        </h3>
+
+                        <p>
+                            Prepare for technical questions, problem-solving
+                            exercises and role-specific assessments.
+                        </p>
+
+                        <a href="#"
+                        class="interview-card-link">
+
+                            Prepare for Technical Interviews
+
+                            <i class="fas fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- HR -->
+
+                <article class="interview-card">
+
+                    <div class="interview-card-image">
+
+                        <img
+                            src="image/interview-hr.jpg"
+                            alt="HR interview preparation"
+                        >
+
+                        <span class="interview-card-number">
+                            02
+                        </span>
+
+                    </div>
+
+                    <div class="interview-card-content">
+
+                        <span class="interview-card-tag">
+                            HR & RECRUITMENT
+                        </span>
+
+                        <h3>
+                            HR Interviews
+                        </h3>
+
+                        <p>
+                            Understand common HR questions and learn how to
+                            present your experience with clarity and confidence.
+                        </p>
+
+                        <a href="#"
+                        class="interview-card-link">
+
+                            Explore HR Preparation
+
+                            <i class="fas fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- VIRTUAL -->
+
+                <article class="interview-card">
+
+                    <div class="interview-card-image">
+
+                        <img
+                            src="image/interview-virtual.jpg"
+                            alt="Virtual job interview"
+                        >
+
+                        <span class="interview-card-number">
+                            03
+                        </span>
+
+                    </div>
+
+                    <div class="interview-card-content">
+
+                        <span class="interview-card-tag">
+                            REMOTE INTERVIEWS
+                        </span>
+
+                        <h3>
+                            Virtual Interviews
+                        </h3>
+
+                        <p>
+                            Master camera presence, communication and the
+                            practical details of successful online interviews.
+                        </p>
+
+                        <a href="#"
+                        class="interview-card-link">
+
+                            Prepare for Virtual Interviews
+
+                            <i class="fas fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SALARY -->
+
+                <article class="interview-card">
+
+                    <div class="interview-card-image">
+
+                        <img
+                            src="image/salary-negotiation.jpg"
+                            alt="Salary negotiation discussion"
+                        >
+
+                        <span class="interview-card-number">
+                            04
+                        </span>
+
+                    </div>
+
+                    <div class="interview-card-content">
+
+                        <span class="interview-card-tag">
+                            CAREER GROWTH
+                        </span>
+
+                        <h3>
+                            Salary Negotiation
+                        </h3>
+
+                        <p>
+                            Learn how to discuss compensation professionally,
+                            understand your value and negotiate with confidence.
+                        </p>
+
+                        <a href="#"
+                        class="interview-card-link">
+
+                            Learn Negotiation Strategies
+
+                            <i class="fas fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- WORKPLACE CULTURE -->
+
+                <article class="interview-card">
+
+                    <div class="interview-card-image">
+
+                        <img
+                            src="image/workplace-culture.jpg"
+                            alt="International workplace culture"
+                        >
+
+                        <span class="interview-card-number">
+                            05
+                        </span>
+
+                    </div>
+
+                    <div class="interview-card-content">
+
+                        <span class="interview-card-tag">
+                            WORKPLACE READINESS
+                        </span>
+
+                        <h3>
+                            Workplace Culture
+                        </h3>
+
+                        <p>
+                            Understand workplace expectations, communication
+                            styles and professional culture in international
+                            environments.
+                        </p>
+
+                        <a href="#"
+                        class="interview-card-link">
+
+                            Explore Workplace Culture
+
+                            <i class="fas fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- BOTTOM CTA -->
+
+            <div class="interview-bottom">
+
+                <div>
+
+                    <span class="interview-bottom-label">
+                        READY FOR YOUR NEXT INTERVIEW?
+                    </span>
+
+                    <h3>
+                        Practice before the real conversation.
+                    </h3>
+
+                    <p>
+                        Use our interview resources to prepare your answers,
+                        strengthen your confidence and walk into your next
+                        interview better prepared.
+                    </p>
+
+                </div>
+
+                <a href="#"
+                class="interview-cta">
+
+                    Start Preparing
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     LINKEDIN OPTIMIZATION
+    ========================================== -->
+    <section class="linkedin-optimization">
+
+        <div class="container">
+
+            <div class="linkedin-wrapper">
+
+                <!-- IMAGE -->
+
+                <div class="linkedin-image">
+
+                    <img
+                        src="image/456dac532a706eb63906a0aab6e0f9f9.jpg"
+                        alt="LinkedIn profile optimization">
+
+                    <div class="linkedin-image-caption">
+
+                        <span>
+                            PERSONAL BRANDING
+                        </span>
+
+                        <strong>
+                            Make your profile
+                            work harder for you.
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONTENT -->
+
+                <div class="linkedin-content">
+
+                    <span class="section-tag">
+                        LINKEDIN OPTIMIZATION
+                    </span>
+
+                    <h2>
+                        Turn Your LinkedIn Profile
+                        Into a Career Asset
+                    </h2>
+
+                    <p class="linkedin-intro">
+                        Build a stronger professional presence with
+                        practical profile improvements designed to help
+                        recruiters understand your experience, skills
+                        and career direction.
+                    </p>
+
+
+                    <!-- WHAT'S INCLUDED -->
+
+                    <div class="linkedin-included">
+
+                        <h3>
+                            What's Included
+                        </h3>
+
+                        <div class="linkedin-features">
+
+                            <div class="linkedin-feature">
+
+                                <span>01</span>
+
+                                <div>
+                                    <strong>
+                                        Profile Review
+                                    </strong>
+
+                                    <p>
+                                        Identify areas that may be
+                                        limiting the impact of your profile.
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="linkedin-feature">
+
+                                <span>02</span>
+
+                                <div>
+                                    <strong>
+                                        Headline Optimization
+                                    </strong>
+
+                                    <p>
+                                        Create a clearer headline that
+                                        communicates your professional value.
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="linkedin-feature">
+
+                                <span>03</span>
+
+                                <div>
+                                    <strong>
+                                        About Section Writing
+                                    </strong>
+
+                                    <p>
+                                        Present your experience and career
+                                        goals with a stronger professional story.
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="linkedin-feature">
+
+                                <span>04</span>
+
+                                <div>
+                                    <strong>
+                                        Keyword Optimization
+                                    </strong>
+
+                                    <p>
+                                        Improve the use of relevant skills
+                                        and industry keywords throughout your profile.
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="linkedin-feature">
+
+                                <span>05</span>
+
+                                <div>
+                                    <strong>
+                                        Recruiter Visibility
+                                    </strong>
+
+                                    <p>
+                                        Strengthen your profile so recruiters
+                                        can better understand your expertise.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CTA -->
+
+                    <a href="#"
+                        class="linkedin-btn">
+
+                        Optimize My LinkedIn
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     CAREER DEVELOPMENT ARTICLES
+    ========================================== -->
+    <section class="career-articles">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="section-tag">
+                    CAREER DEVELOPMENT
+                </span>
+
+                <h2>
+                    Practical Advice for Your
+                    Global Career
+                </h2>
+
+                <p>
+                    Explore practical career advice, job search strategies
+                    and professional development insights designed to help
+                    you build a stronger career.
+                </p>
+
+            </div>
+
+
+            <!-- ==========================================
+                FEATURED ARTICLE
+            =========================================== -->
+
+            <div class="featured-article">
+
+                <img
+                    src="image/career-featured.jpg"
+                    alt="Career development advice">
+
+                <div class="featured-article-overlay">
+
+                    <span class="article-category">
+                        FEATURED ARTICLE
+                    </span>
+
+                    <h3>
+                        Build a Career That Works
+                        Across Borders
+                    </h3>
+
+                    <p>
+                        Practical strategies for improving your
+                        employability, presenting your experience
+                        and preparing for international opportunities.
+                    </p>
+
+                    <a href="#"
+                        class="article-btn">
+
+                        Read Article
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==========================================
+                ARTICLE GRID
+            =========================================== -->
+
+            <div class="career-article-grid">
+
+                <!-- CV -->
+
+                <article class="career-article-card">
+
+                    <img
+                        src="image/cv-tips.jpg"
+                        alt="CV writing tips">
+
+                    <div class="career-article-content">
+
+                        <span>
+                            CV & APPLICATIONS
+                        </span>
+
+                        <h3>
+                            CV Tips
+                        </h3>
+
+                        <p>
+                            Learn how to create a clearer,
+                            stronger CV that highlights your
+                            experience and skills.
+                        </p>
+
+                        <a href="#">
+                            Read Article
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- INTERVIEW -->
+
+                <article class="career-article-card">
+
+                    <img
+                        src="image/interview-tips.jpg"
+                        alt="Interview preparation">
+
+                    <div class="career-article-content">
+
+                        <span>
+                            INTERVIEW PREPARATION
+                        </span>
+
+                        <h3>
+                            Interview Tips
+                        </h3>
+
+                        <p>
+                            Prepare with practical advice for
+                            answering questions and presenting
+                            yourself with confidence.
+                        </p>
+
+                        <a href="#">
+                            Read Article
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- REMOTE WORK -->
+
+                <article class="career-article-card">
+
+                    <img
+                        src="image/remote-work.jpg"
+                        alt="Remote work">
+
+                    <div class="career-article-content">
+
+                        <span>
+                            WORKPLACE
+                        </span>
+
+                        <h3>
+                            Remote Work
+                        </h3>
+
+                        <p>
+                            Discover practical strategies for
+                            finding remote opportunities and
+                            working effectively from anywhere.
+                        </p>
+
+                        <a href="#">
+                            Read Article
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CAREER GROWTH -->
+
+                <article class="career-article-card">
+
+                    <img
+                        src="image/career-growth.jpg"
+                        alt="Career growth">
+
+                    <div class="career-article-content">
+
+                        <span>
+                            CAREER DEVELOPMENT
+                        </span>
+
+                        <h3>
+                            Career Growth
+                        </h3>
+
+                        <p>
+                            Build the skills, experience and
+                            professional habits needed to move
+                            your career forward.
+                        </p>
+
+                        <a href="#">
+                            Read Article
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PERSONAL BRANDING -->
+
+                <article class="career-article-card">
+
+                    <img
+                        src="image/personal-branding.jpg"
+                        alt="Personal branding">
+
+                    <div class="career-article-content">
+
+                        <span>
+                            PERSONAL BRANDING
+                        </span>
+
+                        <h3>
+                            Personal Branding
+                        </h3>
+
+                        <p>
+                            Learn how to communicate your
+                            professional value and build a
+                            stronger personal brand.
+                        </p>
+
+                        <a href="#">
+                            Read Article
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- GLOBAL EMPLOYMENT -->
+
+                <article class="career-article-card">
+
+                    <img
+                        src="image/global-employment.jpg"
+                        alt="Global employment trends">
+
+                    <div class="career-article-content">
+
+                        <span>
+                            GLOBAL CAREERS
+                        </span>
+
+                        <h3>
+                            Global Employment Trends
+                        </h3>
+
+                        <p>
+                            Stay informed about changing
+                            employment patterns and opportunities
+                            across international markets.
+                        </p>
+
+                        <a href="#">
+                            Read Article
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- ==========================================
+                VIEW ALL
+            =========================================== -->
+
+            <div class="articles-view-all">
+
+                <a href="#" class="articles-link">
+
+                    Explore All Career Articles
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     SUCCESS STORIES
+    ========================================== -->
+    <section class="success-stories">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="section-tag">
+                    SUCCESS STORIES
+                </span>
+
+                <h2>
+                    Real People. Real Career Progress.
+                </h2>
+
+                <p>
+                    See how professionals have used our career
+                    development resources to strengthen their skills,
+                    improve their applications and pursue new
+                    opportunities.
+                </p>
+
+            </div>
+
+
+            <!-- ==========================================
+                FEATURED SUCCESS STORY
+            =========================================== -->
+
+            <div class="featured-success">
+
+                <div class="success-photo">
+
+                    <img
+                        src="image/success-story-featured.jpg"
+                        alt="Success story">
+
+                </div>
+
+
+                <div class="success-content">
+
+                    <span class="success-label">
+                        FEATURED SUCCESS STORY
+                    </span>
+
+                    <div class="success-person">
+
+                        <h3>
+                            Sarah M.
+                        </h3>
+
+                        <span>
+                            Kenya · Healthcare
+                        </span>
+
+                    </div>
+
+
+                    <div class="success-outcome">
+
+                        <strong>
+                            Career Outcome
+                        </strong>
+
+                        <p>
+                            Secured a healthcare career opportunity
+                            in Ireland.
+                        </p>
+
+                    </div>
+
+
+                    <blockquote>
+                        "The guidance helped me present my experience
+                        more clearly and approach my international job
+                        search with much more confidence."
+                    </blockquote>
+
+
+                    <div class="success-footer">
+
+                        <span>
+                            Career Development
+                        </span>
+
+                        <a href="#">
+                            Read Story
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==========================================
+                SUPPORTING STORIES
+            =========================================== -->
+
+            <div class="stories-slider-wrapper">
+
+                <button
+                    class="stories-arrow stories-prev"
+                    type="button"
+                    aria-label="Previous success stories">
+
+                    <i class="fas fa-arrow-left"></i>
+
+                </button>
+
+
+                <div class="stories-slider">
+
+                    <div class="stories-track">
+
+
+                        <!-- STORY 1 -->
+
+                        <article class="story-card">
+
+                            <img
+                                src="image/success-story-1.jpg"
+                                alt="Career success story">
+
+                            <div class="story-content">
+
+                                <div class="story-person">
+
+                                    <div>
+
+                                        <h4>
+                                            James K.
+                                        </h4>
+
+                                        <span>
+                                            Ghana · Technology
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <span class="story-outcome-label">
+                                    CAREER OUTCOME
+                                </span>
+
+                                <p class="story-outcome">
+                                    Secured a software development
+                                    opportunity in the UK.
+                                </p>
+
+                                <p class="story-testimonial">
+                                    "The CV and interview preparation
+                                    made a real difference to my
+                                    applications."
+                                </p>
+
+
+                                <a href="#">
+                                    Read Story
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- STORY 2 -->
+
+                        <article class="story-card">
+
+                            <img
+                                src="image/success-story-2.jpg"
+                                alt="Career success story">
+
+                            <div class="story-content">
+
+                                <div class="story-person">
+
+                                    <div>
+
+                                        <h4>
+                                            Anita W.
+                                        </h4>
+
+                                        <span>
+                                            Nigeria · Finance
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <span class="story-outcome-label">
+                                    CAREER OUTCOME
+                                </span>
+
+                                <p class="story-outcome">
+                                    Improved her professional profile
+                                    and secured interviews with
+                                    international employers.
+                                </p>
+
+                                <p class="story-testimonial">
+                                    "My LinkedIn profile finally reflects
+                                    the experience I actually have."
+                                </p>
+
+
+                                <a href="#">
+                                    Read Story
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- STORY 3 -->
+
+                        <article class="story-card">
+
+                            <img
+                                src="image/success-story-3.jpg"
+                                alt="Career success story">
+
+                            <div class="story-content">
+
+                                <div class="story-person">
+
+                                    <div>
+
+                                        <h4>
+                                            Daniel O.
+                                        </h4>
+
+                                        <span>
+                                            Uganda · Engineering
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <span class="story-outcome-label">
+                                    CAREER OUTCOME
+                                </span>
+
+                                <p class="story-outcome">
+                                    Successfully transitioned into
+                                    an international engineering role.
+                                </p>
+
+                                <p class="story-testimonial">
+                                    "The career resources gave me a much
+                                    clearer direction."
+                                </p>
+
+
+                                <a href="#">
+                                    Read Story
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- STORY 4 -->
+
+                        <article class="story-card">
+
+                            <img
+                                src="image/success-story-4.jpg"
+                                alt="Career success story">
+
+                            <div class="story-content">
+
+                                <div class="story-person">
+
+                                    <div>
+
+                                        <h4>
+                                            Mary A.
+                                        </h4>
+
+                                        <span>
+                                            Kenya · Education
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <span class="story-outcome-label">
+                                    CAREER OUTCOME
+                                </span>
+
+                                <p class="story-outcome">
+                                    Strengthened her CV and secured
+                                    new education-sector opportunities.
+                                </p>
+
+                                <p class="story-testimonial">
+                                    "I became much more confident about
+                                    presenting my experience."
+                                </p>
+
+
+                                <a href="#">
+                                    Read Story
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+                        </article>
+
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="stories-arrow stories-next"
+                    type="button"
+                    aria-label="Next success stories">
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- PAGINATION -->
+
+            <div class="stories-pagination">
+
+                <button
+                    class="story-dot active"
+                    type="button"
+                    aria-label="Slide 1">
+                </button>
+
+                <button
+                    class="story-dot"
+                    type="button"
+                    aria-label="Slide 2">
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     CAREER ASSESSMENT
+    ========================================== -->
+    <section class="career-assessment">
+
+        <div class="container">
+
+            <div class="assessment-wrapper">
+
+                <!-- ==========================================
+                    LEFT CONTENT
+                =========================================== -->
+
+                <div class="assessment-intro">
+
+                    <span class="section-tag">
+                        CAREER ASSESSMENT
+                    </span>
+
+                    <h2>
+                        Find the Right Direction
+                        for Your Career
+                    </h2>
+
+                    <p>
+                        Tell us about your experience, goals and
+                        career interests. We'll help you identify
+                        the next steps that best match your
+                        professional ambitions.
+                    </p>
+
+
+                    <!-- BENEFITS -->
+
+                    <div class="assessment-benefits">
+
+                        <div class="assessment-benefit">
+
+                            <span>
+                                01
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Clarify Your Career Direction
+                                </strong>
+
+                                <p>
+                                    Identify career paths that align
+                                    with your goals and experience.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="assessment-benefit">
+
+                            <span>
+                                02
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Understand Your Opportunities
+                                </strong>
+
+                                <p>
+                                    Explore opportunities that may
+                                    suit your professional background.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="assessment-benefit">
+
+                            <span>
+                                03
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Plan Your Next Step
+                                </strong>
+
+                                <p>
+                                    Get a clearer starting point for
+                                    your career development journey.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==========================================
+                    ASSESSMENT FORM
+                =========================================== -->
+
+                <div class="assessment-form-wrapper">
+
+                    <div class="assessment-form-header">
+
+                        <span>
+                            GET STARTED
+                        </span>
+
+                        <h3>
+                            Tell Us About Yourself
+                        </h3>
+
+                        <p>
+                            Complete the form and start your
+                            career assessment.
+                        </p>
+
+                    </div>
+
+
+                    <form
+                        class="career-assessment-form"
+                        id="careerAssessmentForm">
+
+
+                        <!-- NAME -->
+
+                        <div class="form-group">
+
+                            <label for="assessmentName">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="assessmentName"
+                                name="name"
+                                placeholder="Enter your full name"
+                                required>
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+
+                        <div class="form-group">
+
+                            <label for="assessmentEmail">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="assessmentEmail"
+                                name="email"
+                                placeholder="Enter your email address"
+                                required>
+
+                        </div>
+
+
+                        <!-- PHONE -->
+
+                        <div class="form-group">
+
+                            <label for="assessmentPhone">
+                                Phone Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="assessmentPhone"
+                                name="phone"
+                                placeholder="Enter your phone number"
+                                required>
+
+                        </div>
+
+
+                        <!-- INDUSTRY -->
+
+                        <div class="form-group">
+
+                            <label for="assessmentIndustry">
+                                Industry
+                            </label>
+
+                            <select
+                                id="assessmentIndustry"
+                                name="industry"
+                                required>
+
+                                <option value="">
+                                    Select your industry
+                                </option>
+
+                                <option value="technology">
+                                    Technology
+                                </option>
+
+                                <option value="healthcare">
+                                    Healthcare
+                                </option>
+
+                                <option value="finance">
+                                    Finance & Banking
+                                </option>
+
+                                <option value="engineering">
+                                    Engineering
+                                </option>
+
+                                <option value="education">
+                                    Education
+                                </option>
+
+                                <option value="business">
+                                    Business & Management
+                                </option>
+
+                                <option value="hospitality">
+                                    Hospitality & Tourism
+                                </option>
+
+                                <option value="construction">
+                                    Construction & Trades
+                                </option>
+
+                                <option value="other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- CAREER GOAL -->
+
+                        <div class="form-group">
+
+                            <label for="assessmentGoal">
+                                Career Goal
+                            </label>
+
+                            <select
+                                id="assessmentGoal"
+                                name="career_goal"
+                                required>
+
+                                <option value="">
+                                    Select your career goal
+                                </option>
+
+                                <option value="find-job">
+                                    Find a New Job
+                                </option>
+
+                                <option value="career-change">
+                                    Change Career
+                                </option>
+
+                                <option value="international">
+                                    Find International Opportunities
+                                </option>
+
+                                <option value="career-growth">
+                                    Grow in My Current Career
+                                </option>
+
+                                <option value="remote">
+                                    Find Remote Work
+                                </option>
+
+                                <option value="other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- EXPERIENCE -->
+
+                        <div class="form-group">
+
+                            <label for="assessmentExperience">
+                                Experience Level
+                            </label>
+
+                            <select
+                                id="assessmentExperience"
+                                name="experience_level"
+                                required>
+
+                                <option value="">
+                                    Select your experience level
+                                </option>
+
+                                <option value="entry">
+                                    Entry Level
+                                </option>
+
+                                <option value="junior">
+                                    Junior Professional
+                                </option>
+
+                                <option value="mid">
+                                    Mid-Level Professional
+                                </option>
+
+                                <option value="senior">
+                                    Senior Professional
+                                </option>
+
+                                <option value="executive">
+                                    Executive / Leadership
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- SUBMIT -->
+
+                        <button
+                            type="submit"
+                            class="assessment-submit">
+
+                            Start My Career Assessment
+
+                            <i class="fas fa-arrow-right"></i>
+
+                        </button>
+
+
+                        <p class="assessment-note">
+
+                            Your information will be used to
+                            personalize your career assessment.
+
+                        </p>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     CAREER DEVELOPMENT FAQ
+    ========================================== -->
+    <section class="career-faq">
+
+        <div class="container">
+
+            <div class="career-faq-wrapper">
+
+                <!-- ==========================================
+                    LEFT CONTENT
+                =========================================== -->
+
+                <div class="career-faq-intro">
+
+                    <span class="section-tag">
+                        CAREER FAQ
+                    </span>
+
+                    <h2>
+                        Questions About
+                        Your Career Journey?
+                    </h2>
+
+                    <p>
+                        Find answers to common questions about
+                        CVs, career preparation, English tests,
+                        LinkedIn optimization and international
+                        job applications.
+                    </p>
+
+                    <div class="career-faq-note">
+
+                        <i class="fas fa-circle-question"></i>
+
+                        <div>
+
+                            <strong>
+                                Still have questions?
+                            </strong>
+
+                            <p>
+                                Our career team can help you
+                                find the right next step.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==========================================
+                    FAQ LIST
+                =========================================== -->
+
+                <div class="career-faq-list">
+
+                    <!-- FAQ 01 -->
+
+                    <div class="career-faq-item">
+
+                        <button
+                            class="career-faq-question"
+                            type="button"
+                            aria-expanded="false">
+
+                            <span>
+                                How do I create a professional CV?
+                            </span>
+
+                            <i class="fas fa-plus"></i>
+
+                        </button>
+
+                        <div class="career-faq-answer">
+
+                            <p>
+                                Start by creating a clear profile that
+                                highlights your experience, education,
+                                skills and achievements. Our CV tools
+                                can help you structure this information
+                                into a professional format.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FAQ 02 -->
+
+                    <div class="career-faq-item">
+
+                        <button
+                            class="career-faq-question"
+                            type="button"
+                            aria-expanded="false">
+
+                            <span>
+                                Is the CV Builder ATS-friendly?
+                            </span>
+
+                            <i class="fas fa-plus"></i>
+
+                        </button>
+
+                        <div class="career-faq-answer">
+
+                            <p>
+                                Yes. The CV Builder is designed to help
+                                you create a clear, structured CV that
+                                is easier for Applicant Tracking Systems
+                                to read and process.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FAQ 03 -->
+
+                    <div class="career-faq-item">
+
+                        <button
+                            class="career-faq-question"
+                            type="button"
+                            aria-expanded="false">
+
+                            <span>
+                                Can I create a CV without professional
+                                writing experience?
+                            </span>
+
+                            <i class="fas fa-plus"></i>
+
+                        </button>
+
+                        <div class="career-faq-answer">
+
+                            <p>
+                                Yes. The CV Builder guides you through
+                                the important sections of your CV and
+                                helps you present your experience,
+                                education and skills professionally.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FAQ 04 -->
+
+                    <div class="career-faq-item">
+
+                        <button
+                            class="career-faq-question"
+                            type="button"
+                            aria-expanded="false">
+
+                            <span>
+                                Which English test should I choose —
+                                IELTS, PTE or Duolingo?
+                            </span>
+
+                            <i class="fas fa-plus"></i>
+
+                        </button>
+
+                        <div class="career-faq-answer">
+
+                            <p>
+                                The right test depends on your study,
+                                career or immigration goals and the
+                                requirements of the institution or
+                                program you are applying to.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FAQ 05 -->
+
+                    <div class="career-faq-item">
+
+                        <button
+                            class="career-faq-question"
+                            type="button"
+                            aria-expanded="false">
+
+                            <span>
+                                Can you help me improve my LinkedIn profile?
+                            </span>
+
+                            <i class="fas fa-plus"></i>
+
+                        </button>
+
+                        <div class="career-faq-answer">
+
+                            <p>
+                                Yes. Our LinkedIn optimization resources
+                                cover areas such as your headline, About
+                                section, keywords, profile presentation
+                                and recruiter visibility.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FAQ 06 -->
+
+                    <div class="career-faq-item">
+
+                        <button
+                            class="career-faq-question"
+                            type="button"
+                            aria-expanded="false">
+
+                            <span>
+                                How can I prepare for job interviews?
+                            </span>
+
+                            <i class="fas fa-plus"></i>
+
+                        </button>
+
+                        <div class="career-faq-answer">
+
+                            <p>
+                                You can prepare by practicing common
+                                interview questions, improving your
+                                answers and learning how to communicate
+                                your experience with confidence.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FAQ 07 -->
+
+                    <div class="career-faq-item">
+
+                        <button
+                            class="career-faq-question"
+                            type="button"
+                            aria-expanded="false">
+
+                            <span>
+                                Can I use my CV when applying for jobs
+                                internationally?
+                            </span>
+
+                            <i class="fas fa-plus"></i>
+
+                        </button>
+
+                        <div class="career-faq-answer">
+
+                            <p>
+                                Yes. A well-structured CV can be adapted
+                                for international applications. Always
+                                check the CV expectations and requirements
+                                of the country and employer you are
+                                applying to.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FAQ 08 -->
+
+                    <div class="career-faq-item">
+
+                        <button
+                            class="career-faq-question"
+                            type="button"
+                            aria-expanded="false">
+
+                            <span>
+                                Can I get personalized career recommendations?
+                            </span>
+
+                            <i class="fas fa-plus"></i>
+
+                        </button>
+
+                        <div class="career-faq-answer">
+
+                            <p>
+                                Yes. Our career assessment can collect
+                                information about your experience,
+                                industry and career goals to help guide
+                                you toward relevant career opportunities
+                                and development resources.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     FINAL CAREER CTA
+    ========================================== -->
+    <section class="career-final-cta">
+
+        <div class="container">
+
+            <div class="career-cta-wrapper">
+
+                <div class="career-cta-content">
+
+                    <span class="section-tag">
+                        TAKE THE NEXT STEP
+                    </span>
+
+                    <h2>
+                        Ready To Accelerate
+                        Your Career?
+                    </h2>
+
+                    <p>
+                        Build a stronger professional profile,
+                        prepare for your next opportunity and
+                        take the next step toward your career goals.
+                    </p>
+
+                </div>
+
+
+                <div class="career-cta-actions">
+
+                    <a href="#" class="career-cta-btn primary">
+
+                        <i class="fas fa-file-lines"></i>
+
+                        <span>
+                            Build My CV
+                        </span>
+
+                        <i class="fas fa-arrow-right arrow"></i>
+
+                    </a>
+
+
+                    <a href="#" class="career-cta-btn secondary">
+
+                        <i class="fas fa-comments"></i>
+
+                        <span>
+                            Start Interview Prep
+                        </span>
+
+                        <i class="fas fa-arrow-right arrow"></i>
+
+                    </a>
+
+
+                    <a href="#" class="career-cta-btn outline">
+
+                        <i class="fas fa-calendar-check"></i>
+
+                        <span>
+                            Book Career Consultation
+                        </span>
+
+                        <i class="fas fa-arrow-right arrow"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     FOOTER
+    ========================================== -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- COMPANY INFO -->
+            <div class="footer-col footer-brand">
+
+                <div class="logo">
+                    <span>
+                        <img src="logo/ILC Logo.jpg" alt="Insign Link Global Connect Logo">
+                    </span>
+
+                    <h3>
+                        Insign LinkGlobal Connect
+                    </h3>
+                </div>
+
+                <p>
+                    Connecting students, professionals, and families to global
+                    education, career, employment, and immigration opportunities
+                    across the world.
+                </p>
+
+            </div>
+
+            <!-- CONTACT -->
+            <div class="footer-col">
+
+                <h4>CONTACT US</h4>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Nairobi, Kenya
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +254 704 565 250
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    info@insignlinkglobalconnect.com
+                </p>
+
+            </div>
+
+            <!-- OPPORTUNITIES -->
+            <div class="footer-col">
+
+                <h4>OPPORTUNITIES</h4>
+
+                <ul>
+
+                    <li>
+                        <a href="study-abroad.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Study Abroad
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="jobs_abroad.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Jobs Abroad
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="immigration.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Immigration Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="career-development.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Career Development
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- RESOURCES -->
+            <div class="footer-col">
+
+                <h4>RESOURCES</h4>
+
+                <ul>
+
+                    <li>
+                        <a href="resources.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Resource Center
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="success-stories.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Success Stories
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="faq.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            FAQs
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Book Consultation
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- FOOTER BOTTOM -->
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Insign Link Global Connect. All Rights Reserved. Crafted by
+                <a href="https://wa.me/254700073919?text=Hello%20I%20am%20interested%20in%20your%20services">
+                    Brydex Technologies
+                </a>
+            </p>
+
+            <div class="footer-links">
+                <a href="terms.html">Terms of Use</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+            </div>
+
+            <div class="social-icons">
+
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const navbar = document.querySelector('.navbar');
+
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('active');
+            navbar.classList.toggle('active');
+        });
+
+        /* Mobile dropdown toggle */
+
+        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+
+            toggle.addEventListener('click', function(e){
+
+                e.preventDefault();
+                e.stopPropagation();
+
+                const dropdown = this.closest('.dropdown');
+
+                dropdown.classList.toggle('active');
+
+            });
+
+        });
+        // SCROLL BUTTON
+            let calcScrollValue = () => {
+                let scrollProgress = document.getElementById("progress");
+                let pos = document.documentElement.scrollTop;
+                let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                let scrollValue = Math.round((pos * 100) / calcHeight);
+
+                if (pos > 100) {
+                    scrollProgress.style.display = "grid";
+                } else {
+                    scrollProgress.style.display = "none";
+                }
+
+                scrollProgress.onclick = () => {
+                    document.documentElement.scrollTop = 0;
+                };
+
+                scrollProgress.style.background =
+                    `conic-gradient(#F4A646 ${scrollValue}%, white ${scrollValue}%)`;
+            };
+
+            window.addEventListener("scroll", calcScrollValue);
+
+            /* ==========================================
+            SUCCESS STORIES SLIDER
+            ========================================== */
+
+            document.addEventListener("DOMContentLoaded", function(){
+
+                const track = document.querySelector(".stories-track");
+                const cards = document.querySelectorAll(".story-card");
+
+                const nextBtn = document.querySelector(".stories-next");
+                const prevBtn = document.querySelector(".stories-prev");
+
+                const dots = document.querySelectorAll(".story-dot");
+
+                if(!track || !cards.length){
+                    return;
+                }
+
+                let currentSlide = 0;
+
+
+                function getVisibleCards(){
+
+                    if(window.innerWidth <= 768){
+                        return 1;
+                    }
+
+                    if(window.innerWidth <= 1024){
+                        return 2;
+                    }
+
+                    return 3;
+
+                }
+
+
+                function getMaxSlide(){
+
+                    return Math.max(
+                        0,
+                        cards.length - getVisibleCards()
+                    );
+
+                }
+
+
+                function updateSlider(){
+
+                    const visibleCards = getVisibleCards();
+
+                    const cardWidth = cards[0].offsetWidth;
+
+                    const gap = 25;
+
+                    const moveAmount =
+                        (cardWidth + gap) * currentSlide;
+
+                    track.style.transform =
+                        `translateX(-${moveAmount}px)`;
+
+
+                    /* BUTTON STATE */
+
+                    if(prevBtn){
+                        prevBtn.disabled =
+                            currentSlide === 0;
+                    }
+
+                    if(nextBtn){
+                        nextBtn.disabled =
+                            currentSlide >= getMaxSlide();
+                    }
+
+
+                    /* DOTS */
+
+                    dots.forEach((dot,index) => {
+
+                        dot.classList.toggle(
+                            "active",
+                            index === currentSlide
+                        );
+
+                    });
+
+                }
+
+
+                /* NEXT */
+
+                if(nextBtn){
+
+                    nextBtn.addEventListener(
+                        "click",
+                        function(){
+
+                            if(currentSlide < getMaxSlide()){
+
+                                currentSlide++;
+
+                                updateSlider();
+
+                            }
+
+                        }
+                    );
+
+                }
+
+
+                /* PREVIOUS */
+
+                if(prevBtn){
+
+                    prevBtn.addEventListener(
+                        "click",
+                        function(){
+
+                            if(currentSlide > 0){
+
+                                currentSlide--;
+
+                                updateSlider();
+
+                            }
+
+                        }
+                    );
+
+                }
+
+
+                /* DOTS */
+
+                dots.forEach((dot,index) => {
+
+                    dot.addEventListener(
+                        "click",
+                        function(){
+
+                            currentSlide =
+                                Math.min(
+                                    index,
+                                    getMaxSlide()
+                                );
+
+                            updateSlider();
+
+                        }
+                    );
+
+                });
+
+
+                /* RESIZE */
+
+                window.addEventListener(
+                    "resize",
+                    function(){
+
+                        currentSlide =
+                            Math.min(
+                                currentSlide,
+                                getMaxSlide()
+                            );
+
+                        updateSlider();
+
+                    }
+                );
+
+
+                updateSlider();
+
+            });
+            /* ==========================================
+            CAREER FAQ ACCORDION
+            ========================================== */
+
+            const careerFaqItems =
+                document.querySelectorAll(".career-faq-item");
+
+            careerFaqItems.forEach(item => {
+
+                const question =
+                    item.querySelector(".career-faq-question");
+
+                question.addEventListener("click", () => {
+
+                    const isActive =
+                        item.classList.contains("active");
+
+
+                    /* Close all other questions */
+
+                    careerFaqItems.forEach(otherItem => {
+
+                        otherItem.classList.remove("active");
+
+                        otherItem
+                            .querySelector(".career-faq-question")
+                            .setAttribute(
+                                "aria-expanded",
+                                "false"
+                            );
+
+                    });
+
+
+                    /* Open clicked question */
+
+                    if(!isActive){
+
+                        item.classList.add("active");
+
+                        question.setAttribute(
+                            "aria-expanded",
+                            "true"
+                        );
+
+                    }
+
+                });
+
+            });
+    </script>
+</body>
+</html>

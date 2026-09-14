@@ -1,0 +1,4885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap"rel="stylesheet">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Explore Opportunities</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="logo/ILC Logo.jpg">
+</head>
+<style>
+/* ==========================================
+EXPLORE HERO
+========================================== */
+.explore-hero{
+    padding:80px 5%;
+    background:#f8fafc;
+    overflow:hidden;
+}
+.explore-container{
+    display:grid;
+    grid-template-columns:1.1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+/* CONTENT */
+.explore-tag{
+    display:inline-block;
+    padding:8px 18px;
+    color:var(--primary);
+    border-radius:50px;
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:20px;
+}
+.explore-content h1{
+    font-size:40px;
+    line-height:1.15;
+    color:var(--dark);
+    margin-bottom:25px;
+}
+.explore-content h1 span{
+    color:var(--secondary);
+    display:block;
+}
+.explore-content p{
+    font-size:17px;
+    line-height:1.9;
+    color:var(--text);
+    margin-bottom:35px;
+    max-width:650px;
+}
+/* SEARCH */
+.explore-search{
+    display:flex;
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    margin-bottom:30px;
+}
+.explore-search input{
+    flex:1;
+    border:none;
+    outline:none;
+    padding:18px 20px;
+    font-size:15px;
+}
+.explore-search button{
+    border:none;
+    background:var(--secondary);
+    color:#fff;
+    padding:0 30px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:500;
+}
+.explore-search button:hover{
+    background:var(--primary);
+}
+/* QUICK LINKS */
+.quick-categories{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:40px;
+}
+.quick-categories a{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:12px 18px;
+    background:#fff;
+    color:var(--dark);
+    text-decoration:none;
+    border-radius:50px;
+    font-size:14px;
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+    transition:.3s;
+}
+.quick-categories a:hover{
+    background:var(--primary);
+    color:#fff;
+}
+/* TRUST */
+.explore-trust{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+.trust-item{
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    min-width:140px;
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+}
+.trust-item h3{
+    color:var(--secondary);
+    font-size:28px;
+    margin-bottom:5px;
+}
+.trust-item span{
+    color:var(--text);
+    font-size:14px;
+}
+/* VISUAL */
+.explore-visual{
+    position:relative;
+}
+.explore-visual img{
+    width:100%;
+    height:650px;
+    object-fit:cover;
+    border-radius:15px;
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
+}
+/* FLOATING CARDS */
+.country-card{
+    position:absolute;
+    background:#fff;
+    padding:15px 20px;
+    border-radius:12px;
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+}
+.country-card strong{
+    color:var(--dark);
+    font-size:15px;
+}
+.country-card small{
+    color:var(--text);
+}
+.country-card .card-1{
+    top:10%;
+    left:-40px;
+}
+.country-card .card-2{
+    top:45%;
+    right:-30px;
+}
+.country-card .card-3{
+    bottom:10%;
+    left:-30px;
+}
+/* ==========================================
+   RESPONSIVE
+========================================== */
+@media(max-width:991px){
+    .explore-container{
+        grid-template-columns:1fr;
+    }
+    .explore-content{
+        text-align:center;
+    }
+    .explore-content p{
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .explore-content h1{
+        font-size:3rem;
+    }
+    .quick-categories,
+    .explore-trust{
+        justify-content:center;
+    }
+    .explore-visual img{
+        height:500px;
+    }
+    .country-card .card-1{
+        left:10px;
+    }
+    .country-card .card-2{
+        right:10px;
+    }
+    .country-card .card-3{
+        left:10px;
+    }
+}
+@media(max-width:576px){
+    .explore-content h1{
+        font-size:2.3rem;
+    }
+    .explore-search{
+        flex-direction:column;
+    }
+    .explore-search button{
+        padding:18px;
+    }
+    .explore-visual img{
+        height:400px;
+    }
+    .country-card{
+        padding:12px 15px;
+    }
+    .country-card strong{
+        font-size:13px;
+    }
+    .country-card small{
+        font-size:12px;
+    }
+}
+/* ==========================================
+   OPPORTUNITY FILTERS
+========================================== */
+.opportunity-filters{
+    padding:100px 5%;
+    background:#ffffff;
+}
+.filters-header{
+    text-align:center;
+    max-width:750px;
+    margin:0 auto 50px;
+}
+.filters-header h2{
+    font-size:40px;
+    color:var(--dark);
+    margin:15px 0;
+}
+.filters-header p{
+    color:var(--text);
+    line-height:1.8;
+}
+/* FORM */
+.filters-form{
+    background:#fff;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    display:grid;
+    grid-template-columns:
+        repeat(5,1fr);
+    gap:20px;
+}
+.filter-group{
+    display:flex;
+    flex-direction:column;
+}
+.filter-group label{
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:10px;
+    color:var(--dark);
+}
+.filter-group input,
+.filter-group select{
+    height:55px;
+    border:1px solid #dbe3ec;
+    border-radius:8px;
+    padding:0 15px;
+    outline:none;
+    font-size:15px;
+    transition:.3s;
+}
+.filter-group input:focus,
+.filter-group select:focus{
+    border-color:var(--primary);
+}
+.filter-btn-wrap{
+    grid-column:1 / -1;
+    display:flex;
+    justify-content:center;
+    margin-top:10px;
+}
+.search-filter-btn{
+    border:none;
+    cursor:pointer;
+    padding:16px 20px;
+    border-radius:8px;
+    background:var(--primary);
+    color:#fff;
+    font-size:16px;
+    font-weight:400;
+    transition:.3s ease;
+}
+.search-filter-btn i{
+    margin-right:10px;
+}
+.search-filter-btn:hover{
+    background:var(--secondary);
+    transform:translateY(-3px);
+}
+/* ==========================================
+   RESPONSIVE
+========================================== */
+@media(max-width:1200px){
+    .filters-form{
+        grid-template-columns:
+        repeat(3,1fr);
+    }
+}
+@media(max-width:768px){
+    .opportunity-filters{
+        padding:80px 20px;
+    }
+    .filters-header h2{
+        font-size:34px;
+    }
+    .filters-form{
+        grid-template-columns:1fr;
+        padding:25px;
+    }
+    .search-filter-btn{
+        width:100%;
+    }
+}
+@media(max-width:480px){
+    .filters-header h2{
+        font-size:28px;
+    }
+    .filter-group input,
+    .filter-group select{
+        height:52px;
+    }
+}
+/* ==========================================
+   AI OPPORTUNITY MATCHER
+========================================== */
+.ai-matcher-section{
+    padding:100px 5%;
+    background: linear-gradient(
+        180deg,
+        #FFFFFF 0%,
+        #F8FAFC 100%
+    );
+    position:relative;
+    overflow:hidden;
+}
+.ai-matcher-section::before{
+    content:'';
+    position:absolute;
+    width:500px;
+    height:500px;
+    top:-250px;
+    right:-250px;
+    border-radius:50%;
+    background:rgba(31,53,151,.04);
+}
+.ai-matcher-section::after{
+    content:'';
+    position:absolute;
+    width:400px;
+    height:400px;
+    bottom:-200px;
+    left:-200px;
+    border-radius:50%;
+    background:rgba(225,6,0,.04);
+}
+.ai-matcher-wrapper{
+    display:grid;
+    grid-template-columns:1fr 1.1fr;
+    gap:80px;
+    align-items:center;
+    position:relative;
+    z-index:2;
+}
+/* ==========================================
+   LEFT CONTENT
+========================================== */
+.ai-matcher-content h2{
+    font-size:40px;
+    line-height:1.2;
+    color:var(--dark);
+    margin:15px 0 25px;
+}
+.ai-matcher-content p{
+    color:var(--text);
+    line-height:1.9;
+    margin-bottom:35px;
+    font-size:17px;
+}
+.matcher-benefits{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+.benefit-item{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    font-size: 17px;
+    color:var(--dark);
+}
+.benefit-item i{
+    color:var(--secondary);
+    font-size:17px;
+}
+/* ==========================================
+   RIGHT SIDE
+========================================== */
+.match-widget{
+    position:relative;
+}
+/* ==========================================
+   FLOATING CARDS
+========================================== */
+.floating-card{
+    position:absolute;
+    background:#fff;
+    border-radius:18px;
+    padding:14px 20px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    box-shadow:
+    0 10px 25px rgba(15,23,42,.08);
+    backdrop-filter:blur(12px);
+    z-index:3;
+}
+.floating-card i{
+    width:45px;
+    height:45px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:12px;
+    background:rgba(31,53,151,.08);
+    color:var(--primary);
+    font-size:24px;
+    flex-shrink:0;
+}
+.floating-card span{
+    color:var(--dark);
+    font-size:.9rem;
+    font-weight:600;
+    white-space:nowrap;
+}
+.floating-1{
+    top:-80px;
+    right:20px;
+}
+.floating-2{
+    left:-100px;
+    top:50px;
+}
+.floating-3{
+    bottom:120px;
+    right:-50px;
+}
+/* ==========================================
+   MAIN CARD
+========================================== */
+.widget-card{
+    background: rgba(255,255,255,.85);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.7);
+    border-radius:32px;
+    padding:40px;
+    box-shadow: 0 25px 60px rgba(15,23,42,.08);
+    position:relative;
+}
+/* ==========================================
+   HEADER
+========================================== */
+.widget-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:35px;
+}
+.widget-tag{
+    display:inline-block;
+    padding:8px 16px;
+    color:var(--primary);
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:.08em;
+    margin-bottom:12px;
+}
+.widget-header h3{
+    color:var(--dark);
+    font-size:26px;
+}
+/* ==========================================
+   MATCH SCORE
+========================================== */
+.match-score{
+    position:relative;
+    width:110px;
+    height:110px;
+}
+.match-score svg{
+    width:110px;
+    height:110px;
+    transform:rotate(-90deg);
+}
+.bg-circle{
+    fill:none;
+    stroke:#E2E8F0;
+    stroke-width:8;
+}
+.progress-circle{
+    fill:none;
+    stroke:var(--secondary);
+    stroke-width:8;
+    stroke-linecap:round;
+    stroke-dasharray:327;
+    stroke-dashoffset:26;
+}
+.score-text{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+.score-text strong{
+    font-size:1.5rem;
+    color:var(--dark);
+}
+.score-text span{
+    font-size:16px;
+    color:var(--text);
+}
+/* ==========================================
+   FORM
+========================================== */
+.match-form{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    margin-bottom:35px;
+}
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+.form-group label{
+    font-size:16px;
+    font-weight:600;
+    color:var(--dark);
+    margin-bottom:10px;
+}
+.form-group select{
+    height:58px;
+    border:1px solid #E2E8F0;
+    border-radius:14px;
+    padding:0 16px;
+    font-size:.95rem;
+    background:#fff;
+    color:var(--dark);
+    transition:.3s;
+    outline:none;
+    cursor:pointer;
+}
+.form-group select:hover{
+    border-color:var(--primary);
+}
+.form-group select:focus{
+    border-color:var(--primary);
+    box-shadow: 0 0 0 4px rgba(31,53,151,.08);
+}
+/* ==========================================
+   RESULTS
+========================================== */
+.match-results h4{
+    color:var(--dark);
+    margin-bottom:20px;
+}
+.pathway-card{
+    background:#fff;
+    padding:25px;
+}
+.pathway-country{
+    text-align:center;
+    font-weight:700;
+    color:var(--primary);
+    margin-bottom:15px;
+}
+.pathway-step{
+    text-align:center;
+    font-weight:500;
+    color:var(--dark);
+}
+.pathway-line{
+    width:2px;
+    height:25px;
+    background:#CBD5E1;
+    margin:12px auto;
+}
+/* ==========================================
+   BUTTON
+========================================== */
+.match-btn{
+    margin-top:30px;
+    width:100%;
+    height:58px;
+    border-radius:14px;
+    background:var(--primary);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    text-decoration:none;
+    font-weight:400;
+    transition:.3s;
+}
+.match-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:
+    0 12px 25px rgba(31,53,151,.25);
+}
+/* ==========================================
+   RESPONSIVE
+========================================== */
+@media(max-width:991px){
+    .ai-matcher-wrapper{
+        grid-template-columns:1fr;
+        gap:60px;
+    }
+    .floating-card{
+        display:none;
+    }
+}
+@media(max-width:768px){
+    .ai-matcher-content h2{
+        font-size:2.2rem;
+    }
+    .widget-card{
+        padding:25px;
+    }
+    .widget-header{
+        flex-direction:column;
+        gap:25px;
+        align-items:flex-start;
+    }
+    .match-form{
+        grid-template-columns:1fr;
+    }
+}
+/* ==========================================
+   SEARCH STATS STRIP
+========================================== */
+.search-stats{
+    margin-top:35px;
+    padding:25px 30px;
+    background:#f8fafc;
+    border-radius:15px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+.search-stat{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+.search-stat i{
+    width:55px;
+    height:55px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(37,99,235,.1);
+    color:var(--primary);
+    border-radius:12px;
+    font-size:22px;
+}
+.search-stat strong{
+    display:block;
+    font-size:22px;
+    font-weight:700;
+    color:var(--dark);
+    margin-bottom:3px;
+}
+.search-stat span{
+    font-size:14px;
+    color:var(--text);
+    line-height:1.5;
+}
+/* TABLETS */
+@media(max-width:991px){
+    .search-stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+/* MOBILE */
+@media(max-width:576px){
+    .search-stats{
+        grid-template-columns:1fr;
+        padding:20px;
+        gap:18px;
+    }
+    .search-stat{
+        gap:12px;
+    }
+    .search-stat i{
+        width:50px;
+        height:50px;
+        font-size:20px;
+    }
+    .search-stat strong{
+        font-size:18px;
+    }
+}
+/* ==========================================
+   OPPORTUNITY CATEGORIES
+========================================== */
+.opportunity-categories{
+    padding:100px 5%;
+    background:#f8fafc;
+}
+.categories-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+    margin-top:60px;
+}
+.category-card{
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.4s ease;
+}
+.category-card:hover{
+    transform:translateY(-10px);
+}
+.category-image{
+    height:240px;
+    overflow:hidden;
+}
+.category-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.6s ease;
+}
+.category-card:hover .category-image img{
+    transform:scale(1.08);
+}
+.category-content{
+    padding:35px;
+}
+.category-icon{
+    width:70px;
+    height:70px;
+    background:rgba(31,53,151,.08);
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:20px;
+}
+.category-icon i{
+    font-size:30px;
+    color:var(--primary);
+}
+.category-content h3{
+    font-size:28px;
+    color:var(--dark);
+    margin-bottom:15px;
+}
+.category-content p{
+    color:var(--text);
+    line-height:1.8;
+    margin-bottom:15px;
+}
+.category-content ul{
+    list-style:none;
+    margin-bottom:25px;
+}
+.category-content ul li{
+    display:flex;
+    align-items:center;
+    gap:5px;
+    margin-bottom:12px;
+    color:var(--text);
+}
+.category-content ul li i{
+    color:var(--secondary);
+}
+.category-stats{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:25px;
+}
+.category-stats span{
+    padding:8px 15px;
+    background:#f1f5f9;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:500;
+    color:var(--primary);
+}
+.category-btn{
+    display:inline-block;
+    padding:14px 28px;
+    background:var(--secondary);
+    color:#fff;
+    text-decoration:none;
+    border-radius:8px;
+    transition:.3s ease;
+}
+.category-btn:hover{
+    background:var(--primary);
+}
+/* ==========================================
+   RESPONSIVE
+========================================== */
+@media(max-width:991px){
+    .categories-grid{
+        grid-template-columns:1fr;
+    }
+    .category-image{
+        height:220px;
+    }
+}
+@media(max-width:576px){
+    .opportunity-categories{
+        padding:80px 20px;
+    }
+    .category-content{
+        padding:25px;
+    }
+    .category-content h3{
+        font-size:24px;
+    }
+    .category-image{
+        height:200px;
+    }
+    .category-btn{
+        width:100%;
+        text-align:center;
+    }
+}
+/* ==========================================
+   EXPLORE BY GOAL
+========================================== */
+.explore-goals{
+    padding:100px 5%;
+    background:#ffffff;
+    position:relative;
+    overflow:hidden;
+}
+.explore-goals::before{
+    content:'';
+    position:absolute;
+    width:450px;
+    height:450px;
+    background:rgba(31,53,151,.04);
+    border-radius:50%;
+    top:-180px;
+    right:-180px;
+}
+.explore-goals::after{
+    content:'';
+    position:absolute;
+    width:350px;
+    height:350px;
+    background:rgba(225,6,0,.04);
+    border-radius:50%;
+    bottom:-150px;
+    left:-150px;
+}
+.goals-grid1{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:35px;
+    margin-top:70px;
+    position:relative;
+    z-index:2;
+}
+/* CARD */
+.goal-card1{
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    transition:.45s ease;
+    box-shadow:0 15px 40px rgba(15,23,42,.05);
+    position:relative;
+}
+.goal-card1:hover{
+    transform:translateY(-10px);
+    box-shadow:0 30px 60px rgba(15,23,42,.12);
+    border-color:rgba(31,53,151,.15);
+}
+/* IMAGE */
+.goal-image1{
+    height:260px;
+    overflow:hidden;
+    position:relative;
+}
+.goal-image1::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to top,
+        rgba(15,23,42,.45),
+        transparent
+    );
+}
+.goal-image1 img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.7s ease;
+}
+.goal-card1:hover .goal-image1 img{
+    transform:scale(1.08);
+}
+/* CONTENT */
+.goal-body1{
+    padding:35px;
+}
+.goal-icon1{
+    width:50px;
+    height:50px;
+    border-radius:10px;
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        #314ccf
+    );
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:25px;
+    color:#fff;
+    font-size:25px;
+    box-shadow:0 15px 30px rgba(31,53,151,.25);
+}
+.goal-body1 h3{
+    font-size:30px;
+    color:var(--dark);
+    margin-bottom:15px;
+    font-weight:700;
+}
+.goal-body1 p{
+    color:var(--text);
+    line-height:1.8;
+    font-size:16px;
+    margin-bottom:25px;
+}
+/* FEATURE LIST */
+.goal-items1{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin-bottom:30px;
+}
+.goal-items1 span{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:16px;
+    color:var(--dark);
+}
+.goal-items1 i{
+    color:var(--secondary);
+    font-size:15px;
+}
+/* BUTTON */
+.goal-btn1{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    background: var(--primary);
+    color:#fff;
+    padding:15px 26px;
+    border-radius:10px;
+    font-weight:400;
+    transition:.3s ease;
+}
+.goal-btn1:hover{
+    gap:18px;
+    transform:translateX(5px);
+}
+.goal-btn1 i{
+    transition:.3s ease;
+}
+/* SPECIAL CARD ACCENTS */
+.goal-card1:nth-child(1){
+    border-top:5px solid #1F3597;
+}
+.goal-card1:nth-child(2){
+    border-top:5px solid #E10600;
+}
+.goal-card1:nth-child(3){
+    border-top:5px solid #F4A646;
+}
+.goal-card1:nth-child(4){
+    border-top:5px solid #0F172A;
+}
+/* RESPONSIVE */
+@media(max-width:991px){
+    .goals-grid1{
+        grid-template-columns:1fr;
+    }
+    .goal-image1{
+        height:240px;
+    }
+}
+@media(max-width:768px){
+    .explore-goals{
+        padding:70px 5%;
+    }
+    .goal-body1{
+        padding:25px;
+    }
+    .goal-body1 h3{
+        font-size:26px;
+    }
+    .goal-items1{
+        grid-template-columns:1fr;
+    }
+    .goal-icon1{
+        width:60px;
+        height:60px;
+        font-size:24px;
+    }
+}
+/* ==========================================
+   DESTINATIONS
+========================================== */
+.destinations{
+    padding:100px 5%;
+    background:#f8fafc;
+}
+.destinations-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin-top:60px;
+}
+/* FEATURED CARD */
+.featured-destination{
+    grid-column:span 3;
+    height:500px;
+}
+/* CARD */
+.destination-card{
+    position:relative;
+    height:320px;
+    border-radius:10px;
+    overflow:hidden;
+    cursor:pointer;
+}
+.destination-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.6s ease;
+}
+.destination-card:hover img{
+    transform:scale(1.08);
+}
+.destination-card::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.85),
+        rgba(0,0,0,.2)
+    );
+    z-index:1;
+}
+.destination-overlay{
+    position:absolute;
+    inset:0;
+    z-index:2;
+    padding:30px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    color:#fff;
+}
+.destination-overlay h3{
+    font-size:28px;
+    margin-bottom:1px;
+}
+.destination-overlay p{
+    line-height:1.8;
+    margin-bottom:5px;
+    max-width:700px;
+}
+/* BADGE */
+.destination-badge{
+    align-self:flex-start;
+    padding:8px 15px;
+    background:var(--secondary);
+    border-radius:30px;
+    font-size:13px;
+    margin-bottom:auto;
+}
+/* TAGS */
+.destination-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:10px;
+}
+.destination-tags span{
+    padding:8px 14px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(10px);
+    border-radius:30px;
+    font-size:14px;
+}
+/* PARTNERS */
+.partner-list{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+    margin-bottom:10px;
+}
+.partner-list div{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:15px;
+}
+.partner-list i{
+    color:var(--accent);
+}
+/* BUTTON */
+.destination-btn,
+.destination-overlay a{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:max-content;
+    padding:12px 15px;
+    background:var(--secondary);
+    color:#fff;
+    text-decoration:none;
+    border-radius:6px;
+    transition:.3s ease;
+}
+.destination-btn:hover,
+.destination-overlay a:hover{
+    background:var(--primary);
+}
+/* ==========================================
+   TABLET
+========================================== */
+@media(max-width:991px){
+    .destinations-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+    .featured-destination{
+        grid-column:span 2;
+        height:550px;
+    }
+    .partner-list{
+        grid-template-columns:1fr;
+    }
+}
+/* ==========================================
+   MOBILE
+========================================== */
+@media(max-width:768px){
+    .destinations{
+        padding:80px 20px;
+    }
+    .destinations-grid{
+        grid-template-columns:1fr;
+    }
+    .featured-destination{
+        grid-column:auto;
+        height:auto;
+        min-height:600px;
+    }
+    .destination-card{
+        height:320px;
+    }
+    .destination-overlay{
+        padding:25px;
+    }
+    .destination-overlay h3{
+        font-size:24px;
+    }
+    .destination-tags{
+        gap:8px;
+    }
+    .destination-tags span{
+        font-size:13px;
+    }
+}
+@media(max-width:576px){
+    .featured-destination{
+        min-height:700px;
+    }
+    .destination-overlay h3{
+        font-size:22px;
+    }
+    .destination-overlay p{
+        font-size:15px;
+    }
+}
+/* ========================================== 
+   IMMIGRATION PATHWAYS 
+========================================== */ 
+.immigration-pathways{ 
+    padding:100px 5%; 
+    background:#f8fafc; 
+}
+.pathways-layout{ 
+    display:grid; 
+    grid-template-columns:1.1fr 1fr; 
+    gap:35px; 
+    margin-top:60px; 
+}
+.featured-pathway{ 
+    position:relative; 
+    background:#fff; 
+    border-radius:15px; 
+    padding:45px; 
+    overflow:hidden; 
+    box-shadow:0 20px 60px rgba(15,23,42,.08); 
+}
+.featured-pathway::before{ 
+    content:''; 
+    position:absolute; 
+    inset:0; 
+    background: linear-gradient( 135deg, rgba(31,53,151,.04), rgba(244,166,70,.05)); 
+    pointer-events:none; 
+}
+.featured-badge{ 
+    display:inline-flex; 
+    align-items:center; 
+    gap:8px; 
+    background:#E10600; 
+    color:#fff; 
+    font-size:14px; 
+    font-weight:500; 
+    padding:10px 16px; 
+    border-radius:50px; 
+    margin-bottom:55px; 
+}
+.featured-icon{ 
+    width:70px; 
+    height:70px; 
+    border-radius:10px; 
+    background: var(--primary); 
+    display:flex; 
+    align-items:center; 
+    justify-content:center; 
+    color:#fff; 
+    font-size:26px; 
+    margin-bottom:55px; 
+}
+.featured-pathway h3{ 
+    font-size:2rem; 
+    color:#0F172A; 
+    margin-bottom:35px; 
+}
+.featured-pathway p{ 
+    color:#64748b; 
+    line-height:1.8; 
+    margin-bottom:30px; 
+}
+.featured-stats{ 
+    display:grid; 
+    grid-template-columns:repeat(3,1fr); 
+    gap:15px; 
+    margin-bottom:45px; 
+}
+.stat-box{ 
+    background:#f8fafc; 
+    border-radius:18px; 
+    padding:18px; 
+}
+.stat-title{ 
+    display:block; 
+    font-size:.8rem; 
+    color:#64748b; 
+    margin-bottom:8px; 
+}
+.stat-box strong{ 
+    color:#0F172A; 
+    font-size:.95rem; 
+}
+.success-rate{ 
+    display:flex; 
+    align-items:center; 
+    gap:12px; 
+    color:var(--primary); 
+    font-weight:500; 
+    margin-bottom:55px; 
+}
+.featured-btn{ 
+    display:inline-flex; 
+    align-items:center; 
+    gap:10px; 
+    padding:16px 28px; 
+    background:var(--secondary); 
+    color:#fff; 
+    border-radius:14px; 
+    text-decoration:none; 
+    font-weight:500; 
+    transition:.3s; 
+}
+.featured-btn:hover{ 
+    transform:translateY(-3px); 
+}
+.pathways-grid{ 
+    display:grid; 
+    grid-template-columns:1fr 1fr; 
+    gap:25px; 
+}
+.pathway-card{ 
+    background:#fff; 
+    border-radius:15px; 
+    padding:28px; 
+    box-shadow:0 15px 40px rgba(15,23,42,.05); 
+    transition:.35s; 
+}
+.pathway-card:hover{ 
+    transform:translateY(-8px); 
+}
+.pathway-top{ 
+    margin-bottom:20px; 
+}
+.pathway-icon{ 
+    width:50px; 
+    height:50px; 
+    border-radius:10px; 
+    background:rgba(31,53,151,.08); 
+    display:flex; 
+    align-items:center; 
+    justify-content:center; 
+    color:var(--secondary); 
+    font-size:1.5rem; 
+    margin-bottom:15px; 
+}
+.pathway-card h4{ 
+    color:#0F172A; 
+    font-size:1.15rem; 
+    line-height:1.5; 
+}
+.pathway-card ul{ 
+    list-style:none; 
+    padding:0; 
+    margin:20px 0; 
+}
+.pathway-card li{ 
+    color:#2d3238; 
+    margin-bottom:12px; 
+    line-height:1.6; 
+}
+.pathway-card strong{ 
+    color:#0F172A; 
+}
+.pathway-card a{ 
+    color:var(--primary); 
+    font-weight:500; 
+    text-decoration:none; 
+}
+.immigration-cta{ 
+    margin-top:60px;  
+    padding:35px 40px; 
+    display:flex; 
+    justify-content:space-between; 
+    align-items:center; 
+    gap:30px;  
+}
+.immigration-cta h3{ 
+    color:#0F172A; 
+    margin-bottom:10px; 
+} 
+.immigration-cta p{ 
+    color:#64748b; 
+}
+ .assessment-btn{ 
+    white-space:nowrap; 
+    display:inline-flex; 
+    align-items:center; 
+    gap:12px; 
+    padding:18px 28px; 
+    background: var(--accent); 
+    color:#fff; 
+    text-decoration:none; 
+    border-radius:14px; 
+    font-weight:500; 
+}
+@media(max-width:991px){ 
+    .pathways-layout{ 
+        grid-template-columns:1fr; 
+    } 
+    .pathways-grid{ 
+        grid-template-columns:1fr; 
+    } 
+    .featured-stats{ 
+        grid-template-columns:1fr; 
+    } 
+    .immigration-cta{ 
+        flex-direction:column; 
+        text-align:center; 
+    } 
+}
+@media(max-width:600px){ 
+    .pathways-layout{ 
+        grid-template-columns:1fr; 
+    } 
+    .pathways-grid{ 
+        grid-template-columns:1fr; 
+    } 
+    .featured-stats{ 
+        grid-template-columns:1fr; 
+    } 
+    .immigration-cta{ 
+        flex-direction:column; 
+        text-align:center; 
+    } 
+}
+/* ==========================================
+   FEATURED OPPORTUNITIES
+========================================== */
+.featured-opportunities{
+    padding:100px 5%;
+    background:#f8fafc;
+}
+.opportunity-tabs{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin:50px 0;
+    flex-wrap:wrap;
+}
+.tab-btn{
+    padding:14px 25px;
+    border:none;
+    background:#fff;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+.tab-btn i{
+    margin-right:8px;
+}
+.tab-btn.active{
+    background:var(--primary);
+    color:#fff;
+}
+.tab-content{
+    display:none;
+}
+.tab-content.active{
+    display:block;
+}
+/* ==========================================
+   SLIDER
+========================================== */
+.slider-container{
+    position:relative;
+    overflow:hidden;
+}
+.slider-track{
+    display:flex;
+    gap:25px;
+    transition:transform .6s ease;
+}
+.opportunity-card{
+    flex:0 0 calc((100% - 50px)/3);
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    display:flex;
+    flex-direction:column;
+    min-height:500px;
+}
+/* ==========================================
+   IMAGE
+========================================== */
+.card-image{
+    position:relative;
+    height:240px;
+}
+.card-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.card-badge{
+    position:absolute;
+    top:15px;
+    left:15px;
+    padding:8px 16px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:600;
+    color:#fff;
+}
+.study{
+    background:#2563eb;
+}
+.scholarship{
+    background:#16a34a;
+}
+.work{
+    background:#ea580c;
+}
+/* ==========================================
+   CONTENT
+========================================== */
+.card-content{
+    padding:25px;
+    display:flex;
+    flex-direction:column;
+    flex:1;
+}
+.card-content h3{
+    margin-bottom:12px;
+}
+.country{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:var(--primary);
+    font-weight:600;
+    margin-bottom:15px;
+}
+.card-content p{
+    flex:1;
+    line-height:1.7;
+    color:#64748b;
+}
+.card-content a{
+    margin-top:20px;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    padding:12px 20px;
+    background:var(--secondary);
+    color:#fff;
+    text-decoration:none;
+    border-radius:6px;
+}
+.card-content a:hover{
+    background:var(--primary);
+    color:#fff;
+}
+/* ==========================================
+   ARROWS
+========================================== */
+.slider-arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:#fff;
+    cursor:pointer;
+    z-index:100;
+    box-shadow:0 5px 20px rgba(0, 0, 0, 0.397);
+}
+.prev{
+    left:1px;
+}
+.next{
+    right:1px;
+}
+/* ==========================================
+   DOTS
+========================================== */
+.slider-dots{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-top:30px;
+}
+.dot{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:#cbd5e1;
+    cursor:pointer;
+    transition:.3s;
+}
+.dot.active{
+    background:var(--secondary);
+    transform:scale(1.2);
+}
+/* ==========================================
+   LARGE TABLETS (1024px)
+========================================== */
+@media (max-width:1024px){
+    .featured-opportunities{
+        padding:90px 4%;
+    }
+    .opportunity-card{
+        min-height:470px;
+    }
+    .card-image{
+        height:220px;
+    }
+}
+/* ==========================================
+   TABLETS (991px)
+========================================== */
+@media (max-width:991px){
+    .opportunity-tabs{
+        gap:12px;
+        margin:40px 0;
+    }
+    .tab-btn{
+        padding:12px 20px;
+        font-size:15px;
+    }
+    .slider-track{
+        gap:20px;
+    }
+    .opportunity-card{
+        flex:0 0 calc((100% - 20px)/2);
+        min-height:450px;
+    }
+    .card-image{
+        height:220px;
+    }
+    .card-content{
+        padding:22px;
+    }
+    .card-content h3{
+        font-size:22px;
+    }
+    .slider-arrow{
+        width:45px;
+        height:45px;
+    }
+}
+/* ==========================================
+   MOBILE LANDSCAPE (768px)
+========================================== */
+@media (max-width:768px){
+    .featured-opportunities{
+        padding:80px 20px;
+    }
+    .opportunity-tabs{
+        justify-content:flex-start;
+        overflow-x:auto;
+        flex-wrap:nowrap;
+        padding-bottom:5px;
+        scrollbar-width:none;
+    }
+    .opportunity-tabs::-webkit-scrollbar{
+        display:none;
+    }
+    .tab-btn{
+        flex-shrink:0;
+        white-space:nowrap;
+    }
+    .slider-track{
+        gap:10px;
+    }
+    .opportunity-card{
+        flex:0 0 88%;
+        min-height:auto;
+    }
+    .card-image{
+        height:240px;
+    }
+    .slider-arrow{
+        display:none;
+    }
+    .card-content{
+        padding:22px;
+    }
+    .card-content h3{
+        font-size:22px;
+        line-height:1.4;
+    }
+    .country{
+        font-size:15px;
+    }
+    .card-content p{
+        font-size:15px;
+        line-height:1.7;
+    }
+    .card-content a{
+        width:100%;
+    }
+}
+/* ==========================================
+   SMALL PHONES (576px)
+========================================== */
+@media (max-width:576px){
+    .featured-opportunities{
+        padding:70px 15px;
+    }
+    .tab-btn{
+        padding:12px 18px;
+        font-size:14px;
+    }
+    .card-image{
+        height:220px;
+    }
+    .card-badge{
+        font-size:12px;
+        padding:7px 14px;
+    }
+    .card-content{
+        padding:20px;
+    }
+    .card-content h3{
+        font-size:20px;
+    }
+    .country{
+        font-size:14px;
+    }
+    .card-content p{
+        font-size:14px;
+    }
+    .slider-dots{
+        gap:8px;
+        margin-top:25px;
+    }
+    .dot{
+        width:10px;
+        height:10px;
+    }
+}
+/* ==========================================
+   EXTRA SMALL DEVICES (400px)
+========================================== */
+@media (max-width:400px){
+
+    .featured-opportunities{
+        padding:60px 12px;
+    }
+
+    .tab-btn{
+        padding:10px 16px;
+        font-size:13px;
+    }
+
+    .card-image{
+        height:200px;
+    }
+
+    .card-content{
+        padding:18px;
+    }
+
+    .card-content h3{
+        font-size:18px;
+    }
+
+    .card-content a{
+        font-size:14px;
+        padding:12px 15px;
+    }
+
+}
+/* ==========================================
+   HOW IT WORKS
+========================================== */
+.how-it-works{
+    padding:100px 5%;
+    background:#fff;
+}
+.journey-steps1{
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    margin-top:60px;
+}
+.journey-step{
+    flex:1;
+    text-align:center;
+    position:relative;
+    max-width:250px;
+}
+.step-number1{
+    width:45px;
+    height:45px;
+    margin:0 auto 20px;
+    background:var(--primary);
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    font-size:14px;
+}
+.step-icon{
+    width:70px;
+    height:70px;
+    margin:0 auto 25px;
+    background:rgba(37,99,235,.08);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.step-icon i{
+    font-size:32px;
+    color:var(--primary);
+}
+.journey-step h3{
+    font-size:22px;
+    color:var(--dark);
+    margin-bottom:15px;
+}
+.journey-step p{
+    color:var(--text);
+    line-height:1.8;
+    font-size:15px;
+}
+.step-line{
+    flex:0 0 70px;
+    height:2px;
+    background:#dbeafe;
+    margin-top:60px;
+    position:relative;
+}
+.step-line::after{
+    content:"";
+    position:absolute;
+    right:0;
+    top:50%;
+    transform:translateY(-50%);
+    width:10px;
+    height:10px;
+    background:var(--primary);
+    border-radius:50%;
+}
+.journey-cta{
+    text-align:center;
+    margin-top:70px;
+}
+.journey-cta h3{
+    font-size:30px;
+    margin-bottom:25px;
+    color:var(--dark);
+}
+.journey-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:15px 35px;
+    background:var(--primary);
+    color:#fff;
+    text-decoration:none;
+    border-radius:8px;
+    transition:.3s ease;
+}
+.journey-btn:hover{
+    background:var(--secondary);
+    transform:translateY(-3px);
+}
+/* ==========================================
+   RESPONSIVE
+========================================== */
+@media(max-width:991px){
+    .journey-steps1{
+        flex-direction:column;
+        align-items:center;
+        gap:0;
+    }
+    .journey-step{
+        max-width:500px;
+        width:100%;
+        margin-bottom:30px;
+    }
+    .step-line{
+        width:2px;
+        height:60px;
+        margin:0;
+        flex:none;
+    }
+    .step-line::after{
+        top:auto;
+        bottom:-5px;
+        left:50%;
+        transform:translateX(-50%);
+    }
+}
+@media(max-width:768px){
+    .how-it-works{
+        padding:80px 5%;
+    }
+    .journey-step h3{
+        font-size:20px;
+    }
+    .journey-cta h3{
+        font-size:26px;
+    }
+    .step-icon{
+        width:70px;
+        height:70px;
+    }
+    .step-icon i{
+        font-size:28px;
+    }
+}
+@media(max-width:480px){
+    .journey-step{
+        text-align:center;
+    }
+    .journey-step p{
+        font-size:14px;
+    }
+    .journey-btn{
+        width:100%;
+        max-width:280px;
+    }
+}
+/* ==========================================
+   FINAL CTA
+========================================== */
+.finall-cta{
+    padding:120px 5%;
+    background:#ffffff;
+    position:relative;
+    overflow:hidden;
+}
+.finall-cta::before{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    background:rgba(0,0,0,0.03);
+    top:-100px;
+    left:-100px;
+}
+.finall-cta::after{
+    content:"";
+    position:absolute;
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    background:rgba(0,0,0,0.03);
+    bottom:-100px;
+    right:-100px;
+}
+.finall-cta-content{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+.cta-label1{
+    display:inline-block;
+    padding:8px 18px;
+    border-radius:30px;
+    background:#f3f4f6;
+    color:var(--primary);
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:1px;
+    margin-bottom:20px;
+}
+.finall-cta h2{
+    font-size:48px;
+    line-height:1.2;
+    color:var(--dark);
+    margin-bottom:25px;
+}
+.finall-cta p{
+    max-width:750px;
+    margin:auto;
+    font-size:18px;
+    line-height:1.9;
+    color:#64748b;
+}
+.cta-buttons1{
+    margin-top:40px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+.cta-primary1,
+.cta-secondary1{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:16px 35px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:400;
+    transition:.3s ease;
+}
+.cta-primary1{
+    background:var(--primary);
+    color:#fff;
+}
+.cta-primary1:hover{
+    transform:translateY(-4px);
+}
+.cta-secondary1{
+    background:var(--secondary);
+    color:#fff;
+}
+.cta-secondary1:hover{
+    transform:translateY(-4px);
+}
+.cta-trust1{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    color:#64748b;
+    font-size:15px;
+    flex-wrap:wrap;
+}
+.cta-trust1 i{
+    color:var(--primary);
+}
+/* ==========================================
+   RESPONSIVE
+========================================== */
+@media(max-width:768px){
+    .finall-cta{
+        padding:90px 5%;
+    }
+    .finall-cta p{
+        font-size:16px;
+    }
+    .cta-buttons1{
+        flex-direction:column;
+        align-items:center;
+    }
+    .cta-primary1,
+    .cta-secondary1{
+        width:100%;
+        max-width:320px;
+        justify-content:center;
+    }
+}
+</style>
+<body>
+    <!-- SCROLL BUTTON -->
+    <div id="progress">
+        <span id="progress-value">&#8593</span>
+    </div>
+    <!--top-bar-->
+    <div class="top-bar" id="top-bar">
+        <div class="container top-content">
+            <div class="top-left">
+                <span><i class="fas fa-globe"></i>Connecting Talent to Global Opportunities</span>
+                <span><i class="fas fa-envelope"></i>info@insignlinkglobalconnect.com</span>
+            </div>
+
+            <div class="top-right">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </div>
+    <!--header-->
+    <header class="main-header">
+
+        <!-- LOGO AREA -->
+        <div class="logo-section">
+            <a href="index.html" class="logo">
+                <img src="logo/ILC Logo.jpg" alt="Insign Linkglobal Connect">
+            </a>
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <div class="dropdown-header">
+
+                        <a href="explore.html" class="explore-link">
+                            Explore
+                        </a>
+
+                        <button class="dropdown-toggle" type="button">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+
+                    </div>
+
+                    <ul class="dropdown-content">
+                        <li><a href="study_abroad.html">Study Abroad</a></li>
+                        <li><a href="jobs_abroad.html">Jobs Abroad</a></li>
+                        <li><a href="scholarship.html">Scholarships</a></li>
+                        <li><a href="immigration.html">Immigration</a></li>
+                        <li><a href="career_development.html">Career Development</a></li>
+                    </ul>
+
+                </li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <!-- CTA BUTTONS -->
+            <div class="header-actions">
+
+                <a href="consultation.html" class="consultation-butn1">
+                    Book Consultation
+                </a>
+
+                <a href="login.html" class="login-butn1">
+                    Login
+                </a>
+
+                <a href="register.html" class="primary-butn1">
+                    Register
+                </a>
+
+            </div>
+        </nav>
+
+        <!-- MOBILE MENU -->
+        <div class="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </header>
+    <!-- ==========================================
+     EXPLORE HERO
+    ========================================== -->
+    <section class="explore-hero">
+
+        <div class="container explore-container">
+
+            <!-- LEFT CONTENT -->
+            <div class="explore-content">
+
+                <span class="explore-tag">
+                    GLOBAL OPPORTUNITIES HUB
+                </span>
+
+                <h1>
+                    Explore Global Opportunities
+                    <span>Without Limits</span>
+                </h1>
+
+                <p>
+                    Discover study abroad programs, international jobs,
+                    visa-sponsored opportunities, immigration pathways,
+                    scholarships, and career development resources from
+                    around the world.
+                </p>
+
+                <!-- SEARCH -->
+                <form class="explore-search">
+
+                    <input
+                        type="text"
+                        placeholder="Search opportunities, countries or programs..."
+                    >
+
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                        Search
+                    </button>
+
+                </form>
+
+                <!-- QUICK LINKS -->
+                <div class="quick-categories">
+
+                    <a href="study_abroad.html">
+                        <i class="fas fa-graduation-cap"></i>
+                        Study Abroad
+                    </a>
+
+                    <a href="jobs_abroad.html">
+                        <i class="fas fa-briefcase"></i>
+                        Jobs Abroad
+                    </a>
+
+                    <a href="scholarships.html">
+                        <i class="fas fa-award"></i>
+                        Scholarships
+                    </a>
+
+                    <a href="immigration.html">
+                        <i class="fas fa-passport"></i>
+                        Immigration
+                    </a>
+
+                    <a href="career_development.html">
+                        <i class="fas fa-chart-line"></i>
+                        Career Development
+                    </a>
+
+                </div>
+
+                <!-- TRUST STATS -->
+                <div class="explore-trust">
+
+                    <div class="trust-item">
+                        <h3>200+</h3>
+                        <span>Universities</span>
+                    </div>
+
+                    <div class="trust-item">
+                        <h3>500+</h3>
+                        <span>Opportunities</span>
+                    </div>
+
+                    <div class="trust-item">
+                        <h3>10+</h3>
+                        <span>Countries</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT VISUAL -->
+            <div class="explore-visual">
+
+                <img src="image/cbbdbe2495ff3fa501a85c0e03055a31.jpg" alt="Global Opportunities">
+
+                <div class="country-card card-1">
+                    <strong>🇨🇦 Canada</strong>
+                    <small>120 Opportunities</small>
+                </div>
+
+                <div class="country-card card-2">
+                    <strong>🇬🇧 United Kingdom</strong>
+                    <small>85 Opportunities</small>
+                </div>
+
+                <div class="country-card card-3">
+                    <strong>🇦🇺 Australia</strong>
+                    <small>65 Opportunities</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     OPPORTUNITY FILTERS
+    ========================================== -->
+    <section class="opportunity-filters">
+
+        <div class="container">
+
+            <div class="filters-header">
+
+                <span class="section-label">
+                    FIND OPPORTUNITIES FASTER
+                </span>
+
+                <h2>
+                    Refine Your Search
+                </h2>
+
+                <p>
+                    Narrow down opportunities based on your destination,
+                    interests, career goals, and visa requirements.
+                </p>
+
+            </div>
+
+            <form class="filters-form">
+
+                <!-- Keyword -->
+                <div class="filter-group">
+
+                    <label>
+                        Keyword
+                    </label>
+
+                    <input
+                        type="text"
+                        placeholder="Search universities, jobs, scholarships..."
+                    >
+
+                </div>
+
+                <!-- Country -->
+                <div class="filter-group">
+
+                    <label>
+                        Destination Country
+                    </label>
+
+                    <select>
+
+                        <option value="">
+                            Select Country
+                        </option>
+
+                        <option>Ireland</option>
+                        <option>Canada</option>
+                        <option>United Kingdom</option>
+                        <option>Australia</option>
+                        <option>Germany</option>
+                        <option>United States</option>
+                        <option>New Zealand</option>
+
+                    </select>
+
+                </div>
+
+                <!-- Category -->
+                <div class="filter-group">
+
+                    <label>
+                        Category
+                    </label>
+
+                    <select>
+
+                        <option value="">
+                            Select Category
+                        </option>
+
+                        <option>Study Abroad</option>
+                        <option>Jobs Abroad</option>
+                        <option>Scholarships</option>
+                        <option>Immigration</option>
+                        <option>Career Development</option>
+
+                    </select>
+
+                </div>
+
+                <!-- Opportunity Type -->
+                <div class="filter-group">
+
+                    <label>
+                        Opportunity Type
+                    </label>
+
+                    <select>
+
+                        <option value="">
+                            Select Type
+                        </option>
+
+                        <option>University</option>
+                        <option>College</option>
+                        <option>Healthcare Jobs</option>
+                        <option>Engineering Jobs</option>
+                        <option>Scholarships</option>
+                        <option>Work Permit</option>
+
+                    </select>
+
+                </div>
+
+                <!-- Visa -->
+                <div class="filter-group">
+
+                    <label>
+                        Visa Sponsorship
+                    </label>
+
+                    <select>
+
+                        <option value="">
+                            All Opportunities
+                        </option>
+
+                        <option>
+                            Visa Sponsorship Available
+                        </option>
+
+                        <option>
+                            No Sponsorship Required
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <!-- Search Button -->
+                <div class="filter-btn-wrap">
+
+                    <button type="submit" class="search-filter-btn">
+
+                        <i class="fas fa-search"></i>
+
+                        Search Opportunities
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     AI OPPORTUNITY MATCHER
+    ========================================== -->
+    <section class="ai-matcher-section">
+
+        <div class="container">
+
+            <div class="ai-matcher-wrapper">
+
+                <!-- LEFT CONTENT -->
+                <div class="ai-matcher-content">
+
+                    <span class="section-label">
+                        SMART OPPORTUNITY MATCHING
+                    </span>
+
+                    <h2>
+                        Find Opportunities Matched
+                        To Your Goals
+                    </h2>
+
+                    <p>
+                        Tell us where you want to go and what you want to achieve.
+                        Our intelligent matching engine helps identify study,
+                        work, scholarship and immigration opportunities aligned
+                        with your profile and future ambitions.
+                    </p>
+
+                    <div class="matcher-benefits">
+
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Personalized opportunity recommendations</span>
+                        </div>
+
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Study, work and immigration pathways</span>
+                        </div>
+
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Scholarship matching support</span>
+                        </div>
+
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Career growth opportunities</span>
+                        </div>
+
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Human advisor backed guidance</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT SIDE -->
+                <div class="match-widget">
+
+                    <!-- Floating Cards -->
+
+                    <div class="floating-card floating-1">
+                        <i class="fas fa-university"></i>
+                        <span>15 Universities</span>
+                    </div>
+
+                    <div class="floating-card floating-2">
+                        <i class="fas fa-award"></i>
+                        <span>6 Scholarships</span>
+                    </div>
+
+                    <div class="floating-card floating-3">
+                        <i class="fas fa-passport"></i>
+                        <span>Work Permit Eligible</span>
+                    </div>
+                    <!-- Main Card -->
+
+                    <div class="widget-card">
+
+                        <div class="widget-header">
+
+                            <div>
+
+                                <span class="widget-tag">
+                                    MATCH PREVIEW
+                                </span>
+
+                                <h3>
+                                    Opportunity Match Engine
+                                </h3>
+
+                            </div>
+
+                            <div class="match-score">
+
+                                <svg viewBox="0 0 120 120">
+
+                                    <circle
+                                        cx="60"
+                                        cy="60"
+                                        r="52"
+                                        class="bg-circle">
+                                    </circle>
+
+                                    <circle
+                                        cx="60"
+                                        cy="60"
+                                        r="52"
+                                        class="progress-circle">
+                                    </circle>
+
+                                </svg>
+
+                                <div class="score-text">
+                                    <strong>92%</strong>
+                                    <span>Match</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- FORM -->
+
+                        <form class="match-form">
+
+                            <div class="form-group">
+
+                                <label>
+                                    Destination
+                                </label>
+
+                                <select>
+
+                                    <option>Canada</option>
+                                    <option>Ireland</option>
+                                    <option>United Kingdom</option>
+                                    <option>Australia</option>
+
+                                </select>
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label>
+                                    Goal
+                                </label>
+
+                                <select>
+
+                                    <option>Study Abroad</option>
+                                    <option>Work Abroad</option>
+                                    <option>Immigration</option>
+
+                                </select>
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label>
+                                    Field
+                                </label>
+
+                                <select>
+
+                                    <option>Business</option>
+                                    <option>Technology</option>
+                                    <option>Healthcare</option>
+
+                                </select>
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label>
+                                    Qualification
+                                </label>
+
+                                <select>
+
+                                    <option>Bachelor's Degree</option>
+                                    <option>Diploma</option>
+                                    <option>Master's Degree</option>
+
+                                </select>
+
+                            </div>
+
+                        </form>
+
+                        <!-- RESULTS -->
+
+                        <div class="match-results">
+
+                            <h4>
+                                Recommended Pathway
+                            </h4>
+
+                            <div class="pathway-card">
+
+                                <div class="pathway-country">
+                                    🇨🇦 Canada
+                                </div>
+
+                                <div class="pathway-line"></div>
+
+                                <div class="pathway-step">
+                                    Business Studies
+                                </div>
+
+                                <div class="pathway-line"></div>
+
+                                <div class="pathway-step">
+                                    Scholarship Opportunities
+                                </div>
+
+                                <div class="pathway-line"></div>
+
+                                <div class="pathway-step">
+                                    Graduate Work Permit
+                                </div>
+
+                                <div class="pathway-line"></div>
+
+                                <div class="pathway-step">
+                                    Career Growth Pathway
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <a href="#" class="match-btn">
+
+                            <i class="fas fa-bolt"></i>
+
+                            Find My Matches
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- TRUST STRIP -->
+    <div class="search-stats">
+
+        <div class="search-stat">
+
+            <i class="fas fa-university"></i>
+
+            <div>
+                <strong>200+</strong>
+                <span>Partner Universities</span>
+            </div>
+
+        </div>
+
+        <div class="search-stat">
+
+            <i class="fas fa-briefcase"></i>
+
+            <div>
+                <strong>500+</strong>
+                <span>Global Opportunities</span>
+            </div>
+
+        </div>
+
+        <div class="search-stat">
+
+            <i class="fas fa-globe"></i>
+
+            <div>
+                <strong>10+</strong>
+                <span>Destination Countries</span>
+            </div>
+
+        </div>
+
+        <div class="search-stat">
+
+            <i class="fas fa-passport"></i>
+
+            <div>
+                <strong>Visa Sponsored</strong>
+                <span>Jobs Available</span>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- ==========================================
+     OPPORTUNITY CATEGORIES
+    ========================================== -->
+    <section class="opportunity-categories">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="section-label">
+                    EXPLORE OPPORTUNITIES
+                </span>
+
+                <h2>
+                    Opportunities Tailored To Your Goals
+                </h2>
+
+                <p>
+                    Whether you want to study abroad, build an international career,
+                    migrate to a new country, or strengthen your professional profile,
+                    find the right pathway for your future.
+                </p>
+
+            </div>
+
+            <div class="categories-grid">
+
+                <!-- STUDY ABROAD -->
+                <div class="category-card">
+
+                    <div class="category-image">
+                        <img src="image/cca4eddf6eb5ddadb356322404e056f7.jpg" alt="Study Abroad">
+                    </div>
+
+                    <div class="category-content">
+
+                        <div class="category-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+
+                        <h3>Study Abroad</h3>
+
+                        <p>
+                            Access universities, scholarships, admission guidance,
+                            accommodation support, and student visa assistance.
+                        </p>
+
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Universities</li>
+                            <li><i class="fas fa-check-circle"></i> Scholarships</li>
+                            <li><i class="fas fa-check-circle"></i> Student Visas</li>
+                            <li><i class="fas fa-check-circle"></i> Accommodation</li>
+                        </ul>
+
+                        <div class="category-stats">
+                            <span>200+ Universities</span>
+                            <span>50+ Scholarships</span>
+                        </div>
+
+                        <a href="study-abroad.html" class="category-btn">
+                            Explore Study Opportunities
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- WORK ABROAD -->
+                <div class="category-card">
+
+                    <div class="category-image">
+                        <img src="image/a1f3b34d4877477bb7ae77eadc165eed.jpg" alt="Work Abroad">
+                    </div>
+
+                    <div class="category-content">
+
+                        <div class="category-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+
+                        <h3>Work Abroad</h3>
+
+                        <p>
+                            Discover visa-sponsored jobs, international employers,
+                            salary insights and global career opportunities.
+                        </p>
+
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Visa Sponsored Jobs</li>
+                            <li><i class="fas fa-check-circle"></i> Healthcare Jobs</li>
+                            <li><i class="fas fa-check-circle"></i> Engineering Jobs</li>
+                            <li><i class="fas fa-check-circle"></i> Skilled Trades</li>
+                        </ul>
+
+                        <div class="category-stats">
+                            <span>120+ Jobs</span>
+                            <span>30+ Employers</span>
+                        </div>
+
+                        <a href="work-abroad.html" class="category-btn">
+                            Explore Jobs
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- IMMIGRATION -->
+                <div class="category-card">
+
+                    <div class="category-image">
+                        <img src="image/cda4fb4bbf9ffbd0f4e871255401ca6b.jpg" alt="Immigration">
+                    </div>
+
+                    <div class="category-content">
+
+                        <div class="category-icon">
+                            <i class="fas fa-passport"></i>
+                        </div>
+
+                        <h3>Immigration</h3>
+
+                        <p>
+                            Explore permanent residency programs, family visas,
+                            work permits and relocation support.
+                        </p>
+
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Permanent Residency</li>
+                            <li><i class="fas fa-check-circle"></i> Family Sponsorship</li>
+                            <li><i class="fas fa-check-circle"></i> Work Permits</li>
+                            <li><i class="fas fa-check-circle"></i> Relocation Support</li>
+                        </ul>
+
+                        <div class="category-stats">
+                            <span>10+ Pathways</span>
+                            <span>5+ Countries</span>
+                        </div>
+
+                        <a href="immigration.html" class="category-btn">
+                            Explore Immigration
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- CAREER DEVELOPMENT -->
+                <div class="category-card">
+
+                    <div class="category-image">
+                        <img src="image/51462bff02c31d97324d43de3928996d.jpg" alt="Career Development">
+                    </div>
+
+                    <div class="category-content">
+
+                        <div class="category-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+
+                        <h3>Career Development</h3>
+
+                        <p>
+                            Strengthen your professional profile through coaching,
+                            interview preparation and career resources.
+                        </p>
+
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> CV Reviews</li>
+                            <li><i class="fas fa-check-circle"></i> Interview Preparation</li>
+                            <li><i class="fas fa-check-circle"></i> Career Coaching</li>
+                            <li><i class="fas fa-check-circle"></i> LinkedIn Optimization</li>
+                        </ul>
+
+                        <div class="category-stats">
+                            <span>100+ Resources</span>
+                            <span>20+ Templates</span>
+                        </div>
+
+                        <a href="career-development.html" class="category-btn">
+                            Grow Your Career
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     EXPLORE BY GOAL
+    ========================================== -->
+    <section class="explore-goals">
+
+        <div class="container">
+
+            <!-- SECTION HEADER -->
+
+            <div class="section-header">
+
+                <span class="section-label">
+                    EXPLORE BY GOAL
+                </span>
+
+                <h2>
+                    Choose The Pathway
+                    That Matches Your Ambition
+                </h2>
+
+                <p>
+                    Everyone's journey is different. Whether you're pursuing
+                    international education, employment, immigration, or career
+                    advancement, start with the goal that matters most to you.
+                </p>
+
+            </div>
+
+            <!-- GOALS GRID -->
+
+            <div class="goals-grid1">
+
+                <!-- STUDY ABROAD -->
+
+                <article class="goal-card1">
+
+                    <div class="goal-image1">
+
+                        <img
+                            src="image/cca4eddf6eb5ddadb356322404e056f7.jpg"
+                            alt="Study Abroad"
+                        >
+
+                    </div>
+
+                    <div class="goal-body1">
+
+                        <div class="goal-icon1">
+
+                            <i class="fas fa-graduation-cap"></i>
+
+                        </div>
+
+                        <h3>
+                            Study Abroad
+                        </h3>
+
+                        <p>
+                            Access universities, scholarships, admissions guidance,
+                            accommodation support and student visa pathways.
+                        </p>
+
+                        <div class="goal-items1">
+
+                            <span>
+                                <i class="fas fa-check-circle"></i>
+                                Universities
+                            </span>
+
+                            <span>
+                                <i class="fas fa-check-circle"></i>
+                                Scholarships
+                            </span>
+
+                            <span>
+                                <i class="fas fa-check-circle"></i>
+                                Student Visas
+                            </span>
+
+                            <span>
+                                <i class="fas fa-check-circle"></i>
+                                Accommodation
+                            </span>
+
+                        </div>
+
+                        <a href="study-abroad.html" class="goal-btn1">
+
+                            Explore Pathway
+
+                            <i class="fas fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <!-- WORK ABROAD -->
+
+                <article class="goal-card1">
+
+                    <div class="goal-image1">
+
+                        <img
+                            src="image/a1f3b34d4877477bb7ae77eadc165eed.jpg"
+                            alt="Work Abroad"
+                        >
+
+                    </div>
+
+                    <div class="goal-body1">
+
+                        <div class="goal-icon1">
+
+                            <i class="fas fa-briefcase"></i>
+
+                        </div>
+
+                        <h3>
+                            Work Abroad
+                        </h3>
+
+                        <p>
+                            Discover international jobs, visa-sponsored opportunities,
+                            recruitment programs and work permits.
+                        </p>
+
+                        <div class="goal-items1">
+
+                            <span>
+                                <i class="fas fa-check-circle"></i>
+                                Global Jobs
+                            </span>
+
+                            <span>
+                                <i class="fas fa-check-circle"></i>
+                                Visa Sponsorship
+                            </span>
+
+                            <span>
+                                <i class="fas fa-check-circle"></i>
+                                Work Permits
+                            </span>
+
+                            <span>
+                                <i class="fas fa-check-circle"></i>
+                                Recruitment
+                            </span>
+
+                        </div>
+
+                        <a href="work-abroad.html" class="goal-btn1">
+
+                            Explore Pathway
+
+                            <i class="fas fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <!-- IMMIGRATION -->
+
+                <article class="goal-card1">
+
+                    <div class="goal-image1">
+
+                        <img
+                            src="image/cda4fb4bbf9ffbd0f4e871255401ca6b.jpg"
+                            alt="Immigration"
+                        >
+
+                    </div>
+
+                    <div class="goal-body1">
+
+                        <div class="goal-icon1">
+
+                            <i class="fas fa-passport"></i>
+
+                        </div>
+
+                        <h3>
+                            Immigration
+                        </h3>
+
+                        <p>
+                            Explore residency programs, work permits,
+                            relocation support and family sponsorship pathways.
+                        </p>
+
+                        <div class="goal-items1">
+
+                            <span>
+                                <i class="fas fa-check-circle"></i>
+                                Work Permits
+                            </span>
+
+                            <span>
+                                <i class="fas fa-check-circle"></i>
+                                Permanent Residency
+                            </span>
+
+                            <span>
+                                <i class="fas fa-check-circle"></i>
+                                Family Sponsorship
+                            </span>
+
+                            <span>
+                                <i class="fas fa-check-circle"></i>
+                                Settlement Support
+                            </span>
+
+                        </div>
+
+                        <a href="immigration.html" class="goal-btn1">
+
+                            Explore Pathway
+
+                            <i class="fas fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <!-- CAREER GROWTH -->
+
+                <article class="goal-card1">
+
+                    <div class="goal-image1">
+
+                        <img
+                            src="image/51462bff02c31d97324d43de3928996d.jpg"
+                            alt="Career Growth"
+                        >
+
+                    </div>
+
+                    <div class="goal-body1">
+
+                        <div class="goal-icon1">
+
+                            <i class="fas fa-chart-line"></i>
+
+                        </div>
+
+                        <h3>
+                            Career Growth
+                        </h3>
+
+                        <p>
+                            Strengthen your professional profile and prepare for
+                            international opportunities through career development.
+                        </p>
+
+                        <div class="goal-items1">
+
+                            <span>
+                                <i class="fas fa-check-circle"></i>
+                                CV Building
+                            </span>
+
+                            <span>
+                                <i class="fas fa-check-circle"></i>
+                                Interview Coaching
+                            </span>
+
+                            <span>
+                                <i class="fas fa-check-circle"></i>
+                                Career Planning
+                            </span>
+
+                            <span>
+                                <i class="fas fa-check-circle"></i>
+                                LinkedIn Optimization
+                            </span>
+
+                        </div>
+
+                        <a href="career-development.html" class="goal-btn1">
+
+                            Explore Pathway
+
+                            <i class="fas fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     POPULAR DESTINATIONS
+    ========================================== -->
+    <section class="destinations">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="section-label">
+                    POPULAR DESTINATIONS
+                </span>
+
+                <h2>
+                    Explore Opportunities Around The World
+                </h2>
+
+                <p>
+                    Discover top destinations for international education,
+                    employment, immigration pathways, and career growth.
+                </p>
+
+            </div>
+
+            <div class="destinations-grid">
+
+                <!-- FEATURED IRELAND -->
+                <div class="destination-card featured-destination">
+
+                    <img src="image/1b01114e9718e9eca1d6fc52efebc25a.jpg" alt="Ireland">
+
+                    <div class="destination-overlay">
+
+                        <span class="destination-badge">
+                            Featured Destination
+                        </span>
+
+                        <h3>
+                            🇮🇪 Ireland
+                        </h3>
+
+                        <p>
+                            Partner institutions and direct opportunities
+                            for study, career advancement, and relocation.
+                        </p>
+
+                        <div class="destination-tags">
+
+                            <span>Study Abroad</span>
+                            <span>Graduate Programs</span>
+                            <span>Career Opportunities</span>
+
+                        </div>
+
+                        <div class="partner-list">
+
+                            <div>
+                                <i class="fas fa-university"></i>
+                                National College of Ireland
+                            </div>
+
+                            <div>
+                                <i class="fas fa-university"></i>
+                                Griffith College Dublin
+                            </div>
+
+                            <div>
+                                <i class="fas fa-university"></i>
+                                Holmes Institute Dublin
+                            </div>
+
+                            <div>
+                                <i class="fas fa-university"></i>
+                                Dundalk Institute of Technology
+                            </div>
+
+                        </div>
+
+                        <a href="#" class="destination-btn">
+                            Explore Ireland
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- CANADA -->
+                <div class="destination-card">
+
+                    <img src="image/2f550b5a0c750ce788f72e7d1f759b5d.jpg" alt="Canada">
+
+                    <div class="destination-overlay">
+
+                        <h3>🇨🇦 Canada</h3>
+
+                        <div class="destination-tags">
+                            <span>Study</span>
+                            <span>Work</span>
+                            <span>Immigration</span>
+                        </div>
+
+                        <a href="#">Explore</a>
+
+                    </div>
+
+                </div>
+
+                <!-- UK -->
+                <div class="destination-card">
+
+                    <img src="image/c8d47eb4c84b8cc8270192712c2f9d2f.jpg" alt="United Kingdom">
+
+                    <div class="destination-overlay">
+
+                        <h3>🇬🇧 United Kingdom</h3>
+
+                        <div class="destination-tags">
+                            <span>Study</span>
+                            <span>Work</span>
+                            <span>Visa Sponsorship</span>
+                        </div>
+
+                        <a href="#">Explore</a>
+
+                    </div>
+
+                </div>
+
+                <!-- AUSTRALIA -->
+                <div class="destination-card">
+
+                    <img src="image/cf8597ac0daad255fd5c635047351897.jpg" alt="Australia">
+
+                    <div class="destination-overlay">
+
+                        <h3>🇦🇺 Australia</h3>
+
+                        <div class="destination-tags">
+                            <span>Study</span>
+                            <span>Immigration</span>
+                            <span>Skilled Migration</span>
+                        </div>
+
+                        <a href="#">Explore</a>
+
+                    </div>
+
+                </div>
+
+                <!-- GERMANY -->
+                <div class="destination-card">
+
+                    <img src="image/bf9a09ddf7808c176d6812826bcfb38a.jpg" alt="Germany">
+
+                    <div class="destination-overlay">
+
+                        <h3>🇩🇪 Germany</h3>
+
+                        <div class="destination-tags">
+                            <span>Study</span>
+                            <span>Engineering Jobs</span>
+                        </div>
+
+                        <a href="#">Explore</a>
+
+                    </div>
+
+                </div>
+
+                <!-- USA -->
+                <div class="destination-card">
+
+                    <img src="image/6a48f59c7c5911203723754c2adbe179.jpg" alt="United States">
+
+                    <div class="destination-overlay">
+
+                        <h3>🇺🇸 United States</h3>
+
+                        <div class="destination-tags">
+                            <span>Universities</span>
+                            <span>Scholarships</span>
+                        </div>
+
+                        <a href="#">Explore</a>
+
+                    </div>
+
+                </div>
+
+                <!-- NEW ZEALAND -->
+                <div class="destination-card">
+
+                    <img src="image/22b1f02ac69899596538c83c25bc0036.jpg" alt="New Zealand">
+
+                    <div class="destination-overlay">
+
+                        <h3>🇳🇿 New Zealand</h3>
+
+                        <div class="destination-tags">
+                            <span>Work Visas</span>
+                            <span>Skilled Migration</span>
+                        </div>
+
+                        <a href="#">Explore</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ========================================== 
+     POPULAR IMMIGRATION PATHWAYS 
+    ========================================== --> 
+    <section class="immigration-pathways"> 
+
+        <div class="container"> <!-- SECTION HEADER --> 
+
+            <div class="section-header"> 
+
+                <span class="section-label"> IMMIGRATION PATHWAYS </span> 
+
+                <h2> Popular Immigration Routes For Global Mobility </h2> 
+                <p> Explore some of the most sought-after immigration pathways helping professionals, 
+                    students, and families relocate, work, and settle in leading destinations worldwide. 
+                </p> 
+            </div> 
+
+            <div class="pathways-layout"> 
+                
+                <!-- FEATURED CARD --> 
+                 
+                <div class="featured-pathway"> 
+
+                    <div class="featured-badge"> 
+                        MOST POPULAR 
+                    </div> 
+
+                    <div class="featured-icon"> 
+                        <i class="fas fa-maple-leaf"></i> 
+                    </div> 
+
+                    <h3> Canada Permanent Residency </h3> 
+
+                    <p> One of the world's most attractive immigration programs offering multiple pathways 
+                        for skilled workers, international graduates, and families. 
+                    </p> 
+                    
+                    <div class="featured-stats"> 
+                        
+                        <div class="stat-box"> 
+                            
+                            <span class="stat-title"> Stream </span> 
+                            
+                            <strong> Express Entry </strong> 
+                        
+                        </div> 
+                        
+                        <div class="stat-box"> 
+                            
+                            <span class="stat-title"> Processing </span> 
+                            
+                            <strong> 6 – 12 Months </strong> 
+                        
+                        </div> 
+                        
+                        <div class="stat-box"> 
+                            
+                            <span class="stat-title"> Eligibility </span> 
+                            
+                            <strong> Skilled Workers </strong> 
+                        
+                        </div> 
+                    
+                    </div> 
+                    
+                    <div class="success-rate"> 
+                        
+                        <i class="fas fa-chart-line"></i> 
+                        
+                        <span> High Demand Immigration Pathway </span> 
+                    
+                    </div> 
+                    
+                    <a href="#" class="featured-btn"> Explore Canada PR <i class="fas fa-arrow-right"></i> </a> 
+                
+                </div> 
+                
+                <!-- PATHWAYS GRID --> 
+                 
+                <div class="pathways-grid"> 
+                    
+                    <!-- Australia --> 
+                     
+                    <div class="pathway-card"> 
+                        
+                        <div class="pathway-top"> 
+                            
+                            <div class="pathway-icon"> 
+                                
+                                <i class="fas fa-globe-asia"></i> 
+                            
+                            </div> 
+                            
+                            <h4> Australia Skilled Migration </h4> 
+                        
+                        </div> 
+                        
+                        <ul> 
+                            
+                            <li> <strong>Requirements:</strong> Skills Assessment </li> 
+                            <li> <strong>Processing:</strong> 6 – 10 Months </li> 
+                            <li> <strong>Eligibility:</strong> Skilled Professionals </li> 
+                        
+                        </ul> 
+                        
+                        <a href="#"> Learn More <i class="fas fa-arrow-right"></i> </a> 
+                    
+                    </div> 
+                    
+                    <!-- UK --> 
+                     
+                    <div class="pathway-card"> 
+                        
+                        <div class="pathway-top"> 
+                            
+                            <div class="pathway-icon"> <i class="fas fa-briefcase"></i> </div> 
+                            
+                            <h4> UK Work Permit Route </h4> 
+                        
+                        </div> 
+                        
+                        <ul> 
+                            
+                            <li> <strong>Requirements:</strong> Sponsorship </li> 
+                            <li> <strong>Processing:</strong> 3 – 8 Weeks </li> 
+                            <li> <strong>Eligibility:</strong> Skilled Workers </li> 
+                        
+                        </ul> 
+                        
+                        <a href="#"> Learn More <i class="fas fa-arrow-right"></i> </a> 
+                    
+                    </div> 
+                    
+                    <!-- NZ --> 
+                     
+                    <div class="pathway-card"> 
+                        
+                        <div class="pathway-top"> 
+                            
+                            <div class="pathway-icon"> <i class="fas fa-plane"></i> </div> 
+                            
+                            <h4> New Zealand Skilled Worker Visa </h4> 
+                        
+                        </div> 
+                        
+                        <ul> 
+                            
+                            <li> <strong>Requirements:</strong> Job Offer </li> 
+                            <li> <strong>Processing:</strong> 4 – 8 Months </li> 
+                            <li> <strong>Eligibility:</strong> Skilled Occupations </li> 
+                        
+                        </ul> 
+                        
+                        <a href="#"> Learn More <i class="fas fa-arrow-right"></i> </a> 
+                    
+                    </div> 
+                    
+                    <!-- Ireland --> 
+                     
+                    <div class="pathway-card"> 
+                        
+                        <div class="pathway-top"> 
+                            
+                            <div class="pathway-icon"> <i class="fas fa-building"></i> </div> 
+                            
+                            <h4> Ireland Critical Skills Permit </h4> 
+                        
+                        </div> 
+                        
+                        <ul> 
+                            
+                            <li> <strong>Requirements:</strong> Eligible Occupation </li> 
+                            <li> <strong>Processing:</strong> 6 – 12 Weeks </li> 
+                            <li> <strong>Eligibility:</strong> High Demand Skills </li> 
+                        
+                        </ul> 
+                        
+                        <a href="#"> Learn More <i class="fas fa-arrow-right"></i> </a> 
+                    
+                    </div> 
+                
+                </div> 
+            
+            </div> 
+            
+            <!-- CTA --> 
+             
+            <div class="immigration-cta"> 
+                
+                <div class="cta-content"> 
+                    
+                    <h3> Not Sure Which Immigration Route Fits You? </h3> 
+                    
+                    <p> Get a personalized immigration assessment and discover 
+                        the best pathway based on your goals and profile. 
+                    </p> 
+                
+                </div> 
+                
+                <a href="#" class="assessment-btn"> <i class="fas fa-file-signature"></i> Free Immigration Assessment </a> 
+            
+            </div> 
+        
+        </div> 
+    </section>
+    <!-- ==========================================
+     FEATURED OPPORTUNITIES
+    ========================================== -->
+    <section class="featured-opportunities">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="section-label">
+                    FEATURED OPPORTUNITIES
+                </span>
+
+                <h2>
+                    Latest Opportunities Around The World
+                </h2>
+
+                <p>
+                    Explore universities, scholarships and visa-sponsored jobs from leading institutions and employers.
+                </p>
+
+            </div>
+
+            <!-- Tabs -->
+            <div class="opportunity-tabs">
+
+                <button class="tab-btn active" data-tab="universities">
+                    <i class="fas fa-university"></i>
+                    Universities
+                </button>
+
+                <button class="tab-btn" data-tab="scholarships">
+                    <i class="fas fa-award"></i>
+                    Scholarships
+                </button>
+
+                <button class="tab-btn" data-tab="jobs">
+                    <i class="fas fa-briefcase"></i>
+                    Jobs Abroad
+                </button>
+
+            </div>
+
+            <!-- UNIVERSITIES -->
+            <div class="tab-content active" id="universities">
+
+                <div class="slider-container">
+
+                    <button class="slider-arrow prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+
+                    <div class="slider-track">
+
+                        <div class="opportunity-card">
+
+                            <div class="card-image">
+                                <img src="image/1d305f4be62728e8f2fb8260768dfb431.jpg" alt="">
+                                <span class="card-badge study">
+                                    Study Abroad
+                                </span>
+                            </div>
+
+                            <div class="card-content">
+
+                                <h3>University of Malta</h3>
+
+                                <div class="country">
+                                    <i class="fas fa-location-dot"></i>
+                                    Malta
+                                </div>
+
+                                <p>MBA Program</p>
+
+                                <a href="#">
+                                    Apply Now
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="opportunity-card">
+
+                            <div class="card-image">
+                                <img src="image/2ed7e8389d270626edcd2e467faf0134.jpg" alt="">
+                                <span class="card-badge study">
+                                    Study Abroad
+                                </span>
+                            </div>
+
+                            <div class="card-content">
+
+                                <h3>University of Ireland</h3>
+
+                                <div class="country">
+                                    <i class="fas fa-location-dot"></i>
+                                    Ireland
+                                </div>
+
+                                <p>Nursing Program</p>
+
+                                <a href="#">
+                                    Apply Now
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="opportunity-card">
+
+                            <div class="card-image">
+                                <img src="image/cca4eddf6eb5ddadb356322404e056f7.jpg" alt="">
+                                <span class="card-badge study">
+                                    Study Abroad
+                                </span>
+                            </div>
+
+                            <div class="card-content">
+
+                                <h3>University of Manchester</h3>
+
+                                <div class="country">
+                                    <i class="fas fa-location-dot"></i>
+                                    United Kingdom
+                                </div>
+
+                                <p>Engineering Program</p>
+
+                                <a href="#">
+                                    Apply Now
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="opportunity-card">
+
+                            <div class="card-image">
+                                <img src="image/1b01114e9718e9eca1d6fc52efebc25a.jpg" alt="">
+                                <span class="card-badge study">
+                                    Study Abroad
+                                </span>
+                            </div>
+
+                            <div class="card-content">
+
+                                <h3>National College of Ireland</h3>
+
+                                <div class="country">
+                                    <i class="fas fa-location-dot"></i>
+                                    Ireland
+                                </div>
+
+                                <p>Business & Technology Programs</p>
+
+                                <a href="#">
+                                    Apply Now
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button class="slider-arrow next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+
+                </div>
+
+                <div class="slider-dots"></div>
+
+            </div>
+
+            <!-- SCHOLARSHIPS -->
+            <div class="tab-content" id="scholarships">
+
+                <div class="slider-container">
+
+                    <button class="slider-arrow prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+
+                    <div class="slider-track">
+
+                        <div class="opportunity-card">
+
+                            <div class="card-image">
+                                <img src="image/51462bff02c31d97324d43de3928996d.jpg" alt="">
+                                <span class="card-badge scholarship">
+                                    Scholarship
+                                </span>
+                            </div>
+
+                            <div class="card-content">
+
+                                <h3>Chevening Scholarship</h3>
+
+                                <div class="country">
+                                    <i class="fas fa-location-dot"></i>
+                                    United Kingdom
+                                </div>
+
+                                <p>Deadline: Nov 15</p>
+
+                                <a href="#">
+                                    Apply Now
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="opportunity-card">
+
+                            <div class="card-image">
+                                <img src="image/6be897b18d3d21d463d0ed7246a838de.jpg" alt="">
+                                <span class="card-badge scholarship">
+                                    Scholarship
+                                </span>
+                            </div>
+
+                            <div class="card-content">
+
+                                <h3>Australia Awards</h3>
+
+                                <div class="country">
+                                    <i class="fas fa-location-dot"></i>
+                                    Australia
+                                </div>
+
+                                <p>Deadline: April 30</p>
+
+                                <a href="#">
+                                    Apply Now
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="opportunity-card">
+
+                            <div class="card-image">
+                                <img src="image/1b01114e9718e9eca1d6fc52efebc25a.jpg" alt="">
+                                <span class="card-badge scholarship">
+                                    Scholarship
+                                </span>
+                            </div>
+
+                            <div class="card-content">
+
+                                <h3>Vanier Scholarship</h3>
+
+                                <div class="country">
+                                    <i class="fas fa-location-dot"></i>
+                                    Canada
+                                </div>
+
+                                <p>Deadline: October 20</p>
+
+                                <a href="#">
+                                    Apply Now
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button class="slider-arrow next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+
+                </div>
+
+                <div class="slider-dots"></div>
+
+            </div>
+
+            <!-- JOBS -->
+            <div class="tab-content" id="jobs">
+
+                <div class="slider-container">
+
+                    <button class="slider-arrow prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+
+                    <div class="slider-track">
+
+                        <div class="opportunity-card">
+
+                            <div class="card-image">
+                                <img src="image/ddc34f65d5f46e76d8cddaae1ec3f072.jpg" alt="">
+                                <span class="card-badge work">
+                                    Work Abroad
+                                </span>
+                            </div>
+
+                            <div class="card-content">
+
+                                <h3>Registered Nurse</h3>
+
+                                <div class="country">
+                                    <i class="fas fa-location-dot"></i>
+                                    United Kingdom
+                                </div>
+
+                                <p>Visa Sponsorship Available</p>
+
+                                <a href="#">
+                                    Apply Now
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="opportunity-card">
+
+                            <div class="card-image">
+                                <img src="image/a1f3b34d4877477bb7ae77eadc165eed.jpg" alt="">
+                                <span class="card-badge work">
+                                    Work Abroad
+                                </span>
+                            </div>
+
+                            <div class="card-content">
+
+                                <h3>Software Developer</h3>
+
+                                <div class="country">
+                                    <i class="fas fa-location-dot"></i>
+                                    Germany
+                                </div>
+
+                                <p>Visa Sponsorship Available</p>
+
+                                <a href="#">
+                                    Apply Now
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="opportunity-card">
+
+                            <div class="card-image">
+                                <img src="image/940edd9e429cef6c06a77de6ff3cb800.jpg" alt="">
+                                <span class="card-badge work">
+                                    Work Abroad
+                                </span>
+                            </div>
+
+                            <div class="card-content">
+
+                                <h3>Care Assistant</h3>
+
+                                <div class="country">
+                                    <i class="fas fa-location-dot"></i>
+                                    United Kingdom
+                                </div>
+
+                                <p>Visa Sponsorship Available</p>
+
+                                <a href="#">
+                                    Apply Now
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button class="slider-arrow next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+
+                </div>
+
+                <div class="slider-dots"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     HOW IT WORKS
+    ========================================== -->
+    <section class="how-it-works">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="section-label">
+                    HOW IT WORKS
+                </span>
+
+                <h2>
+                    Your Global Journey in 5 Simple Steps
+                </h2>
+
+                <p>
+                    Getting started is easy. Follow these simple steps and begin your journey toward international education, employment, immigration, and career growth.
+                </p>
+
+            </div>
+
+            <div class="journey-steps1">
+
+                <!-- STEP 1 -->
+                <div class="journey-step">
+
+                    <div class="step-number1">
+                        01
+                    </div>
+
+                    <div class="step-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+
+                    <h3>Create Account</h3>
+
+                    <p>
+                        Register your free account and gain access to global opportunities.
+                    </p>
+
+                </div>
+
+                <!-- CONNECTOR -->
+                <div class="step-line"></div>
+
+                <!-- STEP 2 -->
+                <div class="journey-step">
+
+                    <div class="step-number1">
+                        02
+                    </div>
+
+                    <div class="step-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+
+                    <h3>Complete Profile</h3>
+
+                    <p>
+                        Add your education, skills, experience and career interests.
+                    </p>
+
+                </div>
+
+                <div class="step-line"></div>
+
+                <!-- STEP 3 -->
+                <div class="journey-step">
+
+                    <div class="step-number1">
+                        03
+                    </div>
+
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+
+                    <h3>Explore Opportunities</h3>
+
+                    <p>
+                        Browse universities, scholarships, jobs and immigration pathways.
+                    </p>
+
+                </div>
+
+                <div class="step-line"></div>
+
+                <!-- STEP 4 -->
+                <div class="journey-step">
+
+                    <div class="step-number1">
+                        04
+                    </div>
+
+                    <div class="step-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+
+                    <h3>Connect With Advisors</h3>
+
+                    <p>
+                        Receive professional guidance tailored to your goals.
+                    </p>
+
+                </div>
+
+                <div class="step-line"></div>
+
+                <!-- STEP 5 -->
+                <div class="journey-step">
+
+                    <div class="step-number1">
+                        05
+                    </div>
+
+                    <div class="step-icon">
+                        <i class="fas fa-plane-departure"></i>
+                    </div>
+
+                    <h3>Begin Your Journey</h3>
+
+                    <p>
+                        Apply, prepare and confidently move toward your future abroad.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="journey-cta">
+
+                <h3>
+                    Ready To Take The First Step?
+                </h3>
+
+                <a href="register.html" class="journey-btn">
+                    Create Free Account
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     WHY CHOOSE US
+    ========================================== -->
+    <section class="why-us">
+
+        <div class="container">
+
+            <div class="why-us-wrapper">
+
+                <!-- LEFT CONTENT -->
+                <div class="why-content">
+
+                    <span class="section-label">
+                        WHY CHOOSE US
+                    </span>
+
+                    <h2>
+                        Why Thousands Trust
+                        Insign Link Global Connect
+                    </h2>
+
+                    <p>
+                        We simplify the journey to international education,
+                        employment, immigration, and career growth through
+                        expert guidance, verified opportunities, and
+                        personalized support every step of the way.
+                    </p>
+
+                    <a href="contact.html" class="why-btn">
+                        Book Consultation
+                    </a>
+
+                </div>
+
+                <!-- RIGHT CARDS -->
+                <div class="why-grid">
+
+                    <div class="why-card">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <h3>Verified Opportunities</h3>
+                        <p>
+                            Access trusted universities, employers,
+                            scholarships and migration programs.
+                        </p>
+                    </div>
+
+                    <div class="why-card">
+                        <i class="fas fa-user-tie"></i>
+                        <h3>Expert Guidance</h3>
+                        <p>
+                            Get professional advice from experienced
+                            education and immigration consultants.
+                        </p>
+                    </div>
+
+                    <div class="why-card">
+                        <i class="fas fa-globe"></i>
+                        <h3>Global Network</h3>
+                        <p>
+                            Connect with institutions and employers
+                            across multiple countries.
+                        </p>
+                    </div>
+
+                    <div class="why-card">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Personalized Support</h3>
+                        <p>
+                            Receive tailored solutions based on your
+                            unique goals and aspirations.
+                        </p>
+                    </div>
+
+                    <div class="why-card">
+                        <i class="fas fa-route"></i>
+                        <h3>End-to-End Assistance</h3>
+                        <p>
+                            From applications to relocation,
+                            we guide you throughout the process.
+                        </p>
+                    </div>
+
+                    <div class="why-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Career Development</h3>
+                        <p>
+                            Improve employability through CV support,
+                            coaching and professional resources.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- STATS -->
+            <div class="trust-stats">
+
+                <div class="trust-stat">
+                    <h3 class="counter" data-target="500">0</h3>
+                    <span>Applicants Guided</span>
+                </div>
+
+                <div class="trust-stat">
+                    <h3 class="counter" data-target="10">0</h3>
+                    <span>Destination Countries</span>
+                </div>
+
+                <div class="trust-stat">
+                    <h3 class="counter percent" data-target="95">0%</h3>
+                    <span>Client Satisfaction</span>
+                </div>
+
+                <div class="trust-stat">
+                    <h3>24/7</h3>
+                    <span>Support Available</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     CONSULTATION SECTION
+    ========================================== -->
+    <section class="consultation-section">
+
+        <div class="consultation-container">
+
+            <!-- LEFT CONTENT -->
+            <div class="consultation-content">
+
+                <span class="consultation-tag">
+                    EXPERT CONSULTATION
+                </span>
+
+                <h2>
+                    Need Personalized Guidance?
+                </h2>
+
+                <p>
+                    Speak with our experienced advisors for study abroad,
+                    work abroad, immigration, and career development support.
+                    Receive personalized recommendations and a clear roadmap
+                    toward achieving your international goals.
+                </p>
+
+                <div class="consultation-features">
+
+                    <div class="consultation-feature">
+                        <i class="fas fa-user-tie"></i>
+                        <span>Experienced Advisors</span>
+                    </div>
+
+                    <div class="consultation-feature">
+                        <i class="fas fa-route"></i>
+                        <span>Personalized Roadmap</span>
+                    </div>
+
+                    <div class="consultation-feature">
+                        <i class="fas fa-clock"></i>
+                        <span>Fast Response Time</span>
+                    </div>
+
+                </div>
+
+                <a href="contact.html" class="consultation-btn">
+                    Book Consultation
+                </a>
+
+            </div>
+
+            <!-- RIGHT VISUAL -->
+            <div class="consultation-visual">
+
+                <div class="consultation-card">
+
+                    <i class="fas fa-globe"></i>
+
+                    <h3>
+                        Start Your Global Journey
+                    </h3>
+
+                    <p>
+                        Education, careers, immigration and international opportunities 
+                        all under one trusted platform.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     FINAL CTA
+    ========================================== -->
+    <section class="finall-cta">
+
+        <div class="container1">
+
+            <div class="final-cta-content1">
+
+                <span class="cta-label1">
+                    START YOUR JOURNEY TODAY
+                </span>
+
+                <h2>
+                    Ready to Explore Global Opportunities?
+                </h2>
+
+                <p>
+                    Whether you want to study, work, migrate, or grow your career
+                    internationally, we're here to guide you every step of the way.
+                    Discover trusted opportunities, connect with experienced advisors,
+                    and take the next step toward your global future.
+                </p>
+
+                <div class="cta-buttons1">
+
+                    <a href="register.html" class="cta-primary1">
+                        <i class="fas fa-user-plus"></i>
+                        Create Account
+                    </a>
+
+                    <a href="consultation.html" class="cta-secondary1">
+                        <i class="fas fa-calendar-check"></i>
+                        Book Consultation
+                    </a>
+
+                </div>
+
+                <div class="cta-trust1">
+
+                    <i class="fas fa-globe"></i>
+
+                    Trusted by students, professionals, and families pursuing opportunities worldwide.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     FOOTER
+    ========================================== -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- COMPANY INFO -->
+            <div class="footer-col footer-brand">
+
+                <div class="logo">
+                    <span>
+                        <img src="logo/ILC Logo.jpg" alt="Insign Link Global Connect Logo">
+                    </span>
+
+                    <h3>
+                        Insign LinkGlobal Connect
+                    </h3>
+                </div>
+
+                <p>
+                    Connecting students, professionals, and families to global
+                    education, career, employment, and immigration opportunities
+                    across the world.
+                </p>
+
+            </div>
+
+            <!-- CONTACT -->
+            <div class="footer-col">
+
+                <h4>CONTACT US</h4>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Nairobi, Kenya
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +254 704 565 250
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    info@insignlinkglobalconnect.com
+                </p>
+
+            </div>
+
+            <!-- OPPORTUNITIES -->
+            <div class="footer-col">
+
+                <h4>OPPORTUNITIES</h4>
+
+                <ul>
+
+                    <li>
+                        <a href="study-abroad.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Study Abroad
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="jobs_abroad.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Jobs Abroad
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="immigration.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Immigration Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="career-development.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Career Development
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- RESOURCES -->
+            <div class="footer-col">
+
+                <h4>RESOURCES</h4>
+
+                <ul>
+
+                    <li>
+                        <a href="resources.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Resource Center
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="success-stories.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Success Stories
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="faq.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            FAQs
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Book Consultation
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- FOOTER BOTTOM -->
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Insign Link Global Connect. All Rights Reserved. Crafted by
+                <a href="https://wa.me/254700073919?text=Hello%20I%20am%20interested%20in%20your%20services">
+                    Brydex Technologies
+                </a>
+            </p>
+
+            <div class="footer-links">
+                <a href="terms.html">Terms of Use</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+            </div>
+
+            <div class="social-icons">
+
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const navbar = document.querySelector('.navbar');
+
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('active');
+            navbar.classList.toggle('active');
+        });
+
+        /* Mobile dropdown toggle */
+
+        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+
+            toggle.addEventListener('click', function(e){
+
+                e.preventDefault();
+                e.stopPropagation();
+
+                const dropdown = this.closest('.dropdown');
+
+                dropdown.classList.toggle('active');
+
+            });
+
+        });
+        // SCROLL BUTTON
+            let calcScrollValue = () => {
+                let scrollProgress = document.getElementById("progress");
+                let pos = document.documentElement.scrollTop;
+                let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                let scrollValue = Math.round((pos * 100) / calcHeight);
+
+                if (pos > 100) {
+                    scrollProgress.style.display = "grid";
+                } else {
+                    scrollProgress.style.display = "none";
+                }
+
+                scrollProgress.onclick = () => {
+                    document.documentElement.scrollTop = 0;
+                };
+
+                scrollProgress.style.background =
+                    `conic-gradient(#F4A646 ${scrollValue}%, white ${scrollValue}%)`;
+            };
+
+            window.addEventListener("scroll", calcScrollValue);
+
+        /* ==========================================
+        TABS
+        ========================================== */
+
+        const tabs = document.querySelectorAll(".tab-btn");
+        const contents = document.querySelectorAll(".tab-content");
+
+        tabs.forEach(tab => {
+
+            tab.addEventListener("click", () => {
+
+                tabs.forEach(btn =>
+                    btn.classList.remove("active")
+                );
+
+                contents.forEach(content =>
+                    content.classList.remove("active")
+                );
+
+                tab.classList.add("active");
+
+                document
+                    .getElementById(tab.dataset.tab)
+                    .classList.add("active");
+
+            });
+
+        });
+
+        /* ==========================================
+        SLIDERS
+        ========================================== */
+
+        document.querySelectorAll(".tab-content").forEach(tab => {
+
+            const track =
+                tab.querySelector(".slider-track");
+
+            if(!track) return;
+
+            const cards =
+                track.querySelectorAll(".opportunity-card");
+
+            const dotsContainer =
+                tab.querySelector(".slider-dots");
+
+            const nextBtn =
+                tab.querySelector(".next");
+
+            const prevBtn =
+                tab.querySelector(".prev");
+
+            let currentIndex = 0;
+
+            function visibleCards(){
+
+                if(window.innerWidth <= 768) return 1;
+
+                if(window.innerWidth <= 991) return 2;
+
+                return 3;
+
+            }
+
+            const totalSlides =
+                Math.max(
+                    1,
+                    cards.length - visibleCards() + 1
+                );
+
+            for(let i = 0; i < totalSlides; i++){
+
+                const dot =
+                    document.createElement("span");
+
+                dot.classList.add("dot");
+
+                if(i === 0){
+                    dot.classList.add("active");
+                }
+
+                dotsContainer.appendChild(dot);
+
+            }
+
+            const dots =
+                dotsContainer.querySelectorAll(".dot");
+
+            function updateSlider(){
+
+                const gap = 25;
+
+                const cardWidth =
+                    cards[0].offsetWidth + gap;
+
+                track.style.transform =
+                    `translateX(-${currentIndex * cardWidth}px)`;
+
+                dots.forEach(dot =>
+                    dot.classList.remove("active")
+                );
+
+                if(dots[currentIndex]){
+                    dots[currentIndex]
+                        .classList.add("active");
+                }
+
+            }
+
+            nextBtn.addEventListener("click", () => {
+
+                if(currentIndex < totalSlides - 1){
+
+                    currentIndex++;
+
+                }else{
+
+                    currentIndex = 0;
+
+                }
+
+                updateSlider();
+
+            });
+
+            prevBtn.addEventListener("click", () => {
+
+                if(currentIndex > 0){
+
+                    currentIndex--;
+
+                }else{
+
+                    currentIndex = totalSlides - 1;
+
+                }
+
+                updateSlider();
+
+            });
+
+            dots.forEach((dot,index) => {
+
+                dot.addEventListener("click", () => {
+
+                    currentIndex = index;
+
+                    updateSlider();
+
+                });
+
+            });
+
+            setInterval(() => {
+
+                if(
+                    !tab.classList.contains("active")
+                ){
+                    return;
+                }
+
+                if(currentIndex < totalSlides - 1){
+
+                    currentIndex++;
+
+                }else{
+
+                    currentIndex = 0;
+
+                }
+
+                updateSlider();
+
+            },5000);
+
+            window.addEventListener(
+                "resize",
+                updateSlider
+            );
+
+        });
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const counters = document.querySelectorAll(".counter");
+
+            const observer = new IntersectionObserver(entries => {
+
+                entries.forEach(entry => {
+
+                    if(entry.isIntersecting){
+
+                        const counter = entry.target;
+                        const target = +counter.dataset.target;
+
+                        let current = 0;
+
+                        const increment = target / 100;
+
+                        const updateCounter = () => {
+
+                            if(current < target){
+
+                                current += increment;
+
+                                if(counter.classList.contains("percent")){
+                                    counter.innerText = Math.ceil(current) + "%";
+                                }else{
+                                    counter.innerText = Math.ceil(current) + "+";
+                                }
+
+                                requestAnimationFrame(updateCounter);
+
+                            }else{
+
+                                if(counter.classList.contains("percent")){
+                                    counter.innerText = target + "%";
+                                }else{
+                                    counter.innerText = target + "+";
+                                }
+
+                            }
+
+                        };
+
+                        updateCounter();
+
+                        observer.unobserve(counter);
+
+                    }
+
+                });
+
+            }, {
+                threshold: 0.5
+            });
+
+            counters.forEach(counter => {
+                observer.observe(counter);
+            });
+
+        });
+    </script>
+</body>
+</html>
